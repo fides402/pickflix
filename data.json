@@ -1,286 +1,62 @@
 {
   "films": [
     {
-      "title": "La via del cuore",
+      "title": "I Peccatori",
+      "description": "Cercando di lasciarsi alle spalle le loro vite travagliate, due fratelli gemelli (interpretati da Michael B. Jordan) tornano nella loro città natale alla ricerca di un nuovo inizio, ma li scopriranno che un male ancora più grande è pronto ad accoglierli nuovamente.",
+      "image": "https://image.tmdb.org/t/p/w500/g9X7IZtlwqsRHj1BZKxdXwH0cpI.jpg",
+      "link": "https://altadefinizionepremium.com/p/i-peccatori",
+      "rating": "7.5"
+    },
+    {
+      "title": "Eden",
+      "description": "La crisi del 1929 ha provocato una generale sfiducia nel sistema capitalistico, che ha avuto conseguenze anche in Europa, e in particolare in Germania, dove il tracollo economico ha fornito terreno fertile all'ascesa del nazismo. In questo contesto, il medico e filosofo tedesco Friedrich Ritter diventa una celebrità per aver abbandonato la civiltà ed essersi trasferito in un luogo disabitato della Galapagos, l'isola di Floreana, insieme a Dore Strauch, sua discepola e amante.",
+      "image": "https://image.tmdb.org/t/p/w500/ow5qdxpZx52yUYvkfO0O1ba6Hfs.jpg",
+      "link": "https://altadefinizionepremium.com/p/eden",
+      "rating": "7.2"
+    },
+    {
+      "title": "G20",
+      "description": "Quando il vertice del G20 viene attaccato dai terroristi, la Presidente degli Stati Uniti Danielle Sutton diventa l'obiettivo numero uno. Dopo essere sfuggita alla cattura da parte degli aggressori, deve battere in astuzia il nemico per proteggere la sua famiglia, difendere il suo Paese e salvaguardare i leader mondiali, in questo film emozionante e ricco di azione.",
+      "image": "https://image.tmdb.org/t/p/w500/wv6oWAleCJZUk5htrGg413t3GCy.jpg",
+      "link": "https://altadefinizionepremium.com/p/g20",
+      "rating": "6.7"
+    },
+    {
+      "title": "Operazione vendetta",
+      "description": "Charlie Heller (Malek) è un brillante ma profondamente introverso decodificatore della CIA che lavora in un ufficio nel seminterrato del quartier generale di Langley e la cui vita viene sconvolta quando sua moglie viene uccisa in un attacco terroristico a Londra. Quando i suoi supervisori si rifiutano di agire, l'uomo prende in mano la situazione e si imbarca in un pericoloso viaggio intorno al mondo per rintracciare i responsabili, usando la sua intelligenza come arma principale per sfuggire ai suoi inseguitori e vendicare la moglie.",
+      "image": "https://image.tmdb.org/t/p/w500/9QB9r6l11p8k43OSaOMRPKxRXL4.jpg",
+      "link": "https://altadefinizionepremium.com/p/operazione-vendetta",
+      "rating": "6.7"
+    },
+    {
+      "title": "Drop - Accetta o rifiuta",
+      "description": "I primi appuntamenti sono già abbastanza stressanti. Ma andare a un primo appuntamento mentre uno sconosciuto ti invia dei meme irritanti che evolvono in minacce di morte, è da brividi.",
+      "image": "https://image.tmdb.org/t/p/w500/sYo8mowvoL1Hi1vsS8dSEpqArJM.jpg",
+      "link": "https://altadefinizionepremium.com/p/drop-accetta-o-rifiuta",
+      "rating": "6.5"
+    },
+    {
+      "title": "825 Forest Road",
       "description": "",
-      "image": "https://image.tmdb.org/t/p/w500/xFKzEhOhkPwMxWms1n15xLMCXa2.jpg",
-      "link": "https://altadefinizionepremium.com/p/la-via-del-cuore",
-      "rating": "9.9"
-    },
-    {
-      "title": "Succubus",
-      "description": "",
-      "image": "https://image.tmdb.org/t/p/w500/nyGKQrctWNmhSvto8h60AhZ3iLz.jpg",
-      "link": "https://altadefinizionepremium.com/p/succubus",
-      "rating": "9.6"
-    },
-    {
-      "title": "Nude",
-      "description": "",
-      "image": "https://image.tmdb.org/t/p/w500/x6dCEObeulV087wlJeYEvp7D0at.jpg",
-      "link": "https://altadefinizionepremium.com/p/nude",
-      "rating": "9.4"
-    },
-    {
-      "title": "Kill Shot",
-      "description": "Fingendosi cacciatori, un gruppo di terroristi è alla ricerca di 100 milioni di dollari che sono stati rubati e persi in un incidente aereo durante il volo dall'Afghanistan.",
-      "image": "https://image.tmdb.org/t/p/w500/5kCEHZnUeAZFJvE3l8K5OYjIwjj.jpg",
-      "link": "https://altadefinizionepremium.com/p/kill-shot",
-      "rating": "9.2"
-    },
-    {
-      "title": "Le ali della libertà",
-      "description": "Siamo nel 1946. Processato per l'omicidio della moglie e del suo amante, Andy, un bancario del New England, viene condannato a un doppio ergastolo e recluso nel penitenziario di Shawshank. All'inizio è vittima delle violenze dei reclusi, poi però diventa il consulente finanziario delle guardie. Scopre così che il direttore falsifica i libri contabili intestando i conti a un fittizio Randall Stevens. Fuggito di prigione attraverso un tunnel costruito negli anni, Andy assume l'identità di Randall Stevens, denuncia il direttore e va in Messico.",
-      "image": "https://image.tmdb.org/t/p/w500/9OxcvTJwZDjQTFvY2NxiwnSrQS6.jpg",
-      "link": "https://altadefinizionepremium.com/p/le-ali-della-libert",
-      "rating": "8.7"
-    },
-    {
-      "title": "Il padrino",
-      "description": "Anni Quaranta. Come è consuetudine, durante il rinfresco per festeggiare le nozze della figlia Conny con Carlo, il \"padrino\" don Vito Corleone promette assistenza e protezione a familiari e amici. Invia il figliastro Tom Hagen in California per convincere in ogni modo il produttore Jack Woltz a scritturare il cantante Johnny nel suo prossimo film. Woltz non acconsente. Tom allora lo costringe ad accettare con un \"avvertimento\": l'uccisione del suo cavallo di razza preferito. Sollozzo, a nome della potente \"famiglia\" Tartaglia, chiede a Corleone finanziamenti e appoggi per il traffico di droga. Il rifiuto scatena una lotta cruenta tra le due cosche: lo stesso don Vito viene ferito gravemente; il figlio minore Michael lo salva da un secondo attentato. Michael, poi, scavalcando l'irruento fratello Sonny e Tom, temporeggiatore, organizza un incontro con Sollozzo e con il corrotto capitano di polizia McCluskey uccidendoli entrambi.",
-      "image": "https://image.tmdb.org/t/p/w500/hGgz5ho658NECzErDayV5FQTemy.jpg",
-      "link": "https://altadefinizionepremium.com/p/il-padrino",
-      "rating": "8.7"
-    },
-    {
-      "title": "Selena Gomez: My Mind & Me",
-      "description": "Dopo anni sotto i riflettori, Selena Gomez conquista una fama inimmaginabile. Ma proprio quando raggiunge un nuovo apice, una svolta inaspettata la trascina nell’oscurità. Questo documentario schietto e intimo ripercorre il suo viaggio di sei anni verso una nuova luce.",
-      "image": "https://image.tmdb.org/t/p/w500/usJxHVxT70lAA7AynnZlmPth7R3.jpg",
-      "link": "https://altadefinizionepremium.com/p/selena-gomez-my-mind-me",
-      "rating": "8.6"
-    },
-    {
-      "title": "Michael Jackson: Live in Bucharest - The Dangerous Tour",
-      "description": "Live in Bucharest - The Dangerous Tour, registrato il 1º ottobre 1992 all'Arena Națională, è stato il primo live di Michael Jackson entrato in commercio. La diretta televisiva dell'evento in USA e Regno Unito registrò ascolti record.",
-      "image": "https://image.tmdb.org/t/p/w500/fojSl7uLpxE6YCPVvtMG8e0I6Uo.jpg",
-      "link": "https://altadefinizionepremium.com/p/michael-jackson-live-in-bucharest-the-dangerous-tour",
-      "rating": "8.6"
-    },
-    {
-      "title": "Lady Gaga Presents: The Monster Ball Tour at Madison Square Garden",
-      "description": "Lady Gaga Presents: The Monster Ball Tour al Madison Square Garden è uno speciale concerto del 2011 che documenta gli spettacoli del 21 e 22 febbraio 2011 del The Monster Ball Tour di Lady Gaga. Presenta filmati di concerti e contenuti pre-concerto e backstage.",
-      "image": "https://image.tmdb.org/t/p/w500/o4R7ZyMAatFpCJiT2ELSwfaaCoX.jpg",
-      "link": "https://altadefinizionepremium.com/p/lady-gaga-presents-the-monster-ball-tour-at-madison-square-garden",
-      "rating": "8.6"
-    },
-    {
-      "title": "Nirvana: Unplugged In New York",
-      "description": "Si tratta della registrazione del concerto acustico tenutosi il 18 novembre 1993 per la celebre serie Unplugged di MTV.\r I componenti della band sono affiancati da Pat Smear - ex chitarrista dei Germs già aggiuntosi al gruppo in qualità di seconda chitarra a partire dal tour di In Utero - e dalla violoncellista Lori Goldston.\r Kurt Cobain inserisce in scaletta anche tre pezzi dei Meat Puppets, band di cui si è sempre dichiarato appassionato fan, facendosi affiancare nell'esecuzione dagli stessi fratelli Kirkwood, fondatori del gruppo.",
-      "image": "https://image.tmdb.org/t/p/w500/6WIYa58aG4wW7NaTGsgPo5ZT7Ad.jpg",
-      "link": "https://altadefinizionepremium.com/p/nirvana-unplugged-in-new-york",
-      "rating": "8.6"
-    },
-    {
-      "title": "¿Quieres ser mi hijo?",
-      "description": "",
-      "image": "https://image.tmdb.org/t/p/w500/9GuvODahvuFqdhuZ16aBLR4UJoP.jpg",
-      "link": "https://altadefinizionepremium.com/p/quieres-ser-mi-hijo",
-      "rating": "8.6"
-    },
-    {
-      "title": "Il padrino - Parte II",
-      "description": "Il film tratta della giovinezza e dei primi passi nel mondo del crimine di Vito Corleone, e delle difficoltà cinquant'anni più tardi di suo figlio, Michael, a mantenere in piedi l'impero Corleone. Il tutto tra vicende di emigrazione, tradimenti familiari, inchieste governative e affari.",
-      "image": "https://image.tmdb.org/t/p/w500/23NNNNLzaLnyTxwcuj680R7iBFH.jpg",
-      "link": "https://altadefinizionepremium.com/p/il-padrino-parte-ii",
-      "rating": "8.6"
-    },
-    {
-      "title": "Schindler's List",
-      "description": "Tratto dal libro di Thomas Keneally è la vera storia di Oscar Schindler, industriale tedesco, che nel 1938 capisce che è bene legarsi ai comandanti militari. Li frequenta nei locali notturni, offre bottiglie preziose. Quando gli ebrei sono relegati nel ghetto di Cracovia Schindler riesce a farsene assegnare alcune centinaia come operai in una fabbrica di pentole. All'inizio sembra sfruttarli, in realtà li salva. Di fronte alla persecuzione tremenda, il tedesco trasforma quella sua prima iniziativa in una vera missione, fino a comprare letteralmente le vite di quasi milleduecento ebrei (la famosa lista) che sicuramente morirebbero nel campo di Auschwitz.",
-      "image": "https://image.tmdb.org/t/p/w500/m0pV0fmMERzCvPVQbLLrPPLl5q1.jpg",
-      "link": "https://altadefinizionepremium.com/p/schindler-s-list",
-      "rating": "8.6"
-    },
-    {
-      "title": "La parola ai giurati",
-      "description": "Dodici giurati sono riuniti in consiglio per decidere della sorte di un diciottenne accusato d'omicidio. Undici lo ritengono colpevole. Soltanto uno, Davis, lo considera innocente; trattandosi di una possibile condanna a morte, è necessaria l'unanimità. Con appassionata eloquenza e con il rigore dei suoi ragionamenti, Davis convince gli altri uno a uno che l'accusa non regge.",
-      "image": "https://image.tmdb.org/t/p/w500/6lvkCuYuqpbmK1OPcv5oKleWbgV.jpg",
-      "link": "https://altadefinizionepremium.com/p/la-parola-ai-giurati",
-      "rating": "8.5"
-    },
-    {
-      "title": "Everybody's Everything",
-      "description": "Questo intimo ritratto racconta l'ascesa artistica di Lil Peep, la cui musica unica nel suo genere ha attratto un enorme seguito, finendo per definire la sua vita.",
-      "image": "https://image.tmdb.org/t/p/w500/wbMkjkNX8VylPVLmQ2Dp6i5iayY.jpg",
-      "link": "https://altadefinizionepremium.com/p/everybody-s-everything",
-      "rating": "8.5"
-    },
-    {
-      "title": "Il cavaliere oscuro",
-      "description": "Il crimine organizzato a Gotham City ha le ore contate. Batman, il tenente Gordon, il nuovo Procuratore Distrettuale e alcuni improbabili epigoni dell'Uomo Pipistrello in imbottiture da hockey hanno dichiarato guerra ai criminali. La loro fortuna e i loro dollari, accumulati in una banca di massima sicurezza, vengono rubati da Joker, un pagliaccio sadico e mascherato che getterà la città nel disordine e nell'anarchia. Riempite le tasche di lame, polvere da sparo e lanugine, Joker sfiderà il cavaliere oscuro di Bruce Wayne e rivelerà il lato oscuro di Harvey Dent, l'eroe procuratore che applica la giustizia e agisce a volto scoperto.",
-      "image": "https://image.tmdb.org/t/p/w500/qIhsgno1mjbzUbs4H6DaRjhskAR.jpg",
-      "link": "https://altadefinizionepremium.com/p/il-cavaliere-oscuro",
-      "rating": "8.5"
-    },
-    {
-      "title": "Folklore: The Long Pond Studio Sessions",
-      "description": "Taylor Swift interpreta tutte le canzoni del suo ultimo album “folklore” in un concerto intimo, filmato nello storico studio di Long Pond, un’ambientazione che evoca la natura malinconica dell’album. Accompagnata dai suoi co-produttori, Taylor parla dello sviluppo e del significato di tutte le canzoni, mentre le interpreta per la prima volta dal vivo insieme al team che le ha prodotte a distanza.",
-      "image": "https://image.tmdb.org/t/p/w500/4iroJUn8YuQBekDwGy7r61YHXiu.jpg",
-      "link": "https://altadefinizionepremium.com/p/folklore-the-long-pond-studio-sessions",
-      "rating": "8.5"
-    },
-    {
-      "title": "Il miglio verde",
-      "description": "E' il racconto che Paul Edgecomb fa all'amica Elaine Connelly in una casa di riposo. Sono passati circa sessanta anni da quando lavorava come capo delle guardie del braccio della morte nel penitenziario di Could Mountain. Durante la grande depressione, nel carcere del sud degli Usa, Edgecomb si occupava di quattro assassini che attendevano di compiere la loro ultima passeggiata lungo il 'Miglio verde', il corridoio rivestito di linoleum verde che li avrebbe condotti nella stanza della sedia elettrica. Fra questi c'era anche John Coffrey, un ragazzone nero condannato per l'omicidio di due gemelline di nove anni. Nonostante avesse le dimensioni e la forza per uccidere chiunque, Coffrey aveva un carattere semplice e ingenuo: era davvero lui il colpevole?",
-      "image": "https://image.tmdb.org/t/p/w500/kptqTcldosy8JPf75JT16oTYUMB.jpg",
-      "link": "https://altadefinizionepremium.com/p/il-miglio-verde",
-      "rating": "8.5"
-    },
-    {
-      "title": "Pulp Fiction",
-      "description": "Le vite di due gangster, di un pugile e della moglie di un potente boss della malavita finiscono per intrecciarsi in una paradossale storia di violenza, vendetta e redenzione.",
-      "image": "https://image.tmdb.org/t/p/w500/9p10J9Xp7MuaVac56g8BwAuXEsA.jpg",
-      "link": "https://altadefinizionepremium.com/p/pulp-fiction",
-      "rating": "8.5"
-    },
-    {
-      "title": "Il Signore degli Anelli - Il ritorno del re",
-      "description": "Le forze di Sauron hanno attaccato la capitale di Gondor, Minas Tirith, nel suo assedio finale contro l'umanità. Tenuto da un debole sovrintendente, quello che una volta era un fastoso regno non ha mai avuto così bisogno del proprio re. Mentre Gandalf tenta disperatamente di spingere lo smembrato esercito di Gondor ad agire, Thèoden si unisce ai guerrieri di Rohan per combattere assieme a loro. Pieno di coraggio e di appassionata lealtà, l'esercito degli umani non riesce però a tener testa alle numerosissime legioni nemiche che giungono su tutto il regno. Ogni vittoria è accompagnata da un grande sacrificio. Malgrado le numerose perdite, la Compagnia si lancia verso la più grande battaglia mai affrontata, unita dall'unico scopo di riuscire a tenere Sauron distratto e dare a Frodo una occasione per portare a termine la sua spedizione...",
-      "image": "https://image.tmdb.org/t/p/w500/96XilLzI7bijsCG4l7oW6I62oad.jpg",
-      "link": "https://altadefinizionepremium.com/p/il-signore-degli-anelli-il-ritorno-del-re",
-      "rating": "8.5"
+      "image": "https://image.tmdb.org/t/p/w500/ohESp5Nw49OD4ExCeNYCEIGX2iq.jpg",
+      "link": "https://altadefinizionepremium.com/p/825-forest-road",
+      "rating": "5.9"
     }
   ],
   "series": [
     {
-      "title": "Breaking Bad",
-      "description": "Un insegnante di chimica con un cancro allo stadio terminale comincia a produrre e spacciare metanfetamina con un suo ex studente per assicurare un futuro alla famiglia.",
-      "image": "https://image.tmdb.org/t/p/w500/ineLOBPG8AZsluYwnkMpHRyu7L.jpg",
-      "link": "https://altadefinizionepremium.com/p/breaking-bad",
-      "rating": "8.9"
+      "title": "Devil May Cry",
+      "description": "Quando un misterioso malvagio minaccia di aprire le porte dell'Inferno, un cacciatore di demoni dal fascino diabolico potrebbe essere la migliore speranza di salvezza per il mondo.",
+      "image": "https://image.tmdb.org/t/p/w500/9YA4ko7x1o2NS65lDrlKAuNAqjJ.jpg",
+      "link": "https://altadefinizionepremium.com/p/devil-may-cry",
+      "rating": "7.9"
     },
     {
-      "title": "Arcane",
-      "description": "Due sorelle combattono sui fronti opposti di una guerra tra tecnologia magica, convinzioni antitetiche e le stridenti contraddizioni delle città di Piltover e Zaun.",
-      "image": "https://image.tmdb.org/t/p/w500/fqldf2t8ztc9aiwn3k6mlX3tvRT.jpg",
-      "link": "https://altadefinizionepremium.com/p/arcane",
-      "rating": "8.8"
-    },
-    {
-      "title": "Adventure Time: Fionna & Cake",
-      "description": "",
-      "image": "https://image.tmdb.org/t/p/w500/fi1b6U1kp73xheECzqwzMn8u3mX.jpg",
-      "link": "https://altadefinizionepremium.com/p/adventure-time-fionna-cake",
-      "rating": "8.8"
-    },
-    {
-      "title": "Hazbin Hotel",
-      "description": "Charlie. Stella del Mattino, la Principessa dell'Inferno, fatica a convincere sia i demoni che gli angeli che ogni anima possa essere redenta. Cantate e imprecate con noi in questa commedia musicale animata per adulti sul tema delle seconde chance.",
-      "image": "https://image.tmdb.org/t/p/w500/rXojaQcxVUubPLSrFV8PD4xdjrs.jpg",
-      "link": "https://altadefinizionepremium.com/p/hazbin-hotel",
-      "rating": "8.7"
-    },
-    {
-      "title": "Avatar - La leggenda di Aang",
-      "description": "I fratelli Katara e Sokka risvegliano il giovane Aang da un lungo sonno e scoprono che è un Avatar le cui arti marziali possono sconfiggere la malvagia Nazione del Fuoco.",
-      "image": "https://image.tmdb.org/t/p/w500/l7pRUq999FxqT0SuwB22JLcBIZY.jpg",
-      "link": "https://altadefinizionepremium.com/p/avatar-la-leggenda-di-aang",
-      "rating": "8.7"
-    },
-    {
-      "title": "Better Call Saul",
-      "description": "Sei anni prima che Saul Goodman conosca Walter White. Incontreremo l'uomo che sarà conosciuto come Saul Goodman, quando era ancora noto col nome di Jimmy McGill, un avvocato da poco, alla ricerca del suo destino, e che, al momento, cerca di arrivare a fine mese. Lavorando fianco a fianco e, spesso, contro Jimmy McGill, c'è il \"tuttofare\" Mike Erhmantraut.",
-      "image": "https://image.tmdb.org/t/p/w500/zjg4jpK1Wp2kiRvtt5ND0kznako.jpg",
-      "link": "https://altadefinizionepremium.com/p/better-call-saul",
-      "rating": "8.7"
-    },
-    {
-      "title": "Rick and Morty",
-      "description": "Rick è uno scienziato che si è trasferito dalla famiglia di sua figlia Beth, una veterinaria e cardiochirurga per equini. Passa la maggior parte del suo tempo inventando vari gadget high-tech e portando con sé il giovane nipote Morty (e successivamente la nipote Summer) in pericolose e fantastiche avventure attraverso il loro e altri universi paralleli. Questi eventi, aggiunti alla già strana famiglia di Morty, gli causano parecchi disagi sia a scuola che nella vita privata.",
-      "image": "https://image.tmdb.org/t/p/w500/gdIrmf2DdY5mgN6ycVP0XlzKzbE.jpg",
-      "link": "https://altadefinizionepremium.com/p/rick-and-morty",
-      "rating": "8.7"
-    },
-    {
-      "title": "Common Side Effects",
-      "description": "",
-      "image": "https://image.tmdb.org/t/p/w500/a8X5XXP49DHrySTXJMUIN5HI1Wz.jpg",
-      "link": "https://altadefinizionepremium.com/p/common-side-effects",
-      "rating": "8.7"
-    },
-    {
-      "title": "Chernobyl",
-      "description": "Chernobyl è una miniserie televisiva statunitense e britannica, creata e scritta da Craig Mazin e diretta da Johan Renck. Le cinque puntate drammatizzano la vera storia di una delle peggiori catastrofi create dall'uomo a oltre 30 anni dall'accaduto e segue gli uomini e le donne che si sono sacrificati per salvare l'Europa da un disastro inimmaginabile.",
-      "image": "https://image.tmdb.org/t/p/w500/hlLXt2tOPT6RRnjiUmoxyG1LTFi.jpg",
-      "link": "https://altadefinizionepremium.com/p/chernobyl",
-      "rating": "8.7"
-    },
-    {
-      "title": "The Owl House - Aspirante strega",
-      "description": "Luz, un'adolescente umana sicura di sé, si imbatte accidentalmente in un portale verso un nuovo mondo magico dove fa amicizia con una strega ribelle, Eda, e un adorabile piccolo guerriero, King. Pur non avendo abilità magiche, Luz realizza il suo sogno di diventare una strega svolgendo il compito di apprendista di Eda presso la Owl House e alla fine trova una nuova famiglia in un'ambientazione improbabile.",
-      "image": "https://image.tmdb.org/t/p/w500/qjTcI7gO8z4yOKmbHX4qe98kYCA.jpg",
-      "link": "https://altadefinizionepremium.com/p/the-owl-house-aspirante-strega",
-      "rating": "8.7"
-    },
-    {
-      "title": "Chiamatemi Anna",
-      "description": "Dopo aver trascorso la propria infanzia in diversi orfanotrofi, la giovane Anna viene mandata per errore a vivere con gli anziani fratelli Marilla e Matthew Cuthbert. Dopo un'iniziale diffidenza nei confronti di Anna, i due fratelli cominceranno a conoscerla meglio, e la bambina cambierà per sempre le loro vite. Anna diventerá la migliore amica di Diana Barry",
-      "image": "https://image.tmdb.org/t/p/w500/5D1XeIBMGSurVybggoiedC4uIcP.jpg",
-      "link": "https://altadefinizionepremium.com/p/chiamatemi-anna",
-      "rating": "8.7"
-    },
-    {
-      "title": "I Soprano",
-      "description": "La famiglia Soprano, i cui avi italiani sono originari di Avellino, vanta importanti contatti con le cosche newyorkesi e mantiene relazioni affaristiche con la Camorra napoletana. Il boss è soggetto ad attacchi di panico che lo portano sul lettino di una psicoanalista, alla quale confida ben presto i suoi turbamenti legati alla famiglia, in particolare nel rapporto col terribile personaggio della madre Livia: i suoi guai però passano anche attraverso il complesso legame con la moglie Carmela (connivente ma estranea alle imprese criminali del marito), i figli adolescenti, lo zio (fratello del padre) che non lo considera come boss e lo contrasta in ogni modo. A questi problemi personali si aggiungono quelli \"lavorativi\", in cui Tony deve destreggiarsi fra l'FBI, traditori della sua stessa famiglia e boss in ascesa di famiglie rivali.",
-      "image": "https://image.tmdb.org/t/p/w500/7tsJV3jjjGr70eh3WSOLXj8Z65A.jpg",
-      "link": "https://altadefinizionepremium.com/p/i-soprano",
-      "rating": "8.7"
-    },
-    {
-      "title": "The Chosen",
-      "description": "La vita di Cristo attraverso gli occhi di coloro che lo incontrarono chiamati I Prescelti.",
-      "image": "https://image.tmdb.org/t/p/w500/fc6FqGatySnYSNYg2U4HQeZfoeV.jpg",
-      "link": "https://altadefinizionepremium.com/p/the-chosen",
-      "rating": "8.6"
-    },
-    {
-      "title": "INVINCIBLE",
-      "description": "Quando Mark Grayson eredita i superpoteri a 17 anni, si unisce a suo padre come uno dei più grandi supereroi della Terra. Tutti i suoi sogni sembrano essersi avverati, finché un evento scioccante non cambia tutto.",
-      "image": "https://image.tmdb.org/t/p/w500/jBn4LWlgdsf6xIUYhYBwpctBVsj.jpg",
-      "link": "https://altadefinizionepremium.com/p/invincible",
-      "rating": "8.6"
-    },
-    {
-      "title": "Blue Planet II",
-      "description": "Sir David Attenborough torna ad offrire al pubblico una avventura mozzafiato nelle profondità degli oceani. Dai mari tropicali alle più rigide condizioni climatiche ai poli, uno sguardo senza precedenti al mondo sommerso.",
-      "image": "https://image.tmdb.org/t/p/w500/j1NsoYYDYHnPkRr7Enqr8tlexgO.jpg",
-      "link": "https://altadefinizionepremium.com/p/blue-planet-ii",
-      "rating": "8.6"
-    },
-    {
-      "title": "Regular Show",
-      "description": "Mordecai la ghiandaia azzurra, e Rigby il procione sono amici per la pelle e lavorano – o meglio, fanno finta di lavorare – per Benson, un distributore di gomme da masticare che amministra un grande parco. Gli altri personaggi che popolano lo spazio verde sono Skips, uno yeti ingegnoso e apparentemente immortale, e Pops un gioviale leccalecca, ma che talvolta si esprime in modo incomprensibile!",
-      "image": "https://image.tmdb.org/t/p/w500/88dAGv0ywrLJKCynkH226dBwe0i.jpg",
-      "link": "https://altadefinizionepremium.com/p/regular-show",
-      "rating": "8.6"
-    },
-    {
-      "title": "Primal",
-      "description": "Un uomo delle caverne crea un legame con un dinosauro mentre lotta per sopravvivere in un mondo ostile.",
-      "image": "https://image.tmdb.org/t/p/w500/ebupzTwgP8nBy0T5J3abqTqUMjK.jpg",
-      "link": "https://altadefinizionepremium.com/p/primal",
-      "rating": "8.6"
-    },
-    {
-      "title": "I Am Not an Animal",
-      "description": "",
-      "image": "https://image.tmdb.org/t/p/w500/zXhtWhYtlJVyyp5MdT7ggMJn5si.jpg",
-      "link": "https://altadefinizionepremium.com/p/i-am-not-an-animal",
-      "rating": "8.6"
-    },
-    {
-      "title": "The Spectacular Spider-Man",
-      "description": "Peter Parker, diventato Spider-Man da pochi mesi, è alle prese con il primo anno alla Midtown Manhattan Magnet High School. Intanto, per aiutare Zia May dopo la morte dello Zio Ben, Peter diventa un free-lance per il Daily Bugle, vendendo le foto dell'Uomo Ragno.",
-      "image": "https://image.tmdb.org/t/p/w500/dCNxOhXT7c4lqYuRpdM3m8s9XDp.jpg",
-      "link": "https://altadefinizionepremium.com/p/the-spectacular-spider-man",
-      "rating": "8.6"
-    },
-    {
-      "title": "Bluey",
-      "description": "Bluey è un'inesauribile cane Blue Heeler di sei anni, che ama giocare e trasforma la vita familiare di tutti i giorni in avventure straordinarie, sviluppando la sua immaginazione e la sua capacità di recupero mentale, fisica ed emotiva.",
-      "image": "https://image.tmdb.org/t/p/w500/9p4pNoGcuyCfHcGWKNrTopqMWtq.jpg",
-      "link": "https://altadefinizionepremium.com/p/bluey",
-      "rating": "8.6"
+      "title": "The Bondsman",
+      "description": "Dopo essere stato ucciso, il cacciatore di taglie Hub Halloran viene resuscitato dal Diavolo perché dia la caccia ai demoni evasi dalla prigione dell'Inferno. Cacciando i demoni aiutato e ostacolato dalla famiglia da cui è separato, Hub scopre come i suoi peccati lo abbiano portato alla dannazione, il che lo sprona a cercare una seconda chance nella vita, in amore e nella musica country.",
+      "image": "https://image.tmdb.org/t/p/w500/gwd2HpY2ymvmASUP3zMYF59IIr7.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-bondsman",
+      "rating": "7.4"
     }
   ]
 }
