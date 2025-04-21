@@ -109,7 +109,7 @@
     .arrow.left { left: 0; }
     .arrow.right { right: 0; }
 
-    /* ❌ Nascondi le frecce su mobile */
+    /* ❌ Nascondi frecce su mobile */
     @media (max-width: 768px) {
       .arrow {
         display: none;
@@ -148,30 +148,52 @@
     </div>
   </section>
 
-  <!-- Script -->
+  <section>
+    <h3>Meglio dell’anno</h3>
+    <div class="carousel-wrapper">
+      <button class="arrow left" onclick="scrollCarousel('top-year-container', -1)">&#10094;</button>
+      <div class="carousel" id="top-year-container"></div>
+      <button class="arrow right" onclick="scrollCarousel('top-year-container', 1)">&#10095;</button>
+    </div>
+  </section>
+
+  <section>
+    <h3>Film ora al cinema</h3>
+    <div class="carousel-wrapper">
+      <button class="arrow left" onclick="scrollCarousel('now-playing', -1)">&#10094;</button>
+      <div class="carousel" id="now-playing"></div>
+      <button class="arrow right" onclick="scrollCarousel('now-playing', 1)">&#10095;</button>
+    </div>
+  </section>
+
+  <section>
+    <h3>Serie ora in onda</h3>
+    <div class="carousel-wrapper">
+      <button class="arrow left" onclick="scrollCarousel('on-air', -1)">&#10094;</button>
+      <div class="carousel" id="on-air"></div>
+      <button class="arrow right" onclick="scrollCarousel('on-air', 1)">&#10095;</button>
+    </div>
+  </section>
+
   <script>
     async function loadData() {
       const res = await fetch('data.json');
       const data = await res.json();
 
-      const filmContainer = document.getElementById('film-container');
-      const serieContainer = document.getElementById('serie-container');
-
-      data.films.forEach(item => {
-        filmContainer.innerHTML += createCard(item);
-      });
-
-      data.series.forEach(item => {
-        serieContainer.innerHTML += createCard(item);
-      });
+      document.getElementById('film-container').innerHTML = createCards(data.films);
+      document.getElementById('serie-container').innerHTML = createCards(data.series);
+      document.getElementById('top-year-container').innerHTML = createCards(data.top_year);
+      document.getElementById('now-playing').innerHTML = createCards(data.now_playing);
+      document.getElementById('on-air').innerHTML = createCards(data.on_air);
     }
 
-    function createCard(item) {
-      return `
+    function createCards(items) {
+      return items.map(item => `
         <div class="card" onclick="window.location.href='${item.link}'">
           <img src="${item.image}" alt="${item.title}" />
           <div class="rating-badge">${item.rating}</div>
-        </div>`;
+        </div>
+      `).join('');
     }
 
     function scrollCarousel(id, direction) {
