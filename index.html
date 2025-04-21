@@ -12,7 +12,7 @@
     ::-webkit-scrollbar { width: 0; height: 0; }
 
     header {
-      background-color: #111;
+      background-color: transparent;
       padding: 10px 40px;
       display: flex;
       align-items: center;
@@ -97,7 +97,7 @@
   </header>
 
   <section>
-    <h3>🎬 Film del mese</h3>
+    <h3>Film di tendenza</h3>
     <div class="carousel-wrapper">
       <button class="arrow left" onclick="scrollCarousel('film-container', -1)">&#10094;</button>
       <div class="carousel" id="film-container"></div>
@@ -106,20 +106,11 @@
   </section>
 
   <section>
-    <h3>📺 Serie del mese</h3>
+    <h3>Serie di tendenza</h3>
     <div class="carousel-wrapper">
       <button class="arrow left" onclick="scrollCarousel('serie-container', -1)">&#10094;</button>
       <div class="carousel" id="serie-container"></div>
       <button class="arrow right" onclick="scrollCarousel('serie-container', 1)">&#10095;</button>
-    </div>
-  </section>
-
-  <section>
-    <h3>🏆 Meglio dell’anno</h3>
-    <div class="carousel-wrapper">
-      <button class="arrow left" onclick="scrollCarousel('top-year-container', -1)">&#10094;</button>
-      <div class="carousel" id="top-year-container"></div>
-      <button class="arrow right" onclick="scrollCarousel('top-year-container', 1)">&#10095;</button>
     </div>
   </section>
 
@@ -130,7 +121,6 @@
 
       const filmContainer = document.getElementById('film-container');
       const serieContainer = document.getElementById('serie-container');
-      const topContainer = document.getElementById('top-year-container');
 
       data.films.forEach(item => {
         filmContainer.innerHTML += createCard(item);
@@ -138,10 +128,6 @@
 
       data.series.forEach(item => {
         serieContainer.innerHTML += createCard(item);
-      });
-
-      data.top_year.forEach(item => {
-        topContainer.innerHTML += createCard(item);
       });
     }
 
