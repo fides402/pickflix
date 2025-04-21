@@ -10,30 +10,44 @@ LANG = "it-IT"
 def slugify(text):
     return re.sub(r'[^a-z0-9]+', '-', text.lower()).strip('-')
 
-def get_date_range():
+def get_current_month_range():
     now = datetime.now()
-    start_date = now.replace(day=1).strftime("%Y-%m-%d")
-    if now.month == 12:
-        end_date = now.replace(year=now.year + 1, month=1, day=1).strftime("%Y-%m-%d")
-    else:
-        end_date = now.replace(month=now.month + 1, day=1).strftime("%Y-%m-%d")
-    return start_date, end_date
+    start = now.replace(day=1)
+    end = now
+    return start, end
 
-def fetch_tmdb(endpoint, type_label, date_key):
-    start_date, end_date = get_date_range()
+def is_this_month(date_str):
+    try:
+        date = datetime.strptime(date_str, "%Y-%m-%d")
+        start, end = get_current_month_range()
+        return start <= date <= end
+    except:
+        return False
+
+def fetch_tmdb(endpoint, type_label):
+    start_date, end_date = get_current_month_range()
+    start_str = start_date.strftime('%Y-%m-%d')
+    end_str = end_date.strftime('%Y-%m-%d')
+
     url = f"{BASE_URL}/discover/{endpoint}"
     params = {
         "api_key": API_KEY,
         "language": LANG,
         "sort_by": "vote_average.desc",
         "vote_count.gte": 50,
-        "page": 1,
-        f"{date_key}.gte": start_date,
-        f"{date_key}.lt": end_date,
-        "with_original_language": "en"
+        "with_original_language": "en",
+        "page": 1
     }
 
-    print(f"📡 Fetching {type_label} usciti tra {start_date} e {end_date}...")
+    # Applica i filtri corretti per tipo
+    if endpoint == "movie":
+        params["primary_release_date.gte"] = start_str
+        params["primary_release_date.lte"] = end_str
+    else:
+        params["first_air_date.gte"] = start_str
+        params["first_air_date.lte"] = end_str
+
+    print(f"📡 Fetching {type_label}...")
 
     response = requests.get(url, params=params)
     if response.status_code != 200:
@@ -43,20 +57,27 @@ def fetch_tmdb(endpoint, type_label, date_key):
     results = response.json().get("results", [])
     items = []
 
-    for r in results[:20]:
+    for r in results:
         title = r.get("title") or r.get("name")
         if not title:
             continue
-        description = r.get("overview", "")
+
+        # Check extra: la data è davvero di questo mese?
+        release_date = r.get("primary_release_date") if endpoint == "movie" else r.get("first_air_date")
+        if not release_date or not is_this_month(release_date):
+            continue
+
         poster_path = r.get("poster_path")
-        image = f"https://image.tmdb.org/t/p/w500{poster_path}" if poster_path else ""
+        if not poster_path:
+            continue
+
+        image = f"https://image.tmdb.org/t/p/w500{poster_path}"
+        rating = round(r.get("vote_average", 0), 1)
         slug = slugify(title)
         link = f"https://altadefinizionepremium.com/p/{slug}"
-        rating = round(r.get("vote_average", 0), 1)
 
         items.append({
             "title": title,
-            "description": description,
             "image": image,
             "link": link,
             "rating": str(rating)
@@ -66,14 +87,14 @@ def fetch_tmdb(endpoint, type_label, date_key):
 
 def main():
     data = {
-        "films": fetch_tmdb("movie", "film", "primary_release_date"),
-        "series": fetch_tmdb("tv", "serie", "first_air_date")
+        "films": fetch_tmdb("movie", "film"),
+        "series": fetch_tmdb("tv", "serie")
     }
 
     with open("data.json", "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
-    print(f"✅ Scraping completato: {len(data['films'])} film, {len(data['series'])} serie")
+    print("✅ File data.json aggiornato solo con titoli del mese.")
 
 if __name__ == "__main__":
     main()
