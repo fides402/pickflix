@@ -13,6 +13,7 @@
       color: #fff;
       font-family: 'Open Sans', sans-serif;
     }
+
     ::-webkit-scrollbar {
       height: 0;
     }
@@ -87,9 +88,21 @@
       z-index: 2;
     }
 
+    .arrow {
+      display: none; /* nasconde su mobile */
+    }
+
     @media (min-width: 768px) {
       header img {
         height: 100px;
+      }
+
+      section {
+        padding: 20px 40px;
+      }
+
+      h3 {
+        font-size: 24px;
       }
 
       .card {
@@ -97,13 +110,22 @@
         height: 270px;
       }
 
-      h3 {
+      .arrow {
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        border: none;
+        color: white;
         font-size: 24px;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 10;
       }
 
-      section {
-        padding: 20px 40px;
-      }
+      .arrow.left { left: 0; }
+      .arrow.right { right: 0; }
     }
   </style>
 </head>
@@ -114,12 +136,20 @@
 
   <section>
     <h3>Film di tendenza</h3>
-    <div class="carousel" id="film-container"></div>
+    <div class="carousel-wrapper">
+      <button class="arrow left" onclick="scrollCarousel('film-container', -1)">&#10094;</button>
+      <div class="carousel" id="film-container"></div>
+      <button class="arrow right" onclick="scrollCarousel('film-container', 1)">&#10095;</button>
+    </div>
   </section>
 
   <section>
     <h3>Serie di tendenza</h3>
-    <div class="carousel" id="serie-container"></div>
+    <div class="carousel-wrapper">
+      <button class="arrow left" onclick="scrollCarousel('serie-container', -1)">&#10094;</button>
+      <div class="carousel" id="serie-container"></div>
+      <button class="arrow right" onclick="scrollCarousel('serie-container', 1)">&#10095;</button>
+    </div>
   </section>
 
   <script>
@@ -145,6 +175,12 @@
           <img src="${item.image}" alt="${item.title}" />
           <div class="rating-badge">${item.rating}</div>
         </div>`;
+    }
+
+    function scrollCarousel(id, direction) {
+      const container = document.getElementById(id);
+      const scrollAmount = 400;
+      container.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
     }
 
     loadData();
