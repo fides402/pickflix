@@ -1,207 +1,101 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pickflix</title>
+import json
+import re
+import requests
+import csv
 
-  <!-- ✅ Favicon -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+API_KEY = "85395f1f04d886e7ad3581f64d886026"
+BASE_URL = "https://api.themoviedb.org/3"
+IMAGE_BASE = "https://image.tmdb.org/t/p/w500"
+LANG = "it-IT"
 
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet" />
+def slugify(text):
+    return re.sub(r'[^a-z0-9]+', '-', text.lower()).strip('-')
 
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: #000;
-      color: #fff;
-      font-family: 'Open Sans', sans-serif;
+def search_poster_tmdb(title):
+    url = f"{BASE_URL}/search/multi"
+    params = {
+        "api_key": API_KEY,
+        "query": title,
+        "language": LANG,
+        "include_adult": False
     }
 
-    ::-webkit-scrollbar { width: 0; height: 0; }
+    res = requests.get(url, params=params)
+    if res.status_code == 200:
+        results = res.json().get("results", [])
+        if results:
+            poster_path = results[0].get("poster_path")
+            if poster_path:
+                return f"{IMAGE_BASE}{poster_path}"
+    return "https://via.placeholder.com/500x750?text=No+Image"
 
-    header {
-      background-color: transparent;
-      padding: 10px 40px;
-      display: flex;
-      align-items: center;
+def load_staff_picks(filepath):
+    picks = []
+    with open(filepath, "r", encoding="utf-8") as file:
+        reader = csv.DictReader(file, delimiter='\t')
+        for row in reader:
+            title = row["Title"].strip()
+            rating = row["Rating"].strip()
+            image = search_poster_tmdb(title)
+            picks.append({
+                "title": title,
+                "rating": rating,
+                "image": image,
+                "link": f"https://altadefinizionepremium.com/p/{slugify(title)}"
+            })
+    print(f"✅ IMDB Staff Picks caricati: {len(picks)} titoli")
+    return picks
+
+def fetch_tmdb(endpoint, label, min_vote=6.5, pages=1, max_items=50):
+    items = []
+    print(f"📡 Caricamento: {label}...")
+
+    for page in range(1, pages + 1):
+        url = f"{BASE_URL}/{endpoint}"
+        params = {
+            "api_key": API_KEY,
+            "language": LANG,
+            "page": page
+        }
+
+        res = requests.get(url, params=params)
+        if res.status_code != 200:
+            print(f"⚠️ Errore {label} - Pagina {page}: {res.status_code}")
+            continue
+
+        for r in res.json().get("results", []):
+            title = r.get("title") or r.get("name")
+            vote = r.get("vote_average", 0)
+            poster = r.get("poster_path")
+
+            if not title or not poster or vote < min_vote:
+                continue
+
+            items.append({
+                "title": title,
+                "image": f"{IMAGE_BASE}{poster}",
+                "link": f"https://altadefinizionepremium.com/p/{slugify(title)}",
+                "rating": str(round(vote, 1))
+            })
+
+        if len(items) >= max_items:
+            break
+
+    return items[:max_items]
+
+def main():
+    data = {
+        "staff_picks": load_staff_picks("movies_and_ratings.txt"),
+        "trending_films": fetch_tmdb("trending/movie/week", "Film trend settimanali"),
+        "trending_series": fetch_tmdb("trending/tv/week", "Serie trend settimanali"),
+        "now_playing": fetch_tmdb("movie/now_playing", "Film ora al cinema", pages=3),
+        "on_air": fetch_tmdb("tv/on_the_air", "Serie ora in onda")
     }
 
-    header img {
-      height: 90px;
-    }
+    with open("data.json", "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
 
-    section {
-      padding: 30px 40px;
-    }
+    print("✅ File data.json creato con successo!")
 
-    h3 {
-      margin-bottom: 15px;
-      font-size: 22px;
-      font-weight: 600;
-    }
-
-    .carousel-wrapper { position: relative; }
-
-    .carousel {
-      display: flex;
-      gap: 12px;
-      overflow-x: auto;
-      scroll-behavior: smooth;
-      padding-bottom: 10px;
-    }
-
-    .card {
-      flex: 0 0 auto;
-      width: 180px;
-      height: 270px;
-      position: relative;
-      border-radius: 14px;
-      overflow: hidden;
-      cursor: pointer;
-      transition: transform 0.2s ease;
-    }
-
-    .card:hover {
-      transform: scale(1.05);
-    }
-
-    .card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 14px;
-    }
-
-    .rating-badge {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background: #e50914;
-      color: white;
-      font-size: 13px;
-      padding: 5px 10px;
-      border-radius: 20px;
-      font-weight: bold;
-      font-family: 'Open Sans', sans-serif;
-      z-index: 2;
-    }
-
-    .arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: rgba(0, 0, 0, 0.5);
-      border: none;
-      color: white;
-      font-size: 24px;
-      padding: 10px;
-      cursor: pointer;
-      z-index: 10;
-    }
-
-    .arrow.left { left: 0; }
-    .arrow.right { right: 0; }
-
-    @media (max-width: 768px) {
-      .arrow { display: none; }
-    }
-
-    @media (max-width: 600px) {
-      .card {
-        width: 140px;
-        height: 210px;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <img src="logo.png" alt="Pickflix" />
-  </header>
-
-  <!-- 🟩 IMDB STAFF PICKS -->
-  <section>
-    <h3>IMDB Staff Picks</h3>
-    <div class="carousel-wrapper">
-      <button class="arrow left" onclick="scrollCarousel('staff-picks', -1)">&#10094;</button>
-      <div class="carousel" id="staff-picks"></div>
-      <button class="arrow right" onclick="scrollCarousel('staff-picks', 1)">&#10095;</button>
-    </div>
-  </section>
-
-  <!-- 🟩 TRENDING FILMS -->
-  <section>
-    <h3>Film trend della settimana</h3>
-    <div class="carousel-wrapper">
-      <button class="arrow left" onclick="scrollCarousel('trending-films', -1)">&#10094;</button>
-      <div class="carousel" id="trending-films"></div>
-      <button class="arrow right" onclick="scrollCarousel('trending-films', 1)">&#10095;</button>
-    </div>
-  </section>
-
-  <!-- 🟩 TRENDING SERIES -->
-  <section>
-    <h3>Serie trend della settimana</h3>
-    <div class="carousel-wrapper">
-      <button class="arrow left" onclick="scrollCarousel('trending-series', -1)">&#10094;</button>
-      <div class="carousel" id="trending-series"></div>
-      <button class="arrow right" onclick="scrollCarousel('trending-series', 1)">&#10095;</button>
-    </div>
-  </section>
-
-  <!-- 🟩 NOW PLAYING -->
-  <section>
-    <h3>Film ora al cinema</h3>
-    <div class="carousel-wrapper">
-      <button class="arrow left" onclick="scrollCarousel('now-playing', -1)">&#10094;</button>
-      <div class="carousel" id="now-playing"></div>
-      <button class="arrow right" onclick="scrollCarousel('now-playing', 1)">&#10095;</button>
-    </div>
-  </section>
-
-  <!-- 🟩 ON AIR -->
-  <section>
-    <h3>Serie ora in onda</h3>
-    <div class="carousel-wrapper">
-      <button class="arrow left" onclick="scrollCarousel('on-air', -1)">&#10094;</button>
-      <div class="carousel" id="on-air"></div>
-      <button class="arrow right" onclick="scrollCarousel('on-air', 1)">&#10095;</button>
-    </div>
-  </section>
-
-  <!-- SCRIPT -->
-  <script>
-    async function loadData() {
-      const res = await fetch('data.json');
-      const data = await res.json();
-
-      document.getElementById('staff-picks').innerHTML = createCards(data.staff_picks);
-      document.getElementById('trending-films').innerHTML = createCards(data.trending_films);
-      document.getElementById('trending-series').innerHTML = createCards(data.trending_series);
-      document.getElementById('now-playing').innerHTML = createCards(data.now_playing);
-      document.getElementById('on-air').innerHTML = createCards(data.on_air);
-    }
-
-    function createCards(items) {
-      return items.map(item => `
-        <div class="card" onclick="window.location.href='${item.link}'">
-          <img src="${item.image}" alt="${item.title}" />
-          <div class="rating-badge">${item.rating}</div>
-        </div>
-      `).join('');
-    }
-
-    function scrollCarousel(id, direction) {
-      const container = document.getElementById(id);
-      const scrollAmount = 400;
-      container.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
-    }
-
-    loadData();
-  </script>
-
-</body>
-</html>
+if __name__ == "__main__":
+    main()
