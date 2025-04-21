@@ -8,13 +8,21 @@
   <!-- ✅ Favicon -->
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
-  <!-- Font elegante -->
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet" />
 
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { background-color: #000; color: #fff; font-family: 'Open Sans', sans-serif; }
-    ::-webkit-scrollbar { width: 0; height: 0; }
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    ::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
 
     header {
       background-color: #111;
@@ -37,7 +45,10 @@
       font-weight: 600;
     }
 
-    .carousel-wrapper { position: relative; }
+    .carousel-wrapper {
+      position: relative;
+    }
+
     .carousel {
       display: flex;
       gap: 12px;
@@ -57,7 +68,9 @@
       transition: transform 0.2s ease;
     }
 
-    .card:hover { transform: scale(1.05); }
+    .card:hover {
+      transform: scale(1.05);
+    }
 
     .card img {
       width: 100%;
@@ -80,6 +93,29 @@
       z-index: 2;
     }
 
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      font-size: 24px;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .arrow.left { left: 0; }
+    .arrow.right { right: 0; }
+
+    /* ❌ Nascondi le frecce su mobile */
+    @media (max-width: 768px) {
+      .arrow {
+        display: none;
+      }
+    }
+
     @media (max-width: 600px) {
       .card {
         width: 140px;
@@ -90,33 +126,29 @@
 </head>
 <body>
 
-  <!-- ✅ Logo Header -->
   <header>
     <img src="logo.png" alt="Pickflix">
   </header>
 
   <section>
-    <h3>🎬 Film del mese</h3>
+    <h3>Film della settimana</h3>
     <div class="carousel-wrapper">
+      <button class="arrow left" onclick="scrollCarousel('film-container', -1)">&#10094;</button>
       <div class="carousel" id="film-container"></div>
+      <button class="arrow right" onclick="scrollCarousel('film-container', 1)">&#10095;</button>
     </div>
   </section>
 
   <section>
-    <h3>📺 Serie del mese</h3>
+    <h3>Serie della settimana</h3>
     <div class="carousel-wrapper">
+      <button class="arrow left" onclick="scrollCarousel('serie-container', -1)">&#10094;</button>
       <div class="carousel" id="serie-container"></div>
+      <button class="arrow right" onclick="scrollCarousel('serie-container', 1)">&#10095;</button>
     </div>
   </section>
 
-  <section>
-    <h3>🏆 Meglio dell’anno</h3>
-    <div class="carousel-wrapper">
-      <div class="carousel" id="top-year-container"></div>
-    </div>
-  </section>
-
-  <!-- ✅ Script per caricare dati -->
+  <!-- Script -->
   <script>
     async function loadData() {
       const res = await fetch('data.json');
@@ -124,7 +156,6 @@
 
       const filmContainer = document.getElementById('film-container');
       const serieContainer = document.getElementById('serie-container');
-      const topContainer = document.getElementById('top-year-container');
 
       data.films.forEach(item => {
         filmContainer.innerHTML += createCard(item);
@@ -132,10 +163,6 @@
 
       data.series.forEach(item => {
         serieContainer.innerHTML += createCard(item);
-      });
-
-      data.top_year.forEach(item => {
-        topContainer.innerHTML += createCard(item);
       });
     }
 
@@ -145,6 +172,12 @@
           <img src="${item.image}" alt="${item.title}" />
           <div class="rating-badge">${item.rating}</div>
         </div>`;
+    }
+
+    function scrollCarousel(id, direction) {
+      const container = document.getElementById(id);
+      const scrollAmount = 400;
+      container.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
     }
 
     loadData();
