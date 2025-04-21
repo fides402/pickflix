@@ -1,4 +1,246 @@
 {
-  "films": [],
-  "series": []
+  "films": [
+    {
+      "title": "Captain America: Brave New World",
+      "description": "Dopo aver incontrato il neoeletto Presidente degli Stati Uniti Thaddeus Ross, interpretato da Harrison Ford al suo debutto nel Marvel Cinematic Universe, Sam si ritrova nel bel mezzo di un incidente internazionale. Deve scoprire le ragioni di un efferato complotto globale prima che il mondo intero sia costretto a vedere rosso.",
+      "image": "https://image.tmdb.org/t/p/w500/fhL2nDPGKjxpoWvUTo5iFCLRrh0.jpg",
+      "link": "https://altadefinizionepremium.com/p/captain-america-brave-new-world"
+    },
+    {
+      "title": "I Peccatori",
+      "description": "Cercando di lasciarsi alle spalle le loro vite travagliate, due fratelli gemelli (interpretati da Michael B. Jordan) tornano nella loro città natale alla ricerca di un nuovo inizio, ma li scopriranno che un male ancora più grande è pronto ad accoglierli nuovamente.",
+      "image": "https://image.tmdb.org/t/p/w500/g9X7IZtlwqsRHj1BZKxdXwH0cpI.jpg",
+      "link": "https://altadefinizionepremium.com/p/i-peccatori"
+    },
+    {
+      "title": "A Working Man",
+      "description": "Levon Cade ha lasciato una carriera militare decorata nelle operazioni segrete per vivere una vita semplice lavorando nell’edilizia. Ma quando la figlia del suo capo, che per lui è come una famiglia, viene rapita dai trafficanti di esseri umani, la sua ricerca per riportarla a casa scopre un mondo di corruzione molto più grande di quanto avrebbe mai potuto immaginare.",
+      "image": "https://image.tmdb.org/t/p/w500/svSRfBNmZjDnus65gZJovFNa63R.jpg",
+      "link": "https://altadefinizionepremium.com/p/a-working-man"
+    },
+    {
+      "title": "Conclave",
+      "description": "CONCLAVE ci porta nel cuore di uno degli eventi più misteriosi e segreti del mondo: l'elezione di un nuovo Papa. Dopo la morte improvvisa dell’amato e compianto Papa, il Cardinale Lawrence (Ralph Fiennes) è incaricato di dirigere questo delicato processo. Una volta che i leader più potenti della Chiesa Cattolica si riuniscono e si chiudono nelle segrete sale del Vaticano, Lawrence si ritrova intrappolato in una rete di intrighi, tradimenti e giochi di potere. Un oscuro segreto viene alla luce, minacciando di scuotere le fondamenta stesse della Chiesa.",
+      "image": "https://image.tmdb.org/t/p/w500/ftIJ42zwuFvUFVEWZQbFq1vcV5U.jpg",
+      "link": "https://altadefinizionepremium.com/p/conclave"
+    },
+    {
+      "title": "iHostage",
+      "description": "Quando un uomo armato entra in un Apple Store nel centro di Amsterdam, la polizia affronta una sfida complessa per risolvere la situazione di stallo. Ispirato a una storia vera.",
+      "image": "https://image.tmdb.org/t/p/w500/h87bgIhs4keL005Ch5aeKhnaAIL.jpg",
+      "link": "https://altadefinizionepremium.com/p/ihostage"
+    },
+    {
+      "title": "Mickey 17",
+      "description": "Mickey 17 è un \"sacrificabile\", un impiegato usa e getta, in una spedizione umana inviata a colonizzare il mondo ghiacciato Niflheim. Dopo la morte di un'iterazione, un nuovo corpo viene rigenerato con la maggior parte dei suoi ricordi intatti.",
+      "image": "https://image.tmdb.org/t/p/w500/2JQBZs01ahsOiANQ7Fs8MN9zBY4.jpg",
+      "link": "https://altadefinizionepremium.com/p/mickey-17"
+    },
+    {
+      "title": "Mr. Morfina",
+      "description": "Nate (Jack Quaid) è un uomo comune con un dono unico: non sente dolore. Quando la ragazza dei suoi sogni (Amber Midthunder) viene rapita, questa peculiarità diventa la sua arma più potente per salvarla.",
+      "image": "https://image.tmdb.org/t/p/w500/gzHJSn8I1QxGScttymjbTifloN0.jpg",
+      "link": "https://altadefinizionepremium.com/p/mr-morfina"
+    },
+    {
+      "title": "Un film Minecraft",
+      "description": "Benvenuti nel mondo di Minecraft, dove la creatività non serve solo a costruire, ma è essenziale per la sopravvivenza! Quattro improvvisati avventurieri – Garrett “The Garbage Man” Garrison (Momoa), Henry (Hansen), Natalie (Myers) e Dawn (Brooks) – sono alle prese con problemi quotidiani quando vengono improvvisamente trascinati, attraverso un misterioso portale, nell’Overworld: un bizzarro paese delle meraviglie cubico dove regna l’immaginazione. Per far ritorno a casa, dovranno imparare a padroneggiare questo mondo (e proteggerlo dalla minaccia di Piglins e Zombie) mentre intraprendono una magica missione affiancati da un esperto e inaspettato ‘costruttore’ del posto, Steve (Black). L’avventura metterà alla prova tutti e cinque, sfidandoli a essere coraggiosi e a ritrovare le qualità che rendono ciascuno di loro unico e creativo… le stesse abilità di cui hanno bisogno per tornare a vivere nel mondo reale.",
+      "image": "https://image.tmdb.org/t/p/w500/myoxQxrAEZICqe3DRyJUsiE5lWS.jpg",
+      "link": "https://altadefinizionepremium.com/p/un-film-minecraft"
+    },
+    {
+      "title": "G20",
+      "description": "Quando il vertice del G20 viene attaccato dai terroristi, la Presidente degli Stati Uniti Danielle Sutton diventa l'obiettivo numero uno. Dopo essere sfuggita alla cattura da parte degli aggressori, deve battere in astuzia il nemico per proteggere la sua famiglia, difendere il suo Paese e salvaguardare i leader mondiali, in questo film emozionante e ricco di azione.",
+      "image": "https://image.tmdb.org/t/p/w500/wv6oWAleCJZUk5htrGg413t3GCy.jpg",
+      "link": "https://altadefinizionepremium.com/p/g20"
+    },
+    {
+      "title": "Thunderbolts*",
+      "description": "Anche quando hanno affrontato i peggiori pericoli dell'universo, gli Avengers sono sempre stati una forza di speranza, dei benefattori che potevano fare questo tutto il giorno. Ma una cosa è certa: i Thunderbolts non sono gli Avengers. Il prossimo film dell'MCU riunisce un team nuovo di zecca, non di supereroi dai colori primari, ma di disadattati e misantropi. C'è la Yelena Belova di Florence Pugh, un'assassina Vedova Nera con una vena sarcastica; il Bucky Barnes di Sebastian Stan, ex agente dormiente cyborg russo; l'anti-Cap in disgrazia di Wyatt Russell, John Walker; la nemica mutafase Ghost di Hannah John-Kamen; il soldato sovietico Red Guardian di David Harbour; la Taskmaster, che sa imitare a meraviglia. E il misterioso jolly di Lewis Pullman, “Bob”. Idealmente, non è l'equipaggio che scegliereste per salvare il mondo.",
+      "image": "https://image.tmdb.org/t/p/w500/crggVLnJ6btoK4JC04ZJEs2YkwA.jpg",
+      "link": "https://altadefinizionepremium.com/p/thunderbolts"
+    },
+    {
+      "title": "My Hero Academia: You're Next",
+      "description": "In una società in cui eroi e cattivi si scontrano continuamente in nome della pace e del caos, Deku, uno studente della U.A. High School che aspira a diventare il miglior eroe possibile, affronta il cattivo che imita l'eroe che ammira da tempo. Riusciranno Deku e il resto della U.A. High Class 1-A a proteggere il mondo ponendo fine a Dark Might, l'uomo che sostiene di essere il nuovo Simbolo della Pace?",
+      "image": "https://image.tmdb.org/t/p/w500/uRzD5XTqzPxqa9TmZ1mxx0Rm3xd.jpg",
+      "link": "https://altadefinizionepremium.com/p/my-hero-academia-you-re-next"
+    },
+    {
+      "title": "Companion",
+      "description": "Ciao. Stanco di scrollare? Sei stufo di essere ignorato? Ti senti come se mancasse una parte di te? FindYourCompanion.com ti garantisce di trovare un compagno fatto apposta per te.",
+      "image": "https://image.tmdb.org/t/p/w500/AbH00wyIzvwHkiBVyRXKN4Phytl.jpg",
+      "link": "https://altadefinizionepremium.com/p/companion"
+    },
+    {
+      "title": "The Woman in the Yard",
+      "description": "Ramona (Danielle Deadwyler) è una donna che cerca di rimettere insieme i pezzi della sua vita dopo un incidente stradale che le ha portato via il marito (Russell Hornsby). Rimasta gravemente ferita, Ramona deve prendersi cura dei suoi due figli, un adolescente di 14 anni (Peyton Jackson) e una bambina di 6 anni (Estella Kahiha), nella loro casa di campagna. La routine della famiglia viene interrotta dall’arrivo di una donna misteriosa, completamente vestita di nero, che appare inspiegabilmente nel loro giardino e pronuncia un enigmatico avvertimento: “Oggi è il giorno.” Ramona, inizialmente convinta che la donna (Okwui Okpokwasili) sia solo una persona in difficoltà, scoprirà presto che le sue intenzioni sono tutt’altro che innocue.",
+      "image": "https://image.tmdb.org/t/p/w500/n0WS2TsNcS6dtaZKzxipyO7LuCJ.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-woman-in-the-yard"
+    },
+    {
+      "title": "The Accountant 2",
+      "description": "Christian Wolff (Ben Affleck) ha un talento per risolvere problemi complessi. Quando un vecchio conoscente viene ucciso, lasciando dietro di sé il messaggio criptico “trova il contabile”, Wolff è spinto a risolvere il caso. Rendendosi conto che sono necessari metodi più estremi, Wolff recluta il suo letale fratello Brax (Jon Bernthal) per aiutarlo. In collaborazione con Marybeth Medina (Cynthia Addai-Robinson), vicedirettore del Dipartimento del Tesoro degli Stati Uniti, scoprono una letale cospirazione, diventando bersagli di una spietata rete di assassini che non si fermeranno davanti a nulla pur di mantenere sepolti i loro segreti.",
+      "image": "https://image.tmdb.org/t/p/w500/7TRiTQScz6jb6wz5oW9TxWzrOAa.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-accountant-2"
+    },
+    {
+      "title": "Warfare",
+      "description": "",
+      "image": "https://image.tmdb.org/t/p/w500/oXsDTDt1MqxJreROd2cbd2FMOZ2.jpg",
+      "link": "https://altadefinizionepremium.com/p/warfare"
+    },
+    {
+      "title": "Black Bag - Doppio gioco",
+      "description": "Un avvincente spy drama che racconta la storia dei leggendari agenti segreti George Woodhouse e della sua amata moglie Kathryn. Quando lei viene sospettata di tradire la nazione, George si trova ad affrontare la prova definitiva: la fedeltà al suo matrimonio o al suo paese.",
+      "image": "https://image.tmdb.org/t/p/w500/J6bjYavkQStdrj9cW5TXQHF3NG.jpg",
+      "link": "https://altadefinizionepremium.com/p/black-bag-doppio-gioco"
+    },
+    {
+      "title": "The Alto Knights - I due volti del crimine",
+      "description": "‘The Alto Knights – I due volti del crimine’ segue le vicende di due dei più noti boss della criminalità organizzata di New York, Frank Costello (De Niro) e Vito Genovese (De Niro), intenti a contendersi il controllo delle strade della città. Un tempo migliori amici, piccole gelosie e una serie di tradimenti li mettono in una rotta di collisione mortale che cambierà per sempre la mafia (e l'America).",
+      "image": "https://image.tmdb.org/t/p/w500/tGZ6i7lExM27dGq0VfCSzNP7LQF.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-alto-knights-i-due-volti-del-crimine"
+    },
+    {
+      "title": "I Fantastici Quattro: Gli Inizi",
+      "description": "Sullo sfondo di un vivace mondo retro-futuristico ispirato agli anni ’60, il film Marvel Studios I Fantastici 4: Gli Inizi introduce la Prima Famiglia Marvel composta da Reed Richards/Mister Fantastic (Pedro Pascal), Sue Storm/Donna Invisibile (Vanessa Kirby), Johnny Storm/Torcia Umana (Joseph Quinn) e Ben Grimm/la Cosa (Ebon Moss-Bachrach) alle prese con la sfida più difficile mai affrontata. Costretti a bilanciare il loro ruolo di eroi con la forza del loro legame familiare, i protagonisti devono difendere la Terra da una vorace divinità spaziale chiamata Galactus (Ralph Ineson) e dal suo enigmatico Araldo, Silver Surfer (Julia Garner). E se il piano di Galactus di divorare l'intero pianeta e tutti i suoi abitanti non fosse già abbastanza terribile, la situazione diventa all’improvviso una questione molto personale.",
+      "image": "https://image.tmdb.org/t/p/w500/rsZF8NaSHFLPapUirua2FwUh0WS.jpg",
+      "link": "https://altadefinizionepremium.com/p/i-fantastici-quattro-gli-inizi"
+    },
+    {
+      "title": "Sonic 3 - Il film",
+      "description": "Sonic, Knuckles e Tails si ritrovano a dover fronteggiare un nuovo e formidabile nemico:  Shadow, un misterioso villain con poteri incredibili mai visti prima. Con le loro abilità messe alla prova in ogni modo, il Team Sonic dovra cercare un'alleanza inaspettata per fermare Shadow e proteggere il pianeta.",
+      "image": "https://image.tmdb.org/t/p/w500/hArbAOlNZX0qfd2Udpr6RCTflpg.jpg",
+      "link": "https://altadefinizionepremium.com/p/sonic-3-il-film"
+    },
+    {
+      "title": "Operazione vendetta",
+      "description": "Charlie Heller (Malek) è un brillante ma profondamente introverso decodificatore della CIA che lavora in un ufficio nel seminterrato del quartier generale di Langley e la cui vita viene sconvolta quando sua moglie viene uccisa in un attacco terroristico a Londra. Quando i suoi supervisori si rifiutano di agire, l'uomo prende in mano la situazione e si imbarca in un pericoloso viaggio intorno al mondo per rintracciare i responsabili, usando la sua intelligenza come arma principale per sfuggire ai suoi inseguitori e vendicare la moglie.",
+      "image": "https://image.tmdb.org/t/p/w500/9QB9r6l11p8k43OSaOMRPKxRXL4.jpg",
+      "link": "https://altadefinizionepremium.com/p/operazione-vendetta"
+    }
+  ],
+  "series": [
+    {
+      "title": "The Last of Us",
+      "description": "Vent’anni dopo la distruzione della civiltà moderna Joel, uno scaltro sopravvissuto, viene incaricato di far uscire Ellie, una ragazza di 14 anni, da una zona di quarantena sotto stretta sorveglianza. Un compito all’apparenza facile che si trasforma presto in un viaggio brutale e straziante, in cui i due si troveranno a dover attraversare gli Stati Uniti insieme e a dipendere l’uno dall’altra per sopravvivere.",
+      "image": "https://image.tmdb.org/t/p/w500/6WlffOd3bszyndGgsKGcUL6k28n.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-last-of-us"
+    },
+    {
+      "title": "Black Mirror",
+      "description": "Una serie antologica di racconti angosciosi e spiazzanti che rivelano i tratti umani più oscuri, le innovazioni più sensazionali e tanto altro ancora.",
+      "image": "https://image.tmdb.org/t/p/w500/seN6rRfN0I6n8iDXjlSMk1QjNcq.jpg",
+      "link": "https://altadefinizionepremium.com/p/black-mirror"
+    },
+    {
+      "title": "One Piece",
+      "description": "Monkey D. Rufy, soprannominato \"Cappello di paglia\", è un giovane pirata che sogna di diventare il Re dei pirati e di trovare il leggendario tesoro One Piece. Accidentalmente, da bambino, ha mangiato il frutto del diavolo Gom Gom, che gli ha conferito il potere dell'elasticità facendolo diventare letteralmente di gomma. È il capitano di una ciurma della quale fanno parte lo spadaccino Zoro, la navigatrice Nami, il cecchino Usop, il cuoco Sanji, la renna medico Chopper, l'archeologa Robin, il cyborg carpentiere  Franky e lo scheletro musicista Brook. Tutti insieme affrontano avventure epiche nel loro viaggio verso Raftel, l'isola alla fine della Rotta Maggiore, e, navigando attraverso il Mare Orientale, combattono contro pirati nemici e contro la Marina pur di conquistare il loro sogno.",
+      "image": "https://image.tmdb.org/t/p/w500/oag7edI9flSMawmNySEiSEJAbrf.jpg",
+      "link": "https://altadefinizionepremium.com/p/one-piece"
+    },
+    {
+      "title": "Daredevil: Rinascita",
+      "description": "Matt Murdock, un avvocato cieco con abilità potenziate, lotta per la giustizia con il suo movimentato studio legale. Intanto, il boss criminale Wilson Fisk porta avanti i suoi impegni politici a New York. Quando le loro identità passate emergono, entrambi si ritrovano in un’inevitabile rotta di collisione.",
+      "image": "https://image.tmdb.org/t/p/w500/ixvUubkN1Nlizw3N4zYcQnkZ3Pm.jpg",
+      "link": "https://altadefinizionepremium.com/p/daredevil-rinascita"
+    },
+    {
+      "title": "Solo Leveling",
+      "description": "Il “Gate”, un misterioso portale che collega il mondo umano a quello di terribili mostri, mette a rischio la vita degli esseri umani. Delle persone con particolari poteri, gli “hunter”, combattono per contrastarli. Sung Jinwoo è molto debole, senza particolari abilità, ed è schedato come hunter di “livello E”. Nonostante questo, cerca di fare del suo meglio per portare avanti il suo compito e pagare le spese mediche della madre… Ma un giorno, a seguito di un inspiegabile evento, Jinwoo comincia a sviluppare i suoi poteri… Che possa diventare un imbattibile hunter di \"livello S\"?",
+      "image": "https://image.tmdb.org/t/p/w500/eCD7WS9h4lCT8N4Xavc9u8R1IGk.jpg",
+      "link": "https://altadefinizionepremium.com/p/solo-leveling"
+    },
+    {
+      "title": "1923",
+      "description": "La serie segue le vicende della famiglia Dutton nel 1923, durante un'epoca di varie avversità come l'espansione occidentale, le pandemie, la siccità storica, il proibizionismo e la Grande depressione.",
+      "image": "https://image.tmdb.org/t/p/w500/vNJWr0xh7W5IDzFTnVzWhw6KoJr.jpg",
+      "link": "https://altadefinizionepremium.com/p/1923"
+    },
+    {
+      "title": "Doctor Who",
+      "description": "Il Dottore e la sua compagna Ruby Sunday viaggiano attraverso il tempo e lo spazio, dall'Inghilterra dell'epoca della Reggenza a mondi futuri devastati dalla guerra. Nel corso delle loro avventure nel TARDIS - una nave a forma di cabina telefonica che viaggia nel tempo - incontrano amici incredibili e nemici pericolosi, tra cui un terrificante uomo nero e il nemico più potente del Dottore.",
+      "image": "https://image.tmdb.org/t/p/w500/2JP6NSmBwxg75uTcIHiv5R8PpPi.jpg",
+      "link": "https://altadefinizionepremium.com/p/doctor-who"
+    },
+    {
+      "title": "La ruota del tempo",
+      "description": "Le vite di cinque giovani di un villaggio cambiano per sempre, all'arrivo di una donna strana e potente, che afferma che uno di loro sia il bambino di un'antica profezia, che potrà sovvertire l'equilibrio tra Luce e Tenebre per sempre. Dovranno scegliere se affidare a lei - e a se stessi - il destino del mondo, prima che il Tenebroso si liberi dalla sua prigione e l'Ultima Battaglia inizi.",
+      "image": "https://image.tmdb.org/t/p/w500/yA4aisjIIQqfFDgrDyXLxRNkqLp.jpg",
+      "link": "https://altadefinizionepremium.com/p/la-ruota-del-tempo"
+    },
+    {
+      "title": "Glaskupan - La cupola di vetro",
+      "description": "Quando la figlia di un'amica scompare, la criminologa Lejla si unisce alle ricerche e deve affrontare il trauma del proprio rapimento da bambina.",
+      "image": "https://image.tmdb.org/t/p/w500/hkoFjr5t3iJUzlDSvs9rF9Dl2PD.jpg",
+      "link": "https://altadefinizionepremium.com/p/glaskupan-la-cupola-di-vetro"
+    },
+    {
+      "title": "Ransom Canyon",
+      "description": "In una piccola città del Texas le passioni sono vissute intensamente mentre tre dinastie di allevatori lottano per la loro terra, la loro eredità e le persone che amano.",
+      "image": "https://image.tmdb.org/t/p/w500/vp6A0mthGwZmnowmLxqNPF0lVRN.jpg",
+      "link": "https://altadefinizionepremium.com/p/ransom-canyon"
+    },
+    {
+      "title": "Il Trono di Spade",
+      "description": "Nell'immaginario mondo di Westeros, in un tempo dal sapore medievale, s'intrecciano le vicende di alcune casate che lottano per la supremazia: i Baratheon, i Lannister, gli Stark, i Targaryen sono solo alcune delle famiglie che, tra guerre manifeste e intrighi clandestini, in un interminabile rovescio di fortune e alleanze, cercano di trionfare sugli avversari e prendere possesso del Trono di Spade, simbolo del potere e del comando. Tratto dal ciclo di romanzi Cronache del ghiaccio e del fuoco di George R. R. Martin.",
+      "image": "https://image.tmdb.org/t/p/w500/n4IxkaZanXQU89WNRxt8h1fw1yb.jpg",
+      "link": "https://altadefinizionepremium.com/p/il-trono-di-spade"
+    },
+    {
+      "title": "Scissione",
+      "description": "Mark guida un team di impiegati la cui memoria è stata chirurgicamente scissa per dividere i ricordi della vita lavorativa da quelli della vita privata. Quando un misterioso collega compare fuori dalla Lumon Corporation, inizia un viaggio alla scoperta della verità riguardo al loro lavoro.",
+      "image": "https://image.tmdb.org/t/p/w500/vhTkJpcc4UeJjI1mU0bPgYfM8Ar.jpg",
+      "link": "https://altadefinizionepremium.com/p/scissione"
+    },
+    {
+      "title": "MobLand",
+      "description": "Il potere è in palio quando gli Harrigan e gli Stevenson, due famiglie criminali londinesi in guerra, si scontrano in una battaglia all’ultimo sangue che minaccia di far crollare imperi e rovinare vite. Intrappolato nel fuoco incrociato c’è Harry Da Souza, il “fixer” scaltro e pericoloso, che sa fin troppo bene dove risiedono le lealtà quando due forze opposte si scontrano. Mentre i due imperi sono in guerra, i confini saranno oltrepassati e l’unica strada per la salvezza è scommettere sulla vita: la famiglia prima di tutto.",
+      "image": "https://image.tmdb.org/t/p/w500/abeH7n5pcuQcwYcTxG6DTZvXLP1.jpg",
+      "link": "https://altadefinizionepremium.com/p/mobland"
+    },
+    {
+      "title": "Breaking Bad",
+      "description": "Un insegnante di chimica con un cancro allo stadio terminale comincia a produrre e spacciare metanfetamina con un suo ex studente per assicurare un futuro alla famiglia.",
+      "image": "https://image.tmdb.org/t/p/w500/ineLOBPG8AZsluYwnkMpHRyu7L.jpg",
+      "link": "https://altadefinizionepremium.com/p/breaking-bad"
+    },
+    {
+      "title": "Re:Zero - Starting Life in Another World",
+      "description": "Di ritorno da un conbini lo studente Subaru Natsuki si ritrova catapultato in un altro mondo. Nel mezzo dello shock di ritrovarsi da solo in un mondo sconosciuto viene pure attaccato, ma una misteriosa ragazza dai capelli d'argento e un gatto fatato lo salvano. Subaru cerca di collaborare con la ragazza per ricambiare il favore quando vengono attaccati di nuovo e uccisi. Subaru si risveglia nello stesso posto in cui si è ritrovato in questo nuovo mondo per la prima volta e lì capisce di possedere l'abilità di \"ritornare indietro attraverso la morte\", ovvero di riavvolgere il tempo quando muore. E ora il suo scopo è di salvare la misteriosa ragazza dal tragico destino!",
+      "image": "https://image.tmdb.org/t/p/w500/ccG0ZfXOQ0834bIus4SwZrXtkyM.jpg",
+      "link": "https://altadefinizionepremium.com/p/re-zero-starting-life-in-another-world"
+    },
+    {
+      "title": "The Handmaid's Tale - Il racconto dell'ancella",
+      "description": "La società di Gilead, un tempo nota come Stati Uniti d'America, è governata da un regime misogino ed estremista che auspica un ritorno ai valori tradizionali della società. A capo di Gilead c'è un'élite di potere che schiavizza le poche donne fertili rimaste per tentare di ripopolare il mondo. Difred, una delle ancelle del Comandante Waterford, cerca di sopravvivere alla crudeltà della società in cui vive e al tempo stesso ritrovare la figlia perduta.",
+      "image": "https://image.tmdb.org/t/p/w500/qdWEaWkIQIjANGFeskheXpP0mm1.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-handmaid-s-tale-il-racconto-dell-ancella"
+    },
+    {
+      "title": "Doctor Who",
+      "description": "Il Dottore appare e sembra umano. È affascinante, arguto, e potrebbe essere scambiato per un qualsiasi uomo incontrato per strada. Ma è un Signore del tempo, ha più di 900 anni, è un alieno con due cuori e fa parte di una civiltà che possiede la tecnologia per viaggiare nel tempo. Il Dottore salva i pianeti per vivere, o meglio per hobby, ed è molto bravo in questo: salva pianeti e civiltà dal male dall'inizio del tempo. Ma chi sa chi è veramente?",
+      "image": "https://image.tmdb.org/t/p/w500/4edFyasCrkH4MKs6H4mHqlrxA6b.jpg",
+      "link": "https://altadefinizionepremium.com/p/doctor-who"
+    },
+    {
+      "title": "The White Lotus",
+      "description": "Una tagliente satira sociale che racconta le avventure di un gruppo di vacanzieri, ospiti di un meraviglioso resort di lusso.",
+      "image": "https://image.tmdb.org/t/p/w500/gbSaK9v1CbcYH1ISgbM7XObD2dW.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-white-lotus"
+    },
+    {
+      "title": "The Rookie",
+      "description": "La serie segue John Nolan, un uomo di quarant'anni, che si sposta dalla sua confortevole vita in città a Los Angeles per perseguire il suo sogno di diventare un agente del dipartimento di polizia di Los Angeles. Nolan deve però navigare nel pericoloso, umoristico e imprevedibile mondo di un poliziotto \"giovane\".",
+      "image": "https://image.tmdb.org/t/p/w500/bL1mwXDnH5fCxqc4S2n40hoVyoe.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-rookie"
+    },
+    {
+      "title": "Your Friends & Neighbors",
+      "description": "Quando un titano della finanza si trova all'improvviso senza lavoro e divorziato, inizia a rubare ai vicini ricchi per restare a galla. Rubare nella sua cerchia sociale stranamente lo esalta, ma rimane sempre più invischiato in una ragnatela mortale.",
+      "image": "https://image.tmdb.org/t/p/w500/5Red8BT8N0YaWumXMQhuoGP40Ox.jpg",
+      "link": "https://altadefinizionepremium.com/p/your-friends-neighbors"
+    }
+  ]
 }
