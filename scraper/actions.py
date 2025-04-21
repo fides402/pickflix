@@ -9,14 +9,14 @@ def slugify(text):
     return re.sub(r'[^a-z0-9]+', '-', text.lower()).strip('-')
 
 def is_series(title, description):
-    keywords = ['episode', 'season', 'series', 'tv']
+    keywords = ['season', 'episodes', 'series', 'tv']
     return any(k in description.lower() or k in title.lower() for k in keywords)
 
 def scrape():
     options = Options()
-    options.add_argument('--headless')
-    options.add_argument('--no-sandbox')
-    options.add_argument('--disable-dev-shm-usage')
+    options.add_argument("--headless")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
     options.binary_location = '/usr/bin/chromium-browser'
 
     driver = webdriver.Chrome(options=options)
@@ -24,14 +24,22 @@ def scrape():
     time.sleep(5)
 
     data = {"films": [], "series": []}
-    cards = driver.find_elements(By.CSS_SELECTOR, ".ipc-poster-card")
 
-    for card in cards:
+    # Trova le sezioni principali che contengono i titoli
+    sections = driver.find_elements(By.CSS_SELECTOR, "section.ipc-page-section")
+
+    for section in sections:
         try:
-            title = card.find_element(By.CSS_SELECTOR, ".ipc-title__text").text.strip()
-            image = card.find_element(By.CSS_SELECTOR, "img").get_attribute("src")
-            desc_elem = card.find_elements(By.CSS_SELECTOR, ".ipc-poster-card__description")
-            description = desc_elem[0].text.strip() if desc_elem else ""
+            title_tag = section.find_element(By.CSS_SELECTOR, "h3, h2, h1")
+            title = title_tag.text.strip()
+
+            # Prendi immagine e descrizione
+            image_tag = section.find_element(By.CSS_SELECTOR, "img")
+            image = image_tag.get_attribute("src")
+
+            desc_tag = section.find_element(By.CSS_SELECTOR, "div.ipc-html-content-inner-div, p")
+            description = desc_tag.text.strip()
+
             slug = slugify(title)
             link = f"https://altadefinizionepremium.com/p/{slug}"
 
@@ -48,13 +56,15 @@ def scrape():
                 data["films"].append(item)
 
         except Exception as e:
-            print(f"[skip] Card failed: {e}")
+            print(f"[SKIP] Error on section: {e}")
             continue
+
+    driver.quit()
 
     with open("data.json", "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
-    driver.quit()
+    print(f"✅ Scraping completato: {len(data['films'])} film, {len(data['series'])} serie")
 
 if __name__ == "__main__":
     scrape()
