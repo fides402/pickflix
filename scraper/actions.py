@@ -1,7 +1,7 @@
 import json
 import re
 import requests
-from datetime import datetime
+from datetime import datetime, timedelta
 
 API_KEY = "85395f1f04d886e7ad3581f64d886026"
 BASE_URL = "https://api.themoviedb.org/3"
@@ -34,12 +34,11 @@ def fetch_tmdb(endpoint, type_label):
         "api_key": API_KEY,
         "language": LANG,
         "sort_by": "vote_average.desc",
-        "vote_count.gte": 50,
+        "vote_count.gte": 100,
         "with_original_language": "en",
         "page": 1
     }
 
-    # Applica i filtri corretti per tipo
     if endpoint == "movie":
         params["primary_release_date.gte"] = start_str
         params["primary_release_date.lte"] = end_str
@@ -62,7 +61,7 @@ def fetch_tmdb(endpoint, type_label):
         if not title:
             continue
 
-        # Check extra: la data è davvero di questo mese?
+        # Check extra: è davvero di questo mese?
         release_date = r.get("primary_release_date") if endpoint == "movie" else r.get("first_air_date")
         if not release_date or not is_this_month(release_date):
             continue
@@ -94,7 +93,7 @@ def main():
     with open("data.json", "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
-    print("✅ File data.json aggiornato solo con titoli del mese.")
+    print("✅ data.json aggiornato: solo titoli del mese + più votati.")
 
 if __name__ == "__main__":
     main()
