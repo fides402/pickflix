@@ -1,151 +1,63 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pickflix</title>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+import json
+import re
+import requests
 
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { background-color: #000; color: #fff; font-family: 'Open Sans', sans-serif; }
-    ::-webkit-scrollbar { width: 0; height: 0; }
+API_KEY = "85395f1f04d886e7ad3581f64d886026"
+BASE_URL = "https://api.themoviedb.org/3"
+LANG = "it-IT"
 
-    header {
-      background-color: transparent;
-      padding: 10px 40px;
-      display: flex;
-      align-items: center;
+def slugify(text):
+    return re.sub(r'[^a-z0-9]+', '-', text.lower()).strip('-')
+
+def fetch_trending(endpoint, label):
+    url = f"{BASE_URL}/trending/{endpoint}/week"
+    params = {
+        "api_key": API_KEY,
+        "language": LANG
     }
 
-    header img {
-      height: 110px;
+    print(f"📡 Trending {label}...")
+
+    response = requests.get(url, params=params)
+    if response.status_code != 200:
+        print(f"⚠️ Errore trending {label}: {response.status_code}")
+        return []
+
+    results = response.json().get("results", [])
+    items = []
+
+    for r in results:
+        title = r.get("title") or r.get("name")
+        vote = r.get("vote_average", 0)
+        poster = r.get("poster_path")
+
+        if not title or not poster or vote < 6.5:
+            continue
+
+        image = f"https://image.tmdb.org/t/p/w500{poster}"
+        rating = round(vote, 1)
+        slug = slugify(title)
+        link = f"https://altadefinizionepremium.com/p/{slug}"
+
+        items.append({
+            "title": title,
+            "image": image,
+            "link": link,
+            "rating": str(rating)
+        })
+
+    return items
+
+def main():
+    data = {
+        "films": fetch_trending("movie", "Film"),
+        "series": fetch_trending("tv", "Serie TV")
     }
 
-    section {
-      padding: 20px 40px;
-    }
+    with open("data.json", "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
 
-    h3 {
-      margin-bottom: 15px;
-      font-size: 24px;
-      font-weight: 600;
-    }
+    print("✅ data.json aggiornato con trending film/serie ≥ 6.5")
 
-    .carousel-wrapper { position: relative; }
-    .carousel {
-      display: flex;
-      gap: 10px;
-      overflow-x: hidden;
-      scroll-behavior: smooth;
-    }
-
-    .card {
-      flex: 0 0 auto;
-      width: 180px;
-      height: 270px;
-      position: relative;
-      border-radius: 12px;
-      overflow: hidden;
-      cursor: pointer;
-      transition: transform 0.2s ease;
-    }
-
-    .card:hover { transform: scale(1.05); }
-
-    .card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 12px;
-    }
-
-    .rating-badge {
-      position: absolute;
-      top: 8px;
-      right: 8px;
-      background: #e50914;
-      color: white;
-      font-size: 13px;
-      padding: 4px 8px;
-      border-radius: 50px;
-      font-weight: bold;
-      font-family: 'Open Sans', sans-serif;
-      z-index: 2;
-    }
-
-    .arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: rgba(0, 0, 0, 0.5);
-      border: none;
-      color: white;
-      font-size: 24px;
-      padding: 10px;
-      cursor: pointer;
-      z-index: 10;
-    }
-
-    .arrow.left { left: 0; }
-    .arrow.right { right: 0; }
-  </style>
-</head>
-<body>
-  <header>
-    <img src="logo.png" alt="Pickflix" />
-  </header>
-
-  <section>
-    <h3>Film di tendenza</h3>
-    <div class="carousel-wrapper">
-      <button class="arrow left" onclick="scrollCarousel('film-container', -1)">&#10094;</button>
-      <div class="carousel" id="film-container"></div>
-      <button class="arrow right" onclick="scrollCarousel('film-container', 1)">&#10095;</button>
-    </div>
-  </section>
-
-  <section>
-    <h3>Serie di tendenza</h3>
-    <div class="carousel-wrapper">
-      <button class="arrow left" onclick="scrollCarousel('serie-container', -1)">&#10094;</button>
-      <div class="carousel" id="serie-container"></div>
-      <button class="arrow right" onclick="scrollCarousel('serie-container', 1)">&#10095;</button>
-    </div>
-  </section>
-
-  <script>
-    async function loadData() {
-      const res = await fetch('data.json');
-      const data = await res.json();
-
-      const filmContainer = document.getElementById('film-container');
-      const serieContainer = document.getElementById('serie-container');
-
-      data.films.forEach(item => {
-        filmContainer.innerHTML += createCard(item);
-      });
-
-      data.series.forEach(item => {
-        serieContainer.innerHTML += createCard(item);
-      });
-    }
-
-    function createCard(item) {
-      return `
-        <div class="card" onclick="window.location.href='${item.link}'">
-          <img src="${item.image}" alt="${item.title}" />
-          <div class="rating-badge">${item.rating}</div>
-        </div>`;
-    }
-
-    function scrollCarousel(id, direction) {
-      const container = document.getElementById(id);
-      const scrollAmount = 400;
-      container.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
-    }
-
-    loadData();
-  </script>
-</body>
-</html>
+if __name__ == "__main__":
+    main()
