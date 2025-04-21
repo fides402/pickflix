@@ -17,13 +17,17 @@ def scrape():
     r = requests.get(URL, headers=HEADERS)
     soup = BeautifulSoup(r.content, "html.parser")
 
-    picks = soup.select(".ipc-poster-card")
+    items = soup.select(".ipc-page-content-container .ipc-title")  # Fallback
+    picks = soup.find_all("section", class_="ipc-page-section")
+
+    print(f"Trovate sezioni: {len(picks)}")
+
     data = {"films": [], "series": []}
 
-    for pick in picks:
-        title_tag = pick.select_one(".ipc-title__text")
-        desc_tag = pick.find_next("div", class_="ipc-html-content-inner-div")
-        img_tag = pick.select_one("img")
+    for section in picks:
+        title_tag = section.find("h3")
+        img_tag = section.find("img")
+        desc_tag = section.find("div", class_="ipc-html-content-inner-div")
 
         if not title_tag or not img_tag:
             continue
@@ -48,6 +52,8 @@ def scrape():
 
     with open("data.json", "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
+
+    print(f"Scritti {len(data['films'])} film e {len(data['series'])} serie")
 
 if __name__ == "__main__":
     scrape()
