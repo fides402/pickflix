@@ -14,9 +14,9 @@ def is_series(title, description):
 
 def scrape():
     options = Options()
-    options.add_argument("--headless")
-    options.add_argument("--no-sandbox")
-    options.add_argument("--disable-dev-shm-usage")
+    options.add_argument('--headless')
+    options.add_argument('--no-sandbox')
+    options.add_argument('--disable-dev-shm-usage')
     options.binary_location = '/usr/bin/chromium-browser'
 
     driver = webdriver.Chrome(options=options)
@@ -25,21 +25,17 @@ def scrape():
 
     data = {"films": [], "series": []}
 
-    # Trova le sezioni principali che contengono i titoli
-    sections = driver.find_elements(By.CSS_SELECTOR, "section.ipc-page-section")
+    titles = driver.find_elements(By.CSS_SELECTOR, "h3.ipc-title__text")
+    descriptions = driver.find_elements(By.CSS_SELECTOR, "p.sc-kdBSHD.jUsAye.item--description")
+    images = driver.find_elements(By.CSS_SELECTOR, "img.ipc-image")
 
-    for section in sections:
+    count = min(len(titles), len(descriptions), len(images))
+
+    for i in range(count):
         try:
-            title_tag = section.find_element(By.CSS_SELECTOR, "h3, h2, h1")
-            title = title_tag.text.strip()
-
-            # Prendi immagine e descrizione
-            image_tag = section.find_element(By.CSS_SELECTOR, "img")
-            image = image_tag.get_attribute("src")
-
-            desc_tag = section.find_element(By.CSS_SELECTOR, "div.ipc-html-content-inner-div, p")
-            description = desc_tag.text.strip()
-
+            title = titles[i].text.strip()
+            description = descriptions[i].text.strip()
+            image = images[i].get_attribute("src")
             slug = slugify(title)
             link = f"https://altadefinizionepremium.com/p/{slug}"
 
@@ -56,7 +52,7 @@ def scrape():
                 data["films"].append(item)
 
         except Exception as e:
-            print(f"[SKIP] Error on section: {e}")
+            print(f"[SKIP] Error extracting item {i}: {e}")
             continue
 
     driver.quit()
