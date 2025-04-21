@@ -109,11 +109,9 @@
     .arrow.left { left: 0; }
     .arrow.right { right: 0; }
 
-    /* ❌ Nascondi frecce su mobile */
+    /* Nascondi frecce su mobile */
     @media (max-width: 768px) {
-      .arrow {
-        display: none;
-      }
+      .arrow { display: none; }
     }
 
     @media (max-width: 600px) {
@@ -131,29 +129,20 @@
   </header>
 
   <section>
-    <h3>Film della settimana</h3>
+    <h3>Film trend della settimana</h3>
     <div class="carousel-wrapper">
-      <button class="arrow left" onclick="scrollCarousel('film-container', -1)">&#10094;</button>
-      <div class="carousel" id="film-container"></div>
-      <button class="arrow right" onclick="scrollCarousel('film-container', 1)">&#10095;</button>
+      <button class="arrow left" onclick="scrollCarousel('trending-films', -1)">&#10094;</button>
+      <div class="carousel" id="trending-films"></div>
+      <button class="arrow right" onclick="scrollCarousel('trending-films', 1)">&#10095;</button>
     </div>
   </section>
 
   <section>
-    <h3>Serie della settimana</h3>
+    <h3>Serie trend della settimana</h3>
     <div class="carousel-wrapper">
-      <button class="arrow left" onclick="scrollCarousel('serie-container', -1)">&#10094;</button>
-      <div class="carousel" id="serie-container"></div>
-      <button class="arrow right" onclick="scrollCarousel('serie-container', 1)">&#10095;</button>
-    </div>
-  </section>
-
-  <section>
-    <h3>Meglio dell’anno</h3>
-    <div class="carousel-wrapper">
-      <button class="arrow left" onclick="scrollCarousel('top-year-container', -1)">&#10094;</button>
-      <div class="carousel" id="top-year-container"></div>
-      <button class="arrow right" onclick="scrollCarousel('top-year-container', 1)">&#10095;</button>
+      <button class="arrow left" onclick="scrollCarousel('trending-series', -1)">&#10094;</button>
+      <div class="carousel" id="trending-series"></div>
+      <button class="arrow right" onclick="scrollCarousel('trending-series', 1)">&#10095;</button>
     </div>
   </section>
 
@@ -180,9 +169,8 @@
       const res = await fetch('data.json');
       const data = await res.json();
 
-      document.getElementById('film-container').innerHTML = createCards(data.films);
-      document.getElementById('serie-container').innerHTML = createCards(data.series);
-      document.getElementById('top-year-container').innerHTML = createCards(data.top_year);
+      document.getElementById('trending-films').innerHTML = createCards(data.trending_films);
+      document.getElementById('trending-series').innerHTML = createCards(data.trending_series);
       document.getElementById('now-playing').innerHTML = createCards(data.now_playing);
       document.getElementById('on-air').innerHTML = createCards(data.on_air);
     }
