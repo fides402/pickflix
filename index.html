@@ -2,40 +2,38 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pickflix</title>
+
+  <!-- ✅ Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <!-- Font elegante -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
 
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: #000;
-      color: #fff;
-      font-family: 'Open Sans', sans-serif;
-    }
-
-    ::-webkit-scrollbar {
-      height: 0;
-    }
+    body { background-color: #000; color: #fff; font-family: 'Open Sans', sans-serif; }
+    ::-webkit-scrollbar { width: 0; height: 0; }
 
     header {
-      background-color: transparent;
-      padding: 10px 20px;
+      background-color: #111;
+      padding: 10px 40px;
       display: flex;
       align-items: center;
     }
 
     header img {
-      height: 80px;
+      height: 90px;
     }
 
     section {
-      padding: 20px;
+      padding: 30px 40px;
     }
 
     h3 {
       margin-bottom: 15px;
-      font-size: 20px;
+      font-size: 22px;
       font-weight: 600;
     }
 
@@ -45,19 +43,18 @@
 
     .carousel {
       display: flex;
-      gap: 10px;
+      gap: 12px;
       overflow-x: auto;
       scroll-behavior: smooth;
-      padding-bottom: 5px;
-      -webkit-overflow-scrolling: touch;
+      padding-bottom: 10px;
     }
 
     .card {
       flex: 0 0 auto;
-      width: 150px;
-      height: 225px;
+      width: 180px;
+      height: 270px;
       position: relative;
-      border-radius: 12px;
+      border-radius: 14px;
       overflow: hidden;
       cursor: pointer;
       transition: transform 0.2s ease;
@@ -71,87 +68,79 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      border-radius: 12px;
+      border-radius: 14px;
     }
 
     .rating-badge {
       position: absolute;
-      top: 8px;
-      right: 8px;
+      top: 10px;
+      right: 10px;
       background: #e50914;
       color: white;
       font-size: 13px;
-      padding: 4px 8px;
-      border-radius: 50px;
+      padding: 5px 10px;
+      border-radius: 20px;
       font-weight: bold;
       font-family: 'Open Sans', sans-serif;
       z-index: 2;
     }
 
     .arrow {
-      display: none; /* nasconde su mobile */
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      font-size: 24px;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10;
     }
 
-    @media (min-width: 768px) {
-      header img {
-        height: 100px;
-      }
+    .arrow.left { left: 0; }
+    .arrow.right { right: 0; }
 
-      section {
-        padding: 20px 40px;
-      }
-
-      h3 {
-        font-size: 24px;
-      }
-
+    @media (max-width: 600px) {
       .card {
-        width: 180px;
-        height: 270px;
+        width: 140px;
+        height: 210px;
       }
-
-      .arrow {
-        display: block;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: rgba(0, 0, 0, 0.5);
-        border: none;
-        color: white;
-        font-size: 24px;
-        padding: 10px;
-        cursor: pointer;
-        z-index: 10;
-      }
-
-      .arrow.left { left: 0; }
-      .arrow.right { right: 0; }
     }
   </style>
 </head>
 <body>
+
+  <!-- ✅ Logo Header -->
   <header>
-    <img src="logo.png" alt="Pickflix" />
+    <img src="logo.png" alt="Pickflix">
   </header>
 
+  <!-- 🎬 Film del mese -->
   <section>
-    <h3>Film di tendenza</h3>
+    <h3>🎬 Film del mese</h3>
     <div class="carousel-wrapper">
-      <button class="arrow left" onclick="scrollCarousel('film-container', -1)">&#10094;</button>
       <div class="carousel" id="film-container"></div>
-      <button class="arrow right" onclick="scrollCarousel('film-container', 1)">&#10095;</button>
     </div>
   </section>
 
+  <!-- 📺 Serie del mese -->
   <section>
-    <h3>Serie di tendenza</h3>
+    <h3>📺 Serie del mese</h3>
     <div class="carousel-wrapper">
-      <button class="arrow left" onclick="scrollCarousel('serie-container', -1)">&#10094;</button>
       <div class="carousel" id="serie-container"></div>
-      <button class="arrow right" onclick="scrollCarousel('serie-container', 1)">&#10095;</button>
     </div>
   </section>
 
+  <!-- 🏆 Meglio dell’anno -->
+  <section>
+    <h3>🏆 Meglio dell’anno</h3>
+    <div class="carousel-wrapper">
+      <div class="carousel" id="top-year-container"></div>
+    </div>
+  </section>
+
+  <!-- ✅ Script -->
   <script>
     async function loadData() {
       const res = await fetch('data.json');
@@ -159,6 +148,7 @@
 
       const filmContainer = document.getElementById('film-container');
       const serieContainer = document.getElementById('serie-container');
+      const topContainer = document.getElementById('top-year-container');
 
       data.films.forEach(item => {
         filmContainer.innerHTML += createCard(item);
@@ -166,6 +156,10 @@
 
       data.series.forEach(item => {
         serieContainer.innerHTML += createCard(item);
+      });
+
+      data.top_year.forEach(item => {
+        topContainer.innerHTML += createCard(item);
       });
     }
 
@@ -177,13 +171,8 @@
         </div>`;
     }
 
-    function scrollCarousel(id, direction) {
-      const container = document.getElementById(id);
-      const scrollAmount = 400;
-      container.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
-    }
-
     loadData();
   </script>
+
 </body>
 </html>
