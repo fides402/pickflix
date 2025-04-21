@@ -7,22 +7,10 @@
       "rating": "7.5"
     },
     {
-      "title": "Warfare",
-      "image": "https://image.tmdb.org/t/p/w500/oXsDTDt1MqxJreROd2cbd2FMOZ2.jpg",
-      "link": "https://altadefinizionepremium.com/p/warfare",
-      "rating": "7.2"
-    },
-    {
       "title": "Eden",
       "image": "https://image.tmdb.org/t/p/w500/ow5qdxpZx52yUYvkfO0O1ba6Hfs.jpg",
       "link": "https://altadefinizionepremium.com/p/eden",
       "rating": "7.2"
-    },
-    {
-      "title": "Gunslingers",
-      "image": "https://image.tmdb.org/t/p/w500/O7REXWPANWXvX2jhQydHjAq2DV.jpg",
-      "link": "https://altadefinizionepremium.com/p/gunslingers",
-      "rating": "6.9"
     },
     {
       "title": "G20",
@@ -45,12 +33,6 @@
   ],
   "series": [
     {
-      "title": "PULSE",
-      "image": "https://image.tmdb.org/t/p/w500/uGKTDr8ruc4IHGsEZ8wSQZpy2eN.jpg",
-      "link": "https://altadefinizionepremium.com/p/pulse",
-      "rating": "8.1"
-    },
-    {
       "title": "Devil May Cry",
       "image": "https://image.tmdb.org/t/p/w500/9YA4ko7x1o2NS65lDrlKAuNAqjJ.jpg",
       "link": "https://altadefinizionepremium.com/p/devil-may-cry",
@@ -61,6 +43,128 @@
       "image": "https://image.tmdb.org/t/p/w500/gwd2HpY2ymvmASUP3zMYF59IIr7.jpg",
       "link": "https://altadefinizionepremium.com/p/the-bondsman",
       "rating": "7.4"
+    }
+  ],
+  "top_year": [
+    {
+      "title": "Succubus",
+      "image": "https://image.tmdb.org/t/p/w500/nyGKQrctWNmhSvto8h60AhZ3iLz.jpg",
+      "link": "https://altadefinizionepremium.com/p/succubus",
+      "rating": "9.6"
+    },
+    {
+      "title": "GHOST: Rite Here Rite Now",
+      "image": "https://image.tmdb.org/t/p/w500/w3xJNhW5ZYuK3BySbsJiGDmKEiV.jpg",
+      "link": "https://altadefinizionepremium.com/p/ghost-rite-here-rite-now",
+      "rating": "8.8"
+    },
+    {
+      "title": "La strada dell’anima",
+      "image": "https://image.tmdb.org/t/p/w500/n2502V2YazIsxz0DaVF32mWSZM1.jpg",
+      "link": "https://altadefinizionepremium.com/p/la-strada-dell-anima",
+      "rating": "8.3"
+    },
+    {
+      "title": "Il robot selvaggio",
+      "image": "https://image.tmdb.org/t/p/w500/rTLuc7yMbrkl1V9uocfoRcjJqdm.jpg",
+      "link": "https://altadefinizionepremium.com/p/il-robot-selvaggio",
+      "rating": "8.3"
+    },
+    {
+      "title": "Gaga Chromatica Ball",
+      "image": "https://image.tmdb.org/t/p/w500/v4mk7RY5z4l3ILOMMOcrG29vR1o.jpg",
+      "link": "https://altadefinizionepremium.com/p/gaga-chromatica-ball",
+      "rating": "8.3"
+    },
+    {
+      "title": "Ultraman: Rising",
+      "image": "https://image.tmdb.org/t/p/w500/cYaThZqtLuBThBcrV6YRLLwL8F5.jpg",
+      "link": "https://altadefinizionepremium.com/p/ultraman-rising",
+      "rating": "8.2"
+    },
+    {
+      "title": "Super/Man: The Christopher Reeve Story",
+      "image": "https://image.tmdb.org/t/p/w500/jKzPP063EXiMFpKp7vsWJ85rgTR.jpg",
+      "link": "https://altadefinizionepremium.com/p/super-man-the-christopher-reeve-story",
+      "rating": "8.2"
+    },
+    {
+      "title": "Transformers One",
+      "image": "https://image.tmdb.org/t/p/w500/41caGYMJKZMjlwFXwsIxL1UtUN.jpg",
+      "link": "https://altadefinizionepremium.com/p/transformers-one",
+      "rating": "8.1"
+    },
+    {
+      "title": "Con le musiche di John Williams",
+      "image": "https://image.tmdb.org/t/p/w500/2RAKpCpk8ehh64ZIm6wfkjVAdCq.jpg",
+      "link": "https://altadefinizionepremium.com/p/con-le-musiche-di-john-williams",
+      "rating": "8.0"
+    },
+    {
+      "title": "Memoir of a Snail",
+      "image": "https://image.tmdb.org/t/p/w500/57AgZv1ITeBLShiNdchZ5153evs.jpg",
+      "link": "https://altadefinizionepremium.com/p/memoir-of-a-snail",
+      "rating": "8.0"
+    },
+    {
+      "title": "La ragazza del mare",
+      "image": "https://image.tmdb.org/t/p/w500/x5kk0Fdjw5eHorosZby9jVXJCEG.jpg",
+      "link": "https://altadefinizionepremium.com/p/la-ragazza-del-mare",
+      "rating": "7.9"
+    },
+    {
+      "title": "Better Man",
+      "image": "https://image.tmdb.org/t/p/w500/bBwQX0Dn4b6riK1pNNYcmATaSQ5.jpg",
+      "link": "https://altadefinizionepremium.com/p/better-man",
+      "rating": "7.8"
+    },
+    {
+      "title": "Dog Man",
+      "image": "https://image.tmdb.org/t/p/w500/eP5w2Kxz4KVGSqXTmbTEQemC0Wv.jpg",
+      "link": "https://altadefinizionepremium.com/p/dog-man",
+      "rating": "7.8"
+    },
+    {
+      "title": "Henry Danger - Il film",
+      "image": "https://image.tmdb.org/t/p/w500/zdpTiWvFUVLBURzsjMd8nJme4FG.jpg",
+      "link": "https://altadefinizionepremium.com/p/henry-danger-il-film",
+      "rating": "7.8"
+    },
+    {
+      "title": "Io sono: Celine Dion",
+      "image": "https://image.tmdb.org/t/p/w500/dYuGveQ8D3WS3O5umVGfVSYdLKi.jpg",
+      "link": "https://altadefinizionepremium.com/p/io-sono-celine-dion",
+      "rating": "7.8"
+    },
+    {
+      "title": "Sonic 3 - Il film",
+      "image": "https://image.tmdb.org/t/p/w500/hArbAOlNZX0qfd2Udpr6RCTflpg.jpg",
+      "link": "https://altadefinizionepremium.com/p/sonic-3-il-film",
+      "rating": "7.7"
+    },
+    {
+      "title": "Misteri dal profondo",
+      "image": "https://image.tmdb.org/t/p/w500/7IU0AhsnulBMEGauba755Snhcy4.jpg",
+      "link": "https://altadefinizionepremium.com/p/misteri-dal-profondo",
+      "rating": "7.7"
+    },
+    {
+      "title": "RETURN",
+      "image": "https://image.tmdb.org/t/p/w500/qbWCYsz0PTTV468J3bQ8pQBa6KS.jpg",
+      "link": "https://altadefinizionepremium.com/p/return",
+      "rating": "7.7"
+    },
+    {
+      "title": "Black Box Diaries",
+      "image": "https://image.tmdb.org/t/p/w500/wX95ps6Haijvt7evwSwqx1gs88e.jpg",
+      "link": "https://altadefinizionepremium.com/p/black-box-diaries",
+      "rating": "7.6"
+    },
+    {
+      "title": "Un'avventura spaziale - Un film dei Looney Tunes",
+      "image": "https://image.tmdb.org/t/p/w500/tQfc5FOzl5xn7CLSBSULOq9mLXi.jpg",
+      "link": "https://altadefinizionepremium.com/p/un-avventura-spaziale-un-film-dei-looney-tunes",
+      "rating": "7.6"
     }
   ]
 }
