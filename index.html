@@ -19,10 +19,7 @@
       font-family: 'Open Sans', sans-serif;
     }
 
-    ::-webkit-scrollbar {
-      width: 0;
-      height: 0;
-    }
+    ::-webkit-scrollbar { width: 0; height: 0; }
 
     header {
       background-color: transparent;
@@ -45,9 +42,7 @@
       font-weight: 600;
     }
 
-    .carousel-wrapper {
-      position: relative;
-    }
+    .carousel-wrapper { position: relative; }
 
     .carousel {
       display: flex;
@@ -124,9 +119,20 @@
 <body>
 
   <header>
-    <img src="logo.png" alt="Pickflix">
+    <img src="logo.png" alt="Pickflix" />
   </header>
 
+  <!-- 🟩 IMDB STAFF PICKS -->
+  <section>
+    <h3>IMDB Staff Picks</h3>
+    <div class="carousel-wrapper">
+      <button class="arrow left" onclick="scrollCarousel('staff-picks', -1)">&#10094;</button>
+      <div class="carousel" id="staff-picks"></div>
+      <button class="arrow right" onclick="scrollCarousel('staff-picks', 1)">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- 🟩 TRENDING FILMS -->
   <section>
     <h3>Film trend della settimana</h3>
     <div class="carousel-wrapper">
@@ -136,6 +142,7 @@
     </div>
   </section>
 
+  <!-- 🟩 TRENDING SERIES -->
   <section>
     <h3>Serie trend della settimana</h3>
     <div class="carousel-wrapper">
@@ -145,6 +152,7 @@
     </div>
   </section>
 
+  <!-- 🟩 NOW PLAYING -->
   <section>
     <h3>Film ora al cinema</h3>
     <div class="carousel-wrapper">
@@ -154,6 +162,7 @@
     </div>
   </section>
 
+  <!-- 🟩 ON AIR -->
   <section>
     <h3>Serie ora in onda</h3>
     <div class="carousel-wrapper">
@@ -163,11 +172,13 @@
     </div>
   </section>
 
+  <!-- SCRIPT -->
   <script>
     async function loadData() {
       const res = await fetch('data.json');
       const data = await res.json();
 
+      document.getElementById('staff-picks').innerHTML = createCards(data.staff_picks);
       document.getElementById('trending-films').innerHTML = createCards(data.trending_films);
       document.getElementById('trending-series').innerHTML = createCards(data.trending_series);
       document.getElementById('now-playing').innerHTML = createCards(data.now_playing);
