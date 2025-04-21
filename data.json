@@ -5,38 +5,38 @@
       "image": "https://image.tmdb.org/t/p/w500/g9X7IZtlwqsRHj1BZKxdXwH0cpI.jpg",
       "link": "https://altadefinizionepremium.com/p/i-peccatori",
       "rating": "7.5"
+    },
+    {
+      "title": "Warfare",
+      "image": "https://image.tmdb.org/t/p/w500/oXsDTDt1MqxJreROd2cbd2FMOZ2.jpg",
+      "link": "https://altadefinizionepremium.com/p/warfare",
+      "rating": "7.2"
+    },
+    {
+      "title": "Eden",
+      "image": "https://image.tmdb.org/t/p/w500/ow5qdxpZx52yUYvkfO0O1ba6Hfs.jpg",
+      "link": "https://altadefinizionepremium.com/p/eden",
+      "rating": "7.2"
     }
   ],
   "series": [
     {
-      "title": "Suidooster",
-      "image": "https://image.tmdb.org/t/p/w500/naCgSiacvV685kait6fBvhVhdce.jpg",
-      "link": "https://altadefinizionepremium.com/p/suidooster",
+      "title": "PULSE",
+      "image": "https://image.tmdb.org/t/p/w500/uGKTDr8ruc4IHGsEZ8wSQZpy2eN.jpg",
+      "link": "https://altadefinizionepremium.com/p/pulse",
+      "rating": "8.1"
+    },
+    {
+      "title": "Devil May Cry",
+      "image": "https://image.tmdb.org/t/p/w500/9YA4ko7x1o2NS65lDrlKAuNAqjJ.jpg",
+      "link": "https://altadefinizionepremium.com/p/devil-may-cry",
+      "rating": "7.9"
+    },
+    {
+      "title": "The Bondsman",
+      "image": "https://image.tmdb.org/t/p/w500/gwd2HpY2ymvmASUP3zMYF59IIr7.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-bondsman",
       "rating": "7.4"
-    },
-    {
-      "title": "NCIS - Unità anticrimine",
-      "image": "https://image.tmdb.org/t/p/w500/mCA9VTvNNMalJ0WBoUcjxMh4UJV.jpg",
-      "link": "https://altadefinizionepremium.com/p/ncis-unit-anticrimine",
-      "rating": "7.6"
-    },
-    {
-      "title": "Alla mot alla med Filip och Fredrik",
-      "image": "https://image.tmdb.org/t/p/w500/zDmZBMOUtpdjkwI1TDtQt4jmBej.jpg",
-      "link": "https://altadefinizionepremium.com/p/alla-mot-alla-med-filip-och-fredrik",
-      "rating": "7.5"
-    },
-    {
-      "title": "Al Fondo Hay Sitio",
-      "image": "https://image.tmdb.org/t/p/w500/4BkYVoybIvM2U7zeg2JTT5M5dwF.jpg",
-      "link": "https://altadefinizionepremium.com/p/al-fondo-hay-sitio",
-      "rating": "7.8"
-    },
-    {
-      "title": "Have I Got a Bit More News for You",
-      "image": "https://image.tmdb.org/t/p/w500/aOZuKQ2uWRfZPzn61bnzQT5LhMR.jpg",
-      "link": "https://altadefinizionepremium.com/p/have-i-got-a-bit-more-news-for-you",
-      "rating": "7.0"
     }
   ]
 }
