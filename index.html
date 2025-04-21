@@ -1,89 +1,86 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pickflix</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     @font-face {
       font-family: 'Bebas Neue';
       src: url('BebasNeue-Regular.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
     }
+
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
+
     body {
-      font-family: 'Rubik', sans-serif;
       background-color: #000;
       color: #fff;
+      font-family: 'Bebas Neue', sans-serif;
     }
+
     ::-webkit-scrollbar {
       width: 0;
       height: 0;
     }
+
     header {
       background-color: #111;
       padding: 10px 40px;
       display: flex;
       align-items: center;
     }
+
     header img {
-      height: 80px;
+      height: 110px;
     }
+
     section {
       padding: 20px 40px;
-      position: relative;
     }
+
     h3 {
       margin-bottom: 15px;
-      font-family: 'Rubik', sans-serif;
       font-size: 24px;
     }
+
     .carousel-wrapper {
       position: relative;
     }
+
     .carousel {
       display: flex;
       gap: 10px;
       overflow-x: hidden;
       scroll-behavior: smooth;
     }
+
     .card {
       flex: 0 0 auto;
       width: 180px;
-      background-color: transparent;
-      border-radius: 8px;
-      cursor: pointer;
+      height: 270px;
       position: relative;
-      transition: transform 0.2s;
+      border-radius: 12px;
       overflow: hidden;
-      display: flex;
-      flex-direction: column;
+      cursor: pointer;
+      transition: transform 0.2s ease;
     }
+
     .card:hover {
       transform: scale(1.05);
     }
+
     .card img {
       width: 100%;
-      height: 270px;
+      height: 100%;
       object-fit: cover;
-      border-radius: 8px;
+      border-radius: 12px;
     }
-    .card .info {
-      font-size: 14px;
-      font-family: 'Bebas Neue', sans-serif;
-      background: rgba(255, 255, 255, 0.15);
-      border-radius: 0 0 8px 8px;
-      text-align: left;
-      backdrop-filter: blur(4px);
-      padding: 8px 10px;
-      margin-top: 4px;
-    }
+
     .rating-badge {
       position: absolute;
       top: 8px;
@@ -96,11 +93,12 @@
       font-weight: bold;
       z-index: 2;
     }
+
     .arrow {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background-color: rgba(0,0,0,0.5);
+      background-color: rgba(0, 0, 0, 0.5);
       border: none;
       color: white;
       font-size: 24px;
@@ -108,9 +106,11 @@
       cursor: pointer;
       z-index: 10;
     }
+
     .arrow.left {
       left: 0;
     }
+
     .arrow.right {
       right: 0;
     }
@@ -161,7 +161,6 @@
         <div class="card" onclick="window.location.href='${item.link}'">
           <img src="${item.image}" alt="${item.title}" />
           <div class="rating-badge">${item.rating}</div>
-          <div class="info">${item.title}</div>
         </div>`;
     }
 
