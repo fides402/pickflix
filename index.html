@@ -2,9 +2,9 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pickflix</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     * {
       box-sizing: border-box;
@@ -43,50 +43,61 @@
       font-size: 1rem;
     }
 
-    .hero {
-      background: url('https://assets.nflxext.com/ffe/siteui/vlv3/16e02e45-7375-40aa-a264-5e0b053fce6d/d3a97bcd-8bcb-4e5f-9f79-97f10491f5c1/IT-it-20240219-popsignuptwoweeks-perspective_alpha_website_large.jpg') no-repeat center center/cover;
-      height: 60vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 2rem;
-    }
-
-    .hero h1 {
-      font-size: 2.5rem;
-      max-width: 600px;
-    }
-
     .section {
       padding: 2rem;
     }
 
     .section h2 {
       margin-bottom: 1rem;
+      font-size: 1.5rem;
     }
 
-    .row {
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
       gap: 1rem;
     }
 
     .card {
-      background-color: #333;
-      height: 200px;
-      border-radius: 4px;
-      background-size: cover;
-      background-position: center;
+      background-color: #222;
+      border-radius: 6px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-content {
+      padding: 0.5rem;
+    }
+
+    .card-content h3 {
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .card-content p {
+      font-size: 0.85rem;
+      color: #bbb;
     }
 
     @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 1.6rem;
+      header nav {
+        display: none;
       }
 
-      nav {
-        display: none;
+      .card img {
+        height: 180px;
       }
     }
   </style>
@@ -97,37 +108,60 @@
     <div class="logo">Pickflix</div>
     <nav>
       <a href="#">Home</a>
-      <a href="#">Serie</a>
       <a href="#">Film</a>
-      <a href="#">La mia lista</a>
+      <a href="#">Serie</a>
     </nav>
   </header>
 
-  <section class="hero">
-    <h1>Scopri le migliori serie e film consigliati per te</h1>
+  <section class="section" id="film-section">
+    <h2>🎬 Film Consigliati</h2>
+    <div class="grid" id="film-grid"></div>
   </section>
 
-  <section class="section">
-    <h2>Popolari su Pickflix</h2>
-    <div class="row">
-      <div class="card" style="background-image: url('https://picsum.photos/200/300?random=1');"></div>
-      <div class="card" style="background-image: url('https://picsum.photos/200/300?random=2');"></div>
-      <div class="card" style="background-image: url('https://picsum.photos/200/300?random=3');"></div>
-      <div class="card" style="background-image: url('https://picsum.photos/200/300?random=4');"></div>
-      <div class="card" style="background-image: url('https://picsum.photos/200/300?random=5');"></div>
-    </div>
+  <section class="section" id="serie-section">
+    <h2>📺 Serie Consigliate</h2>
+    <div class="grid" id="serie-grid"></div>
   </section>
 
-  <section class="section">
-    <h2>Top Picks per te</h2>
-    <div class="row">
-      <div class="card" style="background-image: url('https://picsum.photos/200/300?random=6');"></div>
-      <div class="card" style="background-image: url('https://picsum.photos/200/300?random=7');"></div>
-      <div class="card" style="background-image: url('https://picsum.photos/200/300?random=8');"></div>
-      <div class="card" style="background-image: url('https://picsum.photos/200/300?random=9');"></div>
-      <div class="card" style="background-image: url('https://picsum.photos/200/300?random=10');"></div>
-    </div>
-  </section>
+  <script>
+    async function loadData() {
+      try {
+        const res = await fetch('data.json');
+        const data = await res.json();
+
+        const filmGrid = document.getElementById('film-grid');
+        const serieGrid = document.getElementById('serie-grid');
+
+        function createCard(item) {
+          const card = document.createElement('div');
+          card.className = 'card';
+          card.onclick = () => window.open(item.link, '_blank');
+
+          card.innerHTML = `
+            <img src="${item.image}" alt="${item.title}" />
+            <div class="card-content">
+              <h3>${item.title}</h3>
+              <p>${item.description}</p>
+            </div>
+          `;
+          return card;
+        }
+
+        data.films.forEach(film => {
+          filmGrid.appendChild(createCard(film));
+        });
+
+        data.series.forEach(serie => {
+          serieGrid.appendChild(createCard(serie));
+        });
+
+      } catch (error) {
+        console.error("Errore nel caricamento dei dati:", error);
+      }
+    }
+
+    loadData();
+  </script>
 
 </body>
 </html>
