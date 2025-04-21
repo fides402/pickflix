@@ -1,46 +1,26 @@
-import json
-import re
 import requests
 import csv
+import re
 
-API_KEY = "85395f1f04d886e7ad3581f64d886026"
+API_KEY = "YOUR_TMDB_API_KEY"
 BASE_URL = "https://api.themoviedb.org/3"
-LANG = "it-IT"
+IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500"
 
 def slugify(text):
     return re.sub(r'[^a-z0-9]+', '-', text.lower()).strip('-')
 
-def fetch_tmdb(endpoint, label, min_vote=6.5, pages=1):
-    items = []
-    print(f"📡 Fetching {label}...")
-
-    for page in range(1, pages + 1):
-        url = f"{BASE_URL}/{endpoint}"
-        params = {
-            "api_key": API_KEY,
-            "language": LANG,
-            "page": page
-        }
-
-        res = requests.get(url, params=params)
-        if res.status_code != 200:
-            continue
-
-        for r in res.json().get("results", []):
-            title = r.get("title") or r.get("name")
-            vote = r.get("vote_average", 0)
-            poster = r.get("poster_path")
-            if not title or not poster or vote < min_vote:
-                continue
-
-            items.append({
-                "title": title,
-                "image": f"https://image.tmdb.org/t/p/w500{poster}",
-                "link": f"https://altadefinizionepremium.com/p/{slugify(title)}",
-                "rating": str(round(vote, 1))
-            })
-
-    return items
+def search_tmdb(title):
+    params = {
+        "api_key": API_KEY,
+        "query": title,
+        "language": "it-IT"
+    }
+    response = requests.get(f"{BASE_URL}/search/multi", params=params)
+    if response.status_code == 200:
+        results = response.json().get("results", [])
+        if results:
+            return results[0].get("poster_path")
+    return None
 
 def load_staff_picks(filepath):
     picks = []
@@ -49,28 +29,12 @@ def load_staff_picks(filepath):
         for row in reader:
             title = row["Title"].strip()
             rating = row["Rating"].strip()
+            poster_path = search_tmdb(title)
+            image_url = f"{IMAGE_BASE_URL}{poster_path}" if poster_path else "https://via.placeholder.com/500x750?text=No+Image"
             picks.append({
                 "title": title,
                 "rating": rating,
-                "image": "https://via.placeholder.com/500x750?text=No+Image",
+                "image": image_url,
                 "link": f"https://altadefinizionepremium.com/p/{slugify(title)}"
             })
-    print(f"✅ Caricati {len(picks)} titoli da IMDB Staff Picks")
     return picks
-
-def main():
-    data = {
-        "staff_picks": load_staff_picks("movies_and_ratings.txt"),
-        "trending_films": fetch_tmdb("trending/movie/week", "Film trend settimanali"),
-        "trending_series": fetch_tmdb("trending/tv/week", "Serie trend settimanali"),
-        "now_playing": fetch_tmdb("movie/now_playing", "Film ora al cinema", pages=3),
-        "on_air": fetch_tmdb("tv/on_the_air", "Serie ora in onda")
-    }
-
-    with open("data.json", "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
-
-    print("✅ data.json aggiornato con IMDB Staff Picks e altre categorie")
-
-if __name__ == "__main__":
-    main()
