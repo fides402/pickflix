@@ -2,14 +2,14 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pickflix</title>
 
   <!-- ✅ Favicon -->
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
   <!-- Font elegante -->
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet" />
 
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -37,10 +37,7 @@
       font-weight: 600;
     }
 
-    .carousel-wrapper {
-      position: relative;
-    }
-
+    .carousel-wrapper { position: relative; }
     .carousel {
       display: flex;
       gap: 12px;
@@ -60,9 +57,7 @@
       transition: transform 0.2s ease;
     }
 
-    .card:hover {
-      transform: scale(1.05);
-    }
+    .card:hover { transform: scale(1.05); }
 
     .card img {
       width: 100%;
@@ -85,22 +80,6 @@
       z-index: 2;
     }
 
-    .arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: rgba(0, 0, 0, 0.5);
-      border: none;
-      color: white;
-      font-size: 24px;
-      padding: 10px;
-      cursor: pointer;
-      z-index: 10;
-    }
-
-    .arrow.left { left: 0; }
-    .arrow.right { right: 0; }
-
     @media (max-width: 600px) {
       .card {
         width: 140px;
@@ -116,7 +95,6 @@
     <img src="logo.png" alt="Pickflix">
   </header>
 
-  <!-- 🎬 Film del mese -->
   <section>
     <h3>🎬 Film del mese</h3>
     <div class="carousel-wrapper">
@@ -124,7 +102,6 @@
     </div>
   </section>
 
-  <!-- 📺 Serie del mese -->
   <section>
     <h3>📺 Serie del mese</h3>
     <div class="carousel-wrapper">
@@ -132,7 +109,6 @@
     </div>
   </section>
 
-  <!-- 🏆 Meglio dell’anno -->
   <section>
     <h3>🏆 Meglio dell’anno</h3>
     <div class="carousel-wrapper">
@@ -140,7 +116,7 @@
     </div>
   </section>
 
-  <!-- ✅ Script -->
+  <!-- ✅ Script per caricare dati -->
   <script>
     async function loadData() {
       const res = await fetch('data.json');
