@@ -4,27 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pickflix</title>
-
-  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      background-color: #000;
-      color: #fff;
-      font-family: 'Open Sans', sans-serif;
-    }
-
-    ::-webkit-scrollbar {
-      width: 0;
-      height: 0;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background-color: #000; color: #fff; font-family: 'Open Sans', sans-serif; }
+    ::-webkit-scrollbar { width: 0; height: 0; }
 
     header {
       background-color: #111;
@@ -47,10 +32,7 @@
       font-weight: 600;
     }
 
-    .carousel-wrapper {
-      position: relative;
-    }
-
+    .carousel-wrapper { position: relative; }
     .carousel {
       display: flex;
       gap: 10px;
@@ -69,9 +51,7 @@
       transition: transform 0.2s ease;
     }
 
-    .card:hover {
-      transform: scale(1.05);
-    }
+    .card:hover { transform: scale(1.05); }
 
     .card img {
       width: 100%;
@@ -107,13 +87,8 @@
       z-index: 10;
     }
 
-    .arrow.left {
-      left: 0;
-    }
-
-    .arrow.right {
-      right: 0;
-    }
+    .arrow.left { left: 0; }
+    .arrow.right { right: 0; }
   </style>
 </head>
 <body>
@@ -122,7 +97,7 @@
   </header>
 
   <section>
-    <h3>Film del mese</h3>
+    <h3>🎬 Film del mese</h3>
     <div class="carousel-wrapper">
       <button class="arrow left" onclick="scrollCarousel('film-container', -1)">&#10094;</button>
       <div class="carousel" id="film-container"></div>
@@ -131,11 +106,20 @@
   </section>
 
   <section>
-    <h3>Serie attualmente in onda</h3>
+    <h3>📺 Serie del mese</h3>
     <div class="carousel-wrapper">
       <button class="arrow left" onclick="scrollCarousel('serie-container', -1)">&#10094;</button>
       <div class="carousel" id="serie-container"></div>
       <button class="arrow right" onclick="scrollCarousel('serie-container', 1)">&#10095;</button>
+    </div>
+  </section>
+
+  <section>
+    <h3>🏆 Meglio dell’anno</h3>
+    <div class="carousel-wrapper">
+      <button class="arrow left" onclick="scrollCarousel('top-year-container', -1)">&#10094;</button>
+      <div class="carousel" id="top-year-container"></div>
+      <button class="arrow right" onclick="scrollCarousel('top-year-container', 1)">&#10095;</button>
     </div>
   </section>
 
@@ -146,13 +130,18 @@
 
       const filmContainer = document.getElementById('film-container');
       const serieContainer = document.getElementById('serie-container');
+      const topContainer = document.getElementById('top-year-container');
 
-      data.films.forEach(film => {
-        filmContainer.innerHTML += createCard(film);
+      data.films.forEach(item => {
+        filmContainer.innerHTML += createCard(item);
       });
 
-      data.series.forEach(serie => {
-        serieContainer.innerHTML += createCard(serie);
+      data.series.forEach(item => {
+        serieContainer.innerHTML += createCard(item);
+      });
+
+      data.top_year.forEach(item => {
+        topContainer.innerHTML += createCard(item);
       });
     }
 
