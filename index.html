@@ -5,15 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pickflix</title>
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
 
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     body {
@@ -90,7 +89,7 @@
       font-size: 13px;
       padding: 4px 8px;
       border-radius: 50px;
-      font-weight: 700;
+      font-weight: bold;
       font-family: 'Open Sans', sans-serif;
       z-index: 2;
     }
@@ -119,7 +118,7 @@
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Pickflix">
+    <img src="logo.png" alt="Pickflix" />
   </header>
 
   <section>
@@ -132,7 +131,7 @@
   </section>
 
   <section>
-    <h3>Serie del mese</h3>
+    <h3>Serie attualmente in onda</h3>
     <div class="carousel-wrapper">
       <button class="arrow left" onclick="scrollCarousel('serie-container', -1)">&#10094;</button>
       <div class="carousel" id="serie-container"></div>
