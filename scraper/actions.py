@@ -3,10 +3,12 @@ import re
 import requests
 from datetime import datetime
 
+# === CONFIG ===
 API_KEY = "85395f1f04d886e7ad3581f64d886026"
 BASE_URL = "https://api.themoviedb.org/3"
 LANG = "it-IT"
 
+# === UTILS ===
 def slugify(text):
     return re.sub(r'[^a-z0-9]+', '-', text.lower()).strip('-')
 
@@ -16,6 +18,7 @@ def get_month_range():
     end = today
     return start.strftime('%Y-%m-%d'), end.strftime('%Y-%m-%d')
 
+# === FETCH FUNCTION ===
 def fetch_tmdb_month(endpoint, date_key, label):
     start_date, end_date = get_month_range()
 
@@ -46,7 +49,7 @@ def fetch_tmdb_month(endpoint, date_key, label):
         vote = r.get("vote_average", 0)
         poster = r.get("poster_path")
 
-        if not title or not poster or vote < 7:
+        if not title or not poster or vote < 6.5:
             continue
 
         image = f"https://image.tmdb.org/t/p/w500{poster}"
@@ -63,6 +66,7 @@ def fetch_tmdb_month(endpoint, date_key, label):
 
     return items
 
+# === MAIN ===
 def main():
     data = {
         "films": fetch_tmdb_month("movie", "primary_release_date", "Film del mese"),
@@ -72,7 +76,7 @@ def main():
     with open("data.json", "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
-    print("✅ data.json aggiornato con FILM e SERIE del mese con voto ≥ 7")
+    print("✅ data.json aggiornato con FILM e SERIE del mese (voto ≥ 6.5)")
 
 if __name__ == "__main__":
     main()
