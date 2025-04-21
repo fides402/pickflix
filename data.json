@@ -1,5 +1,5 @@
 {
-  "films": [
+  "trending_films": [
     {
       "title": "I Peccatori",
       "image": "https://image.tmdb.org/t/p/w500/g9X7IZtlwqsRHj1BZKxdXwH0cpI.jpg",
@@ -7,21 +7,21 @@
       "rating": "7.5"
     },
     {
-      "title": "Warfare",
-      "image": "https://image.tmdb.org/t/p/w500/oXsDTDt1MqxJreROd2cbd2FMOZ2.jpg",
-      "link": "https://altadefinizionepremium.com/p/warfare",
+      "title": "Conclave",
+      "image": "https://image.tmdb.org/t/p/w500/ftIJ42zwuFvUFVEWZQbFq1vcV5U.jpg",
+      "link": "https://altadefinizionepremium.com/p/conclave",
       "rating": "7.2"
     },
     {
-      "title": "Eden",
-      "image": "https://image.tmdb.org/t/p/w500/ow5qdxpZx52yUYvkfO0O1ba6Hfs.jpg",
-      "link": "https://altadefinizionepremium.com/p/eden",
-      "rating": "7.2"
+      "title": "Mickey 17",
+      "image": "https://image.tmdb.org/t/p/w500/2JQBZs01ahsOiANQ7Fs8MN9zBY4.jpg",
+      "link": "https://altadefinizionepremium.com/p/mickey-17",
+      "rating": "6.9"
     },
     {
-      "title": "Gunslingers",
-      "image": "https://image.tmdb.org/t/p/w500/O7REXWPANWXvX2jhQydHjAq2DV.jpg",
-      "link": "https://altadefinizionepremium.com/p/gunslingers",
+      "title": "Mr. Morfina",
+      "image": "https://image.tmdb.org/t/p/w500/gzHJSn8I1QxGScttymjbTifloN0.jpg",
+      "link": "https://altadefinizionepremium.com/p/mr-morfina",
       "rating": "6.9"
     },
     {
@@ -31,158 +31,144 @@
       "rating": "6.7"
     },
     {
+      "title": "Warfare",
+      "image": "https://image.tmdb.org/t/p/w500/oXsDTDt1MqxJreROd2cbd2FMOZ2.jpg",
+      "link": "https://altadefinizionepremium.com/p/warfare",
+      "rating": "7.2"
+    },
+    {
+      "title": "The Accountant 2",
+      "image": "https://image.tmdb.org/t/p/w500/7TRiTQScz6jb6wz5oW9TxWzrOAa.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-accountant-2",
+      "rating": "7.5"
+    },
+    {
       "title": "Operazione vendetta",
       "image": "https://image.tmdb.org/t/p/w500/9QB9r6l11p8k43OSaOMRPKxRXL4.jpg",
       "link": "https://altadefinizionepremium.com/p/operazione-vendetta",
       "rating": "6.7"
     },
     {
-      "title": "Drop - Accetta o rifiuta",
-      "image": "https://image.tmdb.org/t/p/w500/sYo8mowvoL1Hi1vsS8dSEpqArJM.jpg",
-      "link": "https://altadefinizionepremium.com/p/drop-accetta-o-rifiuta",
+      "title": "The Brutalist",
+      "image": "https://image.tmdb.org/t/p/w500/LfI6QwtR7HTguzvjLESpc6qNK6.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-brutalist",
+      "rating": "7.1"
+    },
+    {
+      "title": "Companion",
+      "image": "https://image.tmdb.org/t/p/w500/AbH00wyIzvwHkiBVyRXKN4Phytl.jpg",
+      "link": "https://altadefinizionepremium.com/p/companion",
+      "rating": "7.1"
+    }
+  ],
+  "trending_series": [
+    {
+      "title": "The Last of Us",
+      "image": "https://image.tmdb.org/t/p/w500/6WlffOd3bszyndGgsKGcUL6k28n.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-last-of-us",
+      "rating": "8.6"
+    },
+    {
+      "title": "Black Mirror",
+      "image": "https://image.tmdb.org/t/p/w500/seN6rRfN0I6n8iDXjlSMk1QjNcq.jpg",
+      "link": "https://altadefinizionepremium.com/p/black-mirror",
+      "rating": "8.3"
+    },
+    {
+      "title": "One Piece",
+      "image": "https://image.tmdb.org/t/p/w500/oag7edI9flSMawmNySEiSEJAbrf.jpg",
+      "link": "https://altadefinizionepremium.com/p/one-piece",
+      "rating": "8.7"
+    },
+    {
+      "title": "Daredevil: Rinascita",
+      "image": "https://image.tmdb.org/t/p/w500/ixvUubkN1Nlizw3N4zYcQnkZ3Pm.jpg",
+      "link": "https://altadefinizionepremium.com/p/daredevil-rinascita",
+      "rating": "8.2"
+    },
+    {
+      "title": "Glaskupan - La cupola di vetro",
+      "image": "https://image.tmdb.org/t/p/w500/hkoFjr5t3iJUzlDSvs9rF9Dl2PD.jpg",
+      "link": "https://altadefinizionepremium.com/p/glaskupan-la-cupola-di-vetro",
+      "rating": "7.1"
+    },
+    {
+      "title": "Ransom Canyon",
+      "image": "https://image.tmdb.org/t/p/w500/vp6A0mthGwZmnowmLxqNPF0lVRN.jpg",
+      "link": "https://altadefinizionepremium.com/p/ransom-canyon",
+      "rating": "7.2"
+    },
+    {
+      "title": "Solo Leveling",
+      "image": "https://image.tmdb.org/t/p/w500/eCD7WS9h4lCT8N4Xavc9u8R1IGk.jpg",
+      "link": "https://altadefinizionepremium.com/p/solo-leveling",
+      "rating": "8.6"
+    },
+    {
+      "title": "Doctor Who",
+      "image": "https://image.tmdb.org/t/p/w500/2JP6NSmBwxg75uTcIHiv5R8PpPi.jpg",
+      "link": "https://altadefinizionepremium.com/p/doctor-who",
       "rating": "6.5"
-    }
-  ],
-  "series": [
-    {
-      "title": "PULSE",
-      "image": "https://image.tmdb.org/t/p/w500/uGKTDr8ruc4IHGsEZ8wSQZpy2eN.jpg",
-      "link": "https://altadefinizionepremium.com/p/pulse",
-      "rating": "8.1"
     },
     {
-      "title": "Devil May Cry",
-      "image": "https://image.tmdb.org/t/p/w500/9YA4ko7x1o2NS65lDrlKAuNAqjJ.jpg",
-      "link": "https://altadefinizionepremium.com/p/devil-may-cry",
-      "rating": "7.9"
+      "title": "La ruota del tempo",
+      "image": "https://image.tmdb.org/t/p/w500/yA4aisjIIQqfFDgrDyXLxRNkqLp.jpg",
+      "link": "https://altadefinizionepremium.com/p/la-ruota-del-tempo",
+      "rating": "7.7"
     },
     {
-      "title": "The Bondsman",
-      "image": "https://image.tmdb.org/t/p/w500/gwd2HpY2ymvmASUP3zMYF59IIr7.jpg",
-      "link": "https://altadefinizionepremium.com/p/the-bondsman",
-      "rating": "7.4"
-    }
-  ],
-  "top_year": [
-    {
-      "title": "Succubus",
-      "image": "https://image.tmdb.org/t/p/w500/nyGKQrctWNmhSvto8h60AhZ3iLz.jpg",
-      "link": "https://altadefinizionepremium.com/p/succubus",
-      "rating": "9.6"
-    },
-    {
-      "title": "GHOST: Rite Here Rite Now",
-      "image": "https://image.tmdb.org/t/p/w500/w3xJNhW5ZYuK3BySbsJiGDmKEiV.jpg",
-      "link": "https://altadefinizionepremium.com/p/ghost-rite-here-rite-now",
-      "rating": "8.8"
-    },
-    {
-      "title": "La strada dell’anima",
-      "image": "https://image.tmdb.org/t/p/w500/n2502V2YazIsxz0DaVF32mWSZM1.jpg",
-      "link": "https://altadefinizionepremium.com/p/la-strada-dell-anima",
-      "rating": "8.3"
-    },
-    {
-      "title": "Il robot selvaggio",
-      "image": "https://image.tmdb.org/t/p/w500/rTLuc7yMbrkl1V9uocfoRcjJqdm.jpg",
-      "link": "https://altadefinizionepremium.com/p/il-robot-selvaggio",
-      "rating": "8.3"
-    },
-    {
-      "title": "Gaga Chromatica Ball",
-      "image": "https://image.tmdb.org/t/p/w500/v4mk7RY5z4l3ILOMMOcrG29vR1o.jpg",
-      "link": "https://altadefinizionepremium.com/p/gaga-chromatica-ball",
-      "rating": "8.3"
-    },
-    {
-      "title": "Ultraman: Rising",
-      "image": "https://image.tmdb.org/t/p/w500/cYaThZqtLuBThBcrV6YRLLwL8F5.jpg",
-      "link": "https://altadefinizionepremium.com/p/ultraman-rising",
+      "title": "1923",
+      "image": "https://image.tmdb.org/t/p/w500/vNJWr0xh7W5IDzFTnVzWhw6KoJr.jpg",
+      "link": "https://altadefinizionepremium.com/p/1923",
       "rating": "8.2"
     },
     {
-      "title": "Super/Man: The Christopher Reeve Story",
-      "image": "https://image.tmdb.org/t/p/w500/jKzPP063EXiMFpKp7vsWJ85rgTR.jpg",
-      "link": "https://altadefinizionepremium.com/p/super-man-the-christopher-reeve-story",
+      "title": "The White Lotus",
+      "image": "https://image.tmdb.org/t/p/w500/gbSaK9v1CbcYH1ISgbM7XObD2dW.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-white-lotus",
+      "rating": "7.6"
+    },
+    {
+      "title": "Doctor Who",
+      "image": "https://image.tmdb.org/t/p/w500/4edFyasCrkH4MKs6H4mHqlrxA6b.jpg",
+      "link": "https://altadefinizionepremium.com/p/doctor-who",
+      "rating": "7.5"
+    },
+    {
+      "title": "MobLand",
+      "image": "https://image.tmdb.org/t/p/w500/abeH7n5pcuQcwYcTxG6DTZvXLP1.jpg",
+      "link": "https://altadefinizionepremium.com/p/mobland",
+      "rating": "8.5"
+    },
+    {
+      "title": "Projekt UFO",
+      "image": "https://image.tmdb.org/t/p/w500/o6UuFbNWWn70CODRDrzXhr0fCK6.jpg",
+      "link": "https://altadefinizionepremium.com/p/projekt-ufo",
+      "rating": "6.7"
+    },
+    {
+      "title": "The Handmaid's Tale - Il racconto dell'ancella",
+      "image": "https://image.tmdb.org/t/p/w500/qdWEaWkIQIjANGFeskheXpP0mm1.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-handmaid-s-tale-il-racconto-dell-ancella",
       "rating": "8.2"
     },
     {
-      "title": "Transformers One",
-      "image": "https://image.tmdb.org/t/p/w500/41caGYMJKZMjlwFXwsIxL1UtUN.jpg",
-      "link": "https://altadefinizionepremium.com/p/transformers-one",
-      "rating": "8.1"
+      "title": "Il Trono di Spade",
+      "image": "https://image.tmdb.org/t/p/w500/n4IxkaZanXQU89WNRxt8h1fw1yb.jpg",
+      "link": "https://altadefinizionepremium.com/p/il-trono-di-spade",
+      "rating": "8.5"
     },
     {
-      "title": "Con le musiche di John Williams",
-      "image": "https://image.tmdb.org/t/p/w500/2RAKpCpk8ehh64ZIm6wfkjVAdCq.jpg",
-      "link": "https://altadefinizionepremium.com/p/con-le-musiche-di-john-williams",
-      "rating": "8.0"
+      "title": "The Rookie",
+      "image": "https://image.tmdb.org/t/p/w500/bL1mwXDnH5fCxqc4S2n40hoVyoe.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-rookie",
+      "rating": "8.5"
     },
     {
-      "title": "Blink",
-      "image": "https://image.tmdb.org/t/p/w500/w8w7QbN4gyX4tL2nvenS7Xh44su.jpg",
-      "link": "https://altadefinizionepremium.com/p/blink",
-      "rating": "8.0"
-    },
-    {
-      "title": "Memoir of a Snail",
-      "image": "https://image.tmdb.org/t/p/w500/57AgZv1ITeBLShiNdchZ5153evs.jpg",
-      "link": "https://altadefinizionepremium.com/p/memoir-of-a-snail",
-      "rating": "8.0"
-    },
-    {
-      "title": "La ragazza del mare",
-      "image": "https://image.tmdb.org/t/p/w500/x5kk0Fdjw5eHorosZby9jVXJCEG.jpg",
-      "link": "https://altadefinizionepremium.com/p/la-ragazza-del-mare",
+      "title": "Pokémon",
+      "image": "https://image.tmdb.org/t/p/w500/jmyUVxAeNrYWn1rrJWWEIjQSAbm.jpg",
+      "link": "https://altadefinizionepremium.com/p/pok-mon",
       "rating": "7.9"
-    },
-    {
-      "title": "Better Man",
-      "image": "https://image.tmdb.org/t/p/w500/bBwQX0Dn4b6riK1pNNYcmATaSQ5.jpg",
-      "link": "https://altadefinizionepremium.com/p/better-man",
-      "rating": "7.8"
-    },
-    {
-      "title": "Dog Man",
-      "image": "https://image.tmdb.org/t/p/w500/eP5w2Kxz4KVGSqXTmbTEQemC0Wv.jpg",
-      "link": "https://altadefinizionepremium.com/p/dog-man",
-      "rating": "7.8"
-    },
-    {
-      "title": "Henry Danger - Il film",
-      "image": "https://image.tmdb.org/t/p/w500/zdpTiWvFUVLBURzsjMd8nJme4FG.jpg",
-      "link": "https://altadefinizionepremium.com/p/henry-danger-il-film",
-      "rating": "7.8"
-    },
-    {
-      "title": "Io sono: Celine Dion",
-      "image": "https://image.tmdb.org/t/p/w500/dYuGveQ8D3WS3O5umVGfVSYdLKi.jpg",
-      "link": "https://altadefinizionepremium.com/p/io-sono-celine-dion",
-      "rating": "7.8"
-    },
-    {
-      "title": "Sonic 3 - Il film",
-      "image": "https://image.tmdb.org/t/p/w500/hArbAOlNZX0qfd2Udpr6RCTflpg.jpg",
-      "link": "https://altadefinizionepremium.com/p/sonic-3-il-film",
-      "rating": "7.7"
-    },
-    {
-      "title": "Misteri dal profondo",
-      "image": "https://image.tmdb.org/t/p/w500/7IU0AhsnulBMEGauba755Snhcy4.jpg",
-      "link": "https://altadefinizionepremium.com/p/misteri-dal-profondo",
-      "rating": "7.7"
-    },
-    {
-      "title": "Witches",
-      "image": "https://image.tmdb.org/t/p/w500/ldbidE9ynQmRRtINFIe5uaWomiY.jpg",
-      "link": "https://altadefinizionepremium.com/p/witches",
-      "rating": "7.7"
-    },
-    {
-      "title": "RETURN",
-      "image": "https://image.tmdb.org/t/p/w500/qbWCYsz0PTTV468J3bQ8pQBa6KS.jpg",
-      "link": "https://altadefinizionepremium.com/p/return",
-      "rating": "7.7"
     }
   ],
   "now_playing": [
