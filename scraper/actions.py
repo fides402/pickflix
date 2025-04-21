@@ -1,52 +1,54 @@
-import requests
 import json
 import re
+import requests
+
+API_KEY = "85395f1f04d886e7ad3581f64d886026"
+BASE_URL = "https://api.themoviedb.org/3"
+LANG = "it-IT"
 
 def slugify(text):
     return re.sub(r'[^a-z0-9]+', '-', text.lower()).strip('-')
 
-def fetch_rottentomatoes(url, content_type):
-    headers = {
-        "User-Agent": "Mozilla/5.0",
-        "Accept": "application/json"
+def fetch_tmdb(endpoint, type_label):
+    url = f"{BASE_URL}/trending/{endpoint}/week"
+    params = {
+        "api_key": API_KEY,
+        "language": LANG
     }
 
-    response = requests.get(url, headers=headers)
+    print(f"📡 Fetching {type_label}...")
+
+    response = requests.get(url, params=params)
     if response.status_code != 200:
-        print(f"⚠️ Errore nel fetch {content_type}: {response.status_code}")
+        print(f"⚠️ Errore {type_label.upper()}: {response.status_code}")
         return []
 
-    items = response.json().get("results", [])
-    result = []
+    results = response.json().get("results", [])
+    items = []
 
-    for item in items:
-        title = item.get("title") or item.get("name")
+    for r in results:
+        title = r.get("title") or r.get("name")
         if not title:
             continue
-        description = item.get("synopsis", "")
-        image = item.get("posterImage", {}).get("url", "")
+        description = r.get("overview", "")
+        poster_path = r.get("poster_path")
+        image = f"https://image.tmdb.org/t/p/w500{poster_path}" if poster_path else ""
         slug = slugify(title)
         link = f"https://altadefinizionepremium.com/p/{slug}"
 
-        result.append({
+        items.append({
             "title": title,
             "description": description,
             "image": image,
             "link": link
         })
 
-    return result
+    return items
 
 def main():
     data = {
-        "films": fetch_rottentomatoes(
-            "https://www.rottentomatoes.com/api/private/v2.0/browse?minTomato=0&maxTomato=100&services=all&genres=1&sortBy=most-popular&type=movie",
-            "films"
-        ),
-        "series": fetch_rottentomatoes(
-            "https://www.rottentomatoes.com/api/private/v2.0/browse?minTomato=0&maxTomato=100&services=all&genres=1&sortBy=most-popular&type=tv",
-            "series"
-        )
+        "films": fetch_tmdb("movie", "films"),
+        "series": fetch_tmdb("tv", "series")
     }
 
     with open("data.json", "w", encoding="utf-8") as f:
