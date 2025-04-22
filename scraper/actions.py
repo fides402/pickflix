@@ -1,7 +1,7 @@
+
 import json
 import re
 import requests
-import csv
 
 API_KEY = "85395f1f04d886e7ad3581f64d886026"
 BASE_URL = "https://api.themoviedb.org/3"
@@ -19,7 +19,6 @@ def search_poster_tmdb(title):
         "language": LANG,
         "include_adult": False
     }
-
     res = requests.get(url, params=params)
     if res.status_code == 200:
         results = res.json().get("results", [])
@@ -32,10 +31,12 @@ def search_poster_tmdb(title):
 def load_staff_picks(filepath):
     picks = []
     with open(filepath, "r", encoding="utf-8") as file:
-        reader = csv.DictReader(file, delimiter='\t')
-        for row in reader:
-            title = row["Title"].strip()
-            rating = row["Rating"].strip()
+        for line in file:
+            if "–" not in line:
+                continue
+            title, rating = line.strip().split("–")
+            title = title.strip()
+            rating = rating.strip()
             image = search_poster_tmdb(title)
             picks.append({
                 "title": title,
@@ -49,7 +50,6 @@ def load_staff_picks(filepath):
 def fetch_tmdb(endpoint, label, min_vote=6.5, pages=1, max_items=50):
     items = []
     print(f"📡 Caricamento: {label}...")
-
     for page in range(1, pages + 1):
         url = f"{BASE_URL}/{endpoint}"
         params = {
@@ -57,30 +57,24 @@ def fetch_tmdb(endpoint, label, min_vote=6.5, pages=1, max_items=50):
             "language": LANG,
             "page": page
         }
-
         res = requests.get(url, params=params)
         if res.status_code != 200:
             print(f"⚠️ Errore {label} - Pagina {page}: {res.status_code}")
             continue
-
         for r in res.json().get("results", []):
             title = r.get("title") or r.get("name")
             vote = r.get("vote_average", 0)
             poster = r.get("poster_path")
-
             if not title or not poster or vote < min_vote:
                 continue
-
             items.append({
                 "title": title,
                 "image": f"{IMAGE_BASE}{poster}",
                 "link": f"https://altadefinizionepremium.com/p/{slugify(title)}",
                 "rating": str(round(vote, 1))
             })
-
-        if len(items) >= max_items:
-            break
-
+            if len(items) >= max_items:
+                break
     return items[:max_items]
 
 def main():
@@ -91,10 +85,8 @@ def main():
         "now_playing": fetch_tmdb("movie/now_playing", "Film ora al cinema", pages=3),
         "on_air": fetch_tmdb("tv/on_the_air", "Serie ora in onda")
     }
-
     with open("data.json", "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
-
     print("✅ File data.json creato con successo!")
 
 if __name__ == "__main__":
