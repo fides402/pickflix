@@ -1,3 +1,4 @@
+
 import requests
 import json
 import re
@@ -28,15 +29,20 @@ def search_tmdb_info(title):
             return image_url, rating
     return "https://via.placeholder.com/500x750?text=No+Image", 0
 
-def load_titles_with_ratings(filepath):
+def load_titles_with_ratings(filepath, label):
     picks = []
     with open(filepath, "r", encoding="utf-8") as file:
-        for line in file:
-            parts = line.strip().rsplit("-", 1)
+        for i, line in enumerate(file, 1):
+            if "–" not in line:
+                print(f"⚠️ Riga {i} ignorata in {label}: {line.strip()}")
+                continue
+            parts = line.strip().rsplit("–", 1)
             if len(parts) != 2:
+                print(f"⚠️ Riga malformata in {label}: {line.strip()}")
                 continue
             title, rating = parts
-            title, rating = title.strip(), rating.strip()
+            title = title.strip()
+            rating = rating.strip()
             image, _ = search_tmdb_info(title)
             picks.append({
                 "title": title,
@@ -44,7 +50,7 @@ def load_titles_with_ratings(filepath):
                 "image": image,
                 "link": f"https://altadefinizionepremium.com/p/{slugify(title)}"
             })
-    print(f"✅ Caricati {len(picks)} titoli da {filepath}")
+    print(f"✅ {label} caricati: {len(picks)} titoli")
     return picks
 
 def fetch_tmdb(endpoint, label, min_vote=6.5, pages=1, max_items=50):
@@ -81,16 +87,18 @@ def fetch_tmdb(endpoint, label, min_vote=6.5, pages=1, max_items=50):
 
 def main():
     data = {
-        "staff_picks": load_titles_with_ratings("movies_and_ratings.txt"),
-        "cannes_2025": load_titles_with_ratings("cannes2025.txt"),
-        "emozioni": load_titles_with_ratings("emozioni.txt"),
+        "staff_picks": load_titles_with_ratings("movies_and_ratings.txt", "IMDB Staff Picks"),
+        "cannes_2025": load_titles_with_ratings("cannes2025.txt", "Cannes 2025"),
+        "emozioni": load_titles_with_ratings("emozioni.txt", "Film Emozionanti"),
         "trending_films": fetch_tmdb("trending/movie/week", "Film trend settimanali"),
         "trending_series": fetch_tmdb("trending/tv/week", "Serie trend settimanali"),
         "now_playing": fetch_tmdb("movie/now_playing", "Film ora al cinema", pages=3),
         "on_air": fetch_tmdb("tv/on_the_air", "Serie ora in onda")
     }
+
     with open("data.json", "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
+
     print("✅ File data.json creato con successo!")
 
 if __name__ == "__main__":
