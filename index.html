@@ -203,5 +203,27 @@
     loadData();
   </script>
 
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const carousels = document.querySelectorAll(".carousel");
+
+  // Restore scroll
+  carousels.forEach(carousel => {
+    const saved = localStorage.getItem("scroll_" + carousel.id);
+    if (saved) carousel.scrollLeft = parseInt(saved);
+  });
+
+  // Save scroll on click
+  document.querySelectorAll(".card").forEach(card => {
+    card.addEventListener("click", () => {
+      carousels.forEach(carousel => {
+        localStorage.setItem("scroll_" + carousel.id, carousel.scrollLeft);
+      });
+    });
+  });
+});
+</script>
+
 </body>
 </html>
