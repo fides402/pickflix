@@ -155,17 +155,14 @@
       "rating": "7.8",
       "image": "https://image.tmdb.org/t/p/w500/r46leE6PSzLR3pnVzaxx5Q30yUF.jpg",
       "link": "https://altadefinizionepremium.com/p/havoc"
-    }
-  ],
-  "cannes_2025": [
+    },
     {
       "title": "Mission: Impossible",
-      "rating": "The Final Reckoning\t8.3",
+      "rating": "The Final Reckoning - 8.3",
       "image": "https://image.tmdb.org/t/p/w500/sM2atplnXKyHpabXXpZNpevcwh3.jpg",
       "link": "https://altadefinizionepremium.com/p/mission-impossible"
     }
   ],
-  "emozioni": [],
   "trending_films": [
     {
       "title": "I Peccatori",
@@ -254,28 +251,28 @@
       "rating": "8.7"
     },
     {
-      "title": "Daredevil: Rinascita",
-      "image": "https://image.tmdb.org/t/p/w500/ixvUubkN1Nlizw3N4zYcQnkZ3Pm.jpg",
-      "link": "https://altadefinizionepremium.com/p/daredevil-rinascita",
-      "rating": "8.2"
-    },
-    {
       "title": "Ransom Canyon",
       "image": "https://image.tmdb.org/t/p/w500/vp6A0mthGwZmnowmLxqNPF0lVRN.jpg",
       "link": "https://altadefinizionepremium.com/p/ransom-canyon",
       "rating": "7.4"
     },
     {
-      "title": "Glaskupan - La cupola di vetro",
-      "image": "https://image.tmdb.org/t/p/w500/hkoFjr5t3iJUzlDSvs9rF9Dl2PD.jpg",
-      "link": "https://altadefinizionepremium.com/p/glaskupan-la-cupola-di-vetro",
-      "rating": "7.1"
-    },
-    {
       "title": "Solo Leveling",
       "image": "https://image.tmdb.org/t/p/w500/eCD7WS9h4lCT8N4Xavc9u8R1IGk.jpg",
       "link": "https://altadefinizionepremium.com/p/solo-leveling",
       "rating": "8.6"
+    },
+    {
+      "title": "Daredevil: Rinascita",
+      "image": "https://image.tmdb.org/t/p/w500/ixvUubkN1Nlizw3N4zYcQnkZ3Pm.jpg",
+      "link": "https://altadefinizionepremium.com/p/daredevil-rinascita",
+      "rating": "8.2"
+    },
+    {
+      "title": "Glaskupan - La cupola di vetro",
+      "image": "https://image.tmdb.org/t/p/w500/hkoFjr5t3iJUzlDSvs9rF9Dl2PD.jpg",
+      "link": "https://altadefinizionepremium.com/p/glaskupan-la-cupola-di-vetro",
+      "rating": "7.1"
     },
     {
       "title": "The Handmaid's Tale - Il racconto dell'ancella",
@@ -302,16 +299,16 @@
       "rating": "8.5"
     },
     {
-      "title": "Projekt UFO",
-      "image": "https://image.tmdb.org/t/p/w500/o6UuFbNWWn70CODRDrzXhr0fCK6.jpg",
-      "link": "https://altadefinizionepremium.com/p/projekt-ufo",
-      "rating": "6.7"
-    },
-    {
       "title": "Scissione",
       "image": "https://image.tmdb.org/t/p/w500/vhTkJpcc4UeJjI1mU0bPgYfM8Ar.jpg",
       "link": "https://altadefinizionepremium.com/p/scissione",
       "rating": "8.4"
+    },
+    {
+      "title": "Projekt UFO",
+      "image": "https://image.tmdb.org/t/p/w500/o6UuFbNWWn70CODRDrzXhr0fCK6.jpg",
+      "link": "https://altadefinizionepremium.com/p/projekt-ufo",
+      "rating": "6.7"
     },
     {
       "title": "Heavenly Ever After",
@@ -338,10 +335,10 @@
       "rating": "7.9"
     },
     {
-      "title": "Lycoris Recoil",
-      "image": "https://image.tmdb.org/t/p/w500/1GJMVzfL7lRy4XqvS8UjsX2tzHt.jpg",
-      "link": "https://altadefinizionepremium.com/p/lycoris-recoil",
-      "rating": "8.2"
+      "title": "Doctor Who",
+      "image": "https://image.tmdb.org/t/p/w500/4edFyasCrkH4MKs6H4mHqlrxA6b.jpg",
+      "link": "https://altadefinizionepremium.com/p/doctor-who",
+      "rating": "7.5"
     }
   ],
   "now_playing": [
