@@ -2,28 +2,10 @@
   "staff_picks": [],
   "trending_films": [
     {
-      "title": "The Accountant 2",
-      "image": "https://image.tmdb.org/t/p/w500/7TRiTQScz6jb6wz5oW9TxWzrOAa.jpg",
-      "link": "https://altadefinizionepremium.com/p/the-accountant-2",
-      "rating": "7.4"
-    },
-    {
       "title": "I Peccatori",
       "image": "https://image.tmdb.org/t/p/w500/g9X7IZtlwqsRHj1BZKxdXwH0cpI.jpg",
       "link": "https://altadefinizionepremium.com/p/i-peccatori",
       "rating": "7.4"
-    },
-    {
-      "title": "Mr. Morfina",
-      "image": "https://image.tmdb.org/t/p/w500/gzHJSn8I1QxGScttymjbTifloN0.jpg",
-      "link": "https://altadefinizionepremium.com/p/mr-morfina",
-      "rating": "6.9"
-    },
-    {
-      "title": "Warfare",
-      "image": "https://image.tmdb.org/t/p/w500/oXsDTDt1MqxJreROd2cbd2FMOZ2.jpg",
-      "link": "https://altadefinizionepremium.com/p/warfare",
-      "rating": "7.3"
     },
     {
       "title": "Mickey 17",
@@ -32,10 +14,16 @@
       "rating": "6.9"
     },
     {
-      "title": "The Brutalist",
-      "image": "https://image.tmdb.org/t/p/w500/LfI6QwtR7HTguzvjLESpc6qNK6.jpg",
-      "link": "https://altadefinizionepremium.com/p/the-brutalist",
-      "rating": "7.1"
+      "title": "Mr. Morfina",
+      "image": "https://image.tmdb.org/t/p/w500/gzHJSn8I1QxGScttymjbTifloN0.jpg",
+      "link": "https://altadefinizionepremium.com/p/mr-morfina",
+      "rating": "6.9"
+    },
+    {
+      "title": "Conclave",
+      "image": "https://image.tmdb.org/t/p/w500/ftIJ42zwuFvUFVEWZQbFq1vcV5U.jpg",
+      "link": "https://altadefinizionepremium.com/p/conclave",
+      "rating": "7.2"
     },
     {
       "title": "Operazione vendetta",
@@ -56,16 +44,46 @@
       "rating": "6.8"
     },
     {
-      "title": "Conclave",
-      "image": "https://image.tmdb.org/t/p/w500/ftIJ42zwuFvUFVEWZQbFq1vcV5U.jpg",
-      "link": "https://altadefinizionepremium.com/p/conclave",
-      "rating": "7.2"
+      "title": "G20",
+      "image": "https://image.tmdb.org/t/p/w500/wv6oWAleCJZUk5htrGg413t3GCy.jpg",
+      "link": "https://altadefinizionepremium.com/p/g20",
+      "rating": "6.7"
     },
     {
-      "title": "Companion",
-      "image": "https://image.tmdb.org/t/p/w500/AbH00wyIzvwHkiBVyRXKN4Phytl.jpg",
-      "link": "https://altadefinizionepremium.com/p/companion",
-      "rating": "7.1"
+      "title": "Thunderbolts*",
+      "image": "https://image.tmdb.org/t/p/w500/crggVLnJ6btoK4JC04ZJEs2YkwA.jpg",
+      "link": "https://altadefinizionepremium.com/p/thunderbolts",
+      "rating": "10.0"
+    },
+    {
+      "title": "Flow - Un mondo da salvare",
+      "image": "https://image.tmdb.org/t/p/w500/v1VjlY1AFAcmpLcsBe1Exyxp8CZ.jpg",
+      "link": "https://altadefinizionepremium.com/p/flow-un-mondo-da-salvare",
+      "rating": "8.2"
+    },
+    {
+      "title": "Misteri dal profondo",
+      "image": "https://image.tmdb.org/t/p/w500/7IU0AhsnulBMEGauba755Snhcy4.jpg",
+      "link": "https://altadefinizionepremium.com/p/misteri-dal-profondo",
+      "rating": "7.7"
+    },
+    {
+      "title": "The Accountant 2",
+      "image": "https://image.tmdb.org/t/p/w500/7TRiTQScz6jb6wz5oW9TxWzrOAa.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-accountant-2",
+      "rating": "7.4"
+    },
+    {
+      "title": "Warfare",
+      "image": "https://image.tmdb.org/t/p/w500/oXsDTDt1MqxJreROd2cbd2FMOZ2.jpg",
+      "link": "https://altadefinizionepremium.com/p/warfare",
+      "rating": "7.3"
+    },
+    {
+      "title": "Mufasa: Il Re Leone",
+      "image": "https://image.tmdb.org/t/p/w500/28wQf8Hve6eDB0Ktv0A6Q6YOtD7.jpg",
+      "link": "https://altadefinizionepremium.com/p/mufasa-il-re-leone",
+      "rating": "7.4"
     }
   ],
   "trending_series": [
@@ -94,30 +112,6 @@
       "rating": "8.3"
     },
     {
-      "title": "Solo Leveling",
-      "image": "https://image.tmdb.org/t/p/w500/eCD7WS9h4lCT8N4Xavc9u8R1IGk.jpg",
-      "link": "https://altadefinizionepremium.com/p/solo-leveling",
-      "rating": "8.6"
-    },
-    {
-      "title": "Doctor Who",
-      "image": "https://image.tmdb.org/t/p/w500/2JP6NSmBwxg75uTcIHiv5R8PpPi.jpg",
-      "link": "https://altadefinizionepremium.com/p/doctor-who",
-      "rating": "6.5"
-    },
-    {
-      "title": "La ruota del tempo",
-      "image": "https://image.tmdb.org/t/p/w500/yA4aisjIIQqfFDgrDyXLxRNkqLp.jpg",
-      "link": "https://altadefinizionepremium.com/p/la-ruota-del-tempo",
-      "rating": "7.7"
-    },
-    {
-      "title": "The Handmaid's Tale - Il racconto dell'ancella",
-      "image": "https://image.tmdb.org/t/p/w500/qdWEaWkIQIjANGFeskheXpP0mm1.jpg",
-      "link": "https://altadefinizionepremium.com/p/the-handmaid-s-tale-il-racconto-dell-ancella",
-      "rating": "8.2"
-    },
-    {
       "title": "Ransom Canyon",
       "image": "https://image.tmdb.org/t/p/w500/vp6A0mthGwZmnowmLxqNPF0lVRN.jpg",
       "link": "https://altadefinizionepremium.com/p/ransom-canyon",
@@ -136,10 +130,10 @@
       "rating": "8.5"
     },
     {
-      "title": "MobLand",
-      "image": "https://image.tmdb.org/t/p/w500/abeH7n5pcuQcwYcTxG6DTZvXLP1.jpg",
-      "link": "https://altadefinizionepremium.com/p/mobland",
-      "rating": "8.5"
+      "title": "La ruota del tempo",
+      "image": "https://image.tmdb.org/t/p/w500/yA4aisjIIQqfFDgrDyXLxRNkqLp.jpg",
+      "link": "https://altadefinizionepremium.com/p/la-ruota-del-tempo",
+      "rating": "7.7"
     },
     {
       "title": "Lycoris Recoil",
@@ -160,16 +154,16 @@
       "rating": "7.6"
     },
     {
-      "title": "The Rookie",
-      "image": "https://image.tmdb.org/t/p/w500/bL1mwXDnH5fCxqc4S2n40hoVyoe.jpg",
-      "link": "https://altadefinizionepremium.com/p/the-rookie",
-      "rating": "8.5"
-    },
-    {
       "title": "Glaskupan - La cupola di vetro",
       "image": "https://image.tmdb.org/t/p/w500/hkoFjr5t3iJUzlDSvs9rF9Dl2PD.jpg",
       "link": "https://altadefinizionepremium.com/p/glaskupan-la-cupola-di-vetro",
       "rating": "7.1"
+    },
+    {
+      "title": "Solo Leveling",
+      "image": "https://image.tmdb.org/t/p/w500/eCD7WS9h4lCT8N4Xavc9u8R1IGk.jpg",
+      "link": "https://altadefinizionepremium.com/p/solo-leveling",
+      "rating": "8.6"
     },
     {
       "title": "I Simpson",
@@ -178,10 +172,28 @@
       "rating": "8.0"
     },
     {
-      "title": "Heavenly Ever After",
-      "image": "https://image.tmdb.org/t/p/w500/u6ug7CNmolM2jc5YGG9NDfgGikm.jpg",
-      "link": "https://altadefinizionepremium.com/p/heavenly-ever-after",
-      "rating": "7.5"
+      "title": "Projekt UFO",
+      "image": "https://image.tmdb.org/t/p/w500/o6UuFbNWWn70CODRDrzXhr0fCK6.jpg",
+      "link": "https://altadefinizionepremium.com/p/projekt-ufo",
+      "rating": "6.7"
+    },
+    {
+      "title": "Il monologo della Speziale",
+      "image": "https://image.tmdb.org/t/p/w500/sUep3kEPjvXp3VKAfNikpzBZmzw.jpg",
+      "link": "https://altadefinizionepremium.com/p/il-monologo-della-speziale",
+      "rating": "8.7"
+    },
+    {
+      "title": "Doctor Who",
+      "image": "https://image.tmdb.org/t/p/w500/2JP6NSmBwxg75uTcIHiv5R8PpPi.jpg",
+      "link": "https://altadefinizionepremium.com/p/doctor-who",
+      "rating": "6.5"
+    },
+    {
+      "title": "Pokémon",
+      "image": "https://image.tmdb.org/t/p/w500/jmyUVxAeNrYWn1rrJWWEIjQSAbm.jpg",
+      "link": "https://altadefinizionepremium.com/p/pok-mon",
+      "rating": "7.9"
     }
   ],
   "now_playing": [
