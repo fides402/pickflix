@@ -1,159 +1,192 @@
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pickflix</title>
-  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <!-- ✅ Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet" />
+
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
       background-color: #000;
       color: #fff;
+      font-family: 'Open Sans', sans-serif;
     }
+
+    ::-webkit-scrollbar { width: 0; height: 0; }
+
     header {
       background-color: transparent;
-      padding: 10px 30px;
+      padding: 10px 40px;
+      display: flex;
+      align-items: center;
     }
+
     header img {
-      height: 60px;
+      height: 90px;
     }
+
     section {
-      padding: 20px 30px;
+      padding: 30px 40px;
     }
+
     h3 {
-      font-size: 22px;
       margin-bottom: 15px;
+      font-size: 22px;
+      font-weight: 600;
     }
-    .carousel-wrapper {
-      position: relative;
-    }
+
+    .carousel-wrapper { position: relative; }
+
     .carousel {
       display: flex;
-      gap: 10px;
+      gap: 12px;
       overflow-x: auto;
+      scroll-behavior: smooth;
       padding-bottom: 10px;
     }
-    .carousel::-webkit-scrollbar {
-      display: none;
-    }
+
     .card {
       flex: 0 0 auto;
       width: 180px;
       height: 270px;
-      border-radius: 12px;
-      overflow: hidden;
       position: relative;
+      border-radius: 14px;
+      overflow: hidden;
       cursor: pointer;
+      transition: transform 0.2s ease;
     }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
     .card img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      border-radius: 12px;
+      border-radius: 14px;
     }
+
     .rating-badge {
       position: absolute;
-      top: 6px;
-      right: 6px;
+      top: 10px;
+      right: 10px;
       background: #e50914;
       color: white;
-      font-size: 12px;
-      padding: 4px 6px;
-      border-radius: 50px;
+      font-size: 13px;
+      padding: 5px 10px;
+      border-radius: 20px;
       font-weight: bold;
+      font-family: 'Open Sans', sans-serif;
+      z-index: 2;
     }
-    @media (min-width: 768px) {
-      .arrow {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: rgba(0,0,0,0.6);
-        border: none;
-        color: white;
-        font-size: 20px;
-        padding: 10px;
-        cursor: pointer;
-        z-index: 10;
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      font-size: 24px;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .arrow.left { left: 0; }
+    .arrow.right { right: 0; }
+
+    @media (max-width: 768px) {
+      .arrow { display: none; }
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        width: 140px;
+        height: 210px;
       }
-      .arrow.left { left: 0; }
-      .arrow.right { right: 0; }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <img src="logo.png" alt="Pickflix Logo" />
+    <img src="logo.png" alt="Pickflix" />
   </header>
 
+  <!-- 🟩 IMDB STAFF PICKS -->
   <section>
     <h3>IMDB Staff Picks</h3>
     <div class="carousel-wrapper">
+      <button class="arrow left" onclick="scrollCarousel('staff-picks', -1)">&#10094;</button>
       <div class="carousel" id="staff-picks"></div>
+      <button class="arrow right" onclick="scrollCarousel('staff-picks', 1)">&#10095;</button>
     </div>
   </section>
 
+  <!-- 🟩 TRENDING FILMS -->
   <section>
-    <h3>Film della settimana</h3>
+    <h3>Film trend della settimana</h3>
     <div class="carousel-wrapper">
+      <button class="arrow left" onclick="scrollCarousel('trending-films', -1)">&#10094;</button>
       <div class="carousel" id="trending-films"></div>
+      <button class="arrow right" onclick="scrollCarousel('trending-films', 1)">&#10095;</button>
     </div>
   </section>
 
+  <!-- 🟩 TRENDING SERIES -->
   <section>
-    <h3>Serie della settimana</h3>
+    <h3>Serie trend della settimana</h3>
     <div class="carousel-wrapper">
+      <button class="arrow left" onclick="scrollCarousel('trending-series', -1)">&#10094;</button>
       <div class="carousel" id="trending-series"></div>
+      <button class="arrow right" onclick="scrollCarousel('trending-series', 1)">&#10095;</button>
     </div>
   </section>
 
+  <!-- 🟩 NOW PLAYING -->
   <section>
     <h3>Film ora al cinema</h3>
     <div class="carousel-wrapper">
+      <button class="arrow left" onclick="scrollCarousel('now-playing', -1)">&#10094;</button>
       <div class="carousel" id="now-playing"></div>
+      <button class="arrow right" onclick="scrollCarousel('now-playing', 1)">&#10095;</button>
     </div>
   </section>
 
+  <!-- 🟩 ON AIR -->
   <section>
     <h3>Serie ora in onda</h3>
     <div class="carousel-wrapper">
+      <button class="arrow left" onclick="scrollCarousel('on-air', -1)">&#10094;</button>
       <div class="carousel" id="on-air"></div>
+      <button class="arrow right" onclick="scrollCarousel('on-air', 1)">&#10095;</button>
     </div>
   </section>
 
-  <section>
-    <h3>Selezione ufficiale Cannes 2025</h3>
-    <div class="carousel-wrapper">
-      <div class="carousel" id="cannes-selection"></div>
-    </div>
-  </section>
-
-  <section>
-    <h3>Per quando vuoi provare emozioni</h3>
-    <div class="carousel-wrapper">
-      <div class="carousel" id="feel-something"></div>
-    </div>
-  </section>
-
+  <!-- SCRIPT -->
   <script>
     async function loadData() {
       const res = await fetch('data.json');
       const data = await res.json();
 
-      renderCarousel("staff-picks", data.staff_picks);
-      renderCarousel("trending-films", data.trending_films);
-      renderCarousel("trending-series", data.trending_series);
-      renderCarousel("now-playing", data.now_playing);
-      renderCarousel("on-air", data.on_air);
-      renderCarousel("cannes-selection", data.cannes_selection);
-      renderCarousel("feel-something", data.feel_something);
+      document.getElementById('staff-picks').innerHTML = createCards(data.staff_picks);
+      document.getElementById('trending-films').innerHTML = createCards(data.trending_films);
+      document.getElementById('trending-series').innerHTML = createCards(data.trending_series);
+      document.getElementById('now-playing').innerHTML = createCards(data.now_playing);
+      document.getElementById('on-air').innerHTML = createCards(data.on_air);
     }
 
-    function renderCarousel(id, items) {
-      const container = document.getElementById(id);
-      container.innerHTML = items.map(item => `
+    function createCards(items) {
+      return items.map(item => `
         <div class="card" onclick="window.location.href='${item.link}'">
           <img src="${item.image}" alt="${item.title}" />
           <div class="rating-badge">${item.rating}</div>
@@ -161,7 +194,14 @@
       `).join('');
     }
 
+    function scrollCarousel(id, direction) {
+      const container = document.getElementById(id);
+      const scrollAmount = 400;
+      container.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
+    }
+
     loadData();
   </script>
+
 </body>
 </html>
