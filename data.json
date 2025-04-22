@@ -1,6 +1,482 @@
 {
-  "staff_picks": [],
-  "cannes_2025": [],
+  "staff_picks": [
+    {
+      "title": "The Bondsman",
+      "rating": "7.1",
+      "image": "https://image.tmdb.org/t/p/w500/gwd2HpY2ymvmASUP3zMYF59IIr7.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-bondsman"
+    },
+    {
+      "title": "Devil May Cry",
+      "rating": "7.5",
+      "image": "https://image.tmdb.org/t/p/w500/9YA4ko7x1o2NS65lDrlKAuNAqjJ.jpg",
+      "link": "https://altadefinizionepremium.com/p/devil-may-cry"
+    },
+    {
+      "title": "Pulse",
+      "rating": "6.4",
+      "image": "https://image.tmdb.org/t/p/w500/uGKTDr8ruc4IHGsEZ8wSQZpy2eN.jpg",
+      "link": "https://altadefinizionepremium.com/p/pulse"
+    },
+    {
+      "title": "A Minecraft Movie",
+      "rating": "5.9",
+      "image": "https://image.tmdb.org/t/p/w500/myoxQxrAEZICqe3DRyJUsiE5lWS.jpg",
+      "link": "https://altadefinizionepremium.com/p/a-minecraft-movie"
+    },
+    {
+      "title": "The White Lotus",
+      "rating": "8.0",
+      "image": "https://image.tmdb.org/t/p/w500/gbSaK9v1CbcYH1ISgbM7XObD2dW.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-white-lotus"
+    },
+    {
+      "title": "MobLand",
+      "rating": "8.3",
+      "image": "https://image.tmdb.org/t/p/w500/abeH7n5pcuQcwYcTxG6DTZvXLP1.jpg",
+      "link": "https://altadefinizionepremium.com/p/mobland"
+    },
+    {
+      "title": "Freaky Tales",
+      "rating": "7.2",
+      "image": "https://image.tmdb.org/t/p/w500/9sV7LSh2nu8Z3FqEjWKSeSwtZeM.jpg",
+      "link": "https://altadefinizionepremium.com/p/freaky-tales"
+    },
+    {
+      "title": "The Luckiest Man in America",
+      "rating": "6.7",
+      "image": "https://image.tmdb.org/t/p/w500/etJwfiUR0gtQwH8shhwjRr5bARQ.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-luckiest-man-in-america"
+    },
+    {
+      "title": "The Handmaid's Tale",
+      "rating": "8.3",
+      "image": "https://image.tmdb.org/t/p/w500/qdWEaWkIQIjANGFeskheXpP0mm1.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-handmaid-s-tale"
+    },
+    {
+      "title": "Black Mirror",
+      "rating": "8.7",
+      "image": "https://image.tmdb.org/t/p/w500/seN6rRfN0I6n8iDXjlSMk1QjNcq.jpg",
+      "link": "https://altadefinizionepremium.com/p/black-mirror"
+    },
+    {
+      "title": "Hacks",
+      "rating": "8.2",
+      "image": "https://image.tmdb.org/t/p/w500/ulBzMy5DZjBeUo6wHqn8ao0Zn6j.jpg",
+      "link": "https://altadefinizionepremium.com/p/hacks"
+    },
+    {
+      "title": "G20",
+      "rating": "5.1",
+      "image": "https://image.tmdb.org/t/p/w500/wv6oWAleCJZUk5htrGg413t3GCy.jpg",
+      "link": "https://altadefinizionepremium.com/p/g20"
+    },
+    {
+      "title": "Warfare",
+      "rating": "7.9",
+      "image": "https://image.tmdb.org/t/p/w500/oXsDTDt1MqxJreROd2cbd2FMOZ2.jpg",
+      "link": "https://altadefinizionepremium.com/p/warfare"
+    },
+    {
+      "title": "Drop",
+      "rating": "6.5",
+      "image": "https://image.tmdb.org/t/p/w500/sYo8mowvoL1Hi1vsS8dSEpqArJM.jpg",
+      "link": "https://altadefinizionepremium.com/p/drop"
+    },
+    {
+      "title": "Your Friends & Neighbors",
+      "rating": "7.8",
+      "image": "https://image.tmdb.org/t/p/w500/5Red8BT8N0YaWumXMQhuoGP40Ox.jpg",
+      "link": "https://altadefinizionepremium.com/p/your-friends-neighbors"
+    },
+    {
+      "title": "The Last of Us",
+      "rating": "8.7",
+      "image": "https://image.tmdb.org/t/p/w500/6WlffOd3bszyndGgsKGcUL6k28n.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-last-of-us"
+    },
+    {
+      "title": "Sinners",
+      "rating": "8.2",
+      "image": "https://image.tmdb.org/t/p/w500/g9X7IZtlwqsRHj1BZKxdXwH0cpI.jpg",
+      "link": "https://altadefinizionepremium.com/p/sinners"
+    },
+    {
+      "title": "The Wedding Banquet",
+      "rating": "6.8",
+      "image": "https://image.tmdb.org/t/p/w500/1ofqO5AmjOeKvgPjSqNrJ9yVuT.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-wedding-banquet"
+    },
+    {
+      "title": "The Rehearsal",
+      "rating": "8.5",
+      "image": "https://image.tmdb.org/t/p/w500/mIevNYxovnH4sR22qkUmAgS5vdv.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-rehearsal"
+    },
+    {
+      "title": "Andor",
+      "rating": "8.4",
+      "image": "https://image.tmdb.org/t/p/w500/cXHojTWjLDz3vFn8o46uAR1qjrY.jpg",
+      "link": "https://altadefinizionepremium.com/p/andor"
+    },
+    {
+      "title": "You",
+      "rating": "7.7",
+      "image": "https://image.tmdb.org/t/p/w500/vzgsobZmNxJyJ64ejTOUXvJ9UBn.jpg",
+      "link": "https://altadefinizionepremium.com/p/you"
+    },
+    {
+      "title": "Étoile",
+      "rating": "7.6",
+      "image": "https://image.tmdb.org/t/p/w500/e56elhedMQT2gJa9Hxix9IEBUoC.jpg",
+      "link": "https://altadefinizionepremium.com/p/toile"
+    },
+    {
+      "title": "The Accountant 2",
+      "rating": "7.6",
+      "image": "https://image.tmdb.org/t/p/w500/7TRiTQScz6jb6wz5oW9TxWzrOAa.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-accountant-2"
+    },
+    {
+      "title": "Until Dawn",
+      "rating": "7.2",
+      "image": "https://image.tmdb.org/t/p/w500/wowvIYUQIy1jV87PnUsZu8XItCl.jpg",
+      "link": "https://altadefinizionepremium.com/p/until-dawn"
+    },
+    {
+      "title": "The Legend of Ochi",
+      "rating": "6.4",
+      "image": "https://image.tmdb.org/t/p/w500/fiqIQCa6OGrqs5mdfdqrZMWvyFB.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-legend-of-ochi"
+    },
+    {
+      "title": "Havoc",
+      "rating": "7.8",
+      "image": "https://image.tmdb.org/t/p/w500/r46leE6PSzLR3pnVzaxx5Q30yUF.jpg",
+      "link": "https://altadefinizionepremium.com/p/havoc"
+    }
+  ],
+  "cannes_2025": [
+    {
+      "title": "Bye Bye",
+      "rating": "7.4",
+      "image": "https://image.tmdb.org/t/p/w500/k21jPDnkke8Pcqjo7nBuJJZSP6J.jpg",
+      "link": "https://altadefinizionepremium.com/p/bye-bye"
+    },
+    {
+      "title": "The Phoenician Scheme",
+      "rating": "6.0",
+      "image": "https://image.tmdb.org/t/p/w500/3UUgCveDbwuP93zVFhZMefJReTY.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-phoenician-scheme"
+    },
+    {
+      "title": "Eddington",
+      "rating": "7.3",
+      "image": "https://image.tmdb.org/t/p/w500/xxXKlECD5PIrszc1i8nKbaI3jpp.jpg",
+      "link": "https://altadefinizionepremium.com/p/eddington"
+    },
+    {
+      "title": "Alpha",
+      "rating": "7.0",
+      "image": "https://image.tmdb.org/t/p/w500/2Pz9wIVwUiVhlLAJYae1irxzcTT.jpg",
+      "link": "https://altadefinizionepremium.com/p/alpha"
+    },
+    {
+      "title": "Young Mothers",
+      "rating": "6.3",
+      "image": "https://image.tmdb.org/t/p/w500/jIn3Z3heGwcRZQcR2f1wY9JMuzv.jpg",
+      "link": "https://altadefinizionepremium.com/p/young-mothers"
+    },
+    {
+      "title": "Renoir",
+      "rating": "5.4",
+      "image": "https://image.tmdb.org/t/p/w500/jmzC441vGgvPiZQWTCMbIEH63Ka.jpg",
+      "link": "https://altadefinizionepremium.com/p/renoir"
+    },
+    {
+      "title": "The History of Sound",
+      "rating": "6.1",
+      "image": "https://image.tmdb.org/t/p/w500/e7PmvK3OATfl8LccyJw0HsKKb35.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-history-of-sound"
+    },
+    {
+      "title": "The Little Sister",
+      "rating": "5.4",
+      "image": "https://via.placeholder.com/500x750?text=No+Image",
+      "link": "https://altadefinizionepremium.com/p/the-little-sister"
+    },
+    {
+      "title": "Sirat",
+      "rating": "5.0",
+      "image": "https://image.tmdb.org/t/p/w500/cwD4XB4Bq50D61ZR3kpaVygov7j.jpg",
+      "link": "https://altadefinizionepremium.com/p/sirat"
+    },
+    {
+      "title": "Nouvelle Vague",
+      "rating": "6.9",
+      "image": "https://image.tmdb.org/t/p/w500/pXrl7CsjKOWwLlOfYKKJpipaEHz.jpg",
+      "link": "https://altadefinizionepremium.com/p/nouvelle-vague"
+    },
+    {
+      "title": "Two Prosecutors",
+      "rating": "5.8",
+      "image": "https://image.tmdb.org/t/p/w500/tZvE4CkWvazDWuG44RzhU2AhmAc.jpg",
+      "link": "https://altadefinizionepremium.com/p/two-prosecutors"
+    },
+    {
+      "title": "Fuori",
+      "rating": "7.5",
+      "image": "https://via.placeholder.com/500x750?text=No+Image",
+      "link": "https://altadefinizionepremium.com/p/fuori"
+    },
+    {
+      "title": "The Secret Agent",
+      "rating": "7.8",
+      "image": "https://image.tmdb.org/t/p/w500/dK5ETX5o0WyCvLXJ1jK6ECDNOQH.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-secret-agent"
+    },
+    {
+      "title": "Case 137",
+      "rating": "6.9",
+      "image": "https://image.tmdb.org/t/p/w500/tyswzNTNLWG1WKNVHHH3E8jZpNs.jpg",
+      "link": "https://altadefinizionepremium.com/p/case-137"
+    },
+    {
+      "title": "The Mastermind",
+      "rating": "5.9",
+      "image": "https://image.tmdb.org/t/p/w500/1jBbfnoSWxk47NaPyG7kUZE1Dk5.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-mastermind"
+    },
+    {
+      "title": "Eagles of the Republic",
+      "rating": "6.3",
+      "image": "https://image.tmdb.org/t/p/w500/uF74kTKlnfYicmsUEwdGu7VdVOV.jpg",
+      "link": "https://altadefinizionepremium.com/p/eagles-of-the-republic"
+    },
+    {
+      "title": "A Simple Accident",
+      "rating": "7.3",
+      "image": "https://image.tmdb.org/t/p/w500/yqWOUHvex5zwj9CBFcGLxDITmrv.jpg",
+      "link": "https://altadefinizionepremium.com/p/a-simple-accident"
+    },
+    {
+      "title": "Sound of Falling",
+      "rating": "7.4",
+      "image": "https://image.tmdb.org/t/p/w500/qkP8TFPnutBVuuggJfiVpoYpExX.jpg",
+      "link": "https://altadefinizionepremium.com/p/sound-of-falling"
+    },
+    {
+      "title": "Romería",
+      "rating": "6.7",
+      "image": "https://image.tmdb.org/t/p/w500/wTJvCWSuGTSmpGe6AotWz6ZO9aP.jpg",
+      "link": "https://altadefinizionepremium.com/p/romer-a"
+    },
+    {
+      "title": "Sentimental Value",
+      "rating": "6.9",
+      "image": "https://image.tmdb.org/t/p/w500/9PpGfbepwpX7BiHoyyjZgC7bEp9.jpg",
+      "link": "https://altadefinizionepremium.com/p/sentimental-value"
+    },
+    {
+      "title": "The Mysterious Gaze of the Flamingo",
+      "rating": "5.6",
+      "image": "https://image.tmdb.org/t/p/w500/wFMz57WSOnC7kFkphlM2lAM2ehU.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-mysterious-gaze-of-the-flamingo"
+    },
+    {
+      "title": "Meteors",
+      "rating": "7.7",
+      "image": "https://image.tmdb.org/t/p/w500/4C3RDNZcpUDr4cfSknew2FPCUAS.jpg",
+      "link": "https://altadefinizionepremium.com/p/meteors"
+    },
+    {
+      "title": "My Father's Shadow",
+      "rating": "7.5",
+      "image": "https://via.placeholder.com/500x750?text=No+Image",
+      "link": "https://altadefinizionepremium.com/p/my-father-s-shadow"
+    },
+    {
+      "title": "The Great Arch",
+      "rating": "5.5",
+      "image": "https://image.tmdb.org/t/p/w500/eYVfSzHXFy3ebooLwqak0iUvBWN.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-great-arch"
+    },
+    {
+      "title": "Urchin",
+      "rating": "7.0",
+      "image": "https://via.placeholder.com/500x750?text=No+Image",
+      "link": "https://altadefinizionepremium.com/p/urchin"
+    },
+    {
+      "title": "Homebound",
+      "rating": "5.9",
+      "image": "https://image.tmdb.org/t/p/w500/8ceAveKWI7PoYGGOFz2WW7xjtYF.jpg",
+      "link": "https://altadefinizionepremium.com/p/homebound"
+    },
+    {
+      "title": "A Pale View of Hills",
+      "rating": "7.8",
+      "image": "https://image.tmdb.org/t/p/w500/j5HPFYJyxTIsea0boXrNDTSSGLE.jpg",
+      "link": "https://altadefinizionepremium.com/p/a-pale-view-of-hills"
+    },
+    {
+      "title": "Eleanor the Great",
+      "rating": "7.4",
+      "image": "https://image.tmdb.org/t/p/w500/oRxmur1wNlvCV6VxHCaX6qh1ZEU.jpg",
+      "link": "https://altadefinizionepremium.com/p/eleanor-the-great"
+    },
+    {
+      "title": "Caravan",
+      "rating": "6.9",
+      "image": "https://image.tmdb.org/t/p/w500/biXtOhpG67I4A9wg2HSKC6dCZhw.jpg",
+      "link": "https://altadefinizionepremium.com/p/caravan"
+    },
+    {
+      "title": "Promised Sky",
+      "rating": "6.3",
+      "image": "https://image.tmdb.org/t/p/w500/kmdi05d5bUufTstIpKWTv4h8Ffg.jpg",
+      "link": "https://altadefinizionepremium.com/p/promised-sky"
+    },
+    {
+      "title": "Pillion",
+      "rating": "7.6",
+      "image": "https://image.tmdb.org/t/p/w500/3fJwchkdpePQGGU3p3FyhgBns7F.jpg",
+      "link": "https://altadefinizionepremium.com/p/pillion"
+    },
+    {
+      "title": "Aisha Can't Fly Away Anymore",
+      "rating": "5.8",
+      "image": "https://image.tmdb.org/t/p/w500/HcfN1vNrz9FIQU64QQhslSLACo.jpg",
+      "link": "https://altadefinizionepremium.com/p/aisha-can-t-fly-away-anymore"
+    },
+    {
+      "title": "Once Upon a Time in Gaza",
+      "rating": "5.3",
+      "image": "https://image.tmdb.org/t/p/w500/ez1zhBSWXAijAqiaKwDBieHFsC.jpg",
+      "link": "https://altadefinizionepremium.com/p/once-upon-a-time-in-gaza"
+    },
+    {
+      "title": "The Plague",
+      "rating": "6.7",
+      "image": "https://image.tmdb.org/t/p/w500/oC1IDjpUXbWwmJnWGb9FBldinoG.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-plague"
+    },
+    {
+      "title": "The Last One for the Road",
+      "rating": "6.6",
+      "image": "https://image.tmdb.org/t/p/w500/i4OMh2xi57MXJG1BiUeRQLOeuDc.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-last-one-for-the-road"
+    },
+    {
+      "title": "Heads or Tails?",
+      "rating": "5.6",
+      "image": "https://via.placeholder.com/500x750?text=No+Image",
+      "link": "https://altadefinizionepremium.com/p/heads-or-tails"
+    },
+    {
+      "title": "Colours of Time",
+      "rating": "5.1",
+      "image": "https://image.tmdb.org/t/p/w500/jVXfeeswPioW7giUcJTKDASYkfg.jpg",
+      "link": "https://altadefinizionepremium.com/p/colours-of-time"
+    },
+    {
+      "title": "The Richest Woman in the World",
+      "rating": "5.8",
+      "image": "https://image.tmdb.org/t/p/w500/6fPXZXvc1WkKMNZScW3l3I3mfHP.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-richest-woman-in-the-world"
+    },
+    {
+      "title": "Highest 2 Lowest",
+      "rating": "7.2",
+      "image": "https://image.tmdb.org/t/p/w500/95UCrw3Q8HkdAwNYFeQ9ubD5s6O.jpg",
+      "link": "https://altadefinizionepremium.com/p/highest-2-lowest"
+    },
+    {
+      "title": "Mission: Impossible – The Final Reckoning",
+      "rating": "8.3",
+      "image": "https://image.tmdb.org/t/p/w500/z53D72EAOxGRqdr7KXXWp9dJiDe.jpg",
+      "link": "https://altadefinizionepremium.com/p/mission-impossible-the-final-reckoning"
+    },
+    {
+      "title": "Vie privée",
+      "rating": "7.8",
+      "image": "https://image.tmdb.org/t/p/w500/pwarlgWW1WnqEJH5maDHd8xZCLj.jpg",
+      "link": "https://altadefinizionepremium.com/p/vie-priv-e"
+    },
+    {
+      "title": "Dalloway",
+      "rating": "6.0",
+      "image": "https://image.tmdb.org/t/p/w500/u7qCz8p5WdSKuH8GlbaDdV9TJd5.jpg",
+      "link": "https://altadefinizionepremium.com/p/dalloway"
+    },
+    {
+      "title": "The Exit 8",
+      "rating": "5.0",
+      "image": "https://image.tmdb.org/t/p/w500/gdBLJzNArPaIubRe593mGTB37zu.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-exit-8"
+    },
+    {
+      "title": "Sons of the Neon Night",
+      "rating": "7.0",
+      "image": "https://image.tmdb.org/t/p/w500/mini5t3eavhgv0dDgGl9sWxnoQq.jpg",
+      "link": "https://altadefinizionepremium.com/p/sons-of-the-neon-night"
+    },
+    {
+      "title": "Amrum",
+      "rating": "6.3",
+      "image": "https://image.tmdb.org/t/p/w500/yrFHlsSa5bK2LrV0oN6xpdodyBI.jpg",
+      "link": "https://altadefinizionepremium.com/p/amrum"
+    },
+    {
+      "title": "Splitsville",
+      "rating": "5.3",
+      "image": "https://image.tmdb.org/t/p/w500/eds3qmj1dGt1TzuUMSNqJmYapLK.jpg",
+      "link": "https://altadefinizionepremium.com/p/splitsville"
+    },
+    {
+      "title": "The Wave",
+      "rating": "7.7",
+      "image": "https://image.tmdb.org/t/p/w500/rWFHGTfCOzMphfJW3DPdfbq7Vyp.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-wave"
+    },
+    {
+      "title": "Connemara",
+      "rating": "7.2",
+      "image": "https://image.tmdb.org/t/p/w500/1VRDZU5gYkwSjj9fpDiXPDpfHsg.jpg",
+      "link": "https://altadefinizionepremium.com/p/connemara"
+    },
+    {
+      "title": "Orwell: 2+2=5",
+      "rating": "7.2",
+      "image": "https://image.tmdb.org/t/p/w500/uPmcGluW7QIYOBrr86uOxspBRfQ.jpg",
+      "link": "https://altadefinizionepremium.com/p/orwell-2-2-5"
+    },
+    {
+      "title": "The Disappearance of Josef Mengele",
+      "rating": "7.1",
+      "image": "https://via.placeholder.com/500x750?text=No+Image",
+      "link": "https://altadefinizionepremium.com/p/the-disappearance-of-josef-mengele"
+    },
+    {
+      "title": "Bono: Stories of Surrender",
+      "rating": "5.6",
+      "image": "https://image.tmdb.org/t/p/w500/9Xv9uRyeYO1xwZXOoOI2cdfofrM.jpg",
+      "link": "https://altadefinizionepremium.com/p/bono-stories-of-surrender"
+    },
+    {
+      "title": "Tell Her That I Love Her",
+      "rating": "7.2",
+      "image": "https://image.tmdb.org/t/p/w500/9yuCoKqE9jSxkjwtNxtZ5ubD3ex.jpg",
+      "link": "https://altadefinizionepremium.com/p/tell-her-that-i-love-her"
+    },
+    {
+      "title": "The Magnificent Life of Marcel Pagnol",
+      "rating": "6.9",
+      "image": "https://image.tmdb.org/t/p/w500/8RDzFr9kGPJU2D5pOOzk0W1ATJq.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-magnificent-life-of-marcel-pagnol"
+    }
+  ],
   "emozioni": [],
   "trending_films": [
     {
@@ -10,16 +486,16 @@
       "rating": "7.4"
     },
     {
-      "title": "Conclave",
-      "image": "https://image.tmdb.org/t/p/w500/ftIJ42zwuFvUFVEWZQbFq1vcV5U.jpg",
-      "link": "https://altadefinizionepremium.com/p/conclave",
-      "rating": "7.2"
-    },
-    {
       "title": "Mickey 17",
       "image": "https://image.tmdb.org/t/p/w500/2JQBZs01ahsOiANQ7Fs8MN9zBY4.jpg",
       "link": "https://altadefinizionepremium.com/p/mickey-17",
       "rating": "6.9"
+    },
+    {
+      "title": "Conclave",
+      "image": "https://image.tmdb.org/t/p/w500/ftIJ42zwuFvUFVEWZQbFq1vcV5U.jpg",
+      "link": "https://altadefinizionepremium.com/p/conclave",
+      "rating": "7.2"
     },
     {
       "title": "Mr. Morfina",
@@ -34,16 +510,16 @@
       "rating": "10.0"
     },
     {
-      "title": "G20",
-      "image": "https://image.tmdb.org/t/p/w500/wv6oWAleCJZUk5htrGg413t3GCy.jpg",
-      "link": "https://altadefinizionepremium.com/p/g20",
-      "rating": "6.7"
-    },
-    {
       "title": "The Accountant 2",
       "image": "https://image.tmdb.org/t/p/w500/7TRiTQScz6jb6wz5oW9TxWzrOAa.jpg",
       "link": "https://altadefinizionepremium.com/p/the-accountant-2",
       "rating": "7.3"
+    },
+    {
+      "title": "G20",
+      "image": "https://image.tmdb.org/t/p/w500/wv6oWAleCJZUk5htrGg413t3GCy.jpg",
+      "link": "https://altadefinizionepremium.com/p/g20",
+      "rating": "6.7"
     },
     {
       "title": "Warfare",
