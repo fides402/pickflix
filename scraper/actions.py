@@ -1,7 +1,6 @@
 import json
 import re
 import requests
-import csv
 
 API_KEY = "85395f1f04d886e7ad3581f64d886026"
 BASE_URL = "https://api.themoviedb.org/3"
@@ -11,7 +10,7 @@ LANG = "it-IT"
 def slugify(text):
     return re.sub(r'[^a-z0-9]+', '-', text.lower()).strip('-')
 
-def search_poster_tmdb(title):
+def search_tmdb_details(title):
     url = f"{BASE_URL}/search/multi"
     params = {
         "api_key": API_KEY,
@@ -23,43 +22,47 @@ def search_poster_tmdb(title):
     if res.status_code == 200:
         results = res.json().get("results", [])
         if results:
-            poster_path = results[0].get("poster_path")
-            if poster_path:
-                return f"{IMAGE_BASE}{poster_path}"
-    return "https://via.placeholder.com/500x750?text=No+Image"
+            result = results[0]
+            poster_path = result.get("poster_path")
+            vote = result.get("vote_average", 0)
+            image = f"{IMAGE_BASE}{poster_path}" if poster_path else "https://via.placeholder.com/500x750?text=No+Image"
+            return image, str(round(vote, 1))
+    return "https://via.placeholder.com/500x750?text=No+Image", "N/A"
+
+def load_titles(filepath, label):
+    items = []
+    with open(filepath, "r", encoding="utf-8") as file:
+        titles = [line.strip() for line in file if line.strip()]
+        print(f"🎬 {label}: {titles}")
+        for title in titles:
+            image, rating = search_tmdb_details(title)
+            items.append({
+                "title": title,
+                "rating": rating,
+                "image": image,
+                "link": f"https://altadefinizionepremium.com/p/{slugify(title)}"
+            })
+    print(f"✅ {label} caricati: {len(items)} titoli")
+    return items
 
 def load_staff_picks(filepath):
     picks = []
     with open(filepath, "r", encoding="utf-8") as file:
-        reader = csv.DictReader(file, delimiter='\t')
-        for row in reader:
-            title = row["Title"].strip()
-            rating = row["Rating"].strip()
-            image = search_poster_tmdb(title)
+        for line in file:
+            if "–" not in line:
+                continue
+            title, rating = line.strip().split("–")
+            title = title.strip()
+            rating = rating.strip()
+            image, _ = search_tmdb_details(title)
             picks.append({
                 "title": title,
                 "rating": rating,
                 "image": image,
                 "link": f"https://altadefinizionepremium.com/p/{slugify(title)}"
             })
-    print(f"✅ Caricati {len(picks)} titoli da {filepath}")
+    print(f"✅ IMDB Staff Picks caricati: {len(picks)} titoli")
     return picks
-
-def load_titles(filepath):
-    titles = []
-    with open(filepath, "r", encoding="utf-8") as file:
-        for line in file:
-            title = line.strip()
-            if title:
-                image = search_poster_tmdb(title)
-                titles.append({
-                    "title": title,
-                    "rating": "-",  # rating non disponibile
-                    "image": image,
-                    "link": f"https://altadefinizionepremium.com/p/{slugify(title)}"
-                })
-    print(f"✅ Caricati {len(titles)} titoli da {filepath}")
-    return titles
 
 def fetch_tmdb(endpoint, label, min_vote=6.5, pages=1, max_items=50):
     items = []
@@ -83,9 +86,9 @@ def fetch_tmdb(endpoint, label, min_vote=6.5, pages=1, max_items=50):
                 continue
             items.append({
                 "title": title,
-                "rating": str(round(vote, 1)),
                 "image": f"{IMAGE_BASE}{poster}",
-                "link": f"https://altadefinizionepremium.com/p/{slugify(title)}"
+                "link": f"https://altadefinizionepremium.com/p/{slugify(title)}",
+                "rating": str(round(vote, 1))
             })
             if len(items) >= max_items:
                 break
@@ -98,13 +101,12 @@ def main():
         "trending_series": fetch_tmdb("trending/tv/week", "Serie trend settimanali"),
         "now_playing": fetch_tmdb("movie/now_playing", "Film ora al cinema", pages=3),
         "on_air": fetch_tmdb("tv/on_the_air", "Serie ora in onda"),
-        "cannes2025": load_titles("cannes2025.txt"),
-        "emozioni": load_titles("emozioni.txt")
+        "cannes2025": load_titles("cannes2025.txt", "Cannes 2025"),
+        "emozioni": load_titles("emozioni.txt", "Film emozionanti")
     }
 
     with open("data.json", "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
-
     print("✅ File data.json creato con successo!")
 
 if __name__ == "__main__":
