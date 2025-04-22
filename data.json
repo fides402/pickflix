@@ -155,12 +155,6 @@
       "rating": "7.8",
       "image": "https://image.tmdb.org/t/p/w500/r46leE6PSzLR3pnVzaxx5Q30yUF.jpg",
       "link": "https://altadefinizionepremium.com/p/havoc"
-    },
-    {
-      "title": "Mission: Impossible",
-      "rating": "The Final Reckoning - 8.3",
-      "image": "https://image.tmdb.org/t/p/w500/sM2atplnXKyHpabXXpZNpevcwh3.jpg",
-      "link": "https://altadefinizionepremium.com/p/mission-impossible"
     }
   ],
   "trending_films": [
@@ -171,16 +165,16 @@
       "rating": "7.4"
     },
     {
-      "title": "Mickey 17",
-      "image": "https://image.tmdb.org/t/p/w500/2JQBZs01ahsOiANQ7Fs8MN9zBY4.jpg",
-      "link": "https://altadefinizionepremium.com/p/mickey-17",
-      "rating": "6.9"
-    },
-    {
       "title": "Conclave",
       "image": "https://image.tmdb.org/t/p/w500/ftIJ42zwuFvUFVEWZQbFq1vcV5U.jpg",
       "link": "https://altadefinizionepremium.com/p/conclave",
       "rating": "7.2"
+    },
+    {
+      "title": "Mickey 17",
+      "image": "https://image.tmdb.org/t/p/w500/2JQBZs01ahsOiANQ7Fs8MN9zBY4.jpg",
+      "link": "https://altadefinizionepremium.com/p/mickey-17",
+      "rating": "6.9"
     },
     {
       "title": "Mr. Morfina",
