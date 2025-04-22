@@ -1,10 +1,40 @@
 {
   "staff_picks": [
     {
+      "title": "The Bondsman",
+      "rating": "7.1",
+      "image": "https://image.tmdb.org/t/p/w500/gwd2HpY2ymvmASUP3zMYF59IIr7.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-bondsman"
+    },
+    {
+      "title": "Devil May Cry",
+      "rating": "7.5",
+      "image": "https://image.tmdb.org/t/p/w500/9YA4ko7x1o2NS65lDrlKAuNAqjJ.jpg",
+      "link": "https://altadefinizionepremium.com/p/devil-may-cry"
+    },
+    {
+      "title": "Pulse",
+      "rating": "6.4",
+      "image": "https://image.tmdb.org/t/p/w500/uGKTDr8ruc4IHGsEZ8wSQZpy2eN.jpg",
+      "link": "https://altadefinizionepremium.com/p/pulse"
+    },
+    {
       "title": "A Minecraft Movie",
       "rating": "5.9",
       "image": "https://image.tmdb.org/t/p/w500/myoxQxrAEZICqe3DRyJUsiE5lWS.jpg",
       "link": "https://altadefinizionepremium.com/p/a-minecraft-movie"
+    },
+    {
+      "title": "The White Lotus",
+      "rating": "8.0",
+      "image": "https://image.tmdb.org/t/p/w500/gbSaK9v1CbcYH1ISgbM7XObD2dW.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-white-lotus"
+    },
+    {
+      "title": "MobLand",
+      "rating": "8.3",
+      "image": "https://image.tmdb.org/t/p/w500/abeH7n5pcuQcwYcTxG6DTZvXLP1.jpg",
+      "link": "https://altadefinizionepremium.com/p/mobland"
     },
     {
       "title": "Freaky Tales",
@@ -19,6 +49,30 @@
       "link": "https://altadefinizionepremium.com/p/the-luckiest-man-in-america"
     },
     {
+      "title": "The Handmaid's Tale",
+      "rating": "8.3",
+      "image": "https://image.tmdb.org/t/p/w500/qdWEaWkIQIjANGFeskheXpP0mm1.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-handmaid-s-tale"
+    },
+    {
+      "title": "Black Mirror",
+      "rating": "8.7",
+      "image": "https://image.tmdb.org/t/p/w500/seN6rRfN0I6n8iDXjlSMk1QjNcq.jpg",
+      "link": "https://altadefinizionepremium.com/p/black-mirror"
+    },
+    {
+      "title": "Hacks",
+      "rating": "8.2",
+      "image": "https://image.tmdb.org/t/p/w500/ulBzMy5DZjBeUo6wHqn8ao0Zn6j.jpg",
+      "link": "https://altadefinizionepremium.com/p/hacks"
+    },
+    {
+      "title": "G20",
+      "rating": "5.1",
+      "image": "https://image.tmdb.org/t/p/w500/wv6oWAleCJZUk5htrGg413t3GCy.jpg",
+      "link": "https://altadefinizionepremium.com/p/g20"
+    },
+    {
       "title": "Warfare",
       "rating": "7.9",
       "image": "https://image.tmdb.org/t/p/w500/oXsDTDt1MqxJreROd2cbd2FMOZ2.jpg",
@@ -29,6 +83,18 @@
       "rating": "6.5",
       "image": "https://image.tmdb.org/t/p/w500/sYo8mowvoL1Hi1vsS8dSEpqArJM.jpg",
       "link": "https://altadefinizionepremium.com/p/drop"
+    },
+    {
+      "title": "Your Friends & Neighbors",
+      "rating": "7.8",
+      "image": "https://image.tmdb.org/t/p/w500/5Red8BT8N0YaWumXMQhuoGP40Ox.jpg",
+      "link": "https://altadefinizionepremium.com/p/your-friends-neighbors"
+    },
+    {
+      "title": "The Last of Us",
+      "rating": "8.7",
+      "image": "https://image.tmdb.org/t/p/w500/6WlffOd3bszyndGgsKGcUL6k28n.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-last-of-us"
     },
     {
       "title": "Sinners",
@@ -43,16 +109,52 @@
       "link": "https://altadefinizionepremium.com/p/the-wedding-banquet"
     },
     {
+      "title": "The Rehearsal",
+      "rating": "8.5",
+      "image": "https://image.tmdb.org/t/p/w500/mIevNYxovnH4sR22qkUmAgS5vdv.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-rehearsal"
+    },
+    {
+      "title": "Andor",
+      "rating": "8.4",
+      "image": "https://image.tmdb.org/t/p/w500/cXHojTWjLDz3vFn8o46uAR1qjrY.jpg",
+      "link": "https://altadefinizionepremium.com/p/andor"
+    },
+    {
+      "title": "You",
+      "rating": "7.7",
+      "image": "https://image.tmdb.org/t/p/w500/vzgsobZmNxJyJ64ejTOUXvJ9UBn.jpg",
+      "link": "https://altadefinizionepremium.com/p/you"
+    },
+    {
+      "title": "Étoile",
+      "rating": "7.6",
+      "image": "https://image.tmdb.org/t/p/w500/e56elhedMQT2gJa9Hxix9IEBUoC.jpg",
+      "link": "https://altadefinizionepremium.com/p/toile"
+    },
+    {
       "title": "The Accountant 2",
       "rating": "7.6",
       "image": "https://image.tmdb.org/t/p/w500/7TRiTQScz6jb6wz5oW9TxWzrOAa.jpg",
       "link": "https://altadefinizionepremium.com/p/the-accountant-2"
     },
     {
+      "title": "Until Dawn",
+      "rating": "7.2",
+      "image": "https://image.tmdb.org/t/p/w500/wowvIYUQIy1jV87PnUsZu8XItCl.jpg",
+      "link": "https://altadefinizionepremium.com/p/until-dawn"
+    },
+    {
       "title": "The Legend of Ochi",
       "rating": "6.4",
       "image": "https://image.tmdb.org/t/p/w500/fiqIQCa6OGrqs5mdfdqrZMWvyFB.jpg",
       "link": "https://altadefinizionepremium.com/p/the-legend-of-ochi"
+    },
+    {
+      "title": "Havoc",
+      "rating": "7.8",
+      "image": "https://image.tmdb.org/t/p/w500/r46leE6PSzLR3pnVzaxx5Q30yUF.jpg",
+      "link": "https://altadefinizionepremium.com/p/havoc"
     }
   ],
   "trending_films": [
@@ -60,7 +162,7 @@
       "title": "I Peccatori",
       "image": "https://image.tmdb.org/t/p/w500/g9X7IZtlwqsRHj1BZKxdXwH0cpI.jpg",
       "link": "https://altadefinizionepremium.com/p/i-peccatori",
-      "rating": "7.5"
+      "rating": "7.4"
     },
     {
       "title": "Conclave",
@@ -117,10 +219,10 @@
       "rating": "7.1"
     },
     {
-      "title": "The Brutalist",
-      "image": "https://image.tmdb.org/t/p/w500/LfI6QwtR7HTguzvjLESpc6qNK6.jpg",
-      "link": "https://altadefinizionepremium.com/p/the-brutalist",
-      "rating": "7.1"
+      "title": "WWE WrestleMania 41: Saturday",
+      "image": "https://image.tmdb.org/t/p/w500/jzPK38qZBUxbsegnF5MlqLdaEFq.jpg",
+      "link": "https://altadefinizionepremium.com/p/wwe-wrestlemania-41-saturday",
+      "rating": "6.6"
     }
   ],
   "trending_series": [
@@ -155,16 +257,16 @@
       "rating": "7.7"
     },
     {
-      "title": "Solo Leveling",
-      "image": "https://image.tmdb.org/t/p/w500/eCD7WS9h4lCT8N4Xavc9u8R1IGk.jpg",
-      "link": "https://altadefinizionepremium.com/p/solo-leveling",
-      "rating": "8.6"
-    },
-    {
       "title": "Doctor Who",
       "image": "https://image.tmdb.org/t/p/w500/2JP6NSmBwxg75uTcIHiv5R8PpPi.jpg",
       "link": "https://altadefinizionepremium.com/p/doctor-who",
       "rating": "6.5"
+    },
+    {
+      "title": "Solo Leveling",
+      "image": "https://image.tmdb.org/t/p/w500/eCD7WS9h4lCT8N4Xavc9u8R1IGk.jpg",
+      "link": "https://altadefinizionepremium.com/p/solo-leveling",
+      "rating": "8.6"
     },
     {
       "title": "Glaskupan - La cupola di vetro",
@@ -176,7 +278,7 @@
       "title": "Ransom Canyon",
       "image": "https://image.tmdb.org/t/p/w500/vp6A0mthGwZmnowmLxqNPF0lVRN.jpg",
       "link": "https://altadefinizionepremium.com/p/ransom-canyon",
-      "rating": "7.3"
+      "rating": "7.4"
     },
     {
       "title": "MobLand",
@@ -185,16 +287,16 @@
       "rating": "8.5"
     },
     {
-      "title": "The White Lotus",
-      "image": "https://image.tmdb.org/t/p/w500/gbSaK9v1CbcYH1ISgbM7XObD2dW.jpg",
-      "link": "https://altadefinizionepremium.com/p/the-white-lotus",
-      "rating": "7.6"
-    },
-    {
       "title": "1923",
       "image": "https://image.tmdb.org/t/p/w500/vNJWr0xh7W5IDzFTnVzWhw6KoJr.jpg",
       "link": "https://altadefinizionepremium.com/p/1923",
       "rating": "8.2"
+    },
+    {
+      "title": "The White Lotus",
+      "image": "https://image.tmdb.org/t/p/w500/gbSaK9v1CbcYH1ISgbM7XObD2dW.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-white-lotus",
+      "rating": "7.6"
     },
     {
       "title": "Doctor Who",
