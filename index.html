@@ -172,7 +172,28 @@
     </div>
   </section>
 
-  <!-- SCRIPT -->
+  
+  <!-- 🟩 CANNES 2025 -->
+  <section>
+    <h3>Cannes 2025</h3>
+    <div class="carousel-wrapper">
+      <button class="arrow left" onclick="scrollCarousel('cannes2025', -1)">&#10094;</button>
+      <div class="carousel" id="cannes2025"></div>
+      <button class="arrow right" onclick="scrollCarousel('cannes2025', 1)">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- 🟩 FILM EMOZIONANTI -->
+  <section>
+    <h3>Film emozionanti</h3>
+    <div class="carousel-wrapper">
+      <button class="arrow left" onclick="scrollCarousel('emozioni', -1)">&#10094;</button>
+      <div class="carousel" id="emozioni"></div>
+      <button class="arrow right" onclick="scrollCarousel('emozioni', 1)">&#10095;</button>
+    </div>
+  </section>
+
+<!-- SCRIPT -->
   <script>
     async function loadData() {
       const res = await fetch('data.json');
@@ -183,6 +204,8 @@
       document.getElementById('trending-series').innerHTML = createCards(data.trending_series);
       document.getElementById('now-playing').innerHTML = createCards(data.now_playing);
       document.getElementById('on-air').innerHTML = createCards(data.on_air);
+      document.getElementById('cannes2025').innerHTML = createCards(data.cannes2025);
+      document.getElementById('emozioni').innerHTML = createCards(data.emozioni);
     }
 
     function createCards(items) {
