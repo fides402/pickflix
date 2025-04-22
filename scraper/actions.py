@@ -28,7 +28,7 @@ def search_poster_tmdb(title):
                 return f"{IMAGE_BASE}{poster_path}"
     return "https://via.placeholder.com/500x750?text=No+Image"
 
-def load_staff_picks(filepath):
+def load_rated_titles(filepath):
     picks = []
     with open(filepath, "r", encoding="utf-8") as file:
         for line in file:
@@ -44,7 +44,7 @@ def load_staff_picks(filepath):
                 "image": image,
                 "link": f"https://altadefinizionepremium.com/p/{slugify(title)}"
             })
-    print(f"✅ IMDB Staff Picks caricati: {len(picks)} titoli")
+    print(f"✅ Caricati {len(picks)} da {filepath}")
     return picks
 
 def fetch_tmdb(endpoint, label, min_vote=6.5, pages=1, max_items=50):
@@ -79,14 +79,18 @@ def fetch_tmdb(endpoint, label, min_vote=6.5, pages=1, max_items=50):
 
 def main():
     data = {
-        "staff_picks": load_staff_picks("movies_and_ratings.txt"),
+        "staff_picks": load_rated_titles("movies_and_ratings.txt"),
         "trending_films": fetch_tmdb("trending/movie/week", "Film trend settimanali"),
         "trending_series": fetch_tmdb("trending/tv/week", "Serie trend settimanali"),
         "now_playing": fetch_tmdb("movie/now_playing", "Film ora al cinema", pages=3),
-        "on_air": fetch_tmdb("tv/on_the_air", "Serie ora in onda")
+        "on_air": fetch_tmdb("tv/on_the_air", "Serie ora in onda"),
+        "cannes2025": load_rated_titles("cannes2025.txt"),
+        "emozioni": load_rated_titles("emozioni.txt")
     }
+
     with open("data.json", "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
+
     print("✅ File data.json creato con successo!")
 
 if __name__ == "__main__":
