@@ -267,7 +267,7 @@
     {
       "title": "Romería",
       "rating": "6.7",
-      "image": "https://image.tmdb.org/t/p/w500/wTJvCWSuGTSmpGe6AotWz6ZO9aP.jpg",
+      "image": "https://image.tmdb.org/t/p/w500/pQd4HoRdoE6kqZov3vQXdzCn3XW.jpg",
       "link": "https://altadefinizionepremium.com/p/romer-a"
     },
     {
@@ -1071,22 +1071,28 @@
   ],
   "trending_films": [
     {
-      "title": "Un film Minecraft",
-      "image": "https://image.tmdb.org/t/p/w500/myoxQxrAEZICqe3DRyJUsiE5lWS.jpg",
-      "link": "https://altadefinizionepremium.com/p/un-film-minecraft",
-      "rating": "6.5"
-    },
-    {
       "title": "Final Destination: Bloodlines",
       "image": "https://image.tmdb.org/t/p/w500/hzGZDjkGf3kZVztnh1aj2LaO9DX.jpg",
       "link": "https://altadefinizionepremium.com/p/final-destination-bloodlines",
       "rating": "7.1"
     },
     {
+      "title": "Un film Minecraft",
+      "image": "https://image.tmdb.org/t/p/w500/myoxQxrAEZICqe3DRyJUsiE5lWS.jpg",
+      "link": "https://altadefinizionepremium.com/p/un-film-minecraft",
+      "rating": "6.5"
+    },
+    {
       "title": "Mission: Impossible - The Final Reckoning",
       "image": "https://image.tmdb.org/t/p/w500/a8Yg38L5JY7QtEXuLlfIWFZfxhD.jpg",
       "link": "https://altadefinizionepremium.com/p/mission-impossible-the-final-reckoning",
-      "rating": "7.3"
+      "rating": "7.1"
+    },
+    {
+      "title": "Lilo & Stitch",
+      "image": "https://image.tmdb.org/t/p/w500/pPzClGa4jUxEYcRGQ2LEcK4FRQY.jpg",
+      "link": "https://altadefinizionepremium.com/p/lilo-stitch",
+      "rating": "7.5"
     },
     {
       "title": "A Working Man",
@@ -1101,28 +1107,22 @@
       "rating": "7.6"
     },
     {
-      "title": "Lilo & Stitch",
-      "image": "https://image.tmdb.org/t/p/w500/pPzClGa4jUxEYcRGQ2LEcK4FRQY.jpg",
-      "link": "https://altadefinizionepremium.com/p/lilo-stitch",
-      "rating": "7.9"
-    },
-    {
       "title": "Thunderbolts*",
       "image": "https://image.tmdb.org/t/p/w500/crggVLnJ6btoK4JC04ZJEs2YkwA.jpg",
       "link": "https://altadefinizionepremium.com/p/thunderbolts",
       "rating": "7.5"
     },
     {
-      "title": "Warfare - Tempo di guerra",
-      "image": "https://image.tmdb.org/t/p/w500/vmNgd0v5k1EITVAc9LqaliVtubU.jpg",
-      "link": "https://altadefinizionepremium.com/p/warfare-tempo-di-guerra",
-      "rating": "7.2"
+      "title": "The Banker",
+      "image": "https://image.tmdb.org/t/p/w500/harqk4ngh8x5cDlmBaejFs5emEY.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-banker",
+      "rating": "7.6"
     },
     {
-      "title": "Final Destination",
-      "image": "https://image.tmdb.org/t/p/w500/1mXhlQMnlfvJ2frxTjZSQNnA9Vp.jpg",
-      "link": "https://altadefinizionepremium.com/p/final-destination",
-      "rating": "6.6"
+      "title": "Mission: Impossible - Dead Reckoning Parte uno",
+      "image": "https://image.tmdb.org/t/p/w500/opMK4RJxZmACWrgfZlOnRp6hsQK.jpg",
+      "link": "https://altadefinizionepremium.com/p/mission-impossible-dead-reckoning-parte-uno",
+      "rating": "7.5"
     },
     {
       "title": "Drop - Accetta o rifiuta",
@@ -1131,22 +1131,28 @@
       "rating": "6.5"
     },
     {
+      "title": "Final Destination",
+      "image": "https://image.tmdb.org/t/p/w500/1mXhlQMnlfvJ2frxTjZSQNnA9Vp.jpg",
+      "link": "https://altadefinizionepremium.com/p/final-destination",
+      "rating": "6.6"
+    },
+    {
+      "title": "Warfare - Tempo di guerra",
+      "image": "https://image.tmdb.org/t/p/w500/vmNgd0v5k1EITVAc9LqaliVtubU.jpg",
+      "link": "https://altadefinizionepremium.com/p/warfare-tempo-di-guerra",
+      "rating": "7.2"
+    },
+    {
       "title": "Mickey 17",
       "image": "https://image.tmdb.org/t/p/w500/2JQBZs01ahsOiANQ7Fs8MN9zBY4.jpg",
       "link": "https://altadefinizionepremium.com/p/mickey-17",
       "rating": "6.9"
     },
     {
-      "title": "Karate Kid: Legends",
-      "image": "https://image.tmdb.org/t/p/w500/ckI6bmQDvvGy20FPTIW1kfGKGRK.jpg",
-      "link": "https://altadefinizionepremium.com/p/karate-kid-legends",
-      "rating": "7.7"
-    },
-    {
-      "title": "Mission: Impossible - Dead Reckoning Parte uno",
-      "image": "https://image.tmdb.org/t/p/w500/opMK4RJxZmACWrgfZlOnRp6hsQK.jpg",
-      "link": "https://altadefinizionepremium.com/p/mission-impossible-dead-reckoning-parte-uno",
-      "rating": "7.5"
+      "title": "Guerre stellari",
+      "image": "https://image.tmdb.org/t/p/w500/uteN8YA4Yddm4mDVPH7QwvOZia1.jpg",
+      "link": "https://altadefinizionepremium.com/p/guerre-stellari",
+      "rating": "8.2"
     }
   ],
   "trending_series": [
@@ -1160,7 +1166,7 @@
       "title": "Murderbot",
       "image": "https://image.tmdb.org/t/p/w500/mIKfKo2uDk3itzAPYIcSeYr4KtF.jpg",
       "link": "https://altadefinizionepremium.com/p/murderbot",
-      "rating": "7.7"
+      "rating": "7.8"
     },
     {
       "title": "Love, Death & Robots",
@@ -1175,6 +1181,18 @@
       "rating": "8.6"
     },
     {
+      "title": "For All Mankind",
+      "image": "https://image.tmdb.org/t/p/w500/mNXT1QjRCEasXGH3rHCTQm0A0Su.jpg",
+      "link": "https://altadefinizionepremium.com/p/for-all-mankind",
+      "rating": "7.7"
+    },
+    {
+      "title": "나인 퍼즐",
+      "image": "https://image.tmdb.org/t/p/w500/p5q5tS8PVdZiWaUNdeYPHrOMcaI.jpg",
+      "link": "https://altadefinizionepremium.com/p/",
+      "rating": "10.0"
+    },
+    {
       "title": "MobLand",
       "image": "https://image.tmdb.org/t/p/w500/abeH7n5pcuQcwYcTxG6DTZvXLP1.jpg",
       "link": "https://altadefinizionepremium.com/p/mobland",
@@ -1184,24 +1202,30 @@
       "title": "Dear Hongrang",
       "image": "https://image.tmdb.org/t/p/w500/vQepTUG3kA2n73Hshe8qCrSW5j.jpg",
       "link": "https://altadefinizionepremium.com/p/dear-hongrang",
-      "rating": "6.8"
+      "rating": "7.0"
     },
     {
-      "title": "Kakegurui",
-      "image": "https://image.tmdb.org/t/p/w500/e3ENTAEDEO949khpVkJWgcWnwGG.jpg",
-      "link": "https://altadefinizionepremium.com/p/kakegurui",
-      "rating": "6.8"
+      "title": "Shining Girls",
+      "image": "https://image.tmdb.org/t/p/w500/qmN97JxhZHgCThRqgzaiSF7C2mj.jpg",
+      "link": "https://altadefinizionepremium.com/p/shining-girls",
+      "rating": "7.7"
     },
     {
-      "title": "Motorheads",
-      "image": "https://image.tmdb.org/t/p/w500/jglGmYMPEiHD7tVncvif7WtCOBJ.jpg",
-      "link": "https://altadefinizionepremium.com/p/motorheads",
-      "rating": "10.0"
+      "title": "The Studio",
+      "image": "https://image.tmdb.org/t/p/w500/kdxFSIvEi1cTEUDCUrJrs2UtCWn.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-studio",
+      "rating": "7.4"
     },
     {
       "title": "Overcompensating: l’inganno",
       "image": "https://image.tmdb.org/t/p/w500/2bQoLthCvafsBLhYr5f8RnowgCQ.jpg",
       "link": "https://altadefinizionepremium.com/p/overcompensating-l-inganno",
+      "rating": "7.0"
+    },
+    {
+      "title": "Kakegurui",
+      "image": "https://image.tmdb.org/t/p/w500/e3ENTAEDEO949khpVkJWgcWnwGG.jpg",
+      "link": "https://altadefinizionepremium.com/p/kakegurui",
       "rating": "6.9"
     },
     {
@@ -1211,22 +1235,10 @@
       "rating": "8.7"
     },
     {
-      "title": "The Handmaid's Tale - Il racconto dell'ancella",
-      "image": "https://image.tmdb.org/t/p/w500/qdWEaWkIQIjANGFeskheXpP0mm1.jpg",
-      "link": "https://altadefinizionepremium.com/p/the-handmaid-s-tale-il-racconto-dell-ancella",
-      "rating": "8.2"
-    },
-    {
-      "title": "The Studio",
-      "image": "https://image.tmdb.org/t/p/w500/kdxFSIvEi1cTEUDCUrJrs2UtCWn.jpg",
-      "link": "https://altadefinizionepremium.com/p/the-studio",
-      "rating": "7.3"
-    },
-    {
-      "title": "Pokémon",
-      "image": "https://image.tmdb.org/t/p/w500/jmyUVxAeNrYWn1rrJWWEIjQSAbm.jpg",
-      "link": "https://altadefinizionepremium.com/p/pok-mon",
-      "rating": "7.9"
+      "title": "The Rookie",
+      "image": "https://image.tmdb.org/t/p/w500/bL1mwXDnH5fCxqc4S2n40hoVyoe.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-rookie",
+      "rating": "8.5"
     },
     {
       "title": "藏海传",
@@ -1235,28 +1247,28 @@
       "rating": "7.0"
     },
     {
-      "title": "L'Eternauta",
-      "image": "https://image.tmdb.org/t/p/w500/deiHrEFh7zcSmdN6hj2hj3bSNL9.jpg",
-      "link": "https://altadefinizionepremium.com/p/l-eternauta",
-      "rating": "7.8"
+      "title": "Nine Perfect Strangers",
+      "image": "https://image.tmdb.org/t/p/w500/hEnw7bjJyQoszi0TL1hhlUzhHam.jpg",
+      "link": "https://altadefinizionepremium.com/p/nine-perfect-strangers",
+      "rating": "7.0"
     },
     {
-      "title": "The Walking Dead: Dead City",
-      "image": "https://image.tmdb.org/t/p/w500/wq3vuQzQgbS83zX3malAFWMsSwX.jpg",
-      "link": "https://altadefinizionepremium.com/p/the-walking-dead-dead-city",
-      "rating": "8.0"
+      "title": "Doctor Who",
+      "image": "https://image.tmdb.org/t/p/w500/2JP6NSmBwxg75uTcIHiv5R8PpPi.jpg",
+      "link": "https://altadefinizionepremium.com/p/doctor-who",
+      "rating": "6.5"
     },
     {
-      "title": "Il Trono di Spade",
-      "image": "https://image.tmdb.org/t/p/w500/n4IxkaZanXQU89WNRxt8h1fw1yb.jpg",
-      "link": "https://altadefinizionepremium.com/p/il-trono-di-spade",
-      "rating": "8.5"
+      "title": "The Handmaid's Tale - Il racconto dell'ancella",
+      "image": "https://image.tmdb.org/t/p/w500/qdWEaWkIQIjANGFeskheXpP0mm1.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-handmaid-s-tale-il-racconto-dell-ancella",
+      "rating": "8.2"
     },
     {
-      "title": "The Rookie",
-      "image": "https://image.tmdb.org/t/p/w500/bL1mwXDnH5fCxqc4S2n40hoVyoe.jpg",
-      "link": "https://altadefinizionepremium.com/p/the-rookie",
-      "rating": "8.5"
+      "title": "Motorheads",
+      "image": "https://image.tmdb.org/t/p/w500/jglGmYMPEiHD7tVncvif7WtCOBJ.jpg",
+      "link": "https://altadefinizionepremium.com/p/motorheads",
+      "rating": "9.8"
     }
   ],
   "now_playing": [
@@ -1273,12 +1285,6 @@
       "rating": "7.1"
     },
     {
-      "title": "A Working Man",
-      "image": "https://image.tmdb.org/t/p/w500/svSRfBNmZjDnus65gZJovFNa63R.jpg",
-      "link": "https://altadefinizionepremium.com/p/a-working-man",
-      "rating": "6.6"
-    },
-    {
       "title": "Warfare - Tempo di guerra",
       "image": "https://image.tmdb.org/t/p/w500/vmNgd0v5k1EITVAc9LqaliVtubU.jpg",
       "link": "https://altadefinizionepremium.com/p/warfare-tempo-di-guerra",
@@ -1288,7 +1294,7 @@
       "title": "Mission: Impossible - The Final Reckoning",
       "image": "https://image.tmdb.org/t/p/w500/a8Yg38L5JY7QtEXuLlfIWFZfxhD.jpg",
       "link": "https://altadefinizionepremium.com/p/mission-impossible-the-final-reckoning",
-      "rating": "7.3"
+      "rating": "7.1"
     },
     {
       "title": "Thunderbolts*",
@@ -1297,28 +1303,16 @@
       "rating": "7.5"
     },
     {
-      "title": "Proiettile vagante 3",
-      "image": "https://image.tmdb.org/t/p/w500/t71EMsSWsvnblYKMUhXYO9c24SU.jpg",
-      "link": "https://altadefinizionepremium.com/p/proiettile-vagante-3",
-      "rating": "6.7"
-    },
-    {
       "title": "Exterritorial - Oltre il confine",
       "image": "https://image.tmdb.org/t/p/w500/wqllCospPViEt7AeYIl4ZskKdSj.jpg",
       "link": "https://altadefinizionepremium.com/p/exterritorial-oltre-il-confine",
-      "rating": "6.6"
+      "rating": "6.7"
     },
     {
-      "title": "ज्वेल थीफ: द हीस्ट बिगिन्स",
-      "image": "https://image.tmdb.org/t/p/w500/eujLbO0kf1eqWC8XpHUJdtAVW2J.jpg",
-      "link": "https://altadefinizionepremium.com/p/",
-      "rating": "6.6"
-    },
-    {
-      "title": "I peccatori",
-      "image": "https://image.tmdb.org/t/p/w500/g9X7IZtlwqsRHj1BZKxdXwH0cpI.jpg",
-      "link": "https://altadefinizionepremium.com/p/i-peccatori",
-      "rating": "7.6"
+      "title": "Proiettile vagante 3",
+      "image": "https://image.tmdb.org/t/p/w500/t71EMsSWsvnblYKMUhXYO9c24SU.jpg",
+      "link": "https://altadefinizionepremium.com/p/proiettile-vagante-3",
+      "rating": "6.8"
     },
     {
       "title": "Havoc",
@@ -1327,22 +1321,28 @@
       "rating": "6.5"
     },
     {
-      "title": "Karate Kid: Legends",
-      "image": "https://image.tmdb.org/t/p/w500/ckI6bmQDvvGy20FPTIW1kfGKGRK.jpg",
-      "link": "https://altadefinizionepremium.com/p/karate-kid-legends",
-      "rating": "7.7"
-    },
-    {
-      "title": "Death of a Unicorn",
-      "image": "https://image.tmdb.org/t/p/w500/k3Nuu7Z5PuC6UxVIl2xbGhFvIjj.jpg",
-      "link": "https://altadefinizionepremium.com/p/death-of-a-unicorn",
-      "rating": "6.5"
+      "title": "I peccatori",
+      "image": "https://image.tmdb.org/t/p/w500/g9X7IZtlwqsRHj1BZKxdXwH0cpI.jpg",
+      "link": "https://altadefinizionepremium.com/p/i-peccatori",
+      "rating": "7.6"
     },
     {
       "title": "Lilo & Stitch",
       "image": "https://image.tmdb.org/t/p/w500/pPzClGa4jUxEYcRGQ2LEcK4FRQY.jpg",
       "link": "https://altadefinizionepremium.com/p/lilo-stitch",
-      "rating": "8.4"
+      "rating": "7.5"
+    },
+    {
+      "title": "ज्वेल थीफ: द हीस्ट बिगिन्स",
+      "image": "https://image.tmdb.org/t/p/w500/eujLbO0kf1eqWC8XpHUJdtAVW2J.jpg",
+      "link": "https://altadefinizionepremium.com/p/",
+      "rating": "6.8"
+    },
+    {
+      "title": "Karate Kid: Legends",
+      "image": "https://image.tmdb.org/t/p/w500/iXbNjhz2KU64vq6NEVVG5pIxggy.jpg",
+      "link": "https://altadefinizionepremium.com/p/karate-kid-legends",
+      "rating": "7.7"
     },
     {
       "title": "Final Destination",
@@ -1351,16 +1351,16 @@
       "rating": "6.6"
     },
     {
-      "title": "Desert Dawn",
-      "image": "https://image.tmdb.org/t/p/w500/S21BfLrJSD9njucBfY3CKqp8rD.jpg",
-      "link": "https://altadefinizionepremium.com/p/desert-dawn",
-      "rating": "8.0"
-    },
-    {
       "title": "Bullet Train Explosion",
       "image": "https://image.tmdb.org/t/p/w500/2tYBZqzHmnQenBtowLh55oIWsOY.jpg",
       "link": "https://altadefinizionepremium.com/p/bullet-train-explosion",
       "rating": "6.9"
+    },
+    {
+      "title": "Desert Dawn",
+      "image": "https://image.tmdb.org/t/p/w500/S21BfLrJSD9njucBfY3CKqp8rD.jpg",
+      "link": "https://altadefinizionepremium.com/p/desert-dawn",
+      "rating": "8.0"
     },
     {
       "title": "Drop - Accetta o rifiuta",
@@ -1375,16 +1375,16 @@
       "rating": "7.1"
     },
     {
+      "title": "The Ugly Stepsister",
+      "image": "https://image.tmdb.org/t/p/w500/mk4vGUy03tUCgJsOuwkYy877RYo.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-ugly-stepsister",
+      "rating": "6.6"
+    },
+    {
       "title": "Mickey 17",
       "image": "https://image.tmdb.org/t/p/w500/2JQBZs01ahsOiANQ7Fs8MN9zBY4.jpg",
       "link": "https://altadefinizionepremium.com/p/mickey-17",
       "rating": "6.9"
-    },
-    {
-      "title": "Nonnas",
-      "image": "https://image.tmdb.org/t/p/w500/5Bf1xlxLuCHdi74MpdFi2Yz3FGJ.jpg",
-      "link": "https://altadefinizionepremium.com/p/nonnas",
-      "rating": "6.8"
     },
     {
       "title": "Mission: Impossible",
@@ -1393,10 +1393,10 @@
       "rating": "7.0"
     },
     {
-      "title": "Conclave",
-      "image": "https://image.tmdb.org/t/p/w500/ic4EM9yv6CP8lfPXcNlKTuxTT6X.jpg",
-      "link": "https://altadefinizionepremium.com/p/conclave",
-      "rating": "7.2"
+      "title": "Nonnas",
+      "image": "https://image.tmdb.org/t/p/w500/5Bf1xlxLuCHdi74MpdFi2Yz3FGJ.jpg",
+      "link": "https://altadefinizionepremium.com/p/nonnas",
+      "rating": "6.8"
     },
     {
       "title": "Flow - Un mondo da salvare",
@@ -1405,22 +1405,22 @@
       "rating": "8.2"
     },
     {
+      "title": "Conclave",
+      "image": "https://image.tmdb.org/t/p/w500/ic4EM9yv6CP8lfPXcNlKTuxTT6X.jpg",
+      "link": "https://altadefinizionepremium.com/p/conclave",
+      "rating": "7.2"
+    },
+    {
       "title": "Memoir of a Snail",
       "image": "https://image.tmdb.org/t/p/w500/woaN8CbloH0akyX0E72ayxlJAB4.jpg",
       "link": "https://altadefinizionepremium.com/p/memoir-of-a-snail",
       "rating": "8.1"
     },
     {
-      "title": "Operazione vendetta",
-      "image": "https://image.tmdb.org/t/p/w500/9QB9r6l11p8k43OSaOMRPKxRXL4.jpg",
-      "link": "https://altadefinizionepremium.com/p/operazione-vendetta",
-      "rating": "6.6"
-    },
-    {
-      "title": "Dog Man",
-      "image": "https://image.tmdb.org/t/p/w500/eP5w2Kxz4KVGSqXTmbTEQemC0Wv.jpg",
-      "link": "https://altadefinizionepremium.com/p/dog-man",
-      "rating": "7.8"
+      "title": "Soul to Squeeze",
+      "image": "https://image.tmdb.org/t/p/w500/bBJGmU0ORhmo0liy7c3MdI8qOMU.jpg",
+      "link": "https://altadefinizionepremium.com/p/soul-to-squeeze",
+      "rating": "6.5"
     },
     {
       "title": "Veteran 2",
@@ -1445,6 +1445,18 @@
       "image": "https://image.tmdb.org/t/p/w500/bTMf8M7rZ21fChGdtsZtJj4Dfqh.jpg",
       "link": "https://altadefinizionepremium.com/p/ne-zha-2",
       "rating": "7.9"
+    },
+    {
+      "title": "Nosferatu",
+      "image": "https://image.tmdb.org/t/p/w500/lgQq6jyD9CABcFoi3dUImW7NDak.jpg",
+      "link": "https://altadefinizionepremium.com/p/nosferatu",
+      "rating": "6.7"
+    },
+    {
+      "title": "Heretic",
+      "image": "https://image.tmdb.org/t/p/w500/y3OlFClPjqTk6FIwYyFoIZ2Vk1x.jpg",
+      "link": "https://altadefinizionepremium.com/p/heretic",
+      "rating": "7.0"
     }
   ],
   "on_air": [
@@ -1482,13 +1494,19 @@
       "title": "Murderbot",
       "image": "https://image.tmdb.org/t/p/w500/mIKfKo2uDk3itzAPYIcSeYr4KtF.jpg",
       "link": "https://altadefinizionepremium.com/p/murderbot",
-      "rating": "7.6"
+      "rating": "7.8"
     },
     {
       "title": "Un si grand soleil",
       "image": "https://image.tmdb.org/t/p/w500/v4r70Z5id8eHFCxrfBOtRgu6wLr.jpg",
       "link": "https://altadefinizionepremium.com/p/un-si-grand-soleil",
       "rating": "6.8"
+    },
+    {
+      "title": "Criminal Minds",
+      "image": "https://image.tmdb.org/t/p/w500/wLMQebhTApmn4F6Fzg6FovdwVvL.jpg",
+      "link": "https://altadefinizionepremium.com/p/criminal-minds",
+      "rating": "8.3"
     }
   ]
 }
