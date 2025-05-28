@@ -255,7 +255,7 @@
     {
       "title": "A Simple Accident",
       "rating": "7.3",
-      "image": "https://image.tmdb.org/t/p/w500/gihATxMuABhAx1Vr7vfxy28SJMC.jpg",
+      "image": "https://via.placeholder.com/500x750?text=No+Image",
       "link": "https://altadefinizionepremium.com/p/a-simple-accident"
     },
     {
@@ -1071,6 +1071,18 @@
   ],
   "trending_films": [
     {
+      "title": "Fountain of Youth - L’eterna giovinezza",
+      "image": "https://image.tmdb.org/t/p/w500/kCWGK8QoK8ZPt6sju8pjohG4oxv.jpg",
+      "link": "https://altadefinizionepremium.com/p/fountain-of-youth-l-eterna-giovinezza",
+      "rating": "6.5"
+    },
+    {
+      "title": "Mission: Impossible - The Final Reckoning",
+      "image": "https://image.tmdb.org/t/p/w500/a8Yg38L5JY7QtEXuLlfIWFZfxhD.jpg",
+      "link": "https://altadefinizionepremium.com/p/mission-impossible-the-final-reckoning",
+      "rating": "7.1"
+    },
+    {
       "title": "Lilo & Stitch",
       "image": "https://image.tmdb.org/t/p/w500/pPzClGa4jUxEYcRGQ2LEcK4FRQY.jpg",
       "link": "https://altadefinizionepremium.com/p/lilo-stitch",
@@ -1083,10 +1095,10 @@
       "rating": "7.0"
     },
     {
-      "title": "Mission: Impossible - The Final Reckoning",
-      "image": "https://image.tmdb.org/t/p/w500/a8Yg38L5JY7QtEXuLlfIWFZfxhD.jpg",
-      "link": "https://altadefinizionepremium.com/p/mission-impossible-the-final-reckoning",
-      "rating": "7.0"
+      "title": "I peccatori",
+      "image": "https://image.tmdb.org/t/p/w500/g9X7IZtlwqsRHj1BZKxdXwH0cpI.jpg",
+      "link": "https://altadefinizionepremium.com/p/i-peccatori",
+      "rating": "7.5"
     },
     {
       "title": "Un film Minecraft",
@@ -1095,16 +1107,10 @@
       "rating": "6.5"
     },
     {
-      "title": "I peccatori",
-      "image": "https://image.tmdb.org/t/p/w500/g9X7IZtlwqsRHj1BZKxdXwH0cpI.jpg",
-      "link": "https://altadefinizionepremium.com/p/i-peccatori",
-      "rating": "7.5"
-    },
-    {
       "title": "Thunderbolts*",
       "image": "https://image.tmdb.org/t/p/w500/crggVLnJ6btoK4JC04ZJEs2YkwA.jpg",
       "link": "https://altadefinizionepremium.com/p/thunderbolts",
-      "rating": "7.5"
+      "rating": "7.4"
     },
     {
       "title": "Mission: Impossible - Dead Reckoning Parte uno",
@@ -1113,22 +1119,16 @@
       "rating": "7.5"
     },
     {
-      "title": "Final Destination",
-      "image": "https://image.tmdb.org/t/p/w500/1mXhlQMnlfvJ2frxTjZSQNnA9Vp.jpg",
-      "link": "https://altadefinizionepremium.com/p/final-destination",
-      "rating": "6.6"
-    },
-    {
-      "title": "Mickey 17",
-      "image": "https://image.tmdb.org/t/p/w500/2JQBZs01ahsOiANQ7Fs8MN9zBY4.jpg",
-      "link": "https://altadefinizionepremium.com/p/mickey-17",
-      "rating": "6.9"
-    },
-    {
       "title": "Mission: Impossible",
       "image": "https://image.tmdb.org/t/p/w500/sM2atplnXKyHpabXXpZNpevcwh3.jpg",
       "link": "https://altadefinizionepremium.com/p/mission-impossible",
       "rating": "7.0"
+    },
+    {
+      "title": "Final Destination",
+      "image": "https://image.tmdb.org/t/p/w500/1mXhlQMnlfvJ2frxTjZSQNnA9Vp.jpg",
+      "link": "https://altadefinizionepremium.com/p/final-destination",
+      "rating": "6.6"
     },
     {
       "title": "A Working Man",
@@ -1137,15 +1137,15 @@
       "rating": "6.7"
     },
     {
-      "title": "Guerre stellari",
-      "image": "https://image.tmdb.org/t/p/w500/uteN8YA4Yddm4mDVPH7QwvOZia1.jpg",
-      "link": "https://altadefinizionepremium.com/p/guerre-stellari",
-      "rating": "8.2"
-    },
-    {
       "title": "Karate Kid: Legends",
       "image": "https://image.tmdb.org/t/p/w500/iXbNjhz2KU64vq6NEVVG5pIxggy.jpg",
       "link": "https://altadefinizionepremium.com/p/karate-kid-legends",
+      "rating": "7.6"
+    },
+    {
+      "title": "Lilo & Stitch",
+      "image": "https://image.tmdb.org/t/p/w500/vT83eunD94Pg9bqRy3bTY0r8cr2.jpg",
+      "link": "https://altadefinizionepremium.com/p/lilo-stitch",
       "rating": "7.5"
     }
   ],
@@ -1157,22 +1157,16 @@
       "rating": "8.6"
     },
     {
-      "title": "Murderbot",
-      "image": "https://image.tmdb.org/t/p/w500/mIKfKo2uDk3itzAPYIcSeYr4KtF.jpg",
-      "link": "https://altadefinizionepremium.com/p/murderbot",
-      "rating": "7.3"
-    },
-    {
-      "title": "Sirens",
-      "image": "https://image.tmdb.org/t/p/w500/39TnPl0JjDwOMKzDwWnCMoBxUCn.jpg",
-      "link": "https://altadefinizionepremium.com/p/sirens",
-      "rating": "6.9"
-    },
-    {
       "title": "Andor",
       "image": "https://image.tmdb.org/t/p/w500/dLp2ApdeAk3iPYxjAracJ4aTr3.jpg",
       "link": "https://altadefinizionepremium.com/p/andor",
       "rating": "8.2"
+    },
+    {
+      "title": "Murderbot",
+      "image": "https://image.tmdb.org/t/p/w500/mIKfKo2uDk3itzAPYIcSeYr4KtF.jpg",
+      "link": "https://altadefinizionepremium.com/p/murderbot",
+      "rating": "7.3"
     },
     {
       "title": "Rick and Morty",
@@ -1181,10 +1175,10 @@
       "rating": "8.7"
     },
     {
-      "title": "灵笼",
-      "image": "https://image.tmdb.org/t/p/w500/u19AqnbpXBi3YvAtcLn5WOgZJA7.jpg",
-      "link": "https://altadefinizionepremium.com/p/",
-      "rating": "8.5"
+      "title": "Il racconto dell'ancella",
+      "image": "https://image.tmdb.org/t/p/w500/bn2oFJDMKwIIfwBSHuY561GRBMJ.jpg",
+      "link": "https://altadefinizionepremium.com/p/il-racconto-dell-ancella",
+      "rating": "8.2"
     },
     {
       "title": "MobLand",
@@ -1193,22 +1187,22 @@
       "rating": "8.5"
     },
     {
-      "title": "One Piece",
-      "image": "https://image.tmdb.org/t/p/w500/oag7edI9flSMawmNySEiSEJAbrf.jpg",
-      "link": "https://altadefinizionepremium.com/p/one-piece",
-      "rating": "8.7"
+      "title": "Sirens",
+      "image": "https://image.tmdb.org/t/p/w500/mezbwX9gFWTXl0XiicS5ZMcdXVx.jpg",
+      "link": "https://altadefinizionepremium.com/p/sirens",
+      "rating": "6.8"
     },
     {
-      "title": "Love, Death & Robots",
-      "image": "https://image.tmdb.org/t/p/w500/asDqvkE66EegtKJJXIRhBJPxscr.jpg",
-      "link": "https://altadefinizionepremium.com/p/love-death-robots",
-      "rating": "8.2"
+      "title": "Nine Puzzles",
+      "image": "https://image.tmdb.org/t/p/w500/p5q5tS8PVdZiWaUNdeYPHrOMcaI.jpg",
+      "link": "https://altadefinizionepremium.com/p/nine-puzzles",
+      "rating": "6.6"
     },
     {
-      "title": "La leggenda di Zang Hai",
-      "image": "https://image.tmdb.org/t/p/w500/jnYzQyA5Rh1b5nOnlo0Sh8yCFYr.jpg",
-      "link": "https://altadefinizionepremium.com/p/la-leggenda-di-zang-hai",
-      "rating": "8.2"
+      "title": "灵笼",
+      "image": "https://image.tmdb.org/t/p/w500/u19AqnbpXBi3YvAtcLn5WOgZJA7.jpg",
+      "link": "https://altadefinizionepremium.com/p/",
+      "rating": "8.5"
     },
     {
       "title": "The Studio",
@@ -1223,15 +1217,27 @@
       "rating": "7.0"
     },
     {
-      "title": "The Walking Dead: Dead City",
-      "image": "https://image.tmdb.org/t/p/w500/wq3vuQzQgbS83zX3malAFWMsSwX.jpg",
-      "link": "https://altadefinizionepremium.com/p/the-walking-dead-dead-city",
-      "rating": "8.0"
+      "title": "One Piece",
+      "image": "https://image.tmdb.org/t/p/w500/oag7edI9flSMawmNySEiSEJAbrf.jpg",
+      "link": "https://altadefinizionepremium.com/p/one-piece",
+      "rating": "8.7"
     },
     {
-      "title": "Motorheads",
-      "image": "https://image.tmdb.org/t/p/w500/jglGmYMPEiHD7tVncvif7WtCOBJ.jpg",
-      "link": "https://altadefinizionepremium.com/p/motorheads",
+      "title": "The Librarians: The Next Chapter",
+      "image": "https://image.tmdb.org/t/p/w500/w2PhnfYgY1yjxnUc1M4Jp5CjXvD.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-librarians-the-next-chapter",
+      "rating": "8.4"
+    },
+    {
+      "title": "Love, Death & Robots",
+      "image": "https://image.tmdb.org/t/p/w500/asDqvkE66EegtKJJXIRhBJPxscr.jpg",
+      "link": "https://altadefinizionepremium.com/p/love-death-robots",
+      "rating": "8.2"
+    },
+    {
+      "title": "Breaking Bad",
+      "image": "https://image.tmdb.org/t/p/w500/ztkUQFLlC19CCMYHW9o1zWhJRNq.jpg",
+      "link": "https://altadefinizionepremium.com/p/breaking-bad",
       "rating": "8.9"
     },
     {
@@ -1241,36 +1247,36 @@
       "rating": "8.5"
     },
     {
-      "title": "Il racconto dell'ancella",
-      "image": "https://image.tmdb.org/t/p/w500/bn2oFJDMKwIIfwBSHuY561GRBMJ.jpg",
-      "link": "https://altadefinizionepremium.com/p/il-racconto-dell-ancella",
-      "rating": "8.2"
-    },
-    {
-      "title": "미지의 서울",
-      "image": "https://image.tmdb.org/t/p/w500/woGYRE5vChxqUqTBJJaOhO9Cqk6.jpg",
-      "link": "https://altadefinizionepremium.com/p/",
-      "rating": "8.5"
+      "title": "The Walking Dead: Dead City",
+      "image": "https://image.tmdb.org/t/p/w500/wq3vuQzQgbS83zX3malAFWMsSwX.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-walking-dead-dead-city",
+      "rating": "8.0"
     },
     {
       "title": "Il Trono di Spade",
       "image": "https://image.tmdb.org/t/p/w500/n4IxkaZanXQU89WNRxt8h1fw1yb.jpg",
       "link": "https://altadefinizionepremium.com/p/il-trono-di-spade",
       "rating": "8.5"
+    },
+    {
+      "title": "미지의 서울",
+      "image": "https://image.tmdb.org/t/p/w500/woGYRE5vChxqUqTBJJaOhO9Cqk6.jpg",
+      "link": "https://altadefinizionepremium.com/p/",
+      "rating": "8.5"
     }
   ],
   "now_playing": [
-    {
-      "title": "Un film Minecraft",
-      "image": "https://image.tmdb.org/t/p/w500/myoxQxrAEZICqe3DRyJUsiE5lWS.jpg",
-      "link": "https://altadefinizionepremium.com/p/un-film-minecraft",
-      "rating": "6.5"
-    },
     {
       "title": "Lilo & Stitch",
       "image": "https://image.tmdb.org/t/p/w500/pPzClGa4jUxEYcRGQ2LEcK4FRQY.jpg",
       "link": "https://altadefinizionepremium.com/p/lilo-stitch",
       "rating": "7.0"
+    },
+    {
+      "title": "Un film Minecraft",
+      "image": "https://image.tmdb.org/t/p/w500/myoxQxrAEZICqe3DRyJUsiE5lWS.jpg",
+      "link": "https://altadefinizionepremium.com/p/un-film-minecraft",
+      "rating": "6.5"
     },
     {
       "title": "Final Destination: Bloodlines",
@@ -1282,19 +1288,25 @@
       "title": "Mission: Impossible - The Final Reckoning",
       "image": "https://image.tmdb.org/t/p/w500/a8Yg38L5JY7QtEXuLlfIWFZfxhD.jpg",
       "link": "https://altadefinizionepremium.com/p/mission-impossible-the-final-reckoning",
-      "rating": "7.0"
+      "rating": "7.1"
+    },
+    {
+      "title": "Fountain of Youth - L’eterna giovinezza",
+      "image": "https://image.tmdb.org/t/p/w500/kCWGK8QoK8ZPt6sju8pjohG4oxv.jpg",
+      "link": "https://altadefinizionepremium.com/p/fountain-of-youth-l-eterna-giovinezza",
+      "rating": "6.5"
     },
     {
       "title": "Warfare - Tempo di guerra",
       "image": "https://image.tmdb.org/t/p/w500/vmNgd0v5k1EITVAc9LqaliVtubU.jpg",
       "link": "https://altadefinizionepremium.com/p/warfare-tempo-di-guerra",
-      "rating": "7.2"
+      "rating": "7.3"
     },
     {
       "title": "Thunderbolts*",
       "image": "https://image.tmdb.org/t/p/w500/crggVLnJ6btoK4JC04ZJEs2YkwA.jpg",
       "link": "https://altadefinizionepremium.com/p/thunderbolts",
-      "rating": "7.5"
+      "rating": "7.4"
     },
     {
       "title": "Exterritorial - Oltre il confine",
@@ -1306,19 +1318,19 @@
       "title": "Proiettile vagante 3",
       "image": "https://image.tmdb.org/t/p/w500/t71EMsSWsvnblYKMUhXYO9c24SU.jpg",
       "link": "https://altadefinizionepremium.com/p/proiettile-vagante-3",
-      "rating": "6.7"
-    },
-    {
-      "title": "Jewel Thief - The Heist Begins",
-      "image": "https://image.tmdb.org/t/p/w500/eujLbO0kf1eqWC8XpHUJdtAVW2J.jpg",
-      "link": "https://altadefinizionepremium.com/p/jewel-thief-the-heist-begins",
-      "rating": "6.7"
+      "rating": "6.8"
     },
     {
       "title": "Havoc",
       "image": "https://image.tmdb.org/t/p/w500/ubP2OsF3GlfqYPvXyLw9d78djGX.jpg",
       "link": "https://altadefinizionepremium.com/p/havoc",
       "rating": "6.5"
+    },
+    {
+      "title": "I peccatori",
+      "image": "https://image.tmdb.org/t/p/w500/g9X7IZtlwqsRHj1BZKxdXwH0cpI.jpg",
+      "link": "https://altadefinizionepremium.com/p/i-peccatori",
+      "rating": "7.5"
     },
     {
       "title": "I peccatori",
@@ -1336,7 +1348,7 @@
       "title": "Karate Kid: Legends",
       "image": "https://image.tmdb.org/t/p/w500/iXbNjhz2KU64vq6NEVVG5pIxggy.jpg",
       "link": "https://altadefinizionepremium.com/p/karate-kid-legends",
-      "rating": "7.5"
+      "rating": "7.6"
     },
     {
       "title": "Bullet Train Explosion",
@@ -1357,22 +1369,16 @@
       "rating": "7.0"
     },
     {
-      "title": "The Ugly Stepsister",
-      "image": "https://image.tmdb.org/t/p/w500/mk4vGUy03tUCgJsOuwkYy877RYo.jpg",
-      "link": "https://altadefinizionepremium.com/p/the-ugly-stepsister",
-      "rating": "7.0"
-    },
-    {
-      "title": "Mickey 17",
-      "image": "https://image.tmdb.org/t/p/w500/2JQBZs01ahsOiANQ7Fs8MN9zBY4.jpg",
-      "link": "https://altadefinizionepremium.com/p/mickey-17",
-      "rating": "6.9"
-    },
-    {
       "title": "L'amore che non muore",
       "image": "https://image.tmdb.org/t/p/w500/vyGD51Ybjf6EPWjHxIRGKVjer4n.jpg",
       "link": "https://altadefinizionepremium.com/p/l-amore-che-non-muore",
       "rating": "7.2"
+    },
+    {
+      "title": "The Ugly Stepsister",
+      "image": "https://image.tmdb.org/t/p/w500/mk4vGUy03tUCgJsOuwkYy877RYo.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-ugly-stepsister",
+      "rating": "7.0"
     },
     {
       "title": "The Accountant²",
@@ -1393,27 +1399,39 @@
       "rating": "7.5"
     },
     {
-      "title": "Drop - Accetta o rifiuta",
-      "image": "https://image.tmdb.org/t/p/w500/sYo8mowvoL1Hi1vsS8dSEpqArJM.jpg",
-      "link": "https://altadefinizionepremium.com/p/drop-accetta-o-rifiuta",
-      "rating": "6.5"
-    },
-    {
       "title": "Memoir of a Snail",
       "image": "https://image.tmdb.org/t/p/w500/woaN8CbloH0akyX0E72ayxlJAB4.jpg",
       "link": "https://altadefinizionepremium.com/p/memoir-of-a-snail",
       "rating": "8.1"
     },
     {
-      "title": "Nonnas",
-      "image": "https://image.tmdb.org/t/p/w500/5Bf1xlxLuCHdi74MpdFi2Yz3FGJ.jpg",
-      "link": "https://altadefinizionepremium.com/p/nonnas",
+      "title": "Drop - Accetta o rifiuta",
+      "image": "https://image.tmdb.org/t/p/w500/sYo8mowvoL1Hi1vsS8dSEpqArJM.jpg",
+      "link": "https://altadefinizionepremium.com/p/drop-accetta-o-rifiuta",
+      "rating": "6.5"
+    },
+    {
+      "title": "Thunderbirds: L'élite dell'aeronautica americana",
+      "image": "https://image.tmdb.org/t/p/w500/hsJtBhMxNDGzW5KcQ9qz3EQGnEt.jpg",
+      "link": "https://altadefinizionepremium.com/p/thunderbirds-l-lite-dell-aeronautica-americana",
       "rating": "6.8"
     },
     {
       "title": "Thunderbirds: L'élite dell'aeronautica americana",
       "image": "https://image.tmdb.org/t/p/w500/hsJtBhMxNDGzW5KcQ9qz3EQGnEt.jpg",
       "link": "https://altadefinizionepremium.com/p/thunderbirds-l-lite-dell-aeronautica-americana",
+      "rating": "6.8"
+    },
+    {
+      "title": "Norbert",
+      "image": "https://image.tmdb.org/t/p/w500/2DYgEfgv1bOmgibE1kyPBmzxaf2.jpg",
+      "link": "https://altadefinizionepremium.com/p/norbert",
+      "rating": "7.0"
+    },
+    {
+      "title": "Nonnas",
+      "image": "https://image.tmdb.org/t/p/w500/5Bf1xlxLuCHdi74MpdFi2Yz3FGJ.jpg",
+      "link": "https://altadefinizionepremium.com/p/nonnas",
       "rating": "6.9"
     },
     {
@@ -1443,6 +1461,12 @@
       "rating": "6.8"
     },
     {
+      "title": "Rick and Morty",
+      "image": "https://image.tmdb.org/t/p/w500/WGRQ8FpjkDTzivQJ43t94bOuY0.jpg",
+      "link": "https://altadefinizionepremium.com/p/rick-and-morty",
+      "rating": "8.7"
+    },
+    {
       "title": "I Griffin",
       "image": "https://image.tmdb.org/t/p/w500/6IwwpmNmOta9UDz5gfvSokPFELL.jpg",
       "link": "https://altadefinizionepremium.com/p/i-griffin",
@@ -1467,10 +1491,10 @@
       "rating": "7.9"
     },
     {
-      "title": "Rick and Morty",
-      "image": "https://image.tmdb.org/t/p/w500/WGRQ8FpjkDTzivQJ43t94bOuY0.jpg",
-      "link": "https://altadefinizionepremium.com/p/rick-and-morty",
-      "rating": "8.7"
+      "title": "Al Fondo Hay Sitio",
+      "image": "https://image.tmdb.org/t/p/w500/4BkYVoybIvM2U7zeg2JTT5M5dwF.jpg",
+      "link": "https://altadefinizionepremium.com/p/al-fondo-hay-sitio",
+      "rating": "7.8"
     },
     {
       "title": "Murderbot",
