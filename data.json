@@ -243,7 +243,7 @@
     {
       "title": "The Mastermind",
       "rating": "5.9",
-      "image": "https://image.tmdb.org/t/p/w500/e0wef8yvyHL4WQynJrcRgqFsPiX.jpg",
+      "image": "https://image.tmdb.org/t/p/w500/w41wCJGcQM4Bdd0OeQ26UNi5o39.jpg",
       "link": "https://altadefinizionepremium.com/p/the-mastermind"
     },
     {
@@ -1077,16 +1077,16 @@
       "rating": "7.7"
     },
     {
-      "title": "Superman",
-      "image": "https://image.tmdb.org/t/p/w500/mZtiFCSqqyT9q0B07pvGQIZRG62.jpg",
-      "link": "https://altadefinizionepremium.com/p/superman",
-      "rating": "7.6"
-    },
-    {
       "title": "Mission: Impossible - The Final Reckoning",
       "image": "https://image.tmdb.org/t/p/w500/a8Yg38L5JY7QtEXuLlfIWFZfxhD.jpg",
       "link": "https://altadefinizionepremium.com/p/mission-impossible-the-final-reckoning",
       "rating": "7.2"
+    },
+    {
+      "title": "Superman",
+      "image": "https://image.tmdb.org/t/p/w500/mZtiFCSqqyT9q0B07pvGQIZRG62.jpg",
+      "link": "https://altadefinizionepremium.com/p/superman",
+      "rating": "7.6"
     },
     {
       "title": "Troppo cattivi 2",
@@ -1101,22 +1101,16 @@
       "rating": "6.9"
     },
     {
+      "title": "Eenie Meanie",
+      "image": "https://image.tmdb.org/t/p/w500/12Va3oO3oYUdOd75zM57Nx1976a.jpg",
+      "link": "https://altadefinizionepremium.com/p/eenie-meanie",
+      "rating": "7.3"
+    },
+    {
       "title": "Weapons",
       "image": "https://image.tmdb.org/t/p/w500/rzaoVpOs4Pu73XPSuPqkIFJhU1f.jpg",
       "link": "https://altadefinizionepremium.com/p/weapons",
       "rating": "7.5"
-    },
-    {
-      "title": "Demon Slayer: Kimetsu no Yaiba - Il Castello dell’Infinito",
-      "image": "https://image.tmdb.org/t/p/w500/bq88RHSdnT2rpt4ki9CJUxHz2gH.jpg",
-      "link": "https://altadefinizionepremium.com/p/demon-slayer-kimetsu-no-yaiba-il-castello-dell-infinito",
-      "rating": "7.1"
-    },
-    {
-      "title": "La mappa che mi porta a te",
-      "image": "https://image.tmdb.org/t/p/w500/jd2AkS2IbJSiCz1NYz7VfeMxwnN.jpg",
-      "link": "https://altadefinizionepremium.com/p/la-mappa-che-mi-porta-a-te",
-      "rating": "6.9"
     },
     {
       "title": "Dragon Trainer",
@@ -1125,21 +1119,33 @@
       "rating": "8.0"
     },
     {
-      "title": "The Suicide Squad - Missione suicida",
-      "image": "https://image.tmdb.org/t/p/w500/9MjzpAvNQv8zXeiDJIm58Xws0MD.jpg",
-      "link": "https://altadefinizionepremium.com/p/the-suicide-squad-missione-suicida",
-      "rating": "7.5"
+      "title": "La mappa che mi porta a te",
+      "image": "https://image.tmdb.org/t/p/w500/jd2AkS2IbJSiCz1NYz7VfeMxwnN.jpg",
+      "link": "https://altadefinizionepremium.com/p/la-mappa-che-mi-porta-a-te",
+      "rating": "6.8"
     },
     {
-      "title": "Bring Her Back - Torna da me",
-      "image": "https://image.tmdb.org/t/p/w500/dQFBADjtsZRRbBpU3rhuuCYmowd.jpg",
-      "link": "https://altadefinizionepremium.com/p/bring-her-back-torna-da-me",
-      "rating": "7.4"
+      "title": "Demon Slayer: Kimetsu no Yaiba - Il Castello dell’Infinito",
+      "image": "https://image.tmdb.org/t/p/w500/bq88RHSdnT2rpt4ki9CJUxHz2gH.jpg",
+      "link": "https://altadefinizionepremium.com/p/demon-slayer-kimetsu-no-yaiba-il-castello-dell-infinito",
+      "rating": "7.2"
     },
     {
       "title": "Io sono nessuno 2",
       "image": "https://image.tmdb.org/t/p/w500/j2nxKRLJ3O02CdvB7nrTEN7Qydl.jpg",
       "link": "https://altadefinizionepremium.com/p/io-sono-nessuno-2",
+      "rating": "7.4"
+    },
+    {
+      "title": "Material Love",
+      "image": "https://image.tmdb.org/t/p/w500/ieCB4VjEyEAyWNYC3IBg1f0MPdr.jpg",
+      "link": "https://altadefinizionepremium.com/p/material-love",
+      "rating": "6.7"
+    },
+    {
+      "title": "Bring Her Back - Torna da me",
+      "image": "https://image.tmdb.org/t/p/w500/dQFBADjtsZRRbBpU3rhuuCYmowd.jpg",
+      "link": "https://altadefinizionepremium.com/p/bring-her-back-torna-da-me",
       "rating": "7.4"
     },
     {
@@ -1153,27 +1159,15 @@
       "image": "https://image.tmdb.org/t/p/w500/lnatQ2ZgpTJet7jqjGPRo2h9Xuw.jpg",
       "link": "https://altadefinizionepremium.com/p/i-fantastici-quattro-gli-inizi",
       "rating": "7.2"
-    },
-    {
-      "title": "Ne Zha 2",
-      "image": "https://image.tmdb.org/t/p/w500/bTMf8M7rZ21fChGdtsZtJj4Dfqh.jpg",
-      "link": "https://altadefinizionepremium.com/p/ne-zha-2",
-      "rating": "8.0"
-    },
-    {
-      "title": "Material Love",
-      "image": "https://image.tmdb.org/t/p/w500/ieCB4VjEyEAyWNYC3IBg1f0MPdr.jpg",
-      "link": "https://altadefinizionepremium.com/p/material-love",
-      "rating": "6.7"
-    },
-    {
-      "title": "Fall for Me",
-      "image": "https://image.tmdb.org/t/p/w500/2ZrMkY6ae7tJ5ZOUXXMNPL5fsMD.jpg",
-      "link": "https://altadefinizionepremium.com/p/fall-for-me",
-      "rating": "7.8"
     }
   ],
   "trending_series": [
+    {
+      "title": "Alien: Pianeta Terra",
+      "image": "https://image.tmdb.org/t/p/w500/y6DP95YbjwgDuveTNP28tFqAvWk.jpg",
+      "link": "https://altadefinizionepremium.com/p/alien-pianeta-terra",
+      "rating": "7.9"
+    },
     {
       "title": "Peacemaker",
       "image": "https://image.tmdb.org/t/p/w500/yb4F1Oocq8GfQt6iIuAgYEBokhG.jpg",
@@ -1181,10 +1175,10 @@
       "rating": "8.2"
     },
     {
-      "title": "Alien: Pianeta Terra",
-      "image": "https://image.tmdb.org/t/p/w500/y6DP95YbjwgDuveTNP28tFqAvWk.jpg",
-      "link": "https://altadefinizionepremium.com/p/alien-pianeta-terra",
-      "rating": "7.9"
+      "title": "Dexter: Resurrection",
+      "image": "https://image.tmdb.org/t/p/w500/hIawSocuwqgNeRf3JuKuxgMHmSC.jpg",
+      "link": "https://altadefinizionepremium.com/p/dexter-resurrection",
+      "rating": "8.9"
     },
     {
       "title": "Invasion",
@@ -1211,34 +1205,28 @@
       "rating": "8.6"
     },
     {
-      "title": "Butterfly",
-      "image": "https://image.tmdb.org/t/p/w500/8x1W0TR2VIe7ORaRI9zwDqeJn9q.jpg",
-      "link": "https://altadefinizionepremium.com/p/butterfly",
-      "rating": "7.6"
-    },
-    {
-      "title": "One Piece",
-      "image": "https://image.tmdb.org/t/p/w500/oag7edI9flSMawmNySEiSEJAbrf.jpg",
-      "link": "https://altadefinizionepremium.com/p/one-piece",
-      "rating": "8.7"
-    },
-    {
-      "title": "Dexter: Resurrection",
-      "image": "https://image.tmdb.org/t/p/w500/hIawSocuwqgNeRf3JuKuxgMHmSC.jpg",
-      "link": "https://altadefinizionepremium.com/p/dexter-resurrection",
-      "rating": "8.9"
-    },
-    {
       "title": "凡人修仙传",
       "image": "https://image.tmdb.org/t/p/w500/3m1UaMLgmpj6krNaQwTpftYFsnz.jpg",
       "link": "https://altadefinizionepremium.com/p/",
       "rating": "8.4"
     },
     {
-      "title": "L'estate nei tuoi occhi",
-      "image": "https://image.tmdb.org/t/p/w500/4ucAqEvXoAjQPlh9k4r0LqF9JWJ.jpg",
-      "link": "https://altadefinizionepremium.com/p/l-estate-nei-tuoi-occhi",
+      "title": "Butterfly",
+      "image": "https://image.tmdb.org/t/p/w500/8x1W0TR2VIe7ORaRI9zwDqeJn9q.jpg",
+      "link": "https://altadefinizionepremium.com/p/butterfly",
+      "rating": "7.7"
+    },
+    {
+      "title": "Dexter",
+      "image": "https://image.tmdb.org/t/p/w500/q8dWfc4JwQuv3HayIZeO84jAXED.jpg",
+      "link": "https://altadefinizionepremium.com/p/dexter",
       "rating": "8.2"
+    },
+    {
+      "title": "One Piece",
+      "image": "https://image.tmdb.org/t/p/w500/oag7edI9flSMawmNySEiSEJAbrf.jpg",
+      "link": "https://altadefinizionepremium.com/p/one-piece",
+      "rating": "8.7"
     },
     {
       "title": "Fondazione",
@@ -1253,22 +1241,22 @@
       "rating": "7.0"
     },
     {
+      "title": "Breaking Bad",
+      "image": "https://image.tmdb.org/t/p/w500/ztkUQFLlC19CCMYHW9o1zWhJRNq.jpg",
+      "link": "https://altadefinizionepremium.com/p/breaking-bad",
+      "rating": "8.9"
+    },
+    {
+      "title": "L'estate nei tuoi occhi",
+      "image": "https://image.tmdb.org/t/p/w500/4ucAqEvXoAjQPlh9k4r0LqF9JWJ.jpg",
+      "link": "https://altadefinizionepremium.com/p/l-estate-nei-tuoi-occhi",
+      "rating": "8.2"
+    },
+    {
       "title": "Star Trek: Strange New Worlds",
       "image": "https://image.tmdb.org/t/p/w500/tSDCM88q2DX6bifcr9LI5Iezcld.jpg",
       "link": "https://altadefinizionepremium.com/p/star-trek-strange-new-worlds",
       "rating": "8.1"
-    },
-    {
-      "title": "Twisted Metal",
-      "image": "https://image.tmdb.org/t/p/w500/3Zr9qJXqHQwi9IyPBDwukgg1jcZ.jpg",
-      "link": "https://altadefinizionepremium.com/p/twisted-metal",
-      "rating": "7.8"
-    },
-    {
-      "title": "Dexter",
-      "image": "https://image.tmdb.org/t/p/w500/q8dWfc4JwQuv3HayIZeO84jAXED.jpg",
-      "link": "https://altadefinizionepremium.com/p/dexter",
-      "rating": "8.2"
     },
     {
       "title": "Il Trono di Spade",
@@ -1277,22 +1265,22 @@
       "rating": "8.5"
     },
     {
-      "title": "Breaking Bad",
-      "image": "https://image.tmdb.org/t/p/w500/ztkUQFLlC19CCMYHW9o1zWhJRNq.jpg",
-      "link": "https://altadefinizionepremium.com/p/breaking-bad",
-      "rating": "8.9"
+      "title": "Fallout",
+      "image": "https://image.tmdb.org/t/p/w500/bnayCOZ739OHS2DHPy7ZQDGC8iv.jpg",
+      "link": "https://altadefinizionepremium.com/p/fallout",
+      "rating": "8.2"
+    },
+    {
+      "title": "Twisted Metal",
+      "image": "https://image.tmdb.org/t/p/w500/3Zr9qJXqHQwi9IyPBDwukgg1jcZ.jpg",
+      "link": "https://altadefinizionepremium.com/p/twisted-metal",
+      "rating": "7.8"
     },
     {
       "title": "The Twisted Tale of Amanda Knox",
       "image": "https://image.tmdb.org/t/p/w500/udxkpbqBsVS4Hnrfn4HabDKKxb5.jpg",
       "link": "https://altadefinizionepremium.com/p/the-twisted-tale-of-amanda-knox",
       "rating": "7.8"
-    },
-    {
-      "title": "生万物",
-      "image": "https://image.tmdb.org/t/p/w500/ymPem0W7g2ZtoQMqhsOsBFJxlKh.jpg",
-      "link": "https://altadefinizionepremium.com/p/",
-      "rating": "10.0"
     }
   ],
   "now_playing": [
@@ -1300,19 +1288,25 @@
       "title": "Demon Slayer: Kimetsu no Yaiba - Il Castello dell’Infinito",
       "image": "https://image.tmdb.org/t/p/w500/bq88RHSdnT2rpt4ki9CJUxHz2gH.jpg",
       "link": "https://altadefinizionepremium.com/p/demon-slayer-kimetsu-no-yaiba-il-castello-dell-infinito",
-      "rating": "7.1"
+      "rating": "7.2"
     },
     {
       "title": "Troppo cattivi 2",
       "image": "https://image.tmdb.org/t/p/w500/5yHZwMi39vwY2ooRJHsA0WXq0iA.jpg",
       "link": "https://altadefinizionepremium.com/p/troppo-cattivi-2",
-      "rating": "7.7"
+      "rating": "7.9"
     },
     {
       "title": "Hostile Takeover",
       "image": "https://image.tmdb.org/t/p/w500/vntwlS3CAKfoLTs90GaoK6lymBC.jpg",
       "link": "https://altadefinizionepremium.com/p/hostile-takeover",
-      "rating": "7.9"
+      "rating": "8.1"
+    },
+    {
+      "title": "F1: Il film",
+      "image": "https://image.tmdb.org/t/p/w500/tGMs4Ji6CH33GIx5aHAXc0uhu3F.jpg",
+      "link": "https://altadefinizionepremium.com/p/f1-il-film",
+      "rating": "7.7"
     },
     {
       "title": "Weapons",
@@ -1324,13 +1318,7 @@
       "title": "射雕英雄传：侠之大者",
       "image": "https://image.tmdb.org/t/p/w500/xZmUHiZlzuU3FuD9EE5wdZpNc95.jpg",
       "link": "https://altadefinizionepremium.com/p/",
-      "rating": "6.6"
-    },
-    {
-      "title": "Il blindato dell’amore",
-      "image": "https://image.tmdb.org/t/p/w500/gpAhximhB3gS1CtCjxxuGqTC4S7.jpg",
-      "link": "https://altadefinizionepremium.com/p/il-blindato-dell-amore",
-      "rating": "6.5"
+      "rating": "6.7"
     },
     {
       "title": "KPop Demon Hunters",
@@ -1339,10 +1327,22 @@
       "rating": "8.4"
     },
     {
+      "title": "Il blindato dell’amore",
+      "image": "https://image.tmdb.org/t/p/w500/gpAhximhB3gS1CtCjxxuGqTC4S7.jpg",
+      "link": "https://altadefinizionepremium.com/p/il-blindato-dell-amore",
+      "rating": "6.5"
+    },
+    {
       "title": "I Fantastici Quattro - Gli inizi",
       "image": "https://image.tmdb.org/t/p/w500/lnatQ2ZgpTJet7jqjGPRo2h9Xuw.jpg",
       "link": "https://altadefinizionepremium.com/p/i-fantastici-quattro-gli-inizi",
       "rating": "7.2"
+    },
+    {
+      "title": "Gold Rush Gang",
+      "image": "https://image.tmdb.org/t/p/w500/9ii6tt7jwGiMiZS7qpWVrKKWwzk.jpg",
+      "link": "https://altadefinizionepremium.com/p/gold-rush-gang",
+      "rating": "7.5"
     },
     {
       "title": "Ne Zha 2",
@@ -1354,7 +1354,7 @@
       "title": "M3GAN 2.0",
       "image": "https://image.tmdb.org/t/p/w500/qGn4glNC6UqrkxryP8MWyaJLEcR.jpg",
       "link": "https://altadefinizionepremium.com/p/m3gan-2-0",
-      "rating": "7.5"
+      "rating": "7.6"
     },
     {
       "title": "Karate Kid: Legends",
@@ -1370,9 +1370,15 @@
     },
     {
       "title": "Ballerina",
-      "image": "https://image.tmdb.org/t/p/w500/2VUmvqsHb6cEtdfscEA6fqqVzLg.jpg",
+      "image": "https://image.tmdb.org/t/p/w500/8JSDm4mtgz40QAXSoLvbcwKJtIy.jpg",
       "link": "https://altadefinizionepremium.com/p/ballerina",
       "rating": "7.4"
+    },
+    {
+      "title": "La mappa che mi porta a te",
+      "image": "https://image.tmdb.org/t/p/w500/jd2AkS2IbJSiCz1NYz7VfeMxwnN.jpg",
+      "link": "https://altadefinizionepremium.com/p/la-mappa-che-mi-porta-a-te",
+      "rating": "6.8"
     },
     {
       "title": "Final Destination - Bloodlines",
@@ -1381,16 +1387,16 @@
       "rating": "7.2"
     },
     {
-      "title": "F1: Il film",
-      "image": "https://image.tmdb.org/t/p/w500/tGMs4Ji6CH33GIx5aHAXc0uhu3F.jpg",
-      "link": "https://altadefinizionepremium.com/p/f1-il-film",
-      "rating": "7.6"
+      "title": "Bring Her Back - Torna da me",
+      "image": "https://image.tmdb.org/t/p/w500/dQFBADjtsZRRbBpU3rhuuCYmowd.jpg",
+      "link": "https://altadefinizionepremium.com/p/bring-her-back-torna-da-me",
+      "rating": "7.4"
     },
     {
       "title": "Io sono nessuno 2",
       "image": "https://image.tmdb.org/t/p/w500/j2nxKRLJ3O02CdvB7nrTEN7Qydl.jpg",
       "link": "https://altadefinizionepremium.com/p/io-sono-nessuno-2",
-      "rating": "7.3"
+      "rating": "7.4"
     },
     {
       "title": "Un tipo imprevedibile 2",
@@ -1399,40 +1405,28 @@
       "rating": "6.7"
     },
     {
-      "title": "Eddington",
-      "image": "https://image.tmdb.org/t/p/w500/7dVObOTg6Irn4ePS79fVDYHQF7V.jpg",
-      "link": "https://altadefinizionepremium.com/p/eddington",
-      "rating": "6.5"
-    },
-    {
-      "title": "Bring Her Back - Torna da me",
-      "image": "https://image.tmdb.org/t/p/w500/dQFBADjtsZRRbBpU3rhuuCYmowd.jpg",
-      "link": "https://altadefinizionepremium.com/p/bring-her-back-torna-da-me",
-      "rating": "7.4"
-    },
-    {
       "title": "Quel pazzo venerdì, sempre più pazzo",
       "image": "https://image.tmdb.org/t/p/w500/a44nKbOvoHpheyupffdZdYlPw8T.jpg",
       "link": "https://altadefinizionepremium.com/p/quel-pazzo-venerd-sempre-pi-pazzo",
       "rating": "6.8"
     },
     {
-      "title": "La mappa che mi porta a te",
-      "image": "https://image.tmdb.org/t/p/w500/jd2AkS2IbJSiCz1NYz7VfeMxwnN.jpg",
-      "link": "https://altadefinizionepremium.com/p/la-mappa-che-mi-porta-a-te",
-      "rating": "7.2"
-    },
-    {
-      "title": "Material Love",
-      "image": "https://image.tmdb.org/t/p/w500/ieCB4VjEyEAyWNYC3IBg1f0MPdr.jpg",
-      "link": "https://altadefinizionepremium.com/p/material-love",
-      "rating": "6.7"
+      "title": "Eddington",
+      "image": "https://image.tmdb.org/t/p/w500/7dVObOTg6Irn4ePS79fVDYHQF7V.jpg",
+      "link": "https://altadefinizionepremium.com/p/eddington",
+      "rating": "6.6"
     },
     {
       "title": "捕风追影",
       "image": "https://image.tmdb.org/t/p/w500/4vnfOgB9m4RHUOvLt67AmDzc42K.jpg",
       "link": "https://altadefinizionepremium.com/p/",
       "rating": "7.8"
+    },
+    {
+      "title": "Material Love",
+      "image": "https://image.tmdb.org/t/p/w500/ieCB4VjEyEAyWNYC3IBg1f0MPdr.jpg",
+      "link": "https://altadefinizionepremium.com/p/material-love",
+      "rating": "6.7"
     },
     {
       "title": "Guns Up",
@@ -1444,7 +1438,7 @@
       "title": "Snoopy presenta: Il musical dell'estate",
       "image": "https://image.tmdb.org/t/p/w500/y6JJslY6p5yUJrCZd9a05VlOPAx.jpg",
       "link": "https://altadefinizionepremium.com/p/snoopy-presenta-il-musical-dell-estate",
-      "rating": "8.2"
+      "rating": "7.8"
     },
     {
       "title": "Una pallottola spuntata",
@@ -1462,13 +1456,7 @@
       "title": "The Ugly Stepsister",
       "image": "https://image.tmdb.org/t/p/w500/mk4vGUy03tUCgJsOuwkYy877RYo.jpg",
       "link": "https://altadefinizionepremium.com/p/the-ugly-stepsister",
-      "rating": "7.2"
-    },
-    {
-      "title": "Stolen: Il furto del secolo",
-      "image": "https://image.tmdb.org/t/p/w500/f5fEXDMPkq55cWjGE7jF86CcRuJ.jpg",
-      "link": "https://altadefinizionepremium.com/p/stolen-il-furto-del-secolo",
-      "rating": "7.4"
+      "rating": "7.3"
     },
     {
       "title": "L'evocazione - The Conjuring",
@@ -1477,16 +1465,46 @@
       "rating": "7.5"
     },
     {
+      "title": "Fixed - Un'ultima avventura",
+      "image": "https://image.tmdb.org/t/p/w500/nMwNky113cHewKmbdwo8cxJkzoy.jpg",
+      "link": "https://altadefinizionepremium.com/p/fixed-un-ultima-avventura",
+      "rating": "6.5"
+    },
+    {
+      "title": "Stolen: Il furto del secolo",
+      "image": "https://image.tmdb.org/t/p/w500/f5fEXDMPkq55cWjGE7jF86CcRuJ.jpg",
+      "link": "https://altadefinizionepremium.com/p/stolen-il-furto-del-secolo",
+      "rating": "7.3"
+    },
+    {
+      "title": "Spider-Man: Across the Spider-Verse",
+      "image": "https://image.tmdb.org/t/p/w500/XUN2lS6F7hP5Bn4HMv4w3OBzqK.jpg",
+      "link": "https://altadefinizionepremium.com/p/spider-man-across-the-spider-verse",
+      "rating": "8.3"
+    },
+    {
+      "title": "Death of a Unicorn",
+      "image": "https://image.tmdb.org/t/p/w500/k3Nuu7Z5PuC6UxVIl2xbGhFvIjj.jpg",
+      "link": "https://altadefinizionepremium.com/p/death-of-a-unicorn",
+      "rating": "6.5"
+    },
+    {
       "title": "Kayara",
       "image": "https://image.tmdb.org/t/p/w500/tpZdjnoJ6Z3NsSxI6HjAIggrcEv.jpg",
       "link": "https://altadefinizionepremium.com/p/kayara",
       "rating": "7.6"
     },
     {
-      "title": "Queen of Bones",
-      "image": "https://image.tmdb.org/t/p/w500/qJSSytlQAQuyXdQwZdaNNE5WAu1.jpg",
-      "link": "https://altadefinizionepremium.com/p/queen-of-bones",
-      "rating": "8.0"
+      "title": "Harry Potter e il calice di fuoco",
+      "image": "https://image.tmdb.org/t/p/w500/rZkMtwU1Gx2tyXcmsuFLVoDNwea.jpg",
+      "link": "https://altadefinizionepremium.com/p/harry-potter-e-il-calice-di-fuoco",
+      "rating": "7.8"
+    },
+    {
+      "title": "The Conjuring - Per ordine del diavolo",
+      "image": "https://image.tmdb.org/t/p/w500/qRiThUjSkN5b4kYAzLlUh2OAquv.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-conjuring-per-ordine-del-diavolo",
+      "rating": "7.4"
     },
     {
       "title": "Famiglia, ma non troppo",
@@ -1501,28 +1519,10 @@
       "rating": "6.5"
     },
     {
-      "title": "Death of a Unicorn",
-      "image": "https://image.tmdb.org/t/p/w500/k3Nuu7Z5PuC6UxVIl2xbGhFvIjj.jpg",
-      "link": "https://altadefinizionepremium.com/p/death-of-a-unicorn",
-      "rating": "6.5"
-    },
-    {
-      "title": "वॉर 2",
-      "image": "https://image.tmdb.org/t/p/w500/j8Gl3S4L7LE8GIF1J1phZ2Cbo72.jpg",
-      "link": "https://altadefinizionepremium.com/p/2",
-      "rating": "7.1"
-    },
-    {
       "title": "Zootropolis",
       "image": "https://image.tmdb.org/t/p/w500/AhaTwhvkPjwCeYXVEkJECyk5zkl.jpg",
       "link": "https://altadefinizionepremium.com/p/zootropolis",
       "rating": "7.8"
-    },
-    {
-      "title": "Spider-Man: Across the Spider-Verse",
-      "image": "https://image.tmdb.org/t/p/w500/XUN2lS6F7hP5Bn4HMv4w3OBzqK.jpg",
-      "link": "https://altadefinizionepremium.com/p/spider-man-across-the-spider-verse",
-      "rating": "8.3"
     }
   ],
   "on_air": [
@@ -1551,10 +1551,10 @@
       "rating": "7.0"
     },
     {
-      "title": "花儿与少年",
-      "image": "https://image.tmdb.org/t/p/w500/xj8EEPB0ipfja5ZbcJLGucZtoUA.jpg",
-      "link": "https://altadefinizionepremium.com/p/",
-      "rating": "6.9"
+      "title": "Kaiju No. 8",
+      "image": "https://image.tmdb.org/t/p/w500/A6JOsCdFFTxtbDnKAfE0iY6jOiE.jpg",
+      "link": "https://altadefinizionepremium.com/p/kaiju-no-8",
+      "rating": "8.6"
     },
     {
       "title": "DAN DA DAN",
@@ -1563,10 +1563,10 @@
       "rating": "8.6"
     },
     {
-      "title": "Kaiju No. 8",
-      "image": "https://image.tmdb.org/t/p/w500/A6JOsCdFFTxtbDnKAfE0iY6jOiE.jpg",
-      "link": "https://altadefinizionepremium.com/p/kaiju-no-8",
-      "rating": "8.6"
+      "title": "花儿与少年",
+      "image": "https://image.tmdb.org/t/p/w500/xj8EEPB0ipfja5ZbcJLGucZtoUA.jpg",
+      "link": "https://altadefinizionepremium.com/p/",
+      "rating": "6.9"
     },
     {
       "title": "The Twisted Tale of Amanda Knox",
@@ -1587,16 +1587,16 @@
       "rating": "7.8"
     },
     {
-      "title": "Sakamoto Days",
-      "image": "https://image.tmdb.org/t/p/w500/qTNIxDIzKjLLuS17fxdXjcKAlW7.jpg",
-      "link": "https://altadefinizionepremium.com/p/sakamoto-days",
-      "rating": "8.1"
-    },
-    {
       "title": "Peacemaker",
       "image": "https://image.tmdb.org/t/p/w500/yb4F1Oocq8GfQt6iIuAgYEBokhG.jpg",
       "link": "https://altadefinizionepremium.com/p/peacemaker",
       "rating": "8.2"
+    },
+    {
+      "title": "Sakamoto Days",
+      "image": "https://image.tmdb.org/t/p/w500/qTNIxDIzKjLLuS17fxdXjcKAlW7.jpg",
+      "link": "https://altadefinizionepremium.com/p/sakamoto-days",
+      "rating": "8.1"
     },
     {
       "title": "凡人修仙传",
@@ -1614,7 +1614,7 @@
       "title": "Gachiakuta",
       "image": "https://image.tmdb.org/t/p/w500/RxuL7KuFoOzHC0htjtLGxJEGGx.jpg",
       "link": "https://altadefinizionepremium.com/p/gachiakuta",
-      "rating": "9.1"
+      "rating": "9.0"
     },
     {
       "title": "诡秘之主",
@@ -1629,16 +1629,22 @@
       "rating": "7.6"
     },
     {
-      "title": "Raw",
-      "image": "https://image.tmdb.org/t/p/w500/pv5WNnLUo7mpT8k901Lo8UovrqI.jpg",
-      "link": "https://altadefinizionepremium.com/p/raw",
-      "rating": "6.8"
+      "title": "Twisted Metal",
+      "image": "https://image.tmdb.org/t/p/w500/3Zr9qJXqHQwi9IyPBDwukgg1jcZ.jpg",
+      "link": "https://altadefinizionepremium.com/p/twisted-metal",
+      "rating": "7.8"
     },
     {
-      "title": "L'Istituto",
-      "image": "https://image.tmdb.org/t/p/w500/mOvJlMBwWGwlbzUEOC2KrZQHj0U.jpg",
-      "link": "https://altadefinizionepremium.com/p/l-istituto",
+      "title": "Star Trek: Strange New Worlds",
+      "image": "https://image.tmdb.org/t/p/w500/tSDCM88q2DX6bifcr9LI5Iezcld.jpg",
+      "link": "https://altadefinizionepremium.com/p/star-trek-strange-new-worlds",
       "rating": "8.1"
+    },
+    {
+      "title": "Betty la Fea, la storia continua",
+      "image": "https://image.tmdb.org/t/p/w500/7qechyF13bAJJAlBz4beo5piaQH.jpg",
+      "link": "https://altadefinizionepremium.com/p/betty-la-fea-la-storia-continua",
+      "rating": "7.5"
     }
   ]
 }
