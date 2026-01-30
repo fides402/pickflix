@@ -1071,12 +1071,6 @@
   ],
   "trending_films": [
     {
-      "title": "Fratelli demolitori",
-      "image": "https://image.tmdb.org/t/p/w500/24lKLBFQ7AMVb8CClWoDOZ2R8qo.jpg",
-      "link": "https://altadefinizionepremium.com/p/fratelli-demolitori",
-      "rating": "7.0"
-    },
-    {
       "title": "Zootropolis 2",
       "image": "https://image.tmdb.org/t/p/w500/qAmXRssxXJ9foKgSGyisKnmRJfc.jpg",
       "link": "https://altadefinizionepremium.com/p/zootropolis-2",
@@ -1086,31 +1080,25 @@
       "title": "Greenland 2: Migration",
       "image": "https://image.tmdb.org/t/p/w500/7xkwTQZiCIVH15nbtxo8bCEW8jw.jpg",
       "link": "https://altadefinizionepremium.com/p/greenland-2-migration",
-      "rating": "6.6"
-    },
-    {
-      "title": "The Rip - Soldi sporchi",
-      "image": "https://image.tmdb.org/t/p/w500/2KFcXaBoLbFTLj7gUXHM0sRb5pP.jpg",
-      "link": "https://altadefinizionepremium.com/p/the-rip-soldi-sporchi",
-      "rating": "7.0"
+      "rating": "6.5"
     },
     {
       "title": "Send Help",
       "image": "https://image.tmdb.org/t/p/w500/yiTQ11Ij7xM8KrcHAKiCmKaQQe3.jpg",
       "link": "https://altadefinizionepremium.com/p/send-help",
-      "rating": "7.2"
+      "rating": "7.0"
     },
     {
-      "title": "Mercy - Sotto accusa",
-      "image": "https://image.tmdb.org/t/p/w500/gJMfdovNJ17DTvdDKlT6nbkJ1QX.jpg",
-      "link": "https://altadefinizionepremium.com/p/mercy-sotto-accusa",
-      "rating": "6.9"
+      "title": "The Rip - Soldi sporchi",
+      "image": "https://image.tmdb.org/t/p/w500/2KFcXaBoLbFTLj7gUXHM0sRb5pP.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-rip-soldi-sporchi",
+      "rating": "7.1"
     },
     {
       "title": "Cosmic Princess Kaguya!",
       "image": "https://image.tmdb.org/t/p/w500/9tkMo2GNrtuzggwNF4MzixXw3B1.jpg",
       "link": "https://altadefinizionepremium.com/p/cosmic-princess-kaguya",
-      "rating": "8.4"
+      "rating": "8.3"
     },
     {
       "title": "Marty Supreme",
@@ -1119,10 +1107,10 @@
       "rating": "7.9"
     },
     {
-      "title": "SpongeBob - Un’avventura da pirati",
-      "image": "https://image.tmdb.org/t/p/w500/9p9hIUmyC0jitTqWijiH6MzTPCc.jpg",
-      "link": "https://altadefinizionepremium.com/p/spongebob-un-avventura-da-pirati",
-      "rating": "6.6"
+      "title": "Hamnet - Nel nome del figlio",
+      "image": "https://image.tmdb.org/t/p/w500/61xMzN4h8iLk0hq6oUzr9Ts6GE9.jpg",
+      "link": "https://altadefinizionepremium.com/p/hamnet-nel-nome-del-figlio",
+      "rating": "7.8"
     },
     {
       "title": "I peccatori",
@@ -1131,28 +1119,10 @@
       "rating": "7.5"
     },
     {
-      "title": "David",
-      "image": "https://image.tmdb.org/t/p/w500/7lFG1WrCwAxBfyGK8ahlBVzXno7.jpg",
-      "link": "https://altadefinizionepremium.com/p/david",
-      "rating": "8.1"
-    },
-    {
-      "title": "Hamnet - Nel nome del figlio",
-      "image": "https://image.tmdb.org/t/p/w500/61xMzN4h8iLk0hq6oUzr9Ts6GE9.jpg",
-      "link": "https://altadefinizionepremium.com/p/hamnet-nel-nome-del-figlio",
-      "rating": "7.8"
-    },
-    {
-      "title": "Una di famiglia",
-      "image": "https://image.tmdb.org/t/p/w500/47iPnwRJdTYEGEPLP8p8p2JxcYs.jpg",
-      "link": "https://altadefinizionepremium.com/p/una-di-famiglia",
-      "rating": "7.1"
-    },
-    {
-      "title": "Il Falsario",
-      "image": "https://image.tmdb.org/t/p/w500/bGLgIRasU93kIZbmOClkBA51E5T.jpg",
-      "link": "https://altadefinizionepremium.com/p/il-falsario",
-      "rating": "6.5"
+      "title": "SpongeBob - Un’avventura da pirati",
+      "image": "https://image.tmdb.org/t/p/w500/9p9hIUmyC0jitTqWijiH6MzTPCc.jpg",
+      "link": "https://altadefinizionepremium.com/p/spongebob-un-avventura-da-pirati",
+      "rating": "6.7"
     },
     {
       "title": "Una battaglia dopo l’altra",
@@ -1161,16 +1131,34 @@
       "rating": "7.4"
     },
     {
+      "title": "Dhurandhar",
+      "image": "https://image.tmdb.org/t/p/w500/8FHOtUpNIk5ZPEay2N2EY5lrxkv.jpg",
+      "link": "https://altadefinizionepremium.com/p/dhurandhar",
+      "rating": "6.8"
+    },
+    {
+      "title": "David",
+      "image": "https://image.tmdb.org/t/p/w500/bESlrLOrsQ9gKzaGQGHXKOyIUtX.jpg",
+      "link": "https://altadefinizionepremium.com/p/david",
+      "rating": "7.8"
+    },
+    {
+      "title": "Mercy - Sotto accusa",
+      "image": "https://image.tmdb.org/t/p/w500/gJMfdovNJ17DTvdDKlT6nbkJ1QX.jpg",
+      "link": "https://altadefinizionepremium.com/p/mercy-sotto-accusa",
+      "rating": "6.8"
+    },
+    {
+      "title": "Iron Lung",
+      "image": "https://image.tmdb.org/t/p/w500/sIwakdbMGS1krtgendTWpxTY9Hw.jpg",
+      "link": "https://altadefinizionepremium.com/p/iron-lung",
+      "rating": "8.0"
+    },
+    {
       "title": "L'agente segreto",
       "image": "https://image.tmdb.org/t/p/w500/hQWzqAQ798fBOzQZ7cuLjTOLqCI.jpg",
       "link": "https://altadefinizionepremium.com/p/l-agente-segreto",
       "rating": "7.7"
-    },
-    {
-      "title": "Avatar - Fuoco e cenere",
-      "image": "https://image.tmdb.org/t/p/w500/pAXf6FyDUzZhAjkEhc02fMXWVvz.jpg",
-      "link": "https://altadefinizionepremium.com/p/avatar-fuoco-e-cenere",
-      "rating": "7.3"
     },
     {
       "title": "Bugonia",
@@ -1187,9 +1175,21 @@
       "rating": "6.8"
     },
     {
+      "title": "Jujutsu Kaisen",
+      "image": "https://image.tmdb.org/t/p/w500/zKFkzRn1UyE11Jv9CJjVmvmQFvR.jpg",
+      "link": "https://altadefinizionepremium.com/p/jujutsu-kaisen",
+      "rating": "8.6"
+    },
+    {
       "title": "Fallout",
       "image": "https://image.tmdb.org/t/p/w500/bnayCOZ739OHS2DHPy7ZQDGC8iv.jpg",
       "link": "https://altadefinizionepremium.com/p/fallout",
+      "rating": "8.1"
+    },
+    {
+      "title": "Bridgerton",
+      "image": "https://image.tmdb.org/t/p/w500/5HeazAYMGBgRWa27ViNS6GfdriR.jpg",
+      "link": "https://altadefinizionepremium.com/p/bridgerton",
       "rating": "8.1"
     },
     {
@@ -1199,10 +1199,10 @@
       "rating": "8.1"
     },
     {
-      "title": "Jujutsu Kaisen",
-      "image": "https://image.tmdb.org/t/p/w500/zKFkzRn1UyE11Jv9CJjVmvmQFvR.jpg",
-      "link": "https://altadefinizionepremium.com/p/jujutsu-kaisen",
-      "rating": "8.6"
+      "title": "The Pitt",
+      "image": "https://image.tmdb.org/t/p/w500/kvFSpESyBZMjaeOJDx7RS3P1jey.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-pitt",
+      "rating": "8.7"
     },
     {
       "title": "Stranger Things",
@@ -1223,16 +1223,10 @@
       "rating": "7.7"
     },
     {
-      "title": "The Pitt",
-      "image": "https://image.tmdb.org/t/p/w500/kvFSpESyBZMjaeOJDx7RS3P1jey.jpg",
-      "link": "https://altadefinizionepremium.com/p/the-pitt",
-      "rating": "8.7"
-    },
-    {
-      "title": "Oshi no Ko",
-      "image": "https://image.tmdb.org/t/p/w500/gnNMGCDA2mZuVMHRvqi8BwAUJWj.jpg",
-      "link": "https://altadefinizionepremium.com/p/oshi-no-ko",
-      "rating": "8.3"
+      "title": "太平年",
+      "image": "https://image.tmdb.org/t/p/w500/76gwCVQG1MoItK25o48opYP7TmG.jpg",
+      "link": "https://altadefinizionepremium.com/p/",
+      "rating": "8.5"
     },
     {
       "title": "Shrinking",
@@ -1241,16 +1235,10 @@
       "rating": "7.8"
     },
     {
-      "title": "Finding Her Edge - Passione sul ghiaccio",
-      "image": "https://image.tmdb.org/t/p/w500/rundKWddXHke82ee8Sv9KJmuGhn.jpg",
-      "link": "https://altadefinizionepremium.com/p/finding-her-edge-passione-sul-ghiaccio",
-      "rating": "7.0"
-    },
-    {
-      "title": "太平年",
-      "image": "https://image.tmdb.org/t/p/w500/76gwCVQG1MoItK25o48opYP7TmG.jpg",
-      "link": "https://altadefinizionepremium.com/p/",
-      "rating": "8.5"
+      "title": "Oshi no Ko",
+      "image": "https://image.tmdb.org/t/p/w500/gnNMGCDA2mZuVMHRvqi8BwAUJWj.jpg",
+      "link": "https://altadefinizionepremium.com/p/oshi-no-ko",
+      "rating": "8.3"
     },
     {
       "title": "The Night Manager",
@@ -1259,16 +1247,10 @@
       "rating": "7.7"
     },
     {
-      "title": "One Piece",
-      "image": "https://image.tmdb.org/t/p/w500/oag7edI9flSMawmNySEiSEJAbrf.jpg",
-      "link": "https://altadefinizionepremium.com/p/one-piece",
-      "rating": "8.7"
-    },
-    {
-      "title": "突然的喜欢",
-      "image": "https://image.tmdb.org/t/p/w500/oxO7uBExa8fWe98joDVtjSm9zHo.jpg",
-      "link": "https://altadefinizionepremium.com/p/",
-      "rating": "9.0"
+      "title": "The Rookie",
+      "image": "https://image.tmdb.org/t/p/w500/70kTz0OmjjZe7zHvIDrq2iKW7PJ.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-rookie",
+      "rating": "8.5"
     },
     {
       "title": "Hijack",
@@ -1277,36 +1259,48 @@
       "rating": "7.6"
     },
     {
-      "title": "Memory of a Killer",
-      "image": "https://image.tmdb.org/t/p/w500/3kpXrWW6gmlngwgSa52IhBpjPuz.jpg",
-      "link": "https://altadefinizionepremium.com/p/memory-of-a-killer",
-      "rating": "8.4"
-    },
-    {
       "title": "Come si dice \"amore\"?",
       "image": "https://image.tmdb.org/t/p/w500/ePz0D6B6wbxoLHsUtcaqfGx7E41.jpg",
       "link": "https://altadefinizionepremium.com/p/come-si-dice-amore",
       "rating": "8.8"
+    },
+    {
+      "title": "One Piece",
+      "image": "https://image.tmdb.org/t/p/w500/oag7edI9flSMawmNySEiSEJAbrf.jpg",
+      "link": "https://altadefinizionepremium.com/p/one-piece",
+      "rating": "8.7"
+    },
+    {
+      "title": "Memory of a Killer",
+      "image": "https://image.tmdb.org/t/p/w500/3kpXrWW6gmlngwgSa52IhBpjPuz.jpg",
+      "link": "https://altadefinizionepremium.com/p/memory-of-a-killer",
+      "rating": "8.2"
     }
   ],
   "now_playing": [
     {
+      "title": "The Shadow's Edge",
+      "image": "https://image.tmdb.org/t/p/w500/25OeH0GOuEljJqZoF0HoKxOpq0B.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-shadow-s-edge",
+      "rating": "7.2"
+    },
+    {
+      "title": "Greenland 2: Migration",
+      "image": "https://image.tmdb.org/t/p/w500/7xkwTQZiCIVH15nbtxo8bCEW8jw.jpg",
+      "link": "https://altadefinizionepremium.com/p/greenland-2-migration",
+      "rating": "6.6"
+    },
+    {
       "title": "The Rip - Soldi sporchi",
       "image": "https://image.tmdb.org/t/p/w500/2KFcXaBoLbFTLj7gUXHM0sRb5pP.jpg",
       "link": "https://altadefinizionepremium.com/p/the-rip-soldi-sporchi",
-      "rating": "7.1"
+      "rating": "7.0"
     },
     {
       "title": "Dust Bunny",
       "image": "https://image.tmdb.org/t/p/w500/vobigFZFvbYPf6ElYJu07P9rH8C.jpg",
       "link": "https://altadefinizionepremium.com/p/dust-bunny",
       "rating": "6.6"
-    },
-    {
-      "title": "The Shadow's Edge",
-      "image": "https://image.tmdb.org/t/p/w500/o25Tk1FYQi2BLk0OEAvx2h69QvB.jpg",
-      "link": "https://altadefinizionepremium.com/p/the-shadow-s-edge",
-      "rating": "7.2"
     },
     {
       "title": "Avatar - Fuoco e cenere",
@@ -1333,16 +1327,10 @@
       "rating": "7.5"
     },
     {
-      "title": "Il Falsario",
-      "image": "https://image.tmdb.org/t/p/w500/bGLgIRasU93kIZbmOClkBA51E5T.jpg",
-      "link": "https://altadefinizionepremium.com/p/il-falsario",
-      "rating": "6.5"
-    },
-    {
-      "title": "Greenland 2: Migration",
-      "image": "https://image.tmdb.org/t/p/w500/7xkwTQZiCIVH15nbtxo8bCEW8jw.jpg",
-      "link": "https://altadefinizionepremium.com/p/greenland-2-migration",
-      "rating": "6.7"
+      "title": "David",
+      "image": "https://image.tmdb.org/t/p/w500/7lFG1WrCwAxBfyGK8ahlBVzXno7.jpg",
+      "link": "https://altadefinizionepremium.com/p/david",
+      "rating": "7.8"
     },
     {
       "title": "Marty Supreme",
@@ -1354,7 +1342,7 @@
       "title": "Mercy - Sotto accusa",
       "image": "https://image.tmdb.org/t/p/w500/gJMfdovNJ17DTvdDKlT6nbkJ1QX.jpg",
       "link": "https://altadefinizionepremium.com/p/mercy-sotto-accusa",
-      "rating": "6.9"
+      "rating": "6.8"
     },
     {
       "title": "Una battaglia dopo l’altra",
@@ -1363,16 +1351,22 @@
       "rating": "7.4"
     },
     {
-      "title": "ปัง",
-      "image": "https://image.tmdb.org/t/p/w500/8SUzKOqe2ectvhYdSnR7Vq2F3n1.jpg",
-      "link": "https://altadefinizionepremium.com/p/",
-      "rating": "6.6"
-    },
-    {
       "title": "28 anni dopo - Il tempio delle ossa",
       "image": "https://image.tmdb.org/t/p/w500/yNM4qb9F53nmwI8Lux1xfJ1dqoA.jpg",
       "link": "https://altadefinizionepremium.com/p/28-anni-dopo-il-tempio-delle-ossa",
       "rating": "7.2"
+    },
+    {
+      "title": "Send Help",
+      "image": "https://image.tmdb.org/t/p/w500/yiTQ11Ij7xM8KrcHAKiCmKaQQe3.jpg",
+      "link": "https://altadefinizionepremium.com/p/send-help",
+      "rating": "7.0"
+    },
+    {
+      "title": "ปัง",
+      "image": "https://image.tmdb.org/t/p/w500/8SUzKOqe2ectvhYdSnR7Vq2F3n1.jpg",
+      "link": "https://altadefinizionepremium.com/p/",
+      "rating": "6.6"
     },
     {
       "title": "Five Nights at Freddy's 2",
@@ -1381,28 +1375,28 @@
       "rating": "6.7"
     },
     {
-      "title": "David",
-      "image": "https://image.tmdb.org/t/p/w500/7lFG1WrCwAxBfyGK8ahlBVzXno7.jpg",
-      "link": "https://altadefinizionepremium.com/p/david",
-      "rating": "8.0"
-    },
-    {
       "title": "Cosmic Princess Kaguya!",
       "image": "https://image.tmdb.org/t/p/w500/9tkMo2GNrtuzggwNF4MzixXw3B1.jpg",
       "link": "https://altadefinizionepremium.com/p/cosmic-princess-kaguya",
-      "rating": "8.4"
-    },
-    {
-      "title": "Send Help",
-      "image": "https://image.tmdb.org/t/p/w500/yiTQ11Ij7xM8KrcHAKiCmKaQQe3.jpg",
-      "link": "https://altadefinizionepremium.com/p/send-help",
-      "rating": "7.2"
+      "rating": "8.3"
     },
     {
       "title": "The Running Man",
       "image": "https://image.tmdb.org/t/p/w500/mXoEQkn335DOZr53US64BQqYlt9.jpg",
       "link": "https://altadefinizionepremium.com/p/the-running-man",
       "rating": "6.8"
+    },
+    {
+      "title": "Hamnet - Nel nome del figlio",
+      "image": "https://image.tmdb.org/t/p/w500/61xMzN4h8iLk0hq6oUzr9Ts6GE9.jpg",
+      "link": "https://altadefinizionepremium.com/p/hamnet-nel-nome-del-figlio",
+      "rating": "7.8"
+    },
+    {
+      "title": "Ben - Rabbia animale",
+      "image": "https://image.tmdb.org/t/p/w500/3S7SmYnfywMRyJo6QHep1hgUa0a.jpg",
+      "link": "https://altadefinizionepremium.com/p/ben-rabbia-animale",
+      "rating": "6.7"
     },
     {
       "title": "L'agente segreto",
@@ -1417,16 +1411,10 @@
       "rating": "7.4"
     },
     {
-      "title": "Hamnet - Nel nome del figlio",
-      "image": "https://image.tmdb.org/t/p/w500/61xMzN4h8iLk0hq6oUzr9Ts6GE9.jpg",
-      "link": "https://altadefinizionepremium.com/p/hamnet-nel-nome-del-figlio",
-      "rating": "7.8"
-    },
-    {
-      "title": "Ben - Rabbia animale",
-      "image": "https://image.tmdb.org/t/p/w500/3S7SmYnfywMRyJo6QHep1hgUa0a.jpg",
-      "link": "https://altadefinizionepremium.com/p/ben-rabbia-animale",
-      "rating": "6.6"
+      "title": "Interstellar",
+      "image": "https://image.tmdb.org/t/p/w500/bMKiLh0mES4Uiococ240lbbTGXQ.jpg",
+      "link": "https://altadefinizionepremium.com/p/interstellar",
+      "rating": "8.5"
     },
     {
       "title": "Rental Family - Nelle vite degli altri",
@@ -1441,10 +1429,10 @@
       "rating": "7.7"
     },
     {
-      "title": "Interstellar",
-      "image": "https://image.tmdb.org/t/p/w500/bMKiLh0mES4Uiococ240lbbTGXQ.jpg",
-      "link": "https://altadefinizionepremium.com/p/interstellar",
-      "rating": "8.5"
+      "title": "बॉर्डर २",
+      "image": "https://image.tmdb.org/t/p/w500/AmrCgmDPEJ6QxllS1rhjYwgO9Wb.jpg",
+      "link": "https://altadefinizionepremium.com/p/",
+      "rating": "7.7"
     },
     {
       "title": "People we meet on vacation - Un amore in vacanza",
@@ -1453,34 +1441,16 @@
       "rating": "7.0"
     },
     {
-      "title": "बॉर्डर २",
-      "image": "https://image.tmdb.org/t/p/w500/AmrCgmDPEJ6QxllS1rhjYwgO9Wb.jpg",
-      "link": "https://altadefinizionepremium.com/p/",
-      "rating": "7.7"
-    },
-    {
-      "title": "Sentimental Value",
-      "image": "https://image.tmdb.org/t/p/w500/lk0Tfskd5V84AbpJs9M1ZXJjVPf.jpg",
-      "link": "https://altadefinizionepremium.com/p/sentimental-value",
-      "rating": "7.6"
-    },
-    {
-      "title": "Il Signore degli Anelli - La compagnia dell'anello",
-      "image": "https://image.tmdb.org/t/p/w500/iZTDPQYgr3rhL7hPIYFt17ATp8.jpg",
-      "link": "https://altadefinizionepremium.com/p/il-signore-degli-anelli-la-compagnia-dell-anello",
-      "rating": "8.4"
-    },
-    {
       "title": "Wicked - Parte 2",
       "image": "https://image.tmdb.org/t/p/w500/kkvTiKZ2IIpLJk025ozwKtXKQS8.jpg",
       "link": "https://altadefinizionepremium.com/p/wicked-parte-2",
       "rating": "6.7"
     },
     {
-      "title": "A Working Man",
-      "image": "https://image.tmdb.org/t/p/w500/svSRfBNmZjDnus65gZJovFNa63R.jpg",
-      "link": "https://altadefinizionepremium.com/p/a-working-man",
-      "rating": "6.7"
+      "title": "La mia amica Eva",
+      "image": "https://image.tmdb.org/t/p/w500/7dqYnxe8chn9ablkPskDDoZ8JSZ.jpg",
+      "link": "https://altadefinizionepremium.com/p/la-mia-amica-eva",
+      "rating": "6.8"
     },
     {
       "title": "Norimberga",
@@ -1489,16 +1459,34 @@
       "rating": "7.4"
     },
     {
+      "title": "Il Signore degli Anelli - La compagnia dell'anello",
+      "image": "https://image.tmdb.org/t/p/w500/iZTDPQYgr3rhL7hPIYFt17ATp8.jpg",
+      "link": "https://altadefinizionepremium.com/p/il-signore-degli-anelli-la-compagnia-dell-anello",
+      "rating": "8.4"
+    },
+    {
       "title": "Sirāt",
       "image": "https://image.tmdb.org/t/p/w500/edEDZwU3kZerqdylZsyCn7feH23.jpg",
       "link": "https://altadefinizionepremium.com/p/sir-t",
       "rating": "6.8"
     },
     {
-      "title": "La mia amica Eva",
-      "image": "https://image.tmdb.org/t/p/w500/7dqYnxe8chn9ablkPskDDoZ8JSZ.jpg",
-      "link": "https://altadefinizionepremium.com/p/la-mia-amica-eva",
-      "rating": "6.9"
+      "title": "Sentimental Value",
+      "image": "https://image.tmdb.org/t/p/w500/lk0Tfskd5V84AbpJs9M1ZXJjVPf.jpg",
+      "link": "https://altadefinizionepremium.com/p/sentimental-value",
+      "rating": "7.6"
+    },
+    {
+      "title": "A Working Man",
+      "image": "https://image.tmdb.org/t/p/w500/svSRfBNmZjDnus65gZJovFNa63R.jpg",
+      "link": "https://altadefinizionepremium.com/p/a-working-man",
+      "rating": "6.7"
+    },
+    {
+      "title": "Shelter",
+      "image": "https://image.tmdb.org/t/p/w500/klvZs66SG19qmacdwxSRkdFQhQS.jpg",
+      "link": "https://altadefinizionepremium.com/p/shelter",
+      "rating": "7.5"
     },
     {
       "title": "Good Boy",
@@ -1513,28 +1501,22 @@
       "rating": "8.5"
     },
     {
-      "title": "Shelter",
-      "image": "https://image.tmdb.org/t/p/w500/klvZs66SG19qmacdwxSRkdFQhQS.jpg",
-      "link": "https://altadefinizionepremium.com/p/shelter",
-      "rating": "7.5"
-    },
-    {
       "title": "Il Signore degli Anelli - Le due torri",
       "image": "https://image.tmdb.org/t/p/w500/jIhivyKlNwLmFJ2W6X98vh2XFwu.jpg",
       "link": "https://altadefinizionepremium.com/p/il-signore-degli-anelli-le-due-torri",
       "rating": "8.4"
     },
     {
-      "title": "The Ugly Stepsister",
-      "image": "https://image.tmdb.org/t/p/w500/x72NzHdo6FBlp0tagYvETYGkW3L.jpg",
-      "link": "https://altadefinizionepremium.com/p/the-ugly-stepsister",
-      "rating": "7.3"
-    },
-    {
       "title": "Song Sung Blue - Una melodia d'amore",
       "image": "https://image.tmdb.org/t/p/w500/mHqOTQf9jBcLUBdyCByzeGfdJ09.jpg",
       "link": "https://altadefinizionepremium.com/p/song-sung-blue-una-melodia-d-amore",
       "rating": "7.5"
+    },
+    {
+      "title": "The Ugly Stepsister",
+      "image": "https://image.tmdb.org/t/p/w500/x72NzHdo6FBlp0tagYvETYGkW3L.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-ugly-stepsister",
+      "rating": "7.3"
     },
     {
       "title": "Roofman",
@@ -1569,10 +1551,10 @@
       "rating": "8.2"
     },
     {
-      "title": "Law & Order - I due volti della giustizia",
-      "image": "https://image.tmdb.org/t/p/w500/hpybpPAmYD1VYasaFlQKcfoVdHT.jpg",
-      "link": "https://altadefinizionepremium.com/p/law-order-i-due-volti-della-giustizia",
-      "rating": "7.4"
+      "title": "The Pendragon Cycle: Rise of the Merlin",
+      "image": "https://image.tmdb.org/t/p/w500/jJfk8NXauN4UgFQ1qn9lFzEk7ib.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-pendragon-cycle-rise-of-the-merlin",
+      "rating": "8.6"
     },
     {
       "title": "Jujutsu Kaisen",
@@ -1585,6 +1567,12 @@
       "image": "https://image.tmdb.org/t/p/w500/bnayCOZ739OHS2DHPy7ZQDGC8iv.jpg",
       "link": "https://altadefinizionepremium.com/p/fallout",
       "rating": "8.1"
+    },
+    {
+      "title": "Law & Order - I due volti della giustizia",
+      "image": "https://image.tmdb.org/t/p/w500/hpybpPAmYD1VYasaFlQKcfoVdHT.jpg",
+      "link": "https://altadefinizionepremium.com/p/law-order-i-due-volti-della-giustizia",
+      "rating": "7.4"
     },
     {
       "title": "Kamen Rider",
@@ -1605,22 +1593,16 @@
       "rating": "7.2"
     },
     {
-      "title": "Државни посао",
-      "image": "https://image.tmdb.org/t/p/w500/sceVlRK5RvnU1qjNipyWDHQXB7x.jpg",
-      "link": "https://altadefinizionepremium.com/p/",
-      "rating": "7.9"
-    },
-    {
       "title": "The Pitt",
       "image": "https://image.tmdb.org/t/p/w500/kvFSpESyBZMjaeOJDx7RS3P1jey.jpg",
       "link": "https://altadefinizionepremium.com/p/the-pitt",
       "rating": "8.7"
     },
     {
-      "title": "Chicago P.D.",
-      "image": "https://image.tmdb.org/t/p/w500/bez40PgT36RUu4gstD2A6GSM0tP.jpg",
-      "link": "https://altadefinizionepremium.com/p/chicago-p-d",
-      "rating": "8.4"
+      "title": "Bridgerton",
+      "image": "https://image.tmdb.org/t/p/w500/5HeazAYMGBgRWa27ViNS6GfdriR.jpg",
+      "link": "https://altadefinizionepremium.com/p/bridgerton",
+      "rating": "8.1"
     },
     {
       "title": "아는 형님",
