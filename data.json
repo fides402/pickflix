@@ -9,7 +9,7 @@
     {
       "title": "Devil May Cry",
       "rating": "7.5",
-      "image": "https://image.tmdb.org/t/p/w500/tZaO0YddJtUl6G9SD12mbriz9u9.jpg",
+      "image": "https://image.tmdb.org/t/p/w500/mX9tqfpjqwreONJHhap7SnSSowe.jpg",
       "link": "https://altadefinizionepremium.com/p/devil-may-cry"
     },
     {
@@ -129,7 +129,7 @@
     {
       "title": "Étoile",
       "rating": "7.6",
-      "image": "https://image.tmdb.org/t/p/w500/6KUdNxeDo4D2ofJO4cIvzj4OtIE.jpg",
+      "image": "https://image.tmdb.org/t/p/w500/e56elhedMQT2gJa9Hxix9IEBUoC.jpg",
       "link": "https://altadefinizionepremium.com/p/toile"
     },
     {
@@ -249,7 +249,7 @@
     {
       "title": "Eagles of the Republic",
       "rating": "6.3",
-      "image": "https://image.tmdb.org/t/p/w500/nuNOtBdqd4HvWsMcj0wgqm178oN.jpg",
+      "image": "https://image.tmdb.org/t/p/w500/hHrqtcn3zUGIRWLX6xuJoNqLO9F.jpg",
       "link": "https://altadefinizionepremium.com/p/eagles-of-the-republic"
     },
     {
@@ -369,7 +369,7 @@
     {
       "title": "Heads or Tails?",
       "rating": "5.6",
-      "image": "https://image.tmdb.org/t/p/w500/2tLLJOjZjt4IiErkavIzLIttrIr.jpg",
+      "image": "https://via.placeholder.com/500x750?text=No+Image",
       "link": "https://altadefinizionepremium.com/p/heads-or-tails"
     },
     {
@@ -555,7 +555,7 @@
     {
       "title": "Lucky",
       "rating": "7.4",
-      "image": "https://image.tmdb.org/t/p/w500/4HEXzBCdI1GXTq2KHCKBxXbTZiR.jpg",
+      "image": "https://image.tmdb.org/t/p/w500/wPTU3m5kLbNnlNHl7wWrvCO48XO.jpg",
       "link": "https://altadefinizionepremium.com/p/lucky"
     },
     {
@@ -693,7 +693,7 @@
     {
       "title": "Half Nelson",
       "rating": "7.2",
-      "image": "https://image.tmdb.org/t/p/w500/fdUCisMpTwy0oJOGwM7NrFFs400.jpg",
+      "image": "https://image.tmdb.org/t/p/w500/zhlN8gdXU7cUgs553cdSvd1KtL9.jpg",
       "link": "https://altadefinizionepremium.com/p/half-nelson"
     },
     {
@@ -1071,10 +1071,22 @@
   ],
   "trending_films": [
     {
+      "title": "Jumpers - Un salto tra gli animali",
+      "image": "https://image.tmdb.org/t/p/w500/2bGvWzmJNmCqXgSQ33Iif2xXLKe.jpg",
+      "link": "https://altadefinizionepremium.com/p/jumpers-un-salto-tra-gli-animali",
+      "rating": "8.0"
+    },
+    {
       "title": "Missione Shelter",
       "image": "https://image.tmdb.org/t/p/w500/aK8hylP2zE2cFKGpyhIRPyMroDc.jpg",
       "link": "https://altadefinizionepremium.com/p/missione-shelter",
       "rating": "6.7"
+    },
+    {
+      "title": "La Sposa!",
+      "image": "https://image.tmdb.org/t/p/w500/6CPov1YcWUByY32mASEiJaVatk0.jpg",
+      "link": "https://altadefinizionepremium.com/p/la-sposa",
+      "rating": "8.4"
     },
     {
       "title": "Hamnet - Nel nome del figlio",
@@ -1083,28 +1095,16 @@
       "rating": "7.7"
     },
     {
-      "title": "28 anni dopo - Il tempio delle ossa",
-      "image": "https://image.tmdb.org/t/p/w500/yNM4qb9F53nmwI8Lux1xfJ1dqoA.jpg",
-      "link": "https://altadefinizionepremium.com/p/28-anni-dopo-il-tempio-delle-ossa",
-      "rating": "7.2"
-    },
-    {
-      "title": "Jumpers - Un salto tra gli animali",
-      "image": "https://image.tmdb.org/t/p/w500/2bGvWzmJNmCqXgSQ33Iif2xXLKe.jpg",
-      "link": "https://altadefinizionepremium.com/p/jumpers-un-salto-tra-gli-animali",
-      "rating": "8.1"
-    },
-    {
       "title": "Mercy - Sotto accusa",
       "image": "https://image.tmdb.org/t/p/w500/zhNy3atrXo4DOwmbWbWJx1qy9Wh.jpg",
       "link": "https://altadefinizionepremium.com/p/mercy-sotto-accusa",
       "rating": "7.1"
     },
     {
-      "title": "La Sposa!",
-      "image": "https://image.tmdb.org/t/p/w500/6CPov1YcWUByY32mASEiJaVatk0.jpg",
-      "link": "https://altadefinizionepremium.com/p/la-sposa",
-      "rating": "10.0"
+      "title": "28 anni dopo - Il tempio delle ossa",
+      "image": "https://image.tmdb.org/t/p/w500/hlrvlXw3LdMp7JkwA7lyY318ncH.jpg",
+      "link": "https://altadefinizionepremium.com/p/28-anni-dopo-il-tempio-delle-ossa",
+      "rating": "7.2"
     },
     {
       "title": "Marty Supreme",
@@ -1113,43 +1113,31 @@
       "rating": "7.5"
     },
     {
-      "title": "Una di famiglia",
-      "image": "https://image.tmdb.org/t/p/w500/47iPnwRJdTYEGEPLP8p8p2JxcYs.jpg",
-      "link": "https://altadefinizionepremium.com/p/una-di-famiglia",
-      "rating": "7.3"
-    },
-    {
       "title": "Zootropolis 2",
       "image": "https://image.tmdb.org/t/p/w500/qAmXRssxXJ9foKgSGyisKnmRJfc.jpg",
       "link": "https://altadefinizionepremium.com/p/zootropolis-2",
       "rating": "7.6"
     },
     {
-      "title": "I peccatori",
-      "image": "https://image.tmdb.org/t/p/w500/gGhvLVcdWQanE1XuPkC3iE4PJN9.jpg",
-      "link": "https://altadefinizionepremium.com/p/i-peccatori",
+      "title": "Una di famiglia",
+      "image": "https://image.tmdb.org/t/p/w500/47iPnwRJdTYEGEPLP8p8p2JxcYs.jpg",
+      "link": "https://altadefinizionepremium.com/p/una-di-famiglia",
+      "rating": "7.3"
+    },
+    {
+      "title": "GOAT - Sogna in grande",
+      "image": "https://image.tmdb.org/t/p/w500/2iobI8LOcnu3nyCSgmqux2dtkrV.jpg",
+      "link": "https://altadefinizionepremium.com/p/goat-sogna-in-grande",
       "rating": "7.5"
     },
     {
-      "title": "Una battaglia dopo l’altra",
-      "image": "https://image.tmdb.org/t/p/w500/3TjxuSfBSkhB8OvBov7Dk4L0Bcd.jpg",
-      "link": "https://altadefinizionepremium.com/p/una-battaglia-dopo-l-altra",
-      "rating": "7.4"
-    },
-    {
-      "title": "Arco - Un'amicizia per salvare il futuro",
-      "image": "https://image.tmdb.org/t/p/w500/rgNlpMEkGk6qoLf3pqarw3PSwOs.jpg",
-      "link": "https://altadefinizionepremium.com/p/arco-un-amicizia-per-salvare-il-futuro",
-      "rating": "7.6"
+      "title": "Predator: Badlands",
+      "image": "https://image.tmdb.org/t/p/w500/zn14Felr0VlFg6A86IUx4PDt2E7.jpg",
+      "link": "https://altadefinizionepremium.com/p/predator-badlands",
+      "rating": "7.7"
     }
   ],
   "trending_series": [
-    {
-      "title": "A Knight of the Seven Kingdoms",
-      "image": "https://image.tmdb.org/t/p/w500/A354Cp3H0OnQhw8oab4fYABavz1.jpg",
-      "link": "https://altadefinizionepremium.com/p/a-knight-of-the-seven-kingdoms",
-      "rating": "8.5"
-    },
     {
       "title": "Monarch: Legacy of Monsters",
       "image": "https://image.tmdb.org/t/p/w500/jxreNunNZ1HJLFO24hQ5t4O942w.jpg",
@@ -1163,10 +1151,10 @@
       "rating": "7.8"
     },
     {
-      "title": "Marshals: A Yellowstone Story",
-      "image": "https://image.tmdb.org/t/p/w500/nInfaveN1iFpRIcMGNKENoVVUT2.jpg",
-      "link": "https://altadefinizionepremium.com/p/marshals-a-yellowstone-story",
-      "rating": "8.6"
+      "title": "A Knight of the Seven Kingdoms",
+      "image": "https://image.tmdb.org/t/p/w500/A354Cp3H0OnQhw8oab4fYABavz1.jpg",
+      "link": "https://altadefinizionepremium.com/p/a-knight-of-the-seven-kingdoms",
+      "rating": "8.5"
     },
     {
       "title": "Paradise",
@@ -1187,16 +1175,16 @@
       "rating": "8.6"
     },
     {
+      "title": "Marshals: A Yellowstone Story",
+      "image": "https://image.tmdb.org/t/p/w500/nInfaveN1iFpRIcMGNKENoVVUT2.jpg",
+      "link": "https://altadefinizionepremium.com/p/marshals-a-yellowstone-story",
+      "rating": "8.4"
+    },
+    {
       "title": "Frieren - Oltre la Fine del Viaggio",
       "image": "https://image.tmdb.org/t/p/w500/8R68IpqR97EOxlKb6KgLsBAudsy.jpg",
       "link": "https://altadefinizionepremium.com/p/frieren-oltre-la-fine-del-viaggio",
       "rating": "8.8"
-    },
-    {
-      "title": "The Pitt",
-      "image": "https://image.tmdb.org/t/p/w500/kvFSpESyBZMjaeOJDx7RS3P1jey.jpg",
-      "link": "https://altadefinizionepremium.com/p/the-pitt",
-      "rating": "8.7"
     },
     {
       "title": "The Rookie",
@@ -1205,28 +1193,22 @@
       "rating": "8.5"
     },
     {
+      "title": "Hijack",
+      "image": "https://image.tmdb.org/t/p/w500/vb1gfEOuRZPlWp5ymAoxQ2G1wkx.jpg",
+      "link": "https://altadefinizionepremium.com/p/hijack",
+      "rating": "7.6"
+    },
+    {
       "title": "One Piece",
       "image": "https://image.tmdb.org/t/p/w500/oag7edI9flSMawmNySEiSEJAbrf.jpg",
       "link": "https://altadefinizionepremium.com/p/one-piece",
       "rating": "8.7"
     },
     {
-      "title": "BAKI-DOU: L'invincibile samurai",
-      "image": "https://image.tmdb.org/t/p/w500/qC4JawqYlUS9fwvAzGfY5lSz5uB.jpg",
-      "link": "https://altadefinizionepremium.com/p/baki-dou-l-invincibile-samurai",
-      "rating": "8.4"
-    },
-    {
-      "title": "Formula 1: Drive to Survive",
-      "image": "https://image.tmdb.org/t/p/w500/xGOGjJFYYeRSoOpnhN9IHZTXIxj.jpg",
-      "link": "https://altadefinizionepremium.com/p/formula-1-drive-to-survive",
-      "rating": "8.2"
-    },
-    {
-      "title": "Stranger Things",
-      "image": "https://image.tmdb.org/t/p/w500/wZNIKNMqjulcU1AbU6X98tHy9QF.jpg",
-      "link": "https://altadefinizionepremium.com/p/stranger-things",
-      "rating": "8.6"
+      "title": "The Pitt",
+      "image": "https://image.tmdb.org/t/p/w500/kvFSpESyBZMjaeOJDx7RS3P1jey.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-pitt",
+      "rating": "8.7"
     },
     {
       "title": "The Night Agent",
@@ -1241,10 +1223,22 @@
       "rating": "8.1"
     },
     {
-      "title": "CIA",
-      "image": "https://image.tmdb.org/t/p/w500/8XbgWv137Umc8resTDeWh9ff7Y0.jpg",
-      "link": "https://altadefinizionepremium.com/p/cia",
-      "rating": "9.2"
+      "title": "Young Sherlock",
+      "image": "https://image.tmdb.org/t/p/w500/bb3XIgEUKSboZzDVYbfAi1w381A.jpg",
+      "link": "https://altadefinizionepremium.com/p/young-sherlock",
+      "rating": "9.7"
+    },
+    {
+      "title": "Stranger Things",
+      "image": "https://image.tmdb.org/t/p/w500/wZNIKNMqjulcU1AbU6X98tHy9QF.jpg",
+      "link": "https://altadefinizionepremium.com/p/stranger-things",
+      "rating": "8.6"
+    },
+    {
+      "title": "Fallout",
+      "image": "https://image.tmdb.org/t/p/w500/bnayCOZ739OHS2DHPy7ZQDGC8iv.jpg",
+      "link": "https://altadefinizionepremium.com/p/fallout",
+      "rating": "8.1"
     }
   ],
   "now_playing": [
@@ -1258,7 +1252,7 @@
       "title": "Pose",
       "image": "https://image.tmdb.org/t/p/w500/qhyyyWrHUbl6QG4udAJj17CBa5.jpg",
       "link": "https://altadefinizionepremium.com/p/pose",
-      "rating": "8.2"
+      "rating": "7.9"
     },
     {
       "title": "Mercy - Sotto accusa",
@@ -1270,7 +1264,7 @@
       "title": "Hellfire",
       "image": "https://image.tmdb.org/t/p/w500/tQti9QTf13MfzNpXguijgNh7ojE.jpg",
       "link": "https://altadefinizionepremium.com/p/hellfire",
-      "rating": "7.2"
+      "rating": "7.1"
     },
     {
       "title": "The Shadow's Edge",
@@ -1285,16 +1279,16 @@
       "rating": "6.5"
     },
     {
-      "title": "28 anni dopo - Il tempio delle ossa",
-      "image": "https://image.tmdb.org/t/p/w500/yNM4qb9F53nmwI8Lux1xfJ1dqoA.jpg",
-      "link": "https://altadefinizionepremium.com/p/28-anni-dopo-il-tempio-delle-ossa",
-      "rating": "7.2"
-    },
-    {
       "title": "Arco - Un'amicizia per salvare il futuro",
       "image": "https://image.tmdb.org/t/p/w500/rgNlpMEkGk6qoLf3pqarw3PSwOs.jpg",
       "link": "https://altadefinizionepremium.com/p/arco-un-amicizia-per-salvare-il-futuro",
       "rating": "7.6"
+    },
+    {
+      "title": "28 anni dopo - Il tempio delle ossa",
+      "image": "https://image.tmdb.org/t/p/w500/hlrvlXw3LdMp7JkwA7lyY318ncH.jpg",
+      "link": "https://altadefinizionepremium.com/p/28-anni-dopo-il-tempio-delle-ossa",
+      "rating": "7.2"
     },
     {
       "title": "Una di famiglia",
@@ -1315,10 +1309,16 @@
       "rating": "7.7"
     },
     {
-      "title": "“Cime Tempestose”",
-      "image": "https://image.tmdb.org/t/p/w500/bWniBa1w4Cb327bNSMJtqZXCp0H.jpg",
-      "link": "https://altadefinizionepremium.com/p/cime-tempestose",
-      "rating": "6.5"
+      "title": "Sex Trip",
+      "image": "https://image.tmdb.org/t/p/w500/sr4sLilBbPx4TfPnX2zzUxlySgu.jpg",
+      "link": "https://altadefinizionepremium.com/p/sex-trip",
+      "rating": "7.0"
+    },
+    {
+      "title": "Jumpers - Un salto tra gli animali",
+      "image": "https://image.tmdb.org/t/p/w500/2bGvWzmJNmCqXgSQ33Iif2xXLKe.jpg",
+      "link": "https://altadefinizionepremium.com/p/jumpers-un-salto-tra-gli-animali",
+      "rating": "8.0"
     },
     {
       "title": "GOAT - Sogna in grande",
@@ -1327,16 +1327,28 @@
       "rating": "7.5"
     },
     {
-      "title": "Sex Trip",
-      "image": "https://image.tmdb.org/t/p/w500/sr4sLilBbPx4TfPnX2zzUxlySgu.jpg",
-      "link": "https://altadefinizionepremium.com/p/sex-trip",
-      "rating": "7.0"
+      "title": "Marty Supreme",
+      "image": "https://image.tmdb.org/t/p/w500/zrqTV3MMaIsx9dbplMwKUHxObmP.jpg",
+      "link": "https://altadefinizionepremium.com/p/marty-supreme",
+      "rating": "7.5"
+    },
+    {
+      "title": "Jumpers - Un salto tra gli animali",
+      "image": "https://image.tmdb.org/t/p/w500/2bGvWzmJNmCqXgSQ33Iif2xXLKe.jpg",
+      "link": "https://altadefinizionepremium.com/p/jumpers-un-salto-tra-gli-animali",
+      "rating": "8.0"
+    },
+    {
+      "title": "Hamnet - Nel nome del figlio",
+      "image": "https://image.tmdb.org/t/p/w500/pq4ZOXXRViRs7lCk6hbPpwapDBO.jpg",
+      "link": "https://altadefinizionepremium.com/p/hamnet-nel-nome-del-figlio",
+      "rating": "7.7"
     },
     {
       "title": "Diabolic",
       "image": "https://image.tmdb.org/t/p/w500/3qikoc12LQH6upkLZZlJY8wEZvN.jpg",
       "link": "https://altadefinizionepremium.com/p/diabolic",
-      "rating": "7.2"
+      "rating": "7.3"
     },
     {
       "title": "The Dreadful",
@@ -1348,19 +1360,7 @@
       "title": "Blades of the Guardians",
       "image": "https://image.tmdb.org/t/p/w500/AsWzPlQK2xJTIrzw6McT8Yvy6H2.jpg",
       "link": "https://altadefinizionepremium.com/p/blades-of-the-guardians",
-      "rating": "7.8"
-    },
-    {
-      "title": "Hamnet - Nel nome del figlio",
-      "image": "https://image.tmdb.org/t/p/w500/pq4ZOXXRViRs7lCk6hbPpwapDBO.jpg",
-      "link": "https://altadefinizionepremium.com/p/hamnet-nel-nome-del-figlio",
       "rating": "7.7"
-    },
-    {
-      "title": "Marty Supreme",
-      "image": "https://image.tmdb.org/t/p/w500/zrqTV3MMaIsx9dbplMwKUHxObmP.jpg",
-      "link": "https://altadefinizionepremium.com/p/marty-supreme",
-      "rating": "7.5"
     },
     {
       "title": "SpongeBob - Un’avventura da pirati",
@@ -1393,46 +1393,10 @@
       "rating": "7.0"
     },
     {
-      "title": "Jumpers - Un salto tra gli animali",
-      "image": "https://image.tmdb.org/t/p/w500/2bGvWzmJNmCqXgSQ33Iif2xXLKe.jpg",
-      "link": "https://altadefinizionepremium.com/p/jumpers-un-salto-tra-gli-animali",
-      "rating": "8.1"
-    },
-    {
-      "title": "Ben - Rabbia animale",
-      "image": "https://image.tmdb.org/t/p/w500/3S7SmYnfywMRyJo6QHep1hgUa0a.jpg",
-      "link": "https://altadefinizionepremium.com/p/ben-rabbia-animale",
-      "rating": "6.6"
-    },
-    {
-      "title": "Dust Bunny",
-      "image": "https://image.tmdb.org/t/p/w500/qa5aZpO8tQqhlDaE0flalS1TuIS.jpg",
-      "link": "https://altadefinizionepremium.com/p/dust-bunny",
-      "rating": "6.6"
-    },
-    {
-      "title": "Los domingos",
-      "image": "https://image.tmdb.org/t/p/w500/kwpDm6qtON8pLCSY0C8MltMofEE.jpg",
-      "link": "https://altadefinizionepremium.com/p/los-domingos",
-      "rating": "7.3"
-    },
-    {
       "title": "Resurrection",
       "image": "https://image.tmdb.org/t/p/w500/eEviqb35JWvYSvHTtp31GGFCh7p.jpg",
       "link": "https://altadefinizionepremium.com/p/resurrection",
-      "rating": "6.8"
-    },
-    {
-      "title": "Una battaglia dopo l’altra",
-      "image": "https://image.tmdb.org/t/p/w500/3TjxuSfBSkhB8OvBov7Dk4L0Bcd.jpg",
-      "link": "https://altadefinizionepremium.com/p/una-battaglia-dopo-l-altra",
-      "rating": "7.4"
-    },
-    {
-      "title": "Send Help",
-      "image": "https://image.tmdb.org/t/p/w500/yiTQ11Ij7xM8KrcHAKiCmKaQQe3.jpg",
-      "link": "https://altadefinizionepremium.com/p/send-help",
-      "rating": "7.1"
+      "rating": "6.7"
     },
     {
       "title": "I peccatori",
@@ -1441,10 +1405,34 @@
       "rating": "7.5"
     },
     {
-      "title": "One Mile: Chapter One",
-      "image": "https://image.tmdb.org/t/p/w500/1GZaoYe0mQy211DgDSAxAXr30ul.jpg",
-      "link": "https://altadefinizionepremium.com/p/one-mile-chapter-one",
-      "rating": "7.3"
+      "title": "Ben - Rabbia animale",
+      "image": "https://image.tmdb.org/t/p/w500/3S7SmYnfywMRyJo6QHep1hgUa0a.jpg",
+      "link": "https://altadefinizionepremium.com/p/ben-rabbia-animale",
+      "rating": "6.6"
+    },
+    {
+      "title": "La Sposa!",
+      "image": "https://image.tmdb.org/t/p/w500/6CPov1YcWUByY32mASEiJaVatk0.jpg",
+      "link": "https://altadefinizionepremium.com/p/la-sposa",
+      "rating": "8.4"
+    },
+    {
+      "title": "Dust Bunny",
+      "image": "https://image.tmdb.org/t/p/w500/qa5aZpO8tQqhlDaE0flalS1TuIS.jpg",
+      "link": "https://altadefinizionepremium.com/p/dust-bunny",
+      "rating": "6.6"
+    },
+    {
+      "title": "Send Help",
+      "image": "https://image.tmdb.org/t/p/w500/yiTQ11Ij7xM8KrcHAKiCmKaQQe3.jpg",
+      "link": "https://altadefinizionepremium.com/p/send-help",
+      "rating": "7.0"
+    },
+    {
+      "title": "The Running Man",
+      "image": "https://image.tmdb.org/t/p/w500/c7CAzgr2IIvwI6PlbfvFNfLtVRg.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-running-man",
+      "rating": "6.8"
     },
     {
       "title": "Dracula - L’amore perduto",
@@ -1459,16 +1447,16 @@
       "rating": "6.6"
     },
     {
-      "title": "The Running Man",
-      "image": "https://image.tmdb.org/t/p/w500/c7CAzgr2IIvwI6PlbfvFNfLtVRg.jpg",
-      "link": "https://altadefinizionepremium.com/p/the-running-man",
-      "rating": "6.8"
+      "title": "Il filo del ricatto -  Dead Man's Wire",
+      "image": "https://image.tmdb.org/t/p/w500/oJ6NJSGFvhwlzFebNy5oMyW61Fv.jpg",
+      "link": "https://altadefinizionepremium.com/p/il-filo-del-ricatto-dead-man-s-wire",
+      "rating": "6.5"
     },
     {
-      "title": "Five Nights at Freddy's 2",
-      "image": "https://image.tmdb.org/t/p/w500/knv5iNmZd4PDGtgOtRgFQecrR8Z.jpg",
-      "link": "https://altadefinizionepremium.com/p/five-nights-at-freddy-s-2",
-      "rating": "6.7"
+      "title": "One Mile: Chapter One",
+      "image": "https://image.tmdb.org/t/p/w500/1GZaoYe0mQy211DgDSAxAXr30ul.jpg",
+      "link": "https://altadefinizionepremium.com/p/one-mile-chapter-one",
+      "rating": "7.3"
     },
     {
       "title": "Ne Zha - L'ascesa del guerriero di fuoco",
@@ -1478,7 +1466,7 @@
     },
     {
       "title": "Norimberga",
-      "image": "https://image.tmdb.org/t/p/w500/iXmfBDpY568Hz8xa021eFoU62jA.jpg",
+      "image": "https://image.tmdb.org/t/p/w500/ucZHG8KD2A9Czl1aZz1f4bIvbLR.jpg",
       "link": "https://altadefinizionepremium.com/p/norimberga",
       "rating": "7.3"
     },
@@ -1487,6 +1475,12 @@
       "image": "https://image.tmdb.org/t/p/w500/iZTDPQYgr3rhL7hPIYFt17ATp8.jpg",
       "link": "https://altadefinizionepremium.com/p/il-signore-degli-anelli-la-compagnia-dell-anello",
       "rating": "8.4"
+    },
+    {
+      "title": "Il Signore degli Anelli - Il ritorno del re",
+      "image": "https://image.tmdb.org/t/p/w500/eCua9No8HqVxGajDQrG8mvRCtJM.jpg",
+      "link": "https://altadefinizionepremium.com/p/il-signore-degli-anelli-il-ritorno-del-re",
+      "rating": "8.5"
     }
   ],
   "on_air": [
@@ -1503,16 +1497,16 @@
       "rating": "8.2"
     },
     {
-      "title": "Law & Order - I due volti della giustizia",
-      "image": "https://image.tmdb.org/t/p/w500/hpybpPAmYD1VYasaFlQKcfoVdHT.jpg",
-      "link": "https://altadefinizionepremium.com/p/law-order-i-due-volti-della-giustizia",
-      "rating": "7.3"
-    },
-    {
       "title": "The Rookie",
       "image": "https://image.tmdb.org/t/p/w500/70kTz0OmjjZe7zHvIDrq2iKW7PJ.jpg",
       "link": "https://altadefinizionepremium.com/p/the-rookie",
       "rating": "8.5"
+    },
+    {
+      "title": "Law & Order - I due volti della giustizia",
+      "image": "https://image.tmdb.org/t/p/w500/hpybpPAmYD1VYasaFlQKcfoVdHT.jpg",
+      "link": "https://altadefinizionepremium.com/p/law-order-i-due-volti-della-giustizia",
+      "rating": "7.3"
     },
     {
       "title": "Law & Order - Unità vittime speciali",
@@ -1539,12 +1533,6 @@
       "rating": "8.6"
     },
     {
-      "title": "Kamen Rider",
-      "image": "https://image.tmdb.org/t/p/w500/fIJNVBa6MJStPiOvhLV69nAdu0e.jpg",
-      "link": "https://altadefinizionepremium.com/p/kamen-rider",
-      "rating": "6.5"
-    },
-    {
       "title": "Raw",
       "image": "https://image.tmdb.org/t/p/w500/7wq6uV8YRdWNEyI9TY5k80yWENg.jpg",
       "link": "https://altadefinizionepremium.com/p/raw",
@@ -1566,7 +1554,7 @@
       "title": "Marshals: A Yellowstone Story",
       "image": "https://image.tmdb.org/t/p/w500/nInfaveN1iFpRIcMGNKENoVVUT2.jpg",
       "link": "https://altadefinizionepremium.com/p/marshals-a-yellowstone-story",
-      "rating": "8.6"
+      "rating": "8.4"
     }
   ]
 }
