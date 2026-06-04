@@ -71,6 +71,20 @@ def get_spotify_token(client_id: str, client_secret: str) -> str:
     return resp.json()["access_token"]
 
 
+_SPOTIFY_403_HELP = """
+ERRORE 403 dalla Spotify API.
+La tua app non ha la Web API abilitata. Segui questi passi:
+
+  1. Vai su https://developer.spotify.com/dashboard
+  2. Clicca sulla tua app
+  3. Clicca "Edit Settings" (o "Settings" -> "Basic Information")
+  4. Nella sezione "Which API/SDKs are you planning to use?"
+     seleziona "Web API"
+  5. Salva e riavvia lo scraper.
+
+Se hai appena creato l'app, aspetta 1-2 minuti prima di riprovare.
+"""
+
 def spotify_get(token: str, url: str, params: dict | None = None) -> dict:
     headers = {"Authorization": f"Bearer {token}"}
     for attempt in range(MAX_RETRIES):
@@ -82,6 +96,9 @@ def spotify_get(token: str, url: str, params: dict | None = None) -> dict:
             continue
         if resp.status_code == 401:
             raise RuntimeError("Token Spotify scaduto — riavvia lo script.")
+        if resp.status_code == 403:
+            print(_SPOTIFY_403_HELP)
+            sys.exit(1)
         resp.raise_for_status()
         return resp.json()
     raise RuntimeError(f"Spotify GET fallito dopo {MAX_RETRIES} tentativi: {url}")
