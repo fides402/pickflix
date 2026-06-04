@@ -88,46 +88,61 @@ def spotify_get(token: str, url: str, params: dict | None = None) -> dict:
 
 
 # ---------------------------------------------------------------------------
-# Raccolta track ID via Spotify API
+# Raccolta track ID via Spotify Search
+# (l'endpoint /artists/{id}/albums è ristretto per le nuove app dal 2025)
 # ---------------------------------------------------------------------------
 
-def collect_all_albums(token: str) -> list[dict]:
-    albums: list[dict] = []
-    url = f"https://api.spotify.com/v1/artists/{ARTIST_ID}/albums"
-    params = {
-        "include_groups": "album,single,compilation,appears_on",
-        "market": "IT",
-        "limit": 50,
-        "offset": 0,
-    }
-    while url:
-        data = spotify_get(token, url, params)
-        albums.extend(data.get("items", []))
-        url = data.get("next")
-        params = {}   # next URL ha già i parametri
-        time.sleep(0.1)
-    return albums
+# Query multiple per massimizzare la copertura
+SEARCH_QUERIES = [
+    'artist:"Piero Piccioni"',
+    "Piero Piccioni",
+    "Piccioni colonna sonora",
+    "Piccioni soundtrack",
+]
 
-
-def collect_album_tracks(token: str, album_id: str, album_name: str, release_date: str) -> list[dict]:
+def search_tracks(token: str, query: str, max_offset: int = 950) -> list[dict]:
+    """Cerca tracce con una query. Spotify permette offset 0-999, limit 50."""
     tracks: list[dict] = []
-    url = f"https://api.spotify.com/v1/albums/{album_id}/tracks"
-    params = {"limit": 50, "offset": 0}
-    while url:
-        data = spotify_get(token, url, params)
-        for t in data.get("items", []):
+    for offset in range(0, max_offset + 1, 50):
+        data = spotify_get(token, "https://api.spotify.com/v1/search", {
+            "q": query,
+            "type": "track",
+            "limit": 50,
+            "offset": offset,
+        })
+        items = data.get("tracks", {}).get("items", [])
+        if not items:
+            break
+        for t in items:
+            if not t.get("id"):
+                continue
             tracks.append({
                 "id": t["id"],
                 "name": t["name"],
-                "album": album_name,
-                "year": release_date[:4] if release_date else "",
+                "album": (t.get("album") or {}).get("name", ""),
+                "year": ((t.get("album") or {}).get("release_date", "") or "")[:4],
                 "track_number": t.get("track_number"),
                 "duration_ms": t.get("duration_ms"),
             })
-        url = data.get("next")
-        params = {}
-        time.sleep(0.05)
+        time.sleep(0.15)
     return tracks
+
+
+def collect_all_tracks(token: str) -> list[dict]:
+    """Raccoglie tracce da più query, deduplicando per ID."""
+    seen: set[str] = set()
+    all_tracks: list[dict] = []
+    for query in SEARCH_QUERIES:
+        print(f"    Ricerca: {query}")
+        found = search_tracks(token, query)
+        new = 0
+        for t in found:
+            if t["id"] not in seen:
+                seen.add(t["id"])
+                all_tracks.append(t)
+                new += 1
+        print(f"      {new} nuove tracce (totale: {len(all_tracks)})")
+    return all_tracks
 
 
 # ---------------------------------------------------------------------------
@@ -243,31 +258,10 @@ def main():
     print("[*] Ottengo token Spotify...")
     token = get_spotify_token(client_id, client_secret)
 
-    # --- Album di Piero Piccioni ---
-    print("[*] Scarico la discografia di Piero Piccioni...")
-    albums = collect_all_albums(token)
-    seen_album_ids: set[str] = set()
-    unique_albums = []
-    for a in albums:
-        if a["id"] not in seen_album_ids:
-            seen_album_ids.add(a["id"])
-            unique_albums.append(a)
-    print(f"    Album/singoli trovati: {len(unique_albums)}")
-
-    # --- Track ID da tutti gli album ---
-    print("[*] Raccolgo i track ID...")
-    all_tracks: list[dict] = []
-    seen_ids: set[str] = set()
-    for i, album in enumerate(unique_albums, 1):
-        print(f"    [{i}/{len(unique_albums)}] {album['name'][:60]}")
-        tracks = collect_album_tracks(
-            token, album["id"], album["name"], album.get("release_date", "")
-        )
-        for t in tracks:
-            if t["id"] not in seen_ids:
-                seen_ids.add(t["id"])
-                all_tracks.append(t)
-    print(f"    Tracce uniche totali: {len(all_tracks)}")
+    # --- Tracce di Piero Piccioni via search ---
+    print("[*] Cerco tracce di Piero Piccioni su Spotify...")
+    all_tracks = collect_all_tracks(token)
+    print(f"    Tracce uniche trovate: {len(all_tracks)}")
 
     # --- Carica checkpoint esistente ---
     output_path = Path(OUTPUT_FILE)
