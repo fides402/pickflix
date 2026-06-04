@@ -105,6 +105,8 @@ def api_scrape():
         env = os.environ.copy()
         env["SPOTIFY_CLIENT_ID"] = client_id
         env["SPOTIFY_CLIENT_SECRET"] = client_secret
+        env["PYTHONIOENCODING"] = "utf-8"
+        env["PYTHONUTF8"] = "1"
 
         python = sys.executable
         proc = subprocess.Popen(
@@ -132,7 +134,7 @@ def api_scrape():
         proc.wait()
         _state["running"] = False
         _state["process"] = None
-        _state["log"].append("✅  Scraper terminato.")
+        _state["log"].append("[OK] Scraper terminato.")
 
     threading.Thread(target=run, daemon=True).start()
     return jsonify({"status": "started"})
@@ -193,7 +195,7 @@ def api_stop():
     if proc and _state["running"]:
         proc.terminate()
         _state["running"] = False
-        _state["log"].append("⛔  Scraper fermato dall'utente.")
+        _state["log"].append("[STOP] Scraper fermato dall'utente.")
         return jsonify({"status": "stopped"})
     return jsonify({"status": "not_running"})
 
@@ -204,6 +206,6 @@ def api_stop():
 
 if __name__ == "__main__":
     port = 5050
-    print(f"🎹  Server avviato su  http://localhost:{port}")
+    print(f"[*] Server avviato su  http://localhost:{port}")
     print("    Premi CTRL+C per uscire.\n")
     app.run(host="0.0.0.0", port=port, debug=False, threaded=True)

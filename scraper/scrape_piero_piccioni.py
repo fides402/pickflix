@@ -26,10 +26,6 @@ import sys
 import time
 from pathlib import Path
 
-# Fix encoding Windows (cp1252 non supporta le emoji)
-if hasattr(sys.stdout, "reconfigure"):
-    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
-
 import requests
 
 # ---------------------------------------------------------------------------
@@ -232,7 +228,7 @@ def main():
 
     if not client_id or not client_secret:
         print(
-            "\n❌  Credenziali Spotify mancanti!\n\n"
+            "\nERRORE: Credenziali Spotify mancanti!\n\n"
             "  Come ottenerle (gratis, 2 minuti):\n"
             "    1. Vai su https://developer.spotify.com/dashboard\n"
             "    2. Crea una nuova app (qualsiasi nome)\n"
@@ -244,11 +240,11 @@ def main():
         sys.exit(1)
 
     # --- Token Spotify ---
-    print("🔑  Ottengo token Spotify...")
+    print("[*] Ottengo token Spotify...")
     token = get_spotify_token(client_id, client_secret)
 
     # --- Album di Piero Piccioni ---
-    print("📀  Scarico la discografia di Piero Piccioni...")
+    print("[*] Scarico la discografia di Piero Piccioni...")
     albums = collect_all_albums(token)
     seen_album_ids: set[str] = set()
     unique_albums = []
@@ -259,7 +255,7 @@ def main():
     print(f"    Album/singoli trovati: {len(unique_albums)}")
 
     # --- Track ID da tutti gli album ---
-    print("🎵  Raccolgo i track ID...")
+    print("[*] Raccolgo i track ID...")
     all_tracks: list[dict] = []
     seen_ids: set[str] = set()
     for i, album in enumerate(unique_albums, 1):
@@ -283,15 +279,15 @@ def main():
             if isinstance(existing, list):
                 results = existing
                 done_ids = {r["spotify_id"] for r in results}
-                print(f"♻️   Riprendo da checkpoint: {len(results)} tracce già processate")
+                print(f"[R] Riprendo da checkpoint: {len(results)} tracce gia' processate")
         except (json.JSONDecodeError, KeyError):
             pass
 
     to_scrape = [t for t in all_tracks if t["id"] not in done_ids]
-    print(f"\n⏳  Tracce da scrapare: {len(to_scrape)}")
+    print(f"\n[~] Tracce da scrapare: {len(to_scrape)}")
 
     if not to_scrape:
-        print("✅  Nessuna traccia nuova da scrapare.")
+        print("[OK] Nessuna traccia nuova da scrapare.")
         _print_summary(results)
         return
 
@@ -315,15 +311,15 @@ def main():
             new_since_checkpoint += 1
             progression = result.get("progression") or "N/A"
             bpm = result.get("tempo_bpm") or 0
-            print(f"✓  {progression:<14}  {bpm:.0f} BPM")
+            print(f"OK  {progression:<14}  {bpm:.0f} BPM")
         else:
             failed += 1
-            print("✗  nessun dato")
+            print("FAIL  nessun dato")
 
         # Checkpoint
         if new_since_checkpoint >= CHECKPOINT_EVERY:
             _save(results, output_path)
-            print(f"    💾  Checkpoint: {len(results)} totali salvate")
+            print(f"    [SAVE] Checkpoint: {len(results)} totali salvate")
             new_since_checkpoint = 0
 
         # Pausa anti-blocco
@@ -331,8 +327,8 @@ def main():
 
     # Salvataggio finale
     _save(results, output_path)
-    print(f"\n✅  Completato! {len(results)} tracce salvate in '{OUTPUT_FILE}'")
-    print(f"❌  Fallite: {failed}")
+    print(f"\n[OK] Completato! {len(results)} tracce salvate in '{OUTPUT_FILE}'")
+    print(f"[ERR] Fallite: {failed}")
     _print_summary(results)
 
 
@@ -343,12 +339,11 @@ def _save(results: list[dict], path: Path) -> None:
 def _print_summary(results: list[dict]) -> None:
     if not results:
         return
-    # Distribuzione per progressione
     from collections import Counter
     counts = Counter(r.get("progression") for r in results if r.get("progression"))
-    print("\n📊  Top 10 progressioni:")
+    print("\n[STATS] Top 10 progressioni:")
     for prog, n in counts.most_common(10):
-        bar = "█" * (n * 20 // max(counts.values()))
+        bar = "#" * (n * 20 // max(counts.values()))
         print(f"    {prog:<18} {n:>4}  {bar}")
 
 
