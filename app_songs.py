@@ -4,6 +4,8 @@ Avvia con avvia.bat oppure:  python app_songs.py
 Poi apri:  http://localhost:5050
 """
 
+import csv
+import io
 import json
 import os
 import subprocess
@@ -11,7 +13,7 @@ import sys
 import threading
 from pathlib import Path
 
-from flask import Flask, jsonify, request, send_from_directory
+from flask import Flask, Response, jsonify, request, send_file, send_from_directory
 
 app = Flask(__name__, static_folder=".")
 
@@ -134,6 +136,55 @@ def api_scrape():
 
     threading.Thread(target=run, daemon=True).start()
     return jsonify({"status": "started"})
+
+
+@app.route("/api/download/json")
+def download_json():
+    path = Path("songs_progressions.json")
+    if not path.exists():
+        return jsonify({"error": "Nessun file da scaricare. Avvia prima lo scraper."}), 404
+    return send_file(
+        path.resolve(),
+        as_attachment=True,
+        download_name="piero_piccioni_progressioni.json",
+        mimetype="application/json",
+    )
+
+
+@app.route("/api/download/csv")
+def download_csv():
+    path = Path("songs_progressions.json")
+    if not path.exists():
+        return jsonify({"error": "Nessun file da scaricare. Avvia prima lo scraper."}), 404
+
+    songs = json.loads(path.read_text(encoding="utf-8"))
+    if not songs:
+        return jsonify({"error": "Il file è vuoto."}), 404
+
+    # Colonne ordinate in modo leggibile
+    cols = [
+        "title", "artists", "album", "year", "track_number",
+        "key", "mode", "progression", "tempo_bpm", "time_signature",
+        "danceability", "energy", "acousticness", "instrumentalness",
+        "valence", "loudness_db", "speechiness", "liveness",
+        "duration_ms", "spotify_id", "jamstart_url",
+    ]
+    # Includi solo le colonne presenti
+    available = [c for c in cols if c in songs[0]]
+
+    output = io.StringIO()
+    writer = csv.DictWriter(output, fieldnames=available, extrasaction="ignore")
+    writer.writeheader()
+    writer.writerows(songs)
+
+    return Response(
+        "﻿" + output.getvalue(),   # BOM per Excel italiano
+        mimetype="text/csv; charset=utf-8",
+        headers={
+            "Content-Disposition":
+                'attachment; filename="piero_piccioni_progressioni.csv"'
+        },
+    )
 
 
 @app.route("/api/stop", methods=["POST"])
