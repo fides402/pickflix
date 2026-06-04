@@ -89,13 +89,6 @@ def api_scrape():
     if _state["running"]:
         return jsonify({"error": "Scraper già in esecuzione."}), 400
 
-    data = request.get_json(force=True) or {}
-    client_id = (data.get("client_id") or "").strip()
-    client_secret = (data.get("client_secret") or "").strip()
-
-    if not client_id or not client_secret:
-        return jsonify({"error": "Inserisci Client ID e Client Secret Spotify."}), 400
-
     _state["running"] = True
     _state["log"] = []
     _state["done_count"] = 0
@@ -103,8 +96,6 @@ def api_scrape():
 
     def run():
         env = os.environ.copy()
-        env["SPOTIFY_CLIENT_ID"] = client_id
-        env["SPOTIFY_CLIENT_SECRET"] = client_secret
         env["PYTHONIOENCODING"] = "utf-8"
         env["PYTHONUTF8"] = "1"
 
@@ -121,15 +112,14 @@ def api_scrape():
         )
         _state["process"] = proc
 
+        import re as _re
         for raw_line in proc.stdout:
             line = raw_line.rstrip()
             _state["log"].append(line)
-            # Estrai contatori dal formato "[N/TOTAL]"
-            import re
-            m = re.search(r"\[(\d+)/(\d+)\]", line)
+            m = _re.search(r"\[(\d+)/(\d+)\]", line)
             if m:
                 _state["done_count"] = int(m.group(1))
-                _state["total"] = int(m.group(2))
+                _state["total"]      = int(m.group(2))
 
         proc.wait()
         _state["running"] = False

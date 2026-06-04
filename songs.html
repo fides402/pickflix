@@ -104,34 +104,19 @@
 
 <header>
   <h1>🎹 Piero Piccioni — Progressioni Armoniche</h1>
-  <p>Inserisci le credenziali Spotify, avvia lo scraper e consulta i risultati.</p>
+  <p>Nessuna credenziale richiesta. Clicca Avvia e aspetta.</p>
 </header>
 
-<!-- ── CREDENZIALI ── -->
+<!-- ── AVVIO ── -->
 <div class="section">
-  <div class="section-title">1 · Credenziali Spotify</div>
-  <div class="cred-grid">
-    <div class="field">
-      <label>Client ID</label>
-      <input id="cid" type="text" placeholder="es. 1a2b3c4d5e6f..." autocomplete="off"/>
-    </div>
-    <div class="field">
-      <label>Client Secret</label>
-      <input id="csec" type="password" placeholder="••••••••••••••••" autocomplete="off"/>
-    </div>
-    <div class="field">
-      <label>&nbsp;</label>
-      <div style="display:flex;gap:.6rem">
-        <button class="btn btn-start" id="btnStart" onclick="startScraper()">▶ Avvia Scraper</button>
-        <button class="btn btn-stop"  id="btnStop"  onclick="stopScraper()" disabled>■ Stop</button>
-      </div>
-    </div>
+  <div class="section-title">1 · Avvia lo Scraper</div>
+  <div style="display:flex;gap:.8rem;align-items:center;flex-wrap:wrap">
+    <button class="btn btn-start" id="btnStart" onclick="startScraper()">▶ Avvia Scraper</button>
+    <button class="btn btn-stop"  id="btnStop"  onclick="stopScraper()" disabled>■ Stop</button>
+    <span style="font-size:.8rem;color:#6060a0">
+      Raccoglie ~1000 brani di Piero Piccioni via Spotify embed + Jamstart. Nessuna credenziale richiesta.
+    </span>
   </div>
-  <p style="margin-top:.8rem;font-size:.75rem;color:#504080">
-    Credenziali gratis su
-    <a href="https://developer.spotify.com/dashboard" target="_blank" style="color:#c86aff">developer.spotify.com/dashboard</a>
-    → Create App → qualsiasi nome, Redirect URI: <code>http://localhost</code>
-  </p>
 </div>
 
 <!-- ── PROGRESSO ── -->
@@ -203,10 +188,6 @@ let sortCol = 'title';
 
 // ── Scraper controls ──
 async function startScraper() {
-  const cid  = document.getElementById('cid').value.trim();
-  const csec = document.getElementById('csec').value.trim();
-  if (!cid || !csec) { alert('Inserisci Client ID e Client Secret!'); return; }
-
   document.getElementById('progSection').style.display = '';
   document.getElementById('btnStart').disabled = true;
   document.getElementById('btnStop').disabled  = false;
@@ -215,7 +196,7 @@ async function startScraper() {
   const res = await fetch('/api/scrape', {
     method: 'POST',
     headers: {'Content-Type':'application/json'},
-    body: JSON.stringify({client_id: cid, client_secret: csec})
+    body: JSON.stringify({})
   });
   const data = await res.json();
   if (!res.ok) { alert(data.error || 'Errore avvio scraper'); resetButtons(); return; }
