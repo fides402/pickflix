@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Piero Piccioni – Progressioni Armoniche</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: #0f0f13;
+      color: #e2e2e2;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      padding: 2rem 1.5rem 1.5rem;
+      border-bottom: 1px solid #2a2a3e;
+    }
+
+    header h1 { font-size: 1.7rem; font-weight: 700; color: #e84393; }
+    header p  { margin-top: .4rem; color: #9090a8; font-size: .9rem; }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .7rem;
+      padding: 1rem 1.5rem;
+      background: #13131a;
+      border-bottom: 1px solid #2a2a3e;
+      align-items: center;
+    }
+
+    .controls input, .controls select {
+      background: #1e1e2e;
+      border: 1px solid #3a3a5c;
+      color: #e2e2e2;
+      padding: .45rem .8rem;
+      border-radius: 8px;
+      font-size: .85rem;
+      outline: none;
+    }
+    .controls input:focus, .controls select:focus { border-color: #e84393; }
+    .controls input { min-width: 220px; }
+
+    #count {
+      margin-left: auto;
+      font-size: .8rem;
+      color: #606080;
+    }
+
+    .empty {
+      text-align: center;
+      padding: 4rem 1rem;
+      color: #505070;
+    }
+    .empty a { color: #e84393; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .85rem;
+    }
+
+    thead th {
+      position: sticky;
+      top: 0;
+      background: #16161f;
+      padding: .65rem 1rem;
+      text-align: left;
+      font-size: .75rem;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: #7070a0;
+      border-bottom: 1px solid #2a2a3e;
+      cursor: pointer;
+      user-select: none;
+      white-space: nowrap;
+    }
+    thead th:hover { color: #e84393; }
+    thead th .arrow { margin-left: .3em; opacity: .5; }
+    thead th.sorted .arrow { opacity: 1; color: #e84393; }
+
+    tbody tr {
+      border-bottom: 1px solid #1e1e2e;
+      transition: background .1s;
+    }
+    tbody tr:hover { background: #1a1a2a; }
+
+    td {
+      padding: .6rem 1rem;
+      vertical-align: middle;
+    }
+
+    td.title    { color: #eee; font-weight: 500; max-width: 240px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    td.album    { color: #9090b8; max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    td.year     { color: #606080; }
+    td.prog     { font-weight: 600; }
+    td.bpm      { color: #e2e2e2; }
+    td.acou     { color: #60c0a0; }
+
+    .badge {
+      display: inline-block;
+      padding: .2em .6em;
+      border-radius: 5px;
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .03em;
+    }
+    .badge-major { background: #1a3a5c; color: #60b8ff; }
+    .badge-minor { background: #3a1a3a; color: #d060d0; }
+
+    .key-name { font-size: .95rem; margin-right: .3em; }
+
+    a.jamlink {
+      color: #e84393;
+      text-decoration: none;
+      font-size: .8rem;
+      opacity: .7;
+      transition: opacity .15s;
+    }
+    a.jamlink:hover { opacity: 1; }
+
+    .bar-wrap {
+      display: flex;
+      align-items: center;
+      gap: .4rem;
+      min-width: 80px;
+    }
+    .bar-bg {
+      flex: 1;
+      height: 5px;
+      background: #2a2a3e;
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      background: #60c0a0;
+      border-radius: 3px;
+    }
+    .bar-val { font-size: .75rem; color: #9090b8; min-width: 28px; text-align: right; }
+
+    #loader {
+      text-align: center;
+      padding: 4rem;
+      color: #606080;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🎹 Piero Piccioni</h1>
+  <p>Progressioni armoniche — key, mode, BPM e audio features via Jamstart</p>
+</header>
+
+<div class="controls">
+  <input id="search" type="search" placeholder="Cerca titolo o album…" />
+
+  <select id="filterKey">
+    <option value="">Tutte le tonalità</option>
+    <option>C</option><option>C#</option><option>D</option><option>D#</option>
+    <option>E</option><option>F</option><option>F#</option><option>G</option>
+    <option>G#</option><option>A</option><option>A#</option><option>B</option>
+  </select>
+
+  <select id="filterMode">
+    <option value="">Major e Minor</option>
+    <option value="major">Major</option>
+    <option value="minor">Minor</option>
+  </select>
+
+  <select id="sortBy">
+    <option value="title">Ordina: Titolo</option>
+    <option value="year">Ordina: Anno</option>
+    <option value="bpm">Ordina: BPM ↓</option>
+    <option value="energy">Ordina: Energy ↓</option>
+    <option value="acousticness">Ordina: Acusticità ↓</option>
+  </select>
+
+  <span id="count"></span>
+</div>
+
+<div id="loader">Caricamento dati…</div>
+<div id="empty" class="empty" style="display:none">
+  Nessun risultato. <br><br>
+  Se <code>songs_progressions.json</code> non esiste ancora, esegui prima lo scraper:<br><br>
+  <code>SPOTIFY_CLIENT_ID=… SPOTIFY_CLIENT_SECRET=… python3 scraper/scrape_piero_piccioni.py</code>
+</div>
+
+<div id="wrapper" style="overflow-x:auto; display:none">
+  <table>
+    <thead>
+      <tr>
+        <th data-col="title">Titolo <span class="arrow">↕</span></th>
+        <th data-col="album">Album <span class="arrow">↕</span></th>
+        <th data-col="year">Anno <span class="arrow">↕</span></th>
+        <th data-col="prog">Progressione <span class="arrow">↕</span></th>
+        <th data-col="bpm">BPM <span class="arrow">↕</span></th>
+        <th data-col="acousticness">Acusticità <span class="arrow">↕</span></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody id="tbody"></tbody>
+  </table>
+</div>
+
+<script>
+  let allSongs = [];
+  let sortCol = 'title';
+  let sortAsc = true;
+
+  async function loadData() {
+    try {
+      const res = await fetch('songs_progressions.json');
+      if (!res.ok) throw new Error('File non trovato');
+      allSongs = await res.json();
+      document.getElementById('loader').style.display = 'none';
+      document.getElementById('wrapper').style.display = '';
+      render();
+    } catch (e) {
+      document.getElementById('loader').style.display = 'none';
+      document.getElementById('empty').style.display = '';
+    }
+  }
+
+  function render() {
+    const q      = document.getElementById('search').value.toLowerCase();
+    const fKey   = document.getElementById('filterKey').value;
+    const fMode  = document.getElementById('filterMode').value;
+    const sortBy = document.getElementById('sortBy').value;
+
+    let songs = allSongs.filter(s => {
+      if (q && !s.title?.toLowerCase().includes(q) && !s.album?.toLowerCase().includes(q)) return false;
+      if (fKey  && s.key  !== fKey)  return false;
+      if (fMode && s.mode !== fMode) return false;
+      return true;
+    });
+
+    songs.sort((a, b) => {
+      let av, bv;
+      if (sortBy === 'title')       { av = a.title || ''; bv = b.title || ''; }
+      else if (sortBy === 'year')   { av = a.year || 0;   bv = b.year || 0;   }
+      else if (sortBy === 'bpm')    { av = -(a.tempo_bpm || 0); bv = -(b.tempo_bpm || 0); }
+      else if (sortBy === 'energy') { av = -(a.energy || 0);    bv = -(b.energy || 0);    }
+      else if (sortBy === 'acousticness') { av = -(a.acousticness || 0); bv = -(b.acousticness || 0); }
+      return av < bv ? -1 : av > bv ? 1 : 0;
+    });
+
+    document.getElementById('count').textContent = `${songs.length} / ${allSongs.length} brani`;
+
+    const tbody = document.getElementById('tbody');
+    tbody.innerHTML = songs.map(s => {
+      const modeCls  = s.mode === 'major' ? 'badge-major' : 'badge-minor';
+      const modeLabel = s.mode || '—';
+      const acou = s.acousticness != null ? s.acousticness : null;
+      const acouBar = acou != null
+        ? `<div class="bar-wrap"><div class="bar-bg"><div class="bar-fill" style="width:${Math.round(acou*100)}%"></div></div><span class="bar-val">${Math.round(acou*100)}%</span></div>`
+        : '—';
+
+      return `<tr>
+        <td class="title" title="${esc(s.title)}">${esc(s.title || '—')}</td>
+        <td class="album" title="${esc(s.album)}">${esc(s.album || '—')}</td>
+        <td class="year">${s.year || '—'}</td>
+        <td class="prog">
+          <span class="key-name">${s.key || '—'}</span>
+          <span class="badge ${modeCls}">${modeLabel}</span>
+        </td>
+        <td class="bpm">${s.tempo_bpm ? Math.round(s.tempo_bpm) : '—'}</td>
+        <td class="acou">${acouBar}</td>
+        <td><a class="jamlink" href="${esc(s.jamstart_url)}" target="_blank">Jamstart ↗</a></td>
+      </tr>`;
+    }).join('');
+
+    if (!songs.length) {
+      document.getElementById('empty').style.display = '';
+      document.getElementById('wrapper').style.display = 'none';
+    } else {
+      document.getElementById('empty').style.display = 'none';
+      document.getElementById('wrapper').style.display = '';
+    }
+  }
+
+  function esc(s) {
+    return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  ['search','filterKey','filterMode','sortBy'].forEach(id =>
+    document.getElementById(id).addEventListener('input', render)
+  );
+
+  document.querySelectorAll('thead th[data-col]').forEach(th => {
+    th.addEventListener('click', () => {
+      const col = th.dataset.col;
+      document.getElementById('sortBy').value =
+        col === 'bpm' ? 'bpm' :
+        col === 'acousticness' ? 'acousticness' :
+        col === 'year' ? 'year' : 'title';
+      render();
+    });
+  });
+
+  loadData();
+</script>
+</body>
+</html>
