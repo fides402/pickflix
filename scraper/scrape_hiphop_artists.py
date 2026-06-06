@@ -53,16 +53,16 @@ NOTE_NAMES = ["C","C#","D","D#","E","F","F#","G","G#","A","A#","B"]
 # Come trovare l'ID: open.spotify.com → cerca artista → copia ID dall'URL
 # ---------------------------------------------------------------------------
 ARTISTS = [
-    {"name": "Earl Sweatshirt",    "id": "1cnLNGCMhGfnuAOSMCJ8mW"},
-    {"name": "Navy Blue",          "id": "3FYpJpFYiJXEXA8EO4cgf0"},
+    {"name": "Earl Sweatshirt",    "id": "3A5tHz1SfngyOZM2gItYKu"},
+    {"name": "Navy Blue",          "id": "5qRbfEf4Ooo19aRXKQzvUV"},
     {"name": "Kanye West",         "id": "5K4W6rqBFWDnAN6FQUkS6x"},
-    {"name": "The Alchemist",      "id": "2yzxX7ue8iKSnBDFm9UkQV"},
-    {"name": "Westside Gunn",      "id": "3oqwnCMoKxOm9lDfXRFRCe"},
-    {"name": "Roc Marciano",       "id": "0c8fZQZH3gBq5aBdHcRZDi"},
-    {"name": "Conway the Machine", "id": "5QvXJRXiqaHlvHdJ8cLNlP"},
-    {"name": "Mick Jenkins",       "id": "2aRISK0oKkXNniqKGz3vmq"},
-    {"name": "Joey Bada$$",        "id": "5BHbNGHsJgr8IYnfBBJgOL"},
-    {"name": "J. Cole",            "id": "6l3HvQ5sa6mXTsMTB6okmg"},
+    {"name": "The Alchemist",      "id": "0eVyjRhzZKke2KFYTcDkeu"},
+    {"name": "Westside Gunn",      "id": "0ABk515kENDyATUdpCKVfW"},
+    {"name": "Roc Marciano",       "id": "2XInFFvpdu5Xxpwc6kE8hJ"},
+    {"name": "Conway the Machine", "id": "67gqUXxHedeUGDTxwBzdjS"},
+    {"name": "Mick Jenkins",       "id": "1FvjvACFvko2Z91IvDljrx"},
+    {"name": "Joey Bada$$",        "id": "2P5sC9cVZDToPxyomzF1UH"},
+    {"name": "J. Cole",            "id": "6l3HvQ5sa6mXTsMTB19rO5"},
 ]
 
 
