@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+*.pyo
+songs_progressions.json
+songs_chords.json
