@@ -2,42 +2,38 @@
 """
 Scraper progressioni armoniche di Piero Piccioni.
 
-NON richiede credenziali Spotify. Usa solo:
-  - Spotify embed pages  (pubbliche, nessun auth)
-  - Jamstart public API  (get_track_info + get_single_audio_features)
+Metodo 1 (veloce): estrae token anonimo da embed Spotify, chiama Spotify Web API
+  per ottenere tutti gli album/tracce in pochi secondi senza credenziali.
 
-Strategia BFS:
-  1. Artist embed -> top 10 track IDs
-  2. Per ogni track -> album ID (via Jamstart get_track_info)
-  3. Album embed  -> tutti i track ID dell'album
-  4. Per ogni nuovo track -> album ID -> album embed -> ...
-  fino a raggiungere TARGET tracce
+Metodo 2 (fallback BFS): se l'API Spotify e' bloccata (rate limit IP),
+  usa embed pages + Jamstart get_track_info per trovare album ID via BFS.
 
 Output: songs_progressions.json  (checkpoint ogni 50 tracce, riprendibile)
 """
 
 import json
 import random
+import re
 import sys
 import time
 from collections import deque
 from pathlib import Path
 
-import re
 import requests
 
 # ---------------------------------------------------------------------------
-TARGET      = 1000           # tracce obiettivo
+TARGET      = 1000
 OUTPUT_FILE = "songs_progressions.json"
-CHECKPOINT  = 50             # salva ogni N tracce nuove
-DELAY_EMBED = (0.3, 0.6)    # delay tra embed Spotify
-DELAY_JAM   = (0.4, 0.8)    # delay tra chiamate Jamstart
+CHECKPOINT  = 50
+DELAY_JAM   = (0.5, 1.0)
+DELAY_EMBED = (0.3, 0.7)
+DELAY_API   = (0.15, 0.35)
 MAX_RETRIES = 4
 
-ARTIST_ID   = "2WPn0emjr8XPmMOT0bBcPe"   # Piero Piccioni
+ARTIST_ID = "2WPn0emjr8XPmMOT0bBcPe"   # Piero Piccioni
 
 KEY_NAMES  = ["C","C#","D","D#","E","F","F#","G","G#","A","A#","B"]
-MODE_NAMES = {0:"minor", 1:"major"}
+MODE_NAMES = {0: "minor", 1: "major"}
 
 EMBED_HEADERS = {
     "User-Agent": (
@@ -61,29 +57,17 @@ JAM_HEADERS = {
 
 
 # ---------------------------------------------------------------------------
-# Spotify embed scraping
+# Embed utilities
 # ---------------------------------------------------------------------------
 
 def _next_data(html: str) -> dict:
-    """Estrae __NEXT_DATA__ dall'HTML dell'embed Spotify."""
-    m = re.search(
-        r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', html, re.DOTALL
-    )
+    m = re.search(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', html, re.DOTALL)
     if not m:
         return {}
     try:
         return json.loads(m.group(1))
     except json.JSONDecodeError:
         return {}
-
-
-def _track_list_from_state(state: dict) -> list[dict]:
-    """Ritorna trackList dall'oggetto state Spotify embed."""
-    return (
-        state.get("data", {})
-             .get("entity", {})
-             .get("trackList", [])
-    )
 
 
 def fetch_embed(session: requests.Session, url: str) -> str | None:
@@ -103,55 +87,188 @@ def fetch_embed(session: requests.Session, url: str) -> str | None:
     return None
 
 
+def extract_token(session: requests.Session) -> str | None:
+    """Estrae l'accessToken anonimo dall'embed Spotify (nessun account richiesto)."""
+    urls = [
+        f"https://open.spotify.com/embed/artist/{ARTIST_ID}",
+        "https://open.spotify.com/embed/track/68wSf9grpSGuK6C1SfG2kG",
+    ]
+    for url in urls:
+        html = fetch_embed(session, url)
+        if not html:
+            continue
+        nd = _next_data(html)
+        token = (
+            nd.get("props", {})
+              .get("pageProps", {})
+              .get("state", {})
+              .get("settings", {})
+              .get("session", {})
+              .get("accessToken")
+        )
+        if token:
+            return token
+        time.sleep(1)
+    return None
+
+
+# ---------------------------------------------------------------------------
+# Metodo 1: Spotify Web API con token anonimo
+# ---------------------------------------------------------------------------
+
+def _spotify_get(session: requests.Session, token: str, path: str, params: dict = None) -> dict | None:
+    headers = {
+        "Authorization": f"Bearer {token}",
+        "Accept": "application/json",
+        "User-Agent": EMBED_HEADERS["User-Agent"],
+    }
+    for attempt in range(MAX_RETRIES):
+        try:
+            r = session.get(
+                f"https://api.spotify.com/v1/{path}",
+                headers=headers, params=params, timeout=15
+            )
+            if r.status_code == 200:
+                return r.json()
+            if r.status_code == 401:
+                return None  # token scaduto
+            if r.status_code == 429:
+                retry_after = int(r.headers.get("Retry-After", 0))
+                if retry_after > 300:
+                    return {"_rate_limit_long": True}
+                w = min(retry_after or 5 * (attempt + 1), 30)
+                print(f"  [spotify api] rate limit, attendo {w}s")
+                time.sleep(w)
+            else:
+                return None
+        except requests.RequestException:
+            time.sleep(2)
+    return None
+
+
+def collect_tracks_via_api(session: requests.Session, token: str) -> list[dict] | None:
+    """
+    Raccoglie tutti i track IDs via Spotify API (metodo veloce).
+    Ritorna None se l'API e' bloccata (rate limit lungo).
+    """
+    print("[*] Metodo veloce: Spotify API con token anonimo")
+
+    # Ottieni tutti gli album
+    all_albums = []
+    params = {"include_groups": "album,single,compilation", "limit": 50, "offset": 0, "market": "IT"}
+    page = 1
+    while True:
+        data = _spotify_get(session, token, f"artists/{ARTIST_ID}/albums", params)
+        if not data:
+            print("    Token scaduto o API non disponibile")
+            return None
+        if data.get("_rate_limit_long"):
+            print("    [!] Spotify API bloccata (rate limit IP lungo), passo al metodo BFS")
+            return None
+
+        items = data.get("items", [])
+        for item in items:
+            all_albums.append({
+                "id":           item["id"],
+                "name":         item.get("name", ""),
+                "release_date": item.get("release_date", ""),
+                "total_tracks": item.get("total_tracks", 0),
+            })
+        total = data.get("total", 0)
+        print(f"    Album trovati: {len(all_albums)}/{total}")
+
+        if not data.get("next") or len(all_albums) >= total:
+            break
+        params["offset"] += 50
+        time.sleep(random.uniform(*DELAY_API))
+
+    if not all_albums:
+        return None
+
+    # Ottieni tutti i track IDs
+    print(f"[*] Raccolta tracce da {len(all_albums)} album...")
+    all_tracks = []
+    seen_ids: set[str] = set()
+
+    for i, album in enumerate(all_albums, 1):
+        tparams = {"limit": 50, "offset": 0, "market": "IT"}
+        while True:
+            data = _spotify_get(session, token, f"albums/{album['id']}/tracks", tparams)
+            if not data:
+                break
+            if data.get("_rate_limit_long"):
+                print("    [!] Rate limit durante raccolta tracce, fermo metodo API")
+                if all_tracks:
+                    return all_tracks
+                return None
+
+            for item in data.get("items", []):
+                if item["id"] not in seen_ids:
+                    seen_ids.add(item["id"])
+                    all_tracks.append({
+                        "id":           item["id"],
+                        "name":         item.get("name", ""),
+                        "track_number": item.get("track_number"),
+                        "duration_ms":  item.get("duration_ms"),
+                        "artists":      ", ".join(a["name"] for a in item.get("artists", []) if a.get("name")),
+                        "album_name":   album["name"],
+                        "album_year":   (album.get("release_date", "") or "")[:4],
+                    })
+
+            if not data.get("next"):
+                break
+            tparams["offset"] += 50
+            time.sleep(random.uniform(*DELAY_API))
+
+        if i % 10 == 0:
+            print(f"    [{i}/{len(all_albums)}] {len(all_tracks)} tracce raccolte")
+
+        # Rinnova token ogni 30 album (scade dopo ~1h)
+        if i % 30 == 0:
+            new_tok = extract_token(session)
+            if new_tok:
+                token = new_tok
+
+    print(f"    Totale track IDs unici: {len(all_tracks)}")
+    return all_tracks
+
+
+# ---------------------------------------------------------------------------
+# Metodo 2: BFS via embed pages + Jamstart
+# ---------------------------------------------------------------------------
+
 def get_artist_seed_tracks(session: requests.Session) -> list[str]:
-    """Track IDs dall'embed artista."""
-    html = fetch_embed(
-        session, f"https://open.spotify.com/embed/artist/{ARTIST_ID}"
-    )
+    html = fetch_embed(session, f"https://open.spotify.com/embed/artist/{ARTIST_ID}")
     if not html:
         return []
     nd = _next_data(html)
-    state = nd.get("props", {}).get("pageProps", {}).get("state", {})
-    tracks = _track_list_from_state(state)
-    ids = []
-    for t in tracks:
-        uri = t.get("uri", "")
-        if uri.startswith("spotify:track:"):
-            ids.append(uri.split(":")[-1])
-    return ids
-
-
-def get_album_tracks(session: requests.Session, album_id: str) -> tuple[list[str], str]:
-    """Track IDs + nome album dall'embed album."""
-    html = fetch_embed(
-        session, f"https://open.spotify.com/embed/album/{album_id}"
+    tracks = (
+        nd.get("props", {}).get("pageProps", {}).get("state", {})
+          .get("data", {}).get("entity", {}).get("trackList", [])
     )
+    return [t.get("uri", "").split(":")[-1] for t in tracks if t.get("uri", "").startswith("spotify:track:")]
+
+
+def get_album_tracks_embed(session: requests.Session, album_id: str) -> tuple[list[str], str]:
+    html = fetch_embed(session, f"https://open.spotify.com/embed/album/{album_id}")
     if not html:
         return [], ""
     nd = _next_data(html)
-    state = nd.get("props", {}).get("pageProps", {}).get("state", {})
-    entity = state.get("data", {}).get("entity", {})
+    entity = (
+        nd.get("props", {}).get("pageProps", {}).get("state", {})
+          .get("data", {}).get("entity", {})
+    )
     tracks = entity.get("trackList", [])
     album_name = entity.get("name", "")
-    ids = []
-    for t in tracks:
-        uri = t.get("uri", "")
-        if uri.startswith("spotify:track:"):
-            ids.append(uri.split(":")[-1])
+    ids = [t.get("uri", "").split(":")[-1] for t in tracks if t.get("uri", "").startswith("spotify:track:")]
     return ids, album_name
 
-
-# ---------------------------------------------------------------------------
-# Jamstart public API
-# ---------------------------------------------------------------------------
 
 def _jamstart_post(session: requests.Session, endpoint: str, payload: dict) -> dict | None:
     url = f"https://jamstart.app/api/spotify_utils/{endpoint}"
     for attempt in range(MAX_RETRIES):
         try:
-            r = session.post(
-                url, json=payload, headers=JAM_HEADERS, timeout=12
-            )
+            r = session.post(url, json=payload, headers=JAM_HEADERS, timeout=12)
             if r.status_code == 200:
                 body = r.json()
                 return body if isinstance(body, dict) else None
@@ -167,10 +284,117 @@ def _jamstart_post(session: requests.Session, endpoint: str, payload: dict) -> d
     return None
 
 
-def get_track_info(session: requests.Session, track_id: str) -> dict | None:
+def get_track_info_jam(session: requests.Session, track_id: str) -> dict | None:
     d = _jamstart_post(session, "get_track_info", {"trackID": track_id})
     return d.get("trackData") if d else None
 
+
+def collect_tracks_via_bfs(session: requests.Session, done_album_ids: set[str]) -> list[dict]:
+    """
+    BFS: artist embed seed -> Jamstart album ID -> album embed -> nuovi track IDs.
+    Ritorna lista di track dict con metadati (album name/year da embed o da Jamstart).
+    """
+    print("[*] Metodo BFS: embed Spotify + Jamstart get_track_info")
+    print("    (piu' lento ma non richiede accesso all'API Spotify)")
+
+    seed_ids = get_artist_seed_tracks(session)
+    print(f"    Seed: {len(seed_ids)} track IDs dall'embed artista")
+    time.sleep(random.uniform(*DELAY_EMBED))
+
+    track_queue: deque[str] = deque(seed_ids)
+    album_queue:  deque[str] = deque()
+    seen_track_ids: set[str] = set(seed_ids)
+    album_meta: dict[str, dict] = {}      # album_id -> {name, year}
+    track_full: dict[str, dict] = {}      # track_id -> full dict (from get_track_info)
+    track_partial: dict[str, dict] = {}   # track_id -> partial dict (from album embed)
+
+    while True:
+        # Fase A: da track_queue ottieni album IDs via Jamstart get_track_info
+        while track_queue:
+            tid = track_queue.popleft()
+            if tid in track_full:
+                continue
+
+            info = get_track_info_jam(session, tid)
+            time.sleep(random.uniform(*DELAY_JAM))
+
+            if not info:
+                continue
+
+            album = info.get("album") or {}
+            album_id = album.get("id", "")
+            album_name = album.get("name", "")
+            album_year = (album.get("release_date", "") or "")[:4]
+            artists = ", ".join(a["name"] for a in info.get("artists", []) if a.get("name")) or "Piero Piccioni"
+
+            if album_id and album_id not in done_album_ids:
+                album_queue.append(album_id)
+                done_album_ids.add(album_id)
+                album_meta[album_id] = {"name": album_name, "year": album_year}
+
+            track_full[tid] = {
+                "id":           tid,
+                "name":         info.get("name", ""),
+                "track_number": info.get("track_number"),
+                "duration_ms":  info.get("duration_ms"),
+                "artists":      artists,
+                "album_name":   album_name,
+                "album_year":   album_year,
+            }
+            print(f"    track {tid[:8]}... -> '{album_name[:30]}'")
+
+        # Fase B: scarica un album embed per ottenere nuovi track IDs
+        if not album_queue:
+            print("[!] Nessun album in coda. BFS esaurito.")
+            break
+
+        album_id = album_queue.popleft()
+        print(f"  [album] {album_id[:8]}...", end=" ", flush=True)
+        time.sleep(random.uniform(*DELAY_EMBED))
+
+        album_tracks, album_name_embed = get_album_tracks_embed(session, album_id)
+        meta = album_meta.get(album_id, {"name": album_name_embed, "year": ""})
+        print(f"'{meta['name'][:40]}' -> {len(album_tracks)} tracce")
+
+        for tid in album_tracks:
+            if tid not in seen_track_ids:
+                seen_track_ids.add(tid)
+                track_queue.append(tid)
+            # Salva metadati parziali (usati se get_track_info fallisce)
+            if tid not in track_partial:
+                track_partial[tid] = {
+                    "id":           tid,
+                    "name":         "",
+                    "track_number": None,
+                    "duration_ms":  None,
+                    "artists":      "Piero Piccioni",
+                    "album_name":   meta["name"],
+                    "album_year":   meta["year"],
+                }
+
+        total_known = len(seen_track_ids)
+        if total_known >= TARGET * 2:
+            break
+
+    # Costruisci lista finale: usa full info dove disponibile, altrimenti partial
+    result_list = []
+    seen = set()
+    for tid in seen_track_ids:
+        if tid in seen:
+            continue
+        seen.add(tid)
+        if tid in track_full:
+            result_list.append(track_full[tid])
+        elif tid in track_partial:
+            result_list.append(track_partial[tid])
+
+    print(f"    BFS completato: {len(result_list)} track IDs trovati")
+    return result_list
+
+
+# ---------------------------------------------------------------------------
+# Jamstart audio features
+# ---------------------------------------------------------------------------
 
 def get_audio_features(session: requests.Session, track_id: str) -> dict | None:
     d = _jamstart_post(session, "get_single_audio_features", {"trackID": track_id})
@@ -178,45 +402,37 @@ def get_audio_features(session: requests.Session, track_id: str) -> dict | None:
 
 
 # ---------------------------------------------------------------------------
-# Costruzione record risultato
+# Risultato
 # ---------------------------------------------------------------------------
 
-def build_result(track_id: str, info: dict | None, feat: dict | None) -> dict:
+def build_result(track: dict, feat: dict | None) -> dict:
     key_idx  = (feat or {}).get("key")
     mode_idx = (feat or {}).get("mode")
     key_name  = KEY_NAMES[key_idx] if key_idx is not None and 0 <= key_idx <= 11 else None
     mode_name = MODE_NAMES.get(mode_idx)
 
-    title  = (info or {}).get("name", "")
-    album  = (info or {}).get("album", {}) or {}
-    a_name = album.get("name", "")
-    a_year = (album.get("release_date", "") or "")[:4]
-    artists = ", ".join(
-        a["name"] for a in (info or {}).get("artists", []) if a.get("name")
-    ) or "Piero Piccioni"
-
     return {
-        "spotify_id":      track_id,
-        "title":           title,
-        "artists":         artists,
-        "album":           a_name,
-        "year":            a_year,
-        "track_number":    (info or {}).get("track_number"),
-        "duration_ms":     (info or {}).get("duration_ms"),
-        "jamstart_url":    f"https://jamstart.app/song_info/{track_id}",
-        "key":             key_name,
-        "mode":            mode_name,
-        "progression":     f"{key_name} {mode_name}" if key_name and mode_name else None,
-        "tempo_bpm":       round((feat or {}).get("tempo", 0) or 0, 1) or None,
-        "time_signature":  (feat or {}).get("time_signature"),
-        "danceability":    (feat or {}).get("danceability"),
-        "energy":          (feat or {}).get("energy"),
-        "acousticness":    (feat or {}).get("acousticness"),
-        "instrumentalness":(feat or {}).get("instrumentalness"),
-        "valence":         (feat or {}).get("valence"),
-        "loudness_db":     (feat or {}).get("loudness"),
-        "speechiness":     (feat or {}).get("speechiness"),
-        "liveness":        (feat or {}).get("liveness"),
+        "spotify_id":       track["id"],
+        "title":            track.get("name", ""),
+        "artists":          track.get("artists") or "Piero Piccioni",
+        "album":            track.get("album_name", ""),
+        "year":             track.get("album_year", ""),
+        "track_number":     track.get("track_number"),
+        "duration_ms":      track.get("duration_ms"),
+        "jamstart_url":     f"https://jamstart.app/song_info/{track['id']}",
+        "key":              key_name,
+        "mode":             mode_name,
+        "progression":      f"{key_name} {mode_name}" if key_name and mode_name else None,
+        "tempo_bpm":        round((feat or {}).get("tempo", 0) or 0, 1) or None,
+        "time_signature":   (feat or {}).get("time_signature"),
+        "danceability":     (feat or {}).get("danceability"),
+        "energy":           (feat or {}).get("energy"),
+        "acousticness":     (feat or {}).get("acousticness"),
+        "instrumentalness": (feat or {}).get("instrumentalness"),
+        "valence":          (feat or {}).get("valence"),
+        "loudness_db":      (feat or {}).get("loudness"),
+        "speechiness":      (feat or {}).get("speechiness"),
+        "liveness":         (feat or {}).get("liveness"),
     }
 
 
@@ -227,9 +443,9 @@ def build_result(track_id: str, info: dict | None, feat: dict | None) -> dict:
 def main():
     output_path = Path(OUTPUT_FILE)
 
-    # --- Carica checkpoint ---
+    # Carica checkpoint
     results: list[dict] = []
-    done_track_ids: set[str] = set()
+    done_ids: set[str] = set()
     done_album_ids: set[str] = set()
 
     if output_path.exists():
@@ -237,102 +453,85 @@ def main():
             existing = json.loads(output_path.read_text(encoding="utf-8"))
             if isinstance(existing, list):
                 results = existing
-                done_track_ids = {r["spotify_id"] for r in results}
+                done_ids = {r["spotify_id"] for r in results}
                 print(f"[R] Checkpoint: {len(results)} tracce gia' salvate, riprendo...")
         except Exception:
             pass
-
-    session = requests.Session()
-
-    # --- Seed: top tracks dall'embed artista ---
-    print("[*] Recupero seed tracks dall'embed artista Spotify...")
-    seed_ids = get_artist_seed_tracks(session)
-    print(f"    Seed: {len(seed_ids)} track IDs")
-    time.sleep(random.uniform(*DELAY_EMBED))
-
-    # BFS: coda di track IDs da esplorare per trovare album
-    track_queue: deque[str] = deque(seed_ids)
-    album_queue:  deque[str] = deque()
-
-    # Aggiunge album già processati dal checkpoint
-    # (non li ri-scartiamo, ma non li riscarichiamo)
-    new_since_ckpt = 0
 
     def save():
         output_path.write_text(
             json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8"
         )
 
-    print(f"[~] Obiettivo: {TARGET} tracce uniche")
-    print("    Ciclo BFS: track -> album -> track -> album -> ...")
-    print()
+    session = requests.Session()
 
-    iteration = 0
-    while len(results) < TARGET:
-        iteration += 1
+    # Estrai token anonimo dall'embed
+    print("[*] Estrazione token anonimo da Spotify embed...")
+    token = extract_token(session)
+    if token:
+        print(f"    Token estratto: {token[:30]}...")
+    else:
+        print("    [!] Token non disponibile, uso solo metodo BFS")
 
-        # ── Fase 1: svuota la track_queue (trova album IDs) ──
-        while track_queue and len(results) < TARGET:
-            tid = track_queue.popleft()
-            if tid in done_track_ids:
-                continue
+    # Scopri tutti i track IDs
+    all_tracks: list[dict] = []
 
-            print(
-                f"  [{len(results)+1}/{TARGET}] track {tid[:8]}...",
-                end=" ", flush=True
-            )
+    if token:
+        all_tracks = collect_tracks_via_api(session, token) or []
 
-            # Ottieni info (incluso album_id)
-            info = get_track_info(session, tid)
-            time.sleep(random.uniform(*DELAY_JAM))
+    if not all_tracks:
+        all_tracks = collect_tracks_via_bfs(session, done_album_ids)
 
-            if not info:
-                print("skip (no info)")
-                done_track_ids.add(tid)
-                continue
+    if not all_tracks:
+        print("[ERR] Nessuna traccia trovata. Controlla la connessione.")
+        sys.exit(1)
 
-            # Accoda album se nuovo
-            album_id = (info.get("album") or {}).get("id", "")
-            if album_id and album_id not in done_album_ids:
-                album_queue.append(album_id)
-                done_album_ids.add(album_id)
+    # Filtra tracce gia' processate
+    pending = [t for t in all_tracks if t["id"] not in done_ids]
+    total_available = len(all_tracks)
+    print(f"\n[*] Track IDs totali: {total_available}")
+    print(f"[*] Da processare: {len(pending)} tracce")
+    print(f"[~] Obiettivo: {TARGET} tracce con audio features\n")
 
-            # Ottieni audio features
-            feat = get_audio_features(session, tid)
-            time.sleep(random.uniform(*DELAY_JAM))
+    if not pending and len(results) >= TARGET:
+        print(f"[OK] Obiettivo gia' raggiunto! {len(results)} tracce in '{OUTPUT_FILE}'")
+        _print_summary(results)
+        return
 
-            done_track_ids.add(tid)
+    new_since_ckpt = 0
 
-            result = build_result(tid, info, feat)
-            results.append(result)
-            new_since_ckpt += 1
-
-            prog = result.get("progression") or "N/A"
-            bpm  = result.get("tempo_bpm") or 0
-            print(f"OK  {prog:<16}  {bpm:.0f} BPM")
-
-            if new_since_ckpt >= CHECKPOINT:
-                save()
-                print(f"    [SAVE] {len(results)} tracce salvate")
-                new_since_ckpt = 0
-
-        # ── Fase 2: scarica un album e mette i suoi track in coda ──
-        if not album_queue:
-            print("[!] Nessun album in coda. Discografia esaurita.")
+    for track in pending:
+        if len(results) >= TARGET:
             break
 
-        album_id = album_queue.popleft()
-        print(f"  [album] {album_id[:8]}...", end=" ", flush=True)
-        time.sleep(random.uniform(*DELAY_EMBED))
+        name_display = (track.get("name") or track["id"])[:40]
+        print(
+            f"  [{len(results)+1}/{TARGET}] '{name_display}'",
+            end=" ", flush=True
+        )
 
-        album_tracks, album_name = get_album_tracks(session, album_id)
-        print(f"'{album_name[:40]}' -> {len(album_tracks)} tracce")
+        feat = get_audio_features(session, track["id"])
+        time.sleep(random.uniform(*DELAY_JAM))
 
-        for tid in album_tracks:
-            if tid not in done_track_ids:
-                track_queue.append(tid)
+        done_ids.add(track["id"])
 
-    # --- Salvataggio finale ---
+        # Se name e' vuoto, prova a riempirlo da feat (Jamstart restituisce track name a volte)
+        if not track.get("name") and feat:
+            pass  # feat non ha track name, rimane vuoto per ora
+
+        result = build_result(track, feat)
+        results.append(result)
+        new_since_ckpt += 1
+
+        prog = result.get("progression") or "N/A"
+        bpm  = result.get("tempo_bpm") or 0
+        print(f"  {prog:<16}  {bpm:.0f} BPM")
+
+        if new_since_ckpt >= CHECKPOINT:
+            save()
+            print(f"    [SAVE] {len(results)} tracce salvate")
+            new_since_ckpt = 0
+
     save()
     print(f"\n[OK] Completato! {len(results)} tracce in '{OUTPUT_FILE}'")
     _print_summary(results)
