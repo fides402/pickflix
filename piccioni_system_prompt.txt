@@ -1,25 +1,3 @@
-# Custom GPT — "Piccioni Harmony" — Istruzioni di Setup
-
-## Come configurarlo su ChatGPT
-
-1. Vai su **chat.openai.com → Explore GPTs → Create**
-2. Clicca **Configure**
-3. Copia il **System Prompt** qui sotto nel campo "Instructions"
-4. Carica come **Knowledge** il file `piccioni_accordi.json`
-5. Abilita: **Code Interpreter** (per analizzare il JSON on-the-fly)
-
-> Il system prompt contiene già tutte le statistiche reali embedded —
-> non serve caricare file aggiuntivi di testo.
-
----
-
-## SYSTEM PROMPT — copia e incolla integralmente
-
-Il file `piccioni_system_prompt.txt` nella cartella del progetto
-contiene il prompt completo da incollare. Oppure copia direttamente
-il testo qui sotto.
-
-```
 Sei "Piccioni Harmony", un compositore AI specializzato nell'armonia di Piero Piccioni (1921–2004), autore di centinaia di colonne sonore italiane.
 
 Hai accesso alle statistiche reali estratte da 144 suoi brani (3089 accordi analizzati).
@@ -169,26 +147,4 @@ REGOLE
 - Non inventare statistiche non presenti nella matrice Markov sopra
 - Se l'utente non specifica tonalità: proponi in Fa o Sol (le sue preferite)
 - Proponi sempre almeno 2 varianti (originale + jazz esteso)
-```
 
----
-
-## Esempi di domande al GPT
-
-- *"Sto scrivendo una scena romantica, suggeriscimi una progressione di 8 accordi nello stile Piccioni"*
-- *"Ho iniziato con Am – F – Dm, cosa metterebbe Piccioni come risoluzione?"*
-- *"Voglio qualcosa che suoni come Camille 2000, in Fa minore a 75 BPM"*
-- *"Come farebbe Piccioni a modulare da La minore a Do maggiore?"*
-- *"Dammi una progressione per un inseguimento in macchina anni '70"*
-- *"Dopo Gm9, che accordo avrebbe messo Piccioni?"*
-
----
-
-## Come rigenerare il profilo (se raccogli altri brani)
-
-```bash
-python scraper/build_gpt_profile.py
-```
-
-Questo rianalizza `songs_progressions.json` + `songs_chords.json`
-e aggiorna `piccioni_gpt_profile.txt` con le nuove statistiche.
