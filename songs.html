@@ -8,84 +8,65 @@
     *{box-sizing:border-box;margin:0;padding:0}
     body{font-family:'Segoe UI',system-ui,sans-serif;background:#0d0d14;color:#dde;min-height:100vh}
 
-    /* ── HEADER ── */
     header{background:linear-gradient(135deg,#1a0f2e,#0f1a3e);padding:1.4rem 1.8rem;border-bottom:1px solid #2a2050}
     header h1{font-size:1.5rem;font-weight:700;color:#c86aff}
     header p{margin-top:.3rem;color:#7070a0;font-size:.85rem}
 
-    /* ── SEZIONI ── */
     .section{padding:1.2rem 1.8rem;border-bottom:1px solid #1e1e2e}
     .section-title{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#6060a0;margin-bottom:.9rem;font-weight:600}
 
-    /* ── CREDENZIALI ── */
-    .cred-grid{display:flex;flex-wrap:wrap;gap:.8rem;align-items:flex-end}
-    .field{display:flex;flex-direction:column;gap:.3rem}
-    .field label{font-size:.75rem;color:#8080b0}
-    .field input{
-      background:#181828;border:1px solid #3a3060;color:#eee;
-      padding:.5rem .9rem;border-radius:8px;font-size:.9rem;outline:none;
-      min-width:260px;font-family:monospace
-    }
-    .field input:focus{border-color:#c86aff}
-    .field input.small{min-width:180px}
-
-    .btn{
-      padding:.55rem 1.4rem;border:none;border-radius:8px;font-size:.9rem;
-      font-weight:600;cursor:pointer;transition:opacity .15s,transform .1s
-    }
+    .btn{padding:.55rem 1.4rem;border:none;border-radius:8px;font-size:.9rem;font-weight:600;cursor:pointer;transition:opacity .15s,transform .1s}
     .btn:hover{opacity:.88}
     .btn:active{transform:scale(.97)}
     .btn-start{background:#c86aff;color:#fff}
+    .btn-chord{background:#ff8c42;color:#fff}
     .btn-stop{background:#3a1a1a;color:#ff7070;border:1px solid #ff4040}
     .btn-stop:disabled{opacity:.3;cursor:default}
 
-    /* ── PROGRESSO ── */
     .progress-bar-wrap{height:6px;background:#1e1e2e;border-radius:3px;margin-bottom:.8rem;overflow:hidden}
-    .progress-bar{height:100%;background:linear-gradient(90deg,#c86aff,#6ab4ff);border-radius:3px;transition:width .4s}
+    .progress-bar{height:100%;border-radius:3px;transition:width .4s}
+    .bar-scraper{background:linear-gradient(90deg,#c86aff,#6ab4ff)}
+    .bar-chords{background:linear-gradient(90deg,#ff8c42,#ffcc44)}
     .progress-label{font-size:.8rem;color:#8080b0;margin-bottom:.6rem}
 
-    .log-box{
-      background:#0a0a12;border:1px solid #1e1e2e;border-radius:8px;
-      padding:.7rem .9rem;height:180px;overflow-y:auto;font-family:monospace;
-      font-size:.78rem;line-height:1.6;color:#9090c0
-    }
-    .log-box .ok {color:#60d060}
+    .log-box{background:#0a0a12;border:1px solid #1e1e2e;border-radius:8px;padding:.7rem .9rem;height:160px;overflow-y:auto;font-family:monospace;font-size:.78rem;line-height:1.6;color:#9090c0}
+    .log-box .ok{color:#60d060}
     .log-box .err{color:#ff7070}
-    .log-box .info{color:#aaa}
+    .log-box .warn{color:#ffaa44}
 
-    /* ── FILTRI ── */
+    .info-box{background:#0f1a2a;border:1px solid #1a3050;border-radius:8px;padding:.8rem 1.1rem;font-size:.82rem;color:#7090b0;line-height:1.6;margin-top:.7rem}
+    .info-box code{background:#0a1220;color:#60b0ff;padding:.1em .4em;border-radius:4px;font-size:.8rem}
+
     .filters{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center}
-    .filters input,.filters select{
-      background:#181828;border:1px solid #2a2050;color:#dde;
-      padding:.4rem .75rem;border-radius:7px;font-size:.83rem;outline:none
-    }
+    .filters input,.filters select{background:#181828;border:1px solid #2a2050;color:#dde;padding:.4rem .75rem;border-radius:7px;font-size:.83rem;outline:none}
     .filters input:focus,.filters select:focus{border-color:#c86aff}
     .filters input{min-width:200px}
-    #count{margin-left:auto;font-size:.78rem;color:#505080}
+    #count{font-size:.78rem;color:#505080}
 
-    /* ── TABELLA ── */
     #wrapper{overflow-x:auto}
     table{width:100%;border-collapse:collapse;font-size:.83rem}
-    thead th{
-      position:sticky;top:0;background:#111120;padding:.6rem 1rem;
-      text-align:left;font-size:.7rem;text-transform:uppercase;
-      letter-spacing:.06em;color:#6060a0;border-bottom:1px solid #1e1e2e;
-      cursor:pointer;white-space:nowrap;user-select:none
-    }
+    thead th{position:sticky;top:0;background:#111120;padding:.6rem 1rem;text-align:left;font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;color:#6060a0;border-bottom:1px solid #1e1e2e;cursor:pointer;white-space:nowrap;user-select:none}
     thead th:hover{color:#c86aff}
     thead th .arr{margin-left:.25em;opacity:.4}
     tbody tr{border-bottom:1px solid #14141e;transition:background .1s}
     tbody tr:hover{background:#15152a}
     td{padding:.55rem 1rem;vertical-align:middle}
 
-    td.title{color:#eee;font-weight:500;max-width:220px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-    td.album{color:#8888b0;max-width:190px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-    td.year {color:#555580}
-    td.prog {white-space:nowrap}
+    td.title{color:#eee;font-weight:500;max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    td.album{color:#8888b0;max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    td.year{color:#555580}
+    td.chords{max-width:280px;overflow:hidden}
 
     .badge{display:inline-block;padding:.15em .55em;border-radius:5px;font-size:.72rem;font-weight:700}
     .maj{background:#0f2540;color:#60b0ff}
     .min{background:#2a0f35;color:#c860ff}
+
+    .chord-pill{display:inline-block;background:#1a1a30;border:1px solid #2a2a50;color:#aab4ff;padding:.12em .45em;border-radius:5px;font-size:.71rem;font-family:monospace;margin:.1em .1em}
+    .chord-pill.dom{color:#ffaa44;border-color:#443a20}
+    .chord-pill.dim{color:#ff7070;border-color:#3a1520}
+    .chord-pill.aug{color:#44ffaa;border-color:#1a3a28}
+    .chord-pill.sus{color:#70ddff;border-color:#1a3040}
+    .chord-pill.ext{color:#dd88ff;border-color:#3a1a50}
 
     .bar-w{display:flex;align-items:center;gap:.35rem}
     .bar-bg{flex:1;height:4px;background:#1e1e2e;border-radius:2px;overflow:hidden;min-width:50px}
@@ -98,6 +79,11 @@
     .empty{text-align:center;padding:3rem;color:#404060}
     code{background:#181828;padding:.2em .5em;border-radius:4px;font-size:.82rem}
     #no-data{display:none}
+
+    .step-row{display:flex;gap:.8rem;align-items:center;flex-wrap:wrap}
+    .status-chip{font-size:.78rem;padding:.25em .7em;border-radius:5px;background:#1a1a2e;color:#606080}
+    .status-chip.running{background:#1a2a10;color:#60d060}
+    .status-chip.done{background:#0f2040;color:#60b0ff}
   </style>
 </head>
 <body>
@@ -107,29 +93,57 @@
   <p>Nessuna credenziale richiesta. Clicca Avvia e aspetta.</p>
 </header>
 
-<!-- ── AVVIO ── -->
+<!-- ── STEP 1: SCRAPER ── -->
 <div class="section">
   <div class="section-title">1 · Avvia lo Scraper</div>
-  <div style="display:flex;gap:.8rem;align-items:center;flex-wrap:wrap">
+  <div class="step-row">
     <button class="btn btn-start" id="btnStart" onclick="startScraper()">▶ Avvia Scraper</button>
     <button class="btn btn-stop"  id="btnStop"  onclick="stopScraper()" disabled>■ Stop</button>
+    <span id="scraperChip" class="status-chip"></span>
     <span style="font-size:.8rem;color:#6060a0">
-      Raccoglie ~1000 brani di Piero Piccioni via Spotify embed + Jamstart. Nessuna credenziale richiesta.
+      Raccoglie ~1000 brani via Spotify embed + Jamstart. Nessuna credenziale richiesta.
     </span>
   </div>
 </div>
 
-<!-- ── PROGRESSO ── -->
+<!-- ── AVANZAMENTO SCRAPER ── -->
 <div class="section" id="progSection" style="display:none">
-  <div class="section-title">2 · Avanzamento</div>
+  <div class="section-title">2 · Avanzamento Scraper</div>
   <div class="progress-label" id="progLabel">In attesa…</div>
-  <div class="progress-bar-wrap"><div class="progress-bar" id="progBar" style="width:0%"></div></div>
+  <div class="progress-bar-wrap"><div class="progress-bar bar-scraper" id="progBar" style="width:0%"></div></div>
   <div class="log-box" id="logBox"></div>
+</div>
+
+<!-- ── STEP 2: ACCORDI ── -->
+<div class="section">
+  <div class="section-title">3 · Estrai Accordi con Basic-Pitch (GPU)</div>
+  <div class="step-row" style="margin-bottom:.8rem">
+    <button class="btn btn-chord" id="btnChord" onclick="startChords()">🎸 Estrai Accordi</button>
+    <button class="btn btn-stop"  id="btnChordStop" onclick="stopChords()" disabled>■ Stop</button>
+    <span id="chordChip" class="status-chip"></span>
+  </div>
+
+  <div class="info-box">
+    <strong>Come funziona:</strong> scarica il preview MP3 di 30s per ogni brano da Spotify →
+    analizza le note con <code>basic-pitch</code> (AI di Spotify) → identifica gli accordi →
+    salva in <code>songs_chords.json</code>.<br><br>
+    <strong>Prima volta:</strong> installa le dipendenze con
+    <code>pip install basic-pitch</code>
+    (scarica ~500MB di modello TensorFlow la prima volta).<br>
+    <strong>GPU:</strong> rilevata automaticamente se CUDA è installato (~5x più veloce).
+    <strong>Tempo stimato:</strong> ~45 min con GPU / ~3-4 ore con CPU per 1000 brani.
+  </div>
+
+  <div id="chordProgSection" style="display:none;margin-top:.9rem">
+    <div class="progress-label" id="chordProgLabel">In attesa…</div>
+    <div class="progress-bar-wrap"><div class="progress-bar bar-chords" id="chordProgBar" style="width:0%"></div></div>
+    <div class="log-box" id="chordLogBox"></div>
+  </div>
 </div>
 
 <!-- ── RISULTATI ── -->
 <div class="section">
-  <div class="section-title">3 · Risultati (<span id="savedBadge">0</span> brani salvati)</div>
+  <div class="section-title">4 · Risultati (<span id="savedBadge">0</span> brani)</div>
   <div class="filters">
     <input id="search" type="search" placeholder="Cerca titolo o album…"/>
     <select id="fKey">
@@ -143,6 +157,11 @@
       <option value="major">Major</option>
       <option value="minor">Minor</option>
     </select>
+    <select id="fHasChords">
+      <option value="">Tutti</option>
+      <option value="yes">Con accordi</option>
+      <option value="no">Senza accordi</option>
+    </select>
     <select id="sortBy">
       <option value="title">Titolo A→Z</option>
       <option value="year">Anno</option>
@@ -150,11 +169,13 @@
       <option value="energy">Energy (↓)</option>
       <option value="acousticness">Acusticità (↓)</option>
     </select>
-    <button class="btn" style="background:#1e1e30;color:#aaa;padding:.4rem .9rem;font-size:.8rem" onclick="loadSongs()">↻ Ricarica</button>
+    <button class="btn" style="background:#1e1e30;color:#aaa;padding:.4rem .9rem;font-size:.8rem" onclick="loadAll()">↻ Ricarica</button>
     <span id="count"></span>
     <div style="margin-left:auto;display:flex;gap:.5rem;flex-wrap:wrap">
-      <a href="/api/download/json" class="btn" style="background:#0f2a1a;color:#50d080;font-size:.82rem;padding:.42rem 1rem;text-decoration:none;border:1px solid #1a4a2a">⬇ JSON</a>
-      <a href="/api/download/csv"  class="btn" style="background:#0f2a1a;color:#50d080;font-size:.82rem;padding:.42rem 1rem;text-decoration:none;border:1px solid #1a4a2a">⬇ CSV (Excel)</a>
+      <a href="/api/download/json"        class="btn" style="background:#0f2a1a;color:#50d080;font-size:.82rem;padding:.42rem 1rem;text-decoration:none;border:1px solid #1a4a2a">⬇ JSON</a>
+      <a href="/api/download/csv"         class="btn" style="background:#0f2a1a;color:#50d080;font-size:.82rem;padding:.42rem 1rem;text-decoration:none;border:1px solid #1a4a2a">⬇ CSV</a>
+      <a href="/api/download/chords_json" class="btn" style="background:#2a1a0a;color:#ffaa44;font-size:.82rem;padding:.42rem 1rem;text-decoration:none;border:1px solid #4a3a1a">⬇ Accordi JSON</a>
+      <a href="/api/download/chords_csv"  class="btn" style="background:#2a1a0a;color:#ffaa44;font-size:.82rem;padding:.42rem 1rem;text-decoration:none;border:1px solid #4a3a1a">⬇ Accordi CSV</a>
     </div>
   </div>
 </div>
@@ -170,8 +191,9 @@
         <th onclick="setSort('title')">Titolo <span class="arr">↕</span></th>
         <th onclick="setSort('album')">Album <span class="arr">↕</span></th>
         <th onclick="setSort('year')">Anno <span class="arr">↕</span></th>
-        <th onclick="setSort('prog')">Progressione <span class="arr">↕</span></th>
+        <th onclick="setSort('prog')">Tonalità <span class="arr">↕</span></th>
         <th onclick="setSort('bpm')">BPM <span class="arr">↕</span></th>
+        <th>Accordi (preview)</th>
         <th onclick="setSort('acousticness')">Acusticità <span class="arr">↕</span></th>
         <th></th>
       </tr>
@@ -181,105 +203,171 @@
 </div>
 
 <script>
-// ── Stato ──
-let allSongs = [];
-let pollTimer = null;
+let allSongs  = [];
+let chordMap  = {};   // spotify_id -> chord data
+let pollTimer      = null;
+let chordPollTimer = null;
 let sortCol = 'title';
 
-// ── Scraper controls ──
+// ── Utilità ──
+function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+
+function chordPillClass(c) {
+  if (!c || c === '?') return '';
+  const lo = c.toLowerCase();
+  if (lo.includes('dim')) return 'dim';
+  if (lo.includes('aug')) return 'aug';
+  if (lo.includes('sus')) return 'sus';
+  if (/7|9|11|13|maj7|m7b5|mM7/.test(c)) return 'ext';
+  if (/[0-9]/.test(c) && !lo.includes('sus')) return 'dom';
+  return '';
+}
+
+// ── SCRAPER ──
 async function startScraper() {
   document.getElementById('progSection').style.display = '';
   document.getElementById('btnStart').disabled = true;
   document.getElementById('btnStop').disabled  = false;
   document.getElementById('logBox').innerHTML  = '';
 
-  const res = await fetch('/api/scrape', {
-    method: 'POST',
-    headers: {'Content-Type':'application/json'},
-    body: JSON.stringify({})
-  });
+  const res = await fetch('/api/scrape', {method:'POST',headers:{'Content-Type':'application/json'},body:'{}'});
   const data = await res.json();
-  if (!res.ok) { alert(data.error || 'Errore avvio scraper'); resetButtons(); return; }
-
-  startPolling();
+  if (!res.ok) { alert(data.error || 'Errore avvio scraper'); resetScraper(); return; }
+  startScraperPoll();
 }
 
-async function stopScraper() {
-  await fetch('/api/stop', {method:'POST'});
-}
+async function stopScraper() { await fetch('/api/stop', {method:'POST'}); }
 
-function resetButtons() {
+function resetScraper() {
   document.getElementById('btnStart').disabled = false;
   document.getElementById('btnStop').disabled  = true;
 }
 
-// ── Polling progresso ──
-function startPolling() {
+function startScraperPoll() {
   clearInterval(pollTimer);
-  pollTimer = setInterval(pollProgress, 1200);
+  pollTimer = setInterval(pollScraper, 1200);
 }
 
-async function pollProgress() {
+async function pollScraper() {
   try {
-    const res  = await fetch('/api/progress');
-    const data = await res.json();
-
-    // Log
+    const data = await (await fetch('/api/progress')).json();
     const box = document.getElementById('logBox');
-    box.innerHTML = data.log.map(l => {
-      const cls = l.startsWith('✅') ? 'ok' : l.startsWith('❌') || l.startsWith('⛔') ? 'err' : 'info';
-      return `<div class="${cls}">${esc(l)}</div>`;
-    }).join('');
+    box.innerHTML = data.log.map(l => `<div>${esc(l)}</div>`).join('');
     box.scrollTop = box.scrollHeight;
 
-    // Progress bar
     const pct = data.total > 0 ? Math.round(data.done_count / data.total * 100) : 0;
     document.getElementById('progBar').style.width = pct + '%';
     document.getElementById('progLabel').textContent =
       data.total > 0 ? `${data.done_count} / ${data.total} tracce  (${pct}%)` : 'Caricamento discografia…';
 
-    if (!data.running) {
-      clearInterval(pollTimer);
-      resetButtons();
-      loadSongs();
+    const chip = document.getElementById('scraperChip');
+    if (data.running) {
+      chip.className = 'status-chip running';
+      chip.textContent = 'In esecuzione';
+    } else {
+      chip.className = 'status-chip done';
+      chip.textContent = `${data.done_count || allSongs.length} tracce`;
+      clearInterval(pollTimer); pollTimer = null;
+      resetScraper(); loadAll();
     }
   } catch(e) {}
 }
 
-// ── Carica risultati ──
-async function loadSongs() {
+// ── ACCORDI ──
+async function startChords() {
+  document.getElementById('chordProgSection').style.display = '';
+  document.getElementById('btnChord').disabled     = true;
+  document.getElementById('btnChordStop').disabled = false;
+  document.getElementById('chordLogBox').innerHTML = '';
+
+  const res = await fetch('/api/chords/start', {method:'POST',headers:{'Content-Type':'application/json'},body:'{}'});
+  const data = await res.json();
+  if (!res.ok) { alert(data.error || 'Errore avvio estrazione accordi'); resetChords(); return; }
+  startChordPoll();
+}
+
+async function stopChords() { await fetch('/api/chords/stop', {method:'POST'}); }
+
+function resetChords() {
+  document.getElementById('btnChord').disabled     = false;
+  document.getElementById('btnChordStop').disabled = true;
+}
+
+function startChordPoll() {
+  clearInterval(chordPollTimer);
+  chordPollTimer = setInterval(pollChords, 1500);
+}
+
+async function pollChords() {
   try {
-    const res = await fetch('/api/songs');
-    allSongs  = await res.json();
+    const data = await (await fetch('/api/chords/progress')).json();
+    const box = document.getElementById('chordLogBox');
+    box.innerHTML = data.log.map(l => {
+      const cls = l.includes('[OK]') || l.includes('accordi:') ? 'ok'
+                : l.includes('[WARN]') || l.includes('skip') ? 'warn'
+                : l.includes('[ERR]') ? 'err' : '';
+      return `<div class="${cls}">${esc(l)}</div>`;
+    }).join('');
+    box.scrollTop = box.scrollHeight;
+
+    const pct = data.total > 0 ? Math.round(data.done_count / data.total * 100) : 0;
+    document.getElementById('chordProgBar').style.width = pct + '%';
+    document.getElementById('chordProgLabel').textContent =
+      data.total > 0 ? `${data.done_count} / ${data.total} brani  (${pct}%)` : 'Caricamento modello…';
+
+    const chip = document.getElementById('chordChip');
+    if (data.running) {
+      chip.className = 'status-chip running';
+      chip.textContent = 'Estrazione in corso';
+    } else {
+      chip.className = 'status-chip done';
+      chip.textContent = `${data.done_count || Object.keys(chordMap).length} brani processati`;
+      clearInterval(chordPollTimer); chordPollTimer = null;
+      resetChords(); loadAll();
+    }
+  } catch(e) {}
+}
+
+// ── DATI ──
+async function loadAll() {
+  try {
+    allSongs = await (await fetch('/api/songs')).json();
   } catch(e) {
-    // fallback: fetch diretto del json
-    try {
-      const res = await fetch('songs_progressions.json');
-      allSongs  = await res.json();
-    } catch(e2) { allSongs = []; }
+    try { allSongs = await (await fetch('songs_progressions.json')).json(); }
+    catch(e2) { allSongs = []; }
   }
+
+  try {
+    const chords = await (await fetch('/api/chords')).json();
+    chordMap = {};
+    chords.forEach(c => { chordMap[c.spotify_id] = c; });
+  } catch(e) { chordMap = {}; }
+
   document.getElementById('savedBadge').textContent = allSongs.length;
+  const nChords = Object.keys(chordMap).length;
+  if (nChords > 0) {
+    document.getElementById('chordChip').className = 'status-chip done';
+    document.getElementById('chordChip').textContent = `${nChords} brani con accordi`;
+  }
   render();
 }
 
-// ── Tabella ──
-function setSort(col) {
-  sortCol = col;
-  document.getElementById('sortBy').value =
-    col === 'bpm' || col === 'energy' || col === 'acousticness' || col === 'year' || col === 'title' ? col : 'title';
-  render();
-}
+// ── TABELLA ──
+function setSort(col) { sortCol = col; render(); }
 
 function render() {
-  const q    = document.getElementById('search').value.toLowerCase();
-  const fKey = document.getElementById('fKey').value;
-  const fMode= document.getElementById('fMode').value;
-  const sBy  = document.getElementById('sortBy').value;
+  const q        = document.getElementById('search').value.toLowerCase();
+  const fKey     = document.getElementById('fKey').value;
+  const fMode    = document.getElementById('fMode').value;
+  const fChords  = document.getElementById('fHasChords').value;
+  const sBy      = document.getElementById('sortBy').value;
 
   let songs = allSongs.filter(s => {
-    if (q    && !s.title?.toLowerCase().includes(q) && !s.album?.toLowerCase().includes(q)) return false;
-    if (fKey  && s.key  !== fKey)  return false;
-    if (fMode && s.mode !== fMode) return false;
+    if (q      && !s.title?.toLowerCase().includes(q) && !s.album?.toLowerCase().includes(q)) return false;
+    if (fKey   && s.key  !== fKey)  return false;
+    if (fMode  && s.mode !== fMode) return false;
+    if (fChords === 'yes' && !chordMap[s.spotify_id]?.chord_sequence?.length) return false;
+    if (fChords === 'no'  &&  chordMap[s.spotify_id]?.chord_sequence?.length) return false;
     return true;
   });
 
@@ -297,55 +385,59 @@ function render() {
 
   document.getElementById('count').textContent = `${songs.length} / ${allSongs.length}`;
 
-  const noData = document.getElementById('no-data');
-  const wrapper= document.getElementById('wrapper');
-
-  if (!allSongs.length) {
-    noData.style.display  = '';
-    wrapper.style.display = 'none';
-    return;
-  }
-  noData.style.display  = 'none';
-  wrapper.style.display = '';
+  const noData  = document.getElementById('no-data');
+  const wrapper = document.getElementById('wrapper');
+  if (!allSongs.length) { noData.style.display=''; wrapper.style.display='none'; return; }
+  noData.style.display='none'; wrapper.style.display='';
 
   document.getElementById('tbody').innerHTML = songs.map(s => {
     const modeCls = s.mode==='major' ? 'maj' : 'min';
-    const acou    = s.acousticness!=null ? s.acousticness : null;
-    const acouCell= acou!=null
+    const acou    = s.acousticness != null ? s.acousticness : null;
+    const acouCell= acou != null
       ? `<div class="bar-w"><div class="bar-bg"><div class="bar-fill" style="width:${Math.round(acou*100)}%"></div></div><span class="bar-v">${Math.round(acou*100)}%</span></div>`
       : '—';
+
+    const cd = chordMap[s.spotify_id];
+    let chordsCell = '<span style="color:#303050;font-size:.75rem">—</span>';
+    if (cd && cd.chord_sequence && cd.chord_sequence.length) {
+      const seq = cd.chord_sequence.slice(0, 10);
+      chordsCell = seq.map(c => {
+        const cls = chordPillClass(c);
+        return `<span class="chord-pill ${cls}">${esc(c)}</span>`;
+      }).join('') + (cd.chord_sequence.length > 10 ? `<span style="color:#404060;font-size:.72rem"> +${cd.chord_sequence.length-10}</span>` : '');
+    }
+
     return `<tr>
       <td class="title" title="${esc(s.title)}">${esc(s.title||'—')}</td>
       <td class="album" title="${esc(s.album)}">${esc(s.album||'—')}</td>
       <td class="year">${s.year||'—'}</td>
-      <td class="prog">
-        <span style="margin-right:.3em">${s.key||'—'}</span>
-        <span class="badge ${modeCls}">${s.mode||'—'}</span>
-      </td>
+      <td><span style="margin-right:.3em">${s.key||'—'}</span><span class="badge ${modeCls}">${s.mode||'—'}</span></td>
       <td>${s.tempo_bpm ? Math.round(s.tempo_bpm) : '—'}</td>
+      <td class="chords">${chordsCell}</td>
       <td>${acouCell}</td>
       <td><a class="jl" href="${esc(s.jamstart_url)}" target="_blank">Jamstart ↗</a></td>
     </tr>`;
   }).join('');
 }
 
-function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
-
-['search','fKey','fMode','sortBy'].forEach(id =>
+['search','fKey','fMode','fHasChords','sortBy'].forEach(id =>
   document.getElementById(id).addEventListener('input', render)
 );
 
-// Avvio
-loadSongs();
+// ── Init ──
+loadAll();
 
-// Ricarica automatica ogni 10s se lo scraper è in background
+// Auto-check ogni 10s
 setInterval(async () => {
-  if (!pollTimer) {
+  if (!pollTimer && !chordPollTimer) {
     try {
-      const r = await fetch('/api/status');
-      const d = await r.json();
-      if (d.running) { startPolling(); document.getElementById('progSection').style.display=''; }
-      if (d.saved_count !== allSongs.length) loadSongs();
+      const [sd, cd] = await Promise.all([
+        fetch('/api/status').then(r=>r.json()),
+        fetch('/api/chords/status').then(r=>r.json()),
+      ]);
+      if (sd.running) { startScraperPoll(); document.getElementById('progSection').style.display=''; }
+      if (cd.running) { startChordPoll();  document.getElementById('chordProgSection').style.display=''; }
+      if (sd.saved_count !== allSongs.length || cd.saved_count !== Object.keys(chordMap).length) loadAll();
     } catch(e){}
   }
 }, 10000);
