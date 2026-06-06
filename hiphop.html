@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HipHop – Top 30 Tracks</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Segoe UI',system-ui,sans-serif;background:#0d0d14;color:#dde;min-height:100vh}
+
+    header{background:linear-gradient(135deg,#0f1a0a,#1a1a0f);padding:1.4rem 1.8rem;border-bottom:1px solid #252515}
+    header h1{font-size:1.5rem;font-weight:700;color:#c8ff6a}
+    header p{margin-top:.3rem;color:#707050;font-size:.85rem}
+
+    .section{padding:1.2rem 1.8rem;border-bottom:1px solid #1a1a14}
+    .section-title{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#706050;margin-bottom:.9rem;font-weight:600}
+
+    .btn{padding:.55rem 1.4rem;border:none;border-radius:8px;font-size:.9rem;font-weight:600;cursor:pointer;transition:opacity .15s,transform .1s}
+    .btn:hover{opacity:.88}
+    .btn:active{transform:scale(.97)}
+    .btn-start{background:#c8ff6a;color:#0d1a00}
+    .btn-stop{background:#1a1a0a;color:#ffaa44;border:1px solid #ffaa44}
+    .btn-stop:disabled{opacity:.3;cursor:default}
+
+    .progress-bar-wrap{height:6px;background:#1a1a14;border-radius:3px;margin-bottom:.8rem;overflow:hidden}
+    .progress-bar{height:100%;border-radius:3px;transition:width .4s;background:linear-gradient(90deg,#c8ff6a,#ffcc44)}
+    .progress-label{font-size:.8rem;color:#808060;margin-bottom:.6rem}
+
+    .log-box{background:#0a0a08;border:1px solid #1a1a14;border-radius:8px;padding:.7rem .9rem;height:160px;overflow-y:auto;font-family:monospace;font-size:.78rem;line-height:1.6;color:#909070}
+
+    /* Artist pills */
+    .artist-pills{display:flex;flex-wrap:wrap;gap:.45rem;margin-bottom:.9rem}
+    .pill{padding:.25em .75em;border-radius:20px;font-size:.78rem;font-weight:600;cursor:pointer;border:1px solid transparent;transition:all .15s;background:#1a1a14;color:#909070;border-color:#252510}
+    .pill:hover{border-color:#c8ff6a;color:#c8ff6a}
+    .pill.active{background:#1f2e00;color:#c8ff6a;border-color:#c8ff6a}
+    .pill.all{background:#252515;color:#c8ff6a;border-color:#353520}
+
+    .filters{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;margin-top:.7rem}
+    .filters input,.filters select{background:#141414;border:1px solid #252515;color:#dde;padding:.4rem .75rem;border-radius:7px;font-size:.83rem;outline:none}
+    .filters input:focus,.filters select:focus{border-color:#c8ff6a}
+    .filters input{min-width:180px}
+    #count{font-size:.78rem;color:#505040}
+
+    #wrapper{overflow-x:auto}
+    table{width:100%;border-collapse:collapse;font-size:.83rem}
+    thead th{position:sticky;top:0;background:#0f0f0c;padding:.6rem 1rem;text-align:left;font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;color:#706050;border-bottom:1px solid #1a1a14;cursor:pointer;white-space:nowrap;user-select:none}
+    thead th:hover{color:#c8ff6a}
+    thead th .arr{margin-left:.25em;opacity:.4}
+    thead th.sorted{color:#c8ff6a}
+    tbody tr{border-bottom:1px solid #12120e;transition:background .1s}
+    tbody tr:hover{background:#14140e}
+    td{padding:.55rem 1rem;vertical-align:middle}
+
+    td.artist{color:#c8ff6a;font-weight:600;white-space:nowrap;font-size:.8rem}
+    td.title{color:#eee;font-weight:500;max-width:220px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    td.album{color:#88886a;max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    td.year{color:#555540;white-space:nowrap}
+
+    .pop-bar{display:flex;align-items:center;gap:.4rem}
+    .pop-bg{width:60px;height:5px;background:#1a1a14;border-radius:3px;overflow:hidden}
+    .pop-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,#c8ff6a,#ffcc44)}
+    .pop-val{font-size:.75rem;color:#909070;min-width:20px}
+
+    .bar-w{display:flex;align-items:center;gap:.35rem}
+    .bar-bg{flex:1;height:4px;background:#1a1a14;border-radius:2px;overflow:hidden;min-width:44px}
+    .bar-fill{height:100%;border-radius:2px}
+    .bar-v{font-size:.72rem;color:#606050;min-width:28px;text-align:right}
+    .fill-dance{background:#c8ff6a}
+    .fill-speech{background:#ffaa44}
+    .fill-energy{background:#ff6a6a}
+
+    .badge{display:inline-block;padding:.14em .5em;border-radius:5px;font-size:.72rem;font-weight:700}
+    .maj{background:#1f2e00;color:#aadd44}
+    .min{background:#2a1500;color:#ffaa44}
+
+    a.jl{color:#c8ff6a;text-decoration:none;font-size:.78rem;opacity:.55}
+    a.jl:hover{opacity:1}
+
+    .empty{text-align:center;padding:3rem;color:#40402a}
+    .step-row{display:flex;gap:.8rem;align-items:center;flex-wrap:wrap}
+    .status-chip{font-size:.78rem;padding:.25em .7em;border-radius:5px;background:#1a1a14;color:#605040}
+    .status-chip.running{background:#1a2a00;color:#c8ff6a}
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>HipHop – Top 30 Tracks</h1>
+  <p>Earl Sweatshirt · Navy Blue · Kanye West · The Alchemist · Westside Gunn · Roc Marciano · Conway the Machine · Mick Jenkins · Joey Badass · J Cole</p>
+</header>
+
+<!-- Scraper control -->
+<div class="section">
+  <div class="section-title">1 · Avvia lo Scraper</div>
+  <div class="step-row">
+    <button class="btn btn-start" id="btnStart" onclick="startScraper()">▶ Avvia Scraper</button>
+    <button class="btn btn-stop"  id="btnStop"  onclick="stopScraper()" disabled>■ Stop</button>
+    <span id="scraperChip" class="status-chip"></span>
+    <span style="font-size:.8rem;color:#605040">
+      Raccoglie i 30 brani più famosi per artista via Spotify embed + Jamstart. ~5–8 minuti.
+    </span>
+  </div>
+</div>
+
+<!-- Progress -->
+<div class="section" id="progSection" style="display:none">
+  <div class="section-title">2 · Avanzamento</div>
+  <div class="progress-label" id="progLabel">In attesa…</div>
+  <div class="progress-bar-wrap"><div class="progress-bar" id="progBar" style="width:0%"></div></div>
+  <div class="log-box" id="logBox"></div>
+</div>
+
+<!-- Results -->
+<div class="section">
+  <div class="section-title">3 · Risultati (<span id="savedBadge">0</span> brani)</div>
+
+  <!-- Artist pills -->
+  <div class="artist-pills" id="artistPills">
+    <span class="pill all active" onclick="filterArtist('')">Tutti</span>
+  </div>
+
+  <div class="filters">
+    <input id="search" type="search" placeholder="Cerca titolo o album…" oninput="renderTable()"/>
+    <select id="fMode" onchange="renderTable()">
+      <option value="">Major e Minor</option>
+      <option value="major">Major</option>
+      <option value="minor">Minor</option>
+    </select>
+    <select id="sortBy" onchange="renderTable()">
+      <option value="popularity">Popularity (↓)</option>
+      <option value="title">Titolo A→Z</option>
+      <option value="year">Anno</option>
+      <option value="bpm">BPM (↓)</option>
+      <option value="danceability">Danceability (↓)</option>
+      <option value="speechiness">Speechiness (↓)</option>
+      <option value="energy">Energy (↓)</option>
+    </select>
+    <button class="btn" style="background:#1a1a14;color:#aaa;padding:.4rem .9rem;font-size:.8rem" onclick="loadAll()">↻ Ricarica</button>
+    <span id="count"></span>
+    <div style="margin-left:auto;display:flex;gap:.5rem;flex-wrap:wrap">
+      <a href="/api/download/json" class="btn" style="background:#1a2a00;color:#c8ff6a;font-size:.82rem;padding:.42rem 1rem;text-decoration:none;border:1px solid #2a4a00">⬇ JSON</a>
+      <a href="/api/download/csv"  class="btn" style="background:#1a2a00;color:#c8ff6a;font-size:.82rem;padding:.42rem 1rem;text-decoration:none;border:1px solid #2a4a00">⬇ CSV</a>
+    </div>
+  </div>
+</div>
+
+<!-- Table -->
+<div id="wrapper">
+  <table>
+    <thead>
+      <tr>
+        <th onclick="setSort('artist')">Artista<span class="arr" id="arr-artist"></span></th>
+        <th onclick="setSort('title')">Titolo<span class="arr" id="arr-title"></span></th>
+        <th onclick="setSort('album')">Album<span class="arr" id="arr-album"></span></th>
+        <th onclick="setSort('year')">Anno<span class="arr" id="arr-year"></span></th>
+        <th onclick="setSort('popularity')">Pop<span class="arr" id="arr-popularity"></span></th>
+        <th onclick="setSort('bpm')">BPM<span class="arr" id="arr-bpm"></span></th>
+        <th>Tonalità</th>
+        <th onclick="setSort('danceability')">Dance<span class="arr" id="arr-danceability"></span></th>
+        <th onclick="setSort('speechiness')">Speech<span class="arr" id="arr-speechiness"></span></th>
+        <th onclick="setSort('energy')">Energy<span class="arr" id="arr-energy"></span></th>
+        <th>Link</th>
+      </tr>
+    </thead>
+    <tbody id="tbody"></tbody>
+  </table>
+  <div class="empty" id="empty" style="display:none">Nessun brano trovato. Avvia lo scraper per raccogliere i dati.</div>
+</div>
+
+<script>
+let allTracks  = [];
+let sortKey    = "popularity";
+let sortAsc    = false;
+let filterArt  = "";
+let pollTimer  = null;
+
+const ARTISTS = [
+  "Earl Sweatshirt","Navy Blue","Kanye West","The Alchemist",
+  "Westside Gunn","Roc Marciano","Conway the Machine","Mick Jenkins",
+  "Joey Badass","J Cole"
+];
+
+// Artist color palette (10 colors)
+const ART_COLORS = [
+  "#c8ff6a","#ff9f44","#44d4ff","#ff6aaa","#aaaaff",
+  "#ffee44","#44ffcc","#ff6a6a","#c46aff","#6affaa"
+];
+const artColor = {};
+ARTISTS.forEach((a,i) => artColor[a] = ART_COLORS[i % ART_COLORS.length]);
+
+function $ (id){ return document.getElementById(id); }
+
+async function loadAll(){
+  const r = await fetch("/api/tracks");
+  allTracks = await r.json();
+  buildArtistPills();
+  renderTable();
+  $("savedBadge").textContent = allTracks.length;
+}
+
+function buildArtistPills(){
+  const pills  = $("artistPills");
+  pills.innerHTML = `<span class="pill all ${filterArt===''?'active':''}" onclick="filterArtist('')">Tutti (${allTracks.length})</span>`;
+  const seen   = new Set();
+  const counts = {};
+  allTracks.forEach(t => { counts[t.artist] = (counts[t.artist]||0)+1; });
+  ARTISTS.forEach(a => {
+    if (!counts[a]) return;
+    const cls = filterArt === a ? "active" : "";
+    const col = artColor[a] || "#c8ff6a";
+    pills.innerHTML += `<span class="pill ${cls}" style="border-color:${filterArt===a?col:'#252510'};color:${filterArt===a?col:'#909070'}" onclick="filterArtist('${a.replace(/'/g,"\\'")}')">
+      ${a} <span style="opacity:.6">(${counts[a]})</span></span>`;
+  });
+}
+
+function filterArtist(name){
+  filterArt = name;
+  buildArtistPills();
+  renderTable();
+}
+
+function setSort(key){
+  const bpmMap = {"bpm":"tempo_bpm","danceability":"danceability","speechiness":"speechiness","energy":"energy"};
+  const k = bpmMap[key] || key;
+  if(sortKey === k) sortAsc = !sortAsc;
+  else { sortKey = k; sortAsc = (k === "title" || k === "album" || k === "artist"); }
+  $("sortBy").value = key;
+  renderTable();
+}
+
+function renderTable(){
+  const q      = $("search").value.toLowerCase();
+  const mode   = $("fMode").value;
+  const sortSel= $("sortBy").value;
+  const bpmMap = {"bpm":"tempo_bpm","danceability":"danceability","speechiness":"speechiness","energy":"energy"};
+  const sk     = bpmMap[sortSel] || sortSel;
+  if(sk !== sortKey){
+    sortKey = sk;
+    sortAsc = (sk === "title" || sk === "album" || sk === "artist");
+  }
+
+  let rows = allTracks.filter(t => {
+    if(filterArt && t.artist !== filterArt) return false;
+    if(mode && t.mode !== mode) return false;
+    if(q && !t.title?.toLowerCase().includes(q) && !t.album?.toLowerCase().includes(q) && !t.artist?.toLowerCase().includes(q)) return false;
+    return true;
+  });
+
+  rows.sort((a,b) => {
+    let va = a[sortKey], vb = b[sortKey];
+    if(va == null) va = sortAsc ? "￿" : -Infinity;
+    if(vb == null) vb = sortAsc ? "￿" : -Infinity;
+    if(typeof va === "string") return sortAsc ? va.localeCompare(vb) : vb.localeCompare(va);
+    return sortAsc ? va - vb : vb - va;
+  });
+
+  // Update sort arrows
+  ["artist","title","album","year","popularity","bpm","danceability","speechiness","energy"].forEach(k => {
+    const el = $("arr-"+k);
+    if(!el) return;
+    const mk = bpmMap[k] || k;
+    el.textContent = mk === sortKey ? (sortAsc ? " ▲" : " ▼") : "";
+    el.parentElement.classList.toggle("sorted", mk === sortKey);
+  });
+
+  $("count").textContent = `${rows.length} brani`;
+  $("savedBadge").textContent = allTracks.length;
+
+  const tbody = $("tbody");
+  if(!rows.length){
+    tbody.innerHTML = "";
+    $("empty").style.display = "block";
+    return;
+  }
+  $("empty").style.display = "none";
+
+  tbody.innerHTML = rows.map(t => {
+    const color  = artColor[t.artist] || "#c8ff6a";
+    const pop    = t.popularity || 0;
+    const bpm    = t.tempo_bpm ? Math.round(t.tempo_bpm) : "–";
+    const dance  = t.danceability != null ? t.danceability : null;
+    const speech = t.speechiness  != null ? t.speechiness  : null;
+    const energy = t.energy       != null ? t.energy       : null;
+
+    const modeBadge = t.mode
+      ? `<span class="badge ${t.mode==='major'?'maj':'min'}">${t.key||"?"}${t.mode==='major'?' M':' m'}</span>`
+      : "–";
+
+    const barCell = (val, cls) => val != null
+      ? `<div class="bar-w"><div class="bar-bg"><div class="bar-fill ${cls}" style="width:${Math.round(val*100)}%"></div></div><span class="bar-v">${(val*100).toFixed(0)}</span></div>`
+      : "–";
+
+    return `<tr>
+      <td class="artist" style="color:${color}">${t.artist}</td>
+      <td class="title" title="${esc(t.title)}">${esc(t.title)}</td>
+      <td class="album" title="${esc(t.album)}">${esc(t.album||"–")}</td>
+      <td class="year">${t.year||"–"}</td>
+      <td>
+        <div class="pop-bar">
+          <div class="pop-bg"><div class="pop-fill" style="width:${pop}%"></div></div>
+          <span class="pop-val">${pop}</span>
+        </div>
+      </td>
+      <td style="color:#aaa;white-space:nowrap">${bpm}</td>
+      <td>${modeBadge}</td>
+      <td>${barCell(dance,  "fill-dance")}</td>
+      <td>${barCell(speech, "fill-speech")}</td>
+      <td>${barCell(energy, "fill-energy")}</td>
+      <td><a class="jl" href="${t.jamstart_url}" target="_blank">JAM</a></td>
+    </tr>`;
+  }).join("");
+}
+
+function esc(s){ return (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+
+// ---------------------------------------------------------------------------
+// Scraper control
+// ---------------------------------------------------------------------------
+
+async function startScraper(){
+  await fetch("/api/scrape", {method:"POST"});
+  $("btnStart").disabled = true;
+  $("btnStop").disabled  = false;
+  $("progSection").style.display = "block";
+  $("scraperChip").textContent = "in esecuzione";
+  $("scraperChip").className   = "status-chip running";
+  startPoll();
+}
+
+async function stopScraper(){
+  await fetch("/api/stop", {method:"POST"});
+  $("scraperChip").textContent = "fermato";
+  $("scraperChip").className   = "status-chip";
+}
+
+function startPoll(){
+  if(pollTimer) return;
+  pollTimer = setInterval(poll, 1000);
+}
+
+async function poll(){
+  const p = await (await fetch("/api/progress")).json();
+
+  // Log
+  const box  = $("logBox");
+  const last = box.dataset.last || 0;
+  const lines= p.log.slice(last);
+  lines.forEach(ln => {
+    const d = document.createElement("div");
+    d.textContent = ln;
+    if(ln.includes("[OK]") || ln.includes("[SAVE]") || ln.includes("[FIND]")) d.style.color="#a0d060";
+    else if(ln.includes("[ERR]")) d.style.color="#ff7070";
+    else if(ln.includes("[WARN]") || ln.includes("[RATE]")) d.style.color="#ffaa44";
+    box.appendChild(d);
+  });
+  box.dataset.last = p.log.length;
+  box.scrollTop = box.scrollHeight;
+
+  // Progress bar
+  if(p.total > 0){
+    const pct = Math.round(p.done_count / p.total * 100);
+    $("progBar").style.width = pct + "%";
+    $("progLabel").textContent = `Artisti: ${p.done_count} / ${p.total}  (${pct}%)`;
+  }
+
+  if(!p.running){
+    clearInterval(pollTimer);
+    pollTimer = null;
+    $("btnStart").disabled = false;
+    $("btnStop").disabled  = true;
+    $("scraperChip").textContent = "completato";
+    $("scraperChip").className   = "status-chip done" + (p.done_count > 0 ? "" : "");
+    await loadAll();
+  } else {
+    await loadAll();
+  }
+}
+
+// Init
+(async () => {
+  const s = await (await fetch("/api/status")).json();
+  if(s.running){
+    $("btnStart").disabled = true;
+    $("btnStop").disabled  = false;
+    $("progSection").style.display = "block";
+    $("scraperChip").textContent = "in esecuzione";
+    $("scraperChip").className   = "status-chip running";
+    startPoll();
+  }
+  await loadAll();
+})();
+</script>
+</body>
+</html>
