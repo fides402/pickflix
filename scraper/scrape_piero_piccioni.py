@@ -146,74 +146,136 @@ def _spotify_get(session: requests.Session, token: str, path: str, params: dict 
     return None
 
 
-def collect_tracks_via_api(session: requests.Session, token: str) -> list[dict] | None:
-    """
-    Raccoglie tutti i track IDs via Spotify API (metodo veloce).
-    Ritorna None se l'API e' bloccata (rate limit lungo).
-    """
-    print("[*] Metodo veloce: Spotify API con token anonimo")
-
-    # Ottieni tutti gli album
-    all_albums = []
-    params = {"include_groups": "album,single,compilation", "limit": 50, "offset": 0, "market": "IT"}
-    page = 1
+def _fetch_all_artist_albums(session, token, include_groups: str) -> list[dict] | None:
+    """Scarica tutti gli album di un artista per un dato include_groups."""
+    albums = []
+    params = {"include_groups": include_groups, "limit": 50, "offset": 0}
     while True:
         data = _spotify_get(session, token, f"artists/{ARTIST_ID}/albums", params)
         if not data:
-            print("    Token scaduto o API non disponibile")
             return None
         if data.get("_rate_limit_long"):
-            print("    [!] Spotify API bloccata (rate limit IP lungo), passo al metodo BFS")
-            return None
-
-        items = data.get("items", [])
-        for item in items:
-            all_albums.append({
+            return {"_rate_limit_long": True}
+        for item in data.get("items", []):
+            albums.append({
                 "id":           item["id"],
                 "name":         item.get("name", ""),
                 "release_date": item.get("release_date", ""),
                 "total_tracks": item.get("total_tracks", 0),
+                "appears_on":   False,
             })
-        total = data.get("total", 0)
-        print(f"    Album trovati: {len(all_albums)}/{total}")
-
-        if not data.get("next") or len(all_albums) >= total:
+        if not data.get("next") or len(albums) >= data.get("total", 0):
             break
         params["offset"] += 50
         time.sleep(random.uniform(*DELAY_API))
+    return albums
+
+
+def _search_artist_albums(session, token) -> list[dict]:
+    """Cerca album con 'Piero Piccioni' nel titolo via Spotify search."""
+    albums = []
+    seen = set()
+    params = {"q": "Piero Piccioni", "type": "album", "limit": 50, "offset": 0}
+    for _ in range(6):   # max 300 risultati
+        data = _spotify_get(session, token, "search", params)
+        if not data or data.get("_rate_limit_long"):
+            break
+        items = data.get("albums", {}).get("items", [])
+        if not items:
+            break
+        for item in items:
+            if item["id"] not in seen:
+                seen.add(item["id"])
+                albums.append({
+                    "id":           item["id"],
+                    "name":         item.get("name", ""),
+                    "release_date": item.get("release_date", ""),
+                    "total_tracks": item.get("total_tracks", 0),
+                    "appears_on":   True,
+                })
+        if not data.get("albums", {}).get("next"):
+            break
+        params["offset"] += 50
+        time.sleep(random.uniform(*DELAY_API))
+    return albums
+
+
+def collect_tracks_via_api(session: requests.Session, token: str) -> list[dict] | None:
+    """
+    Raccoglie tutti i track IDs via Spotify API (metodo veloce).
+    - album/single/compilation: artista principale
+    - appears_on: compilation dove compare
+    - search: album con 'Piero Piccioni' nel titolo
+    Ritorna None se l'API e' bloccata (rate limit lungo).
+    """
+    print("[*] Metodo veloce: Spotify API con token anonimo")
+
+    # 1. Album come artista principale
+    all_albums = []
+    seen_album_ids: set[str] = set()
+
+    for group in ["album,single,compilation", "appears_on"]:
+        result = _fetch_all_artist_albums(session, token, group)
+        if result is None:
+            print("    Token scaduto o API non disponibile")
+            return None
+        if isinstance(result, dict) and result.get("_rate_limit_long"):
+            print("    [!] Spotify API bloccata (rate limit IP lungo), passo al metodo BFS")
+            return None
+        for a in result:
+            if a["id"] not in seen_album_ids:
+                seen_album_ids.add(a["id"])
+                all_albums.append(a)
+        print(f"    [{group}] {len(result)} album trovati (tot: {len(all_albums)})")
+        time.sleep(random.uniform(*DELAY_API))
+
+    # 2. Ricerca per nome (cattura album non collegati all'artista ID)
+    search_albums = _search_artist_albums(session, token)
+    added = 0
+    for a in search_albums:
+        if a["id"] not in seen_album_ids:
+            seen_album_ids.add(a["id"])
+            all_albums.append(a)
+            added += 1
+    print(f"    [search] +{added} album aggiuntivi (tot: {len(all_albums)})")
 
     if not all_albums:
         return None
 
-    # Ottieni tutti i track IDs
+    # Raccoglie le tracce da ogni album
     print(f"[*] Raccolta tracce da {len(all_albums)} album...")
     all_tracks = []
     seen_ids: set[str] = set()
+    PICCIONI_NAMES = {"piero piccioni", "piccioni"}
 
     for i, album in enumerate(all_albums, 1):
-        tparams = {"limit": 50, "offset": 0, "market": "IT"}
+        tparams = {"limit": 50, "offset": 0}
         while True:
             data = _spotify_get(session, token, f"albums/{album['id']}/tracks", tparams)
             if not data:
                 break
             if data.get("_rate_limit_long"):
                 print("    [!] Rate limit durante raccolta tracce, fermo metodo API")
-                if all_tracks:
-                    return all_tracks
-                return None
+                return all_tracks if all_tracks else None
 
             for item in data.get("items", []):
-                if item["id"] not in seen_ids:
-                    seen_ids.add(item["id"])
-                    all_tracks.append({
-                        "id":           item["id"],
-                        "name":         item.get("name", ""),
-                        "track_number": item.get("track_number"),
-                        "duration_ms":  item.get("duration_ms"),
-                        "artists":      ", ".join(a["name"] for a in item.get("artists", []) if a.get("name")),
-                        "album_name":   album["name"],
-                        "album_year":   (album.get("release_date", "") or "")[:4],
-                    })
+                if item["id"] in seen_ids:
+                    continue
+                # Per album appears_on/search: filtra tracce senza Piccioni come artista
+                if album.get("appears_on"):
+                    artists_lc = [a["name"].lower() for a in item.get("artists", [])]
+                    if not any(any(p in a for p in PICCIONI_NAMES) for a in artists_lc):
+                        continue
+                seen_ids.add(item["id"])
+                all_tracks.append({
+                    "id":           item["id"],
+                    "name":         item.get("name", ""),
+                    "track_number": item.get("track_number"),
+                    "duration_ms":  item.get("duration_ms"),
+                    "artists":      ", ".join(a["name"] for a in item.get("artists", []) if a.get("name")),
+                    "album_name":   album["name"],
+                    "album_year":   (album.get("release_date", "") or "")[:4],
+                })
 
             if not data.get("next"):
                 break
@@ -223,7 +285,7 @@ def collect_tracks_via_api(session: requests.Session, token: str) -> list[dict] 
         if i % 10 == 0:
             print(f"    [{i}/{len(all_albums)}] {len(all_tracks)} tracce raccolte")
 
-        # Rinnova token ogni 30 album (scade dopo ~1h)
+        # Rinnova token ogni 30 album
         if i % 30 == 0:
             new_tok = extract_token(session)
             if new_tok:
@@ -372,8 +434,8 @@ def collect_tracks_via_bfs(session: requests.Session, done_album_ids: set[str]) 
                     "album_year":   meta["year"],
                 }
 
-        total_known = len(seen_track_ids)
-        if total_known >= TARGET * 2:
+        # Continua finche' non si esauriscono gli album O si supera il doppio del target
+        if len(seen_track_ids) >= TARGET * 3 and not album_queue:
             break
 
     # Costruisci lista finale: usa full info dove disponibile, altrimenti partial
