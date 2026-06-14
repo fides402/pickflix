@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kiwi Fast Nav</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <img src="icons/icon48.png" alt="logo" width="28" height="28">
+    <h1>Kiwi Fast Nav</h1>
+  </header>
+
+  <main>
+    <section class="group">
+      <h2>Pubblicità</h2>
+      <label class="toggle">
+        <input type="checkbox" id="skipAds">
+        <span class="track"><span class="thumb"></span></span>
+        <span class="lbl">Skip automatico ads</span>
+      </label>
+    </section>
+
+    <section class="group">
+      <h2>Video</h2>
+      <label class="toggle">
+        <input type="checkbox" id="autoSpeed">
+        <span class="track"><span class="thumb"></span></span>
+        <span class="lbl">Velocità predefinita</span>
+      </label>
+      <div class="sub-row" id="speedRow">
+        <span>Velocità</span>
+        <select id="defaultSpeed">
+          <option value="0.5">0.5×</option>
+          <option value="0.75">0.75×</option>
+          <option value="1" selected>1× (normale)</option>
+          <option value="1.25">1.25×</option>
+          <option value="1.5">1.5×</option>
+          <option value="1.75">1.75×</option>
+          <option value="2">2×</option>
+          <option value="2.5">2.5×</option>
+          <option value="3">3×</option>
+        </select>
+      </div>
+
+      <label class="toggle">
+        <input type="checkbox" id="autoTheater">
+        <span class="track"><span class="thumb"></span></span>
+        <span class="lbl">Modalità teatro automatica</span>
+      </label>
+
+      <label class="toggle">
+        <input type="checkbox" id="skipCountdown">
+        <span class="track"><span class="thumb"></span></span>
+        <span class="lbl">Salta conto alla rovescia</span>
+      </label>
+    </section>
+
+    <section class="group">
+      <h2>Gesti Touch</h2>
+      <label class="toggle">
+        <input type="checkbox" id="touchGestures">
+        <span class="track"><span class="thumb"></span></span>
+        <span class="lbl">Gesti touch attivi</span>
+      </label>
+      <div class="sub-row">
+        <span>Seek doppio tap (s)</span>
+        <select id="seekSeconds">
+          <option value="5">5s</option>
+          <option value="10" selected>10s</option>
+          <option value="15">15s</option>
+          <option value="20">20s</option>
+          <option value="30">30s</option>
+        </select>
+      </div>
+      <div class="hint">
+        <b>↔ Swipe orizzontale</b> → avanza/indietro<br>
+        <b>↕ Swipe verticale destra</b> → volume<br>
+        <b>↕ Swipe verticale sinistra</b> → luminosità<br>
+        <b>Doppio tap ◀/▶</b> → −/+seek
+      </div>
+    </section>
+
+    <section class="group">
+      <h2>Interfaccia</h2>
+      <label class="toggle">
+        <input type="checkbox" id="removeBloat">
+        <span class="track"><span class="thumb"></span></span>
+        <span class="lbl">Rimuovi elementi inutili</span>
+      </label>
+      <label class="toggle">
+        <input type="checkbox" id="hideShortsRedirect">
+        <span class="track"><span class="thumb"></span></span>
+        <span class="lbl">Converti Shorts in video normale</span>
+      </label>
+      <label class="toggle">
+        <input type="checkbox" id="autoDismissConsent">
+        <span class="track"><span class="thumb"></span></span>
+        <span class="lbl">Chiudi dialog cookie auto</span>
+      </label>
+    </section>
+  </main>
+
+  <footer>
+    <span id="save-status"></span>
+    <button id="saveBtn">Salva impostazioni</button>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>
