@@ -1,51 +1,4 @@
-/* Kiwi Fast Nav – Speed HUD */
-#fn-speed-hud {
-  position: fixed;
-  bottom: 80px;
-  right: 16px;
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(0, 0, 0, 0.75);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 24px;
-  padding: 6px 14px;
-  font-family: 'Roboto', sans-serif;
-  font-size: 15px;
-  color: #fff;
-  user-select: none;
-  touch-action: none;
-  backdrop-filter: blur(6px);
-  box-shadow: 0 2px 12px rgba(0,0,0,0.4);
-}
-
-#fn-speed-hud button {
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 20px;
-  line-height: 1;
-  cursor: pointer;
-  padding: 2px 6px;
-  border-radius: 50%;
-  transition: background 0.15s;
-  min-width: 32px;
-  min-height: 32px;
-}
-
-#fn-speed-hud button:active {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-#fn-speed-label {
-  min-width: 32px;
-  text-align: center;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-}
-
-/* Gesture feedback bubble */
+/* Kiwi Fast Nav – Gesture feedback bubble */
 #fn-gesture-feedback {
   position: fixed;
   top: 50%;
@@ -69,27 +22,4 @@
 #fn-gesture-feedback.fn-show {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
-}
-
-/* Hide HUD when fullscreen – player handles it */
-:fullscreen #fn-speed-hud,
-:-webkit-full-screen #fn-speed-hud {
-  bottom: 60px;
-  right: 12px;
-}
-
-/* Tablet-specific: bigger touch targets */
-@media (max-width: 1200px) and (pointer: coarse) {
-  #fn-speed-hud {
-    bottom: 96px;
-    right: 12px;
-    font-size: 17px;
-    padding: 8px 16px;
-  }
-
-  #fn-speed-hud button {
-    min-width: 44px;
-    min-height: 44px;
-    font-size: 24px;
-  }
 }

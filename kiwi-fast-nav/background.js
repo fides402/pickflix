@@ -4,8 +4,6 @@ chrome.runtime.onInstalled.addListener(({ reason }) => {
   if (reason === 'install') {
     chrome.storage.sync.set({
       skipAds: true,
-      autoSpeed: false,
-      defaultSpeed: 1,
       removeBloat: true,
       touchGestures: true,
       autoDismissConsent: true,
