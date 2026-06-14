@@ -1035,7 +1035,7 @@
     {
       "title": "Joy",
       "rating": "6.6",
-      "image": "https://image.tmdb.org/t/p/w500/kRWWHvSMGDocUDZtUktvyz5Jlm.jpg",
+      "image": "https://image.tmdb.org/t/p/w500/ydK7b8zyuD36OTK2tcDS97ik96A.jpg",
       "link": "https://altadefinizionepremium.com/p/joy"
     },
     {
@@ -1077,16 +1077,16 @@
       "rating": "8.6"
     },
     {
-      "title": "Obsession",
-      "image": "https://image.tmdb.org/t/p/w500/bRwnj8WEKBCvmfeUNOukJPwB43K.jpg",
-      "link": "https://altadefinizionepremium.com/p/obsession",
-      "rating": "7.9"
-    },
-    {
       "title": "Disclosure Day",
       "image": "https://image.tmdb.org/t/p/w500/2HfLCkrCc7mnT15lp8tfZag1a9L.jpg",
       "link": "https://altadefinizionepremium.com/p/disclosure-day",
-      "rating": "7.2"
+      "rating": "7.0"
+    },
+    {
+      "title": "Obsession",
+      "image": "https://image.tmdb.org/t/p/w500/rFz5RCSx8SILVDs0Q2OYdMYVtRC.jpg",
+      "link": "https://altadefinizionepremium.com/p/obsession",
+      "rating": "7.9"
     },
     {
       "title": "Mortal Kombat II",
@@ -1101,40 +1101,34 @@
       "rating": "6.9"
     },
     {
-      "title": "Office Romance",
-      "image": "https://image.tmdb.org/t/p/w500/1HRUTqEVDmJC4L6tp6zd85MI6uH.jpg",
-      "link": "https://altadefinizionepremium.com/p/office-romance",
-      "rating": "6.5"
-    },
-    {
-      "title": "Masters of the Universe",
-      "image": "https://image.tmdb.org/t/p/w500/myxz3z3VOOcDPudmKTr3TUjjIUg.jpg",
-      "link": "https://altadefinizionepremium.com/p/masters-of-the-universe",
-      "rating": "7.3"
-    },
-    {
       "title": "Sul tuo cadavere",
       "image": "https://image.tmdb.org/t/p/w500/mhUhrEg2WDfHRdbhRRFNH1Cc7hu.jpg",
       "link": "https://altadefinizionepremium.com/p/sul-tuo-cadavere",
       "rating": "6.7"
     },
     {
-      "title": "Hokum",
-      "image": "https://image.tmdb.org/t/p/w500/jKPWwsbAM6HKURPYQ1eG8DmKMKn.jpg",
-      "link": "https://altadefinizionepremium.com/p/hokum",
-      "rating": "6.7"
+      "title": "Masters of the Universe",
+      "image": "https://image.tmdb.org/t/p/w500/myxz3z3VOOcDPudmKTr3TUjjIUg.jpg",
+      "link": "https://altadefinizionepremium.com/p/masters-of-the-universe",
+      "rating": "7.4"
+    },
+    {
+      "title": "Office Romance",
+      "image": "https://image.tmdb.org/t/p/w500/1HRUTqEVDmJC4L6tp6zd85MI6uH.jpg",
+      "link": "https://altadefinizionepremium.com/p/office-romance",
+      "rating": "6.5"
+    },
+    {
+      "title": "L'ultima missione: Project Hail Mary",
+      "image": "https://image.tmdb.org/t/p/w500/gPC1X3mwqwX50Ye3qwwPt7iW3Ma.jpg",
+      "link": "https://altadefinizionepremium.com/p/l-ultima-missione-project-hail-mary",
+      "rating": "8.7"
     },
     {
       "title": "In the Grey",
       "image": "https://image.tmdb.org/t/p/w500/dQgIcW6Th08kMRf2HBoYWoFE6OD.jpg",
       "link": "https://altadefinizionepremium.com/p/in-the-grey",
-      "rating": "6.6"
-    },
-    {
-      "title": "L'ultima missione: Project Hail Mary",
-      "image": "https://image.tmdb.org/t/p/w500/sqmDaFbAlQD80jv8CeZxro1yQLd.jpg",
-      "link": "https://altadefinizionepremium.com/p/l-ultima-missione-project-hail-mary",
-      "rating": "8.7"
+      "rating": "6.7"
     },
     {
       "title": "Super Mario Galaxy Il Film",
@@ -1152,13 +1146,25 @@
       "title": "火遮眼",
       "image": "https://image.tmdb.org/t/p/w500/zP19YO60jwEsfKd5Qf1UvA5uJu8.jpg",
       "link": "https://altadefinizionepremium.com/p/",
-      "rating": "8.0"
+      "rating": "7.8"
     },
     {
       "title": "Jumpers - Un salto tra gli animali",
       "image": "https://image.tmdb.org/t/p/w500/m2lHyG4XWP4LxNBUGHZEHKyfid4.jpg",
       "link": "https://altadefinizionepremium.com/p/jumpers-un-salto-tra-gli-animali",
       "rating": "8.2"
+    },
+    {
+      "title": "Hokum",
+      "image": "https://image.tmdb.org/t/p/w500/jKPWwsbAM6HKURPYQ1eG8DmKMKn.jpg",
+      "link": "https://altadefinizionepremium.com/p/hokum",
+      "rating": "6.7"
+    },
+    {
+      "title": "Love, Ngo",
+      "image": "https://image.tmdb.org/t/p/w500/qA7FX4vp2qWfkMd2R3JrbGP6vbu.jpg",
+      "link": "https://altadefinizionepremium.com/p/love-ngo",
+      "rating": "9.0"
     }
   ],
   "trending_series": [
@@ -1169,16 +1175,10 @@
       "rating": "9.4"
     },
     {
-      "title": "诛仙",
-      "image": "https://image.tmdb.org/t/p/w500/kSC8drFvUBrcnHe6bz6zwvrnoeo.jpg",
+      "title": "凡人修仙传",
+      "image": "https://image.tmdb.org/t/p/w500/i6SYuRHPtODpZ8VX9ql21nj0tDq.jpg",
       "link": "https://altadefinizionepremium.com/p/",
-      "rating": "8.1"
-    },
-    {
-      "title": "Spider-Noir",
-      "image": "https://image.tmdb.org/t/p/w500/oD8WSVqz84ZRfelkr7JPeJwR9Iv.jpg",
-      "link": "https://altadefinizionepremium.com/p/spider-noir",
-      "rating": "8.6"
+      "rating": "8.4"
     },
     {
       "title": "FROM",
@@ -1187,22 +1187,16 @@
       "rating": "8.5"
     },
     {
-      "title": "Rick and Morty",
-      "image": "https://image.tmdb.org/t/p/w500/owhkU6KRqdXoUQpjV8uyZGPtX58.jpg",
-      "link": "https://altadefinizionepremium.com/p/rick-and-morty",
-      "rating": "8.7"
+      "title": "Spider-Noir",
+      "image": "https://image.tmdb.org/t/p/w500/oD8WSVqz84ZRfelkr7JPeJwR9Iv.jpg",
+      "link": "https://altadefinizionepremium.com/p/spider-noir",
+      "rating": "8.6"
     },
     {
-      "title": "Off Campus",
-      "image": "https://image.tmdb.org/t/p/w500/cbODFqkcmRgrYH8NkG4Q4Hcg8Z1.jpg",
-      "link": "https://altadefinizionepremium.com/p/off-campus",
-      "rating": "9.0"
-    },
-    {
-      "title": "凡人修仙传",
-      "image": "https://image.tmdb.org/t/p/w500/i6SYuRHPtODpZ8VX9ql21nj0tDq.jpg",
-      "link": "https://altadefinizionepremium.com/p/",
-      "rating": "8.4"
+      "title": "Un anno dopo l'altro",
+      "image": "https://image.tmdb.org/t/p/w500/6q5bO7n6aFeygjfhuAVcqH72Gx0.jpg",
+      "link": "https://altadefinizionepremium.com/p/un-anno-dopo-l-altro",
+      "rating": "8.2"
     },
     {
       "title": "Euphoria",
@@ -1211,14 +1205,14 @@
       "rating": "8.3"
     },
     {
-      "title": "Un anno dopo l'altro",
-      "image": "https://image.tmdb.org/t/p/w500/6q5bO7n6aFeygjfhuAVcqH72Gx0.jpg",
-      "link": "https://altadefinizionepremium.com/p/un-anno-dopo-l-altro",
-      "rating": "8.1"
+      "title": "Among Us",
+      "image": "https://image.tmdb.org/t/p/w500/zQPnH87FXB6MEwRIy2xfhT41lq9.jpg",
+      "link": "https://altadefinizionepremium.com/p/among-us",
+      "rating": "8.9"
     },
     {
       "title": "Widow's Bay",
-      "image": "https://image.tmdb.org/t/p/w500/vKq8XEJKxQTHd2Bm5zZMFPUrke7.jpg",
+      "image": "https://image.tmdb.org/t/p/w500/5lcxWLVAEICkFpuAiV1aMy7ZZj3.jpg",
       "link": "https://altadefinizionepremium.com/p/widow-s-bay",
       "rating": "8.3"
     },
@@ -1229,22 +1223,40 @@
       "rating": "8.5"
     },
     {
-      "title": "Among Us",
-      "image": "https://image.tmdb.org/t/p/w500/zQPnH87FXB6MEwRIy2xfhT41lq9.jpg",
-      "link": "https://altadefinizionepremium.com/p/among-us",
-      "rating": "8.9"
-    },
-    {
       "title": "One Piece",
       "image": "https://image.tmdb.org/t/p/w500/8f33Q5AuM2G5ZqFeusbIqDjr3cI.jpg",
       "link": "https://altadefinizionepremium.com/p/one-piece",
       "rating": "8.7"
     },
     {
-      "title": "Re:ZERO -Starting Life in Another World-",
-      "image": "https://image.tmdb.org/t/p/w500/ccG0ZfXOQ0834bIus4SwZrXtkyM.jpg",
-      "link": "https://altadefinizionepremium.com/p/re-zero-starting-life-in-another-world",
-      "rating": "7.9"
+      "title": "Rick and Morty",
+      "image": "https://image.tmdb.org/t/p/w500/owhkU6KRqdXoUQpjV8uyZGPtX58.jpg",
+      "link": "https://altadefinizionepremium.com/p/rick-and-morty",
+      "rating": "8.7"
+    },
+    {
+      "title": "Star City",
+      "image": "https://image.tmdb.org/t/p/w500/jjJZyBCDgyYylGdtctuqEYcO7Lc.jpg",
+      "link": "https://altadefinizionepremium.com/p/star-city",
+      "rating": "6.7"
+    },
+    {
+      "title": "Off Campus",
+      "image": "https://image.tmdb.org/t/p/w500/cbODFqkcmRgrYH8NkG4Q4Hcg8Z1.jpg",
+      "link": "https://altadefinizionepremium.com/p/off-campus",
+      "rating": "9.0"
+    },
+    {
+      "title": "Viral Hit",
+      "image": "https://image.tmdb.org/t/p/w500/cjy716l2l6uCCbvkkRgFReCdjYF.jpg",
+      "link": "https://altadefinizionepremium.com/p/viral-hit",
+      "rating": "6.9"
+    },
+    {
+      "title": "迷墙",
+      "image": "https://image.tmdb.org/t/p/w500/2pr8GOqHsY4w3gvBzviLeOxbZxa.jpg",
+      "link": "https://altadefinizionepremium.com/p/",
+      "rating": "9.0"
     },
     {
       "title": "Dutton Ranch",
@@ -1253,30 +1265,36 @@
       "rating": "9.3"
     },
     {
-      "title": "Viral Hit",
-      "image": "https://image.tmdb.org/t/p/w500/cjy716l2l6uCCbvkkRgFReCdjYF.jpg",
-      "link": "https://altadefinizionepremium.com/p/viral-hit",
-      "rating": "6.6"
+      "title": "Re:ZERO -Starting Life in Another World-",
+      "image": "https://image.tmdb.org/t/p/w500/ccG0ZfXOQ0834bIus4SwZrXtkyM.jpg",
+      "link": "https://altadefinizionepremium.com/p/re-zero-starting-life-in-another-world",
+      "rating": "7.9"
     },
     {
-      "title": "Love Island USA",
-      "image": "https://image.tmdb.org/t/p/w500/kU2y21cls8WargMaX7KI47URMjD.jpg",
-      "link": "https://altadefinizionepremium.com/p/love-island-usa",
-      "rating": "7.0"
+      "title": "Kuruluş: Orhan",
+      "image": "https://image.tmdb.org/t/p/w500/1kEgzEvhJmw5eSxuGwn0o1cgHlK.jpg",
+      "link": "https://altadefinizionepremium.com/p/kurulu-orhan",
+      "rating": "7.5"
     }
   ],
   "now_playing": [
     {
       "title": "Obsession",
-      "image": "https://image.tmdb.org/t/p/w500/bRwnj8WEKBCvmfeUNOukJPwB43K.jpg",
+      "image": "https://image.tmdb.org/t/p/w500/rFz5RCSx8SILVDs0Q2OYdMYVtRC.jpg",
       "link": "https://altadefinizionepremium.com/p/obsession",
       "rating": "7.9"
+    },
+    {
+      "title": "పెద్ది",
+      "image": "https://image.tmdb.org/t/p/w500/kJAJNNBYlbqAcpTDxBNnaILSMTy.jpg",
+      "link": "https://altadefinizionepremium.com/p/",
+      "rating": "6.7"
     },
     {
       "title": "Michael",
       "image": "https://image.tmdb.org/t/p/w500/xUjMqG7GH6md8qX5e3MyLAzAYSZ.jpg",
       "link": "https://altadefinizionepremium.com/p/michael",
-      "rating": "8.5"
+      "rating": "8.6"
     },
     {
       "title": "Mortal Kombat II",
@@ -1285,22 +1303,28 @@
       "rating": "8.0"
     },
     {
+      "title": "கருப்பு",
+      "image": "https://image.tmdb.org/t/p/w500/4KZXlZ5tTT6ghbW77gS4hSLkCd7.jpg",
+      "link": "https://altadefinizionepremium.com/p/",
+      "rating": "7.3"
+    },
+    {
       "title": "The Mandalorian and Grogu",
       "image": "https://image.tmdb.org/t/p/w500/2XX2XlXdfEWV0tfUyWunBj1SFpx.jpg",
       "link": "https://altadefinizionepremium.com/p/the-mandalorian-and-grogu",
       "rating": "6.8"
     },
     {
+      "title": "Disclosure Day",
+      "image": "https://image.tmdb.org/t/p/w500/2HfLCkrCc7mnT15lp8tfZag1a9L.jpg",
+      "link": "https://altadefinizionepremium.com/p/disclosure-day",
+      "rating": "7.0"
+    },
+    {
       "title": "Masters of the Universe",
       "image": "https://image.tmdb.org/t/p/w500/myxz3z3VOOcDPudmKTr3TUjjIUg.jpg",
       "link": "https://altadefinizionepremium.com/p/masters-of-the-universe",
-      "rating": "7.3"
-    },
-    {
-      "title": "கருப்பு",
-      "image": "https://image.tmdb.org/t/p/w500/4KZXlZ5tTT6ghbW77gS4hSLkCd7.jpg",
-      "link": "https://altadefinizionepremium.com/p/",
-      "rating": "7.6"
+      "rating": "7.4"
     },
     {
       "title": "Lee Cronin - La Mummia",
@@ -1315,16 +1339,16 @@
       "rating": "6.5"
     },
     {
-      "title": "Disclosure Day",
-      "image": "https://image.tmdb.org/t/p/w500/2HfLCkrCc7mnT15lp8tfZag1a9L.jpg",
-      "link": "https://altadefinizionepremium.com/p/disclosure-day",
-      "rating": "7.2"
+      "title": "बंदर",
+      "image": "https://image.tmdb.org/t/p/w500/3TrQUHmnEL2tOYf4KKkXb01BQt2.jpg",
+      "link": "https://altadefinizionepremium.com/p/",
+      "rating": "7.0"
     },
     {
       "title": "In the Grey",
       "image": "https://image.tmdb.org/t/p/w500/dQgIcW6Th08kMRf2HBoYWoFE6OD.jpg",
       "link": "https://altadefinizionepremium.com/p/in-the-grey",
-      "rating": "6.6"
+      "rating": "6.7"
     },
     {
       "title": "The Punisher: One Last Kill",
@@ -1336,13 +1360,7 @@
       "title": "माँ बहन",
       "image": "https://image.tmdb.org/t/p/w500/rfooTavEjaWh6krAcPpHp1CPj7E.jpg",
       "link": "https://altadefinizionepremium.com/p/",
-      "rating": "7.1"
-    },
-    {
-      "title": "बंदर",
-      "image": "https://image.tmdb.org/t/p/w500/3TrQUHmnEL2tOYf4KKkXb01BQt2.jpg",
-      "link": "https://altadefinizionepremium.com/p/",
-      "rating": "7.0"
+      "rating": "7.2"
     },
     {
       "title": "धुरंधर: द रिवेंज",
@@ -1352,9 +1370,9 @@
     },
     {
       "title": "The Shadow's Edge",
-      "image": "https://image.tmdb.org/t/p/w500/o25Tk1FYQi2BLk0OEAvx2h69QvB.jpg",
+      "image": "https://image.tmdb.org/t/p/w500/uFsqAak0ClSwtXiZUO1JgzpFH6y.jpg",
       "link": "https://altadefinizionepremium.com/p/the-shadow-s-edge",
-      "rating": "7.7"
+      "rating": "7.8"
     },
     {
       "title": "Tom Clancy's Jack Ryan: Ghost War",
@@ -1366,13 +1384,19 @@
       "title": "Backrooms",
       "image": "https://image.tmdb.org/t/p/w500/rhGx6E3qRNMgj3i5su2oukNHwIQ.jpg",
       "link": "https://altadefinizionepremium.com/p/backrooms",
-      "rating": "6.8"
+      "rating": "6.9"
     },
     {
       "title": "Hokum",
       "image": "https://image.tmdb.org/t/p/w500/jKPWwsbAM6HKURPYQ1eG8DmKMKn.jpg",
       "link": "https://altadefinizionepremium.com/p/hokum",
       "rating": "6.7"
+    },
+    {
+      "title": "火遮眼",
+      "image": "https://image.tmdb.org/t/p/w500/zP19YO60jwEsfKd5Qf1UvA5uJu8.jpg",
+      "link": "https://altadefinizionepremium.com/p/",
+      "rating": "7.9"
     },
     {
       "title": "Sul tuo cadavere",
@@ -1387,12 +1411,6 @@
       "rating": "7.7"
     },
     {
-      "title": "火遮眼",
-      "image": "https://image.tmdb.org/t/p/w500/zP19YO60jwEsfKd5Qf1UvA5uJu8.jpg",
-      "link": "https://altadefinizionepremium.com/p/",
-      "rating": "8.0"
-    },
-    {
       "title": "I colori del male: Nero",
       "image": "https://image.tmdb.org/t/p/w500/bQV434JB05gfRM4KaILzTOF0l6F.jpg",
       "link": "https://altadefinizionepremium.com/p/i-colori-del-male-nero",
@@ -1405,16 +1423,28 @@
       "rating": "8.5"
     },
     {
-      "title": "Iron Lung",
-      "image": "https://image.tmdb.org/t/p/w500/ltnWaH0yjEWcYOB0na1Iqr03zMN.jpg",
-      "link": "https://altadefinizionepremium.com/p/iron-lung",
-      "rating": "7.1"
-    },
-    {
       "title": "La valle dei sorrisi",
       "image": "https://image.tmdb.org/t/p/w500/wZWBXIsX3QBXf94vzCSUqlZDp57.jpg",
       "link": "https://altadefinizionepremium.com/p/la-valle-dei-sorrisi",
       "rating": "7.0"
+    },
+    {
+      "title": "ദൃഢം",
+      "image": "https://image.tmdb.org/t/p/w500/fXSdAujfiRRW6LqekN4FvFQidh3.jpg",
+      "link": "https://altadefinizionepremium.com/p/",
+      "rating": "7.0"
+    },
+    {
+      "title": "The Drama - Un segreto è per sempre",
+      "image": "https://image.tmdb.org/t/p/w500/gWZCkzgSAv6pxdLlhTQNUiFTlAa.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-drama-un-segreto-per-sempre",
+      "rating": "7.0"
+    },
+    {
+      "title": "Iron Lung",
+      "image": "https://image.tmdb.org/t/p/w500/ltnWaH0yjEWcYOB0na1Iqr03zMN.jpg",
+      "link": "https://altadefinizionepremium.com/p/iron-lung",
+      "rating": "7.1"
     },
     {
       "title": "Messico 1986",
@@ -1423,34 +1453,22 @@
       "rating": "7.4"
     },
     {
-      "title": "The Drama - Un segreto è per sempre",
-      "image": "https://image.tmdb.org/t/p/w500/gWZCkzgSAv6pxdLlhTQNUiFTlAa.jpg",
-      "link": "https://altadefinizionepremium.com/p/the-drama-un-segreto-per-sempre",
-      "rating": "6.9"
-    },
-    {
       "title": "Una di famiglia - The Housemaid",
       "image": "https://image.tmdb.org/t/p/w500/vhcLvSkPaD7udoRqEXKBWO9ld1D.jpg",
       "link": "https://altadefinizionepremium.com/p/una-di-famiglia-the-housemaid",
-      "rating": "7.2"
+      "rating": "7.3"
     },
     {
-      "title": "കാട്ടാളൻ",
-      "image": "https://image.tmdb.org/t/p/w500/9OA6y2GdbXuJ5PAMMMawNBIkrZA.jpg",
-      "link": "https://altadefinizionepremium.com/p/",
-      "rating": "7.1"
+      "title": "Blades of the Guardians",
+      "image": "https://image.tmdb.org/t/p/w500/ki0ilBYgbOZKUuE1NN53FYWK9zQ.jpg",
+      "link": "https://altadefinizionepremium.com/p/blades-of-the-guardians",
+      "rating": "7.0"
     },
     {
       "title": "My Dearest Assassin",
       "image": "https://image.tmdb.org/t/p/w500/b1VNnA0ewb6F0hccCpPpXD8c8oT.jpg",
       "link": "https://altadefinizionepremium.com/p/my-dearest-assassin",
       "rating": "8.6"
-    },
-    {
-      "title": "Blades of the Guardians",
-      "image": "https://image.tmdb.org/t/p/w500/ki0ilBYgbOZKUuE1NN53FYWK9zQ.jpg",
-      "link": "https://altadefinizionepremium.com/p/blades-of-the-guardians",
-      "rating": "7.2"
     },
     {
       "title": "Mio fratello è un vichingo",
@@ -1477,10 +1495,10 @@
       "rating": "7.5"
     },
     {
-      "title": "La casa dell'estate",
-      "image": "https://image.tmdb.org/t/p/w500/kA6e4wmyulZn76xBd5Bq29PZwnb.jpg",
-      "link": "https://altadefinizionepremium.com/p/la-casa-dell-estate",
-      "rating": "8.8"
+      "title": "Ti uccideranno",
+      "image": "https://image.tmdb.org/t/p/w500/z5K7wK8tGyoFMd6X9PQpGNVCcIk.jpg",
+      "link": "https://altadefinizionepremium.com/p/ti-uccideranno",
+      "rating": "7.1"
     },
     {
       "title": "KPop Demon Hunters",
@@ -1489,28 +1507,34 @@
       "rating": "8.0"
     },
     {
-      "title": "Creature luminose",
-      "image": "https://image.tmdb.org/t/p/w500/8pUkU7t4MhfIaxbSPYeRTo96jdl.jpg",
-      "link": "https://altadefinizionepremium.com/p/creature-luminose",
-      "rating": "8.6"
-    },
-    {
       "title": "군체",
       "image": "https://image.tmdb.org/t/p/w500/thK6glS5pklrlijsgSN6Hw9GLQK.jpg",
       "link": "https://altadefinizionepremium.com/p/",
       "rating": "6.9"
     },
     {
-      "title": "Ti uccideranno",
-      "image": "https://image.tmdb.org/t/p/w500/z5K7wK8tGyoFMd6X9PQpGNVCcIk.jpg",
-      "link": "https://altadefinizionepremium.com/p/ti-uccideranno",
-      "rating": "7.1"
+      "title": "Creature luminose",
+      "image": "https://image.tmdb.org/t/p/w500/8pUkU7t4MhfIaxbSPYeRTo96jdl.jpg",
+      "link": "https://altadefinizionepremium.com/p/creature-luminose",
+      "rating": "8.6"
+    },
+    {
+      "title": "La casa dell'estate",
+      "image": "https://image.tmdb.org/t/p/w500/kA6e4wmyulZn76xBd5Bq29PZwnb.jpg",
+      "link": "https://altadefinizionepremium.com/p/la-casa-dell-estate",
+      "rating": "7.5"
     },
     {
       "title": "Milky☆Subway: The Galactic Limited Express - Il film",
       "image": "https://image.tmdb.org/t/p/w500/p2wClSPUcs0NidsNBueaTBmGkJd.jpg",
       "link": "https://altadefinizionepremium.com/p/milky-subway-the-galactic-limited-express-il-film",
       "rating": "9.4"
+    },
+    {
+      "title": "കാട്ടാളൻ",
+      "image": "https://image.tmdb.org/t/p/w500/9OA6y2GdbXuJ5PAMMMawNBIkrZA.jpg",
+      "link": "https://altadefinizionepremium.com/p/",
+      "rating": "7.1"
     },
     {
       "title": "29",
@@ -1523,12 +1547,6 @@
       "image": "https://image.tmdb.org/t/p/w500/cg8ZdeZBsh2EMZrulGiEyVGxuBo.jpg",
       "link": "https://altadefinizionepremium.com/p/pecore-sotto-copertura",
       "rating": "7.7"
-    },
-    {
-      "title": "L'illusione perfetta - Now You See Me: Now You Don't",
-      "image": "https://image.tmdb.org/t/p/w500/cZRWBcAIfln9PpmSE6wCwf4KGLB.jpg",
-      "link": "https://altadefinizionepremium.com/p/l-illusione-perfetta-now-you-see-me-now-you-don-t",
-      "rating": "6.5"
     }
   ],
   "on_air": [
@@ -1537,6 +1555,12 @@
       "image": "https://image.tmdb.org/t/p/w500/oRTAA5VqHi2W2rfkiJ3fHiGfI9M.jpg",
       "link": "https://altadefinizionepremium.com/p/from",
       "rating": "8.5"
+    },
+    {
+      "title": "凡人修仙传",
+      "image": "https://image.tmdb.org/t/p/w500/i6SYuRHPtODpZ8VX9ql21nj0tDq.jpg",
+      "link": "https://altadefinizionepremium.com/p/",
+      "rating": "8.4"
     },
     {
       "title": "Criminal Minds",
@@ -1551,16 +1575,16 @@
       "rating": "8.0"
     },
     {
-      "title": "Rick and Morty",
-      "image": "https://image.tmdb.org/t/p/w500/owhkU6KRqdXoUQpjV8uyZGPtX58.jpg",
-      "link": "https://altadefinizionepremium.com/p/rick-and-morty",
-      "rating": "8.7"
-    },
-    {
       "title": "Dutton Ranch",
       "image": "https://image.tmdb.org/t/p/w500/oYaRozHp2xRYzXUA7Eltvuw5um4.jpg",
       "link": "https://altadefinizionepremium.com/p/dutton-ranch",
       "rating": "9.3"
+    },
+    {
+      "title": "Rick and Morty",
+      "image": "https://image.tmdb.org/t/p/w500/owhkU6KRqdXoUQpjV8uyZGPtX58.jpg",
+      "link": "https://altadefinizionepremium.com/p/rick-and-morty",
+      "rating": "8.7"
     },
     {
       "title": "गुल्लक",
@@ -1569,22 +1593,16 @@
       "rating": "7.9"
     },
     {
-      "title": "五十公里桃花坞",
-      "image": "https://image.tmdb.org/t/p/w500/A3C6crK4GQPNt2f43Vq6l2c845Y.jpg",
-      "link": "https://altadefinizionepremium.com/p/",
-      "rating": "8.0"
-    },
-    {
       "title": "런닝맨",
       "image": "https://image.tmdb.org/t/p/w500/15SMnscZqd7HZ0bzruatOcKUlOV.jpg",
       "link": "https://altadefinizionepremium.com/p/",
-      "rating": "8.3"
+      "rating": "8.2"
     },
     {
-      "title": "Un si grand soleil",
-      "image": "https://image.tmdb.org/t/p/w500/m1z5FCcnKWBl2dEt8J81RmQnqmr.jpg",
-      "link": "https://altadefinizionepremium.com/p/un-si-grand-soleil",
-      "rating": "6.6"
+      "title": "American Dad!",
+      "image": "https://image.tmdb.org/t/p/w500/eb9sH2am9IUSQ8GhXTNAVoujk8W.jpg",
+      "link": "https://altadefinizionepremium.com/p/american-dad",
+      "rating": "7.0"
     },
     {
       "title": "斗罗大陆Ⅱ绝世唐门",
@@ -1593,16 +1611,22 @@
       "rating": "7.9"
     },
     {
-      "title": "Eşref Rüya",
-      "image": "https://image.tmdb.org/t/p/w500/eeFYLgiRFaG3bKx1qLyC7YOdHJz.jpg",
-      "link": "https://altadefinizionepremium.com/p/e-ref-r-ya",
-      "rating": "7.1"
+      "title": "House of the Dragon",
+      "image": "https://image.tmdb.org/t/p/w500/paD01zRRCY3lXo038pvs2Avu0Q7.jpg",
+      "link": "https://altadefinizionepremium.com/p/house-of-the-dragon",
+      "rating": "8.3"
     },
     {
-      "title": "仙逆",
-      "image": "https://image.tmdb.org/t/p/w500/6AVM12M6UunFmX0bSmP2o4N5Bnt.jpg",
+      "title": "五十公里桃花坞",
+      "image": "https://image.tmdb.org/t/p/w500/A3C6crK4GQPNt2f43Vq6l2c845Y.jpg",
       "link": "https://altadefinizionepremium.com/p/",
-      "rating": "8.6"
+      "rating": "6.8"
+    },
+    {
+      "title": "Re:ZERO -Starting Life in Another World-",
+      "image": "https://image.tmdb.org/t/p/w500/ccG0ZfXOQ0834bIus4SwZrXtkyM.jpg",
+      "link": "https://altadefinizionepremium.com/p/re-zero-starting-life-in-another-world",
+      "rating": "7.9"
     },
     {
       "title": "Raw",
