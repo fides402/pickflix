@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Book Carousel Generator",
+  "version": "2.0",
+  "description": "Carica un PDF su ChatGPT e genera caroselli eleganti per ogni capitolo",
+  "permissions": ["activeTab", "scripting", "storage", "tabs"],
+  "host_permissions": [
+    "https://chat.openai.com/*",
+    "https://chatgpt.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Book Carousel"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://chat.openai.com/*", "https://chatgpt.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["carousel.html"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Carousel</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 360px;
+      background: #0a0a0a;
+      color: #fff;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      padding: 20px;
+    }
+    .logo { text-align: center; margin-bottom: 20px; }
+    .logo h1 {
+      font-size: 18px; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase;
+      background: linear-gradient(135deg, #fff 0%, #888 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .logo p { font-size: 11px; color: #555; margin-top: 4px; }
+
+    .drop-zone {
+      border: 2px dashed #333; border-radius: 12px;
+      padding: 24px 16px; text-align: center; cursor: pointer;
+      transition: border-color 0.2s, background 0.2s; margin-bottom: 16px;
+    }
+    .drop-zone:hover, .drop-zone.drag-over { border-color: #666; background: #111; }
+    .drop-zone.has-file { border-color: #4ade80; background: rgba(74,222,128,0.05); }
+    .drop-zone .icon { font-size: 28px; margin-bottom: 8px; }
+    .drop-zone p { font-size: 12px; color: #666; line-height: 1.5; }
+    .drop-zone p strong { color: #aaa; }
+    #file-name { font-size: 11px; color: #4ade80; margin-top: 6px; word-break: break-all; }
+
+    .section-title {
+      font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px;
+      color: #444; margin-bottom: 10px;
+    }
+
+    #chatgpt-status {
+      display: flex; align-items: center; gap: 8px;
+      padding: 10px 14px; background: #111; border-radius: 8px;
+      font-size: 12px; color: #666; margin-bottom: 16px;
+    }
+    #chatgpt-status .dot {
+      width: 8px; height: 8px; border-radius: 50%; background: #333; flex-shrink: 0;
+    }
+    #chatgpt-status.connected .dot { background: #4ade80; }
+    #chatgpt-status.connected { color: #aaa; }
+
+    .btn {
+      width: 100%; padding: 14px; border: none; border-radius: 10px;
+      font-size: 14px; font-weight: 600; cursor: pointer;
+      transition: opacity 0.2s, transform 0.1s; margin-bottom: 8px; letter-spacing: 0.5px;
+    }
+    .btn:active { transform: scale(0.98); }
+    .btn:disabled { opacity: 0.3; cursor: not-allowed; transform: none; }
+    .btn-primary { background: #fff; color: #000; }
+    .btn-secondary { background: #1a1a1a; color: #fff; border: 1px solid #333; }
+    .btn-accent { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #fff; }
+    .btn-danger { background: #1a0a0a; color: #f87171; border: 1px solid #3a1a1a; }
+
+    #chapter-info {
+      background: #111; border-radius: 10px; padding: 14px;
+      margin-bottom: 14px; display: none;
+    }
+    #chapter-info .cap-label { font-size: 10px; color: #444; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+    #chapter-info .cap-num { font-size: 28px; font-weight: 700; color: #fff; line-height: 1; }
+    #chapter-info .cap-sub { font-size: 11px; color: #666; margin-top: 4px; }
+
+    #status-log {
+      font-size: 12px; color: #555; min-height: 20px; margin-bottom: 12px; line-height: 1.5;
+    }
+    #status-log.active { color: #a78bfa; }
+    #status-log.success { color: #4ade80; }
+    #status-log.error { color: #f87171; }
+
+    .spinner {
+      display: inline-block; width: 10px; height: 10px;
+      border: 2px solid #444; border-top-color: #a78bfa;
+      border-radius: 50%; animation: spin 0.8s linear infinite; margin-right: 6px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .divider { border: none; border-top: 1px solid #1a1a1a; margin: 16px 0; }
+
+    .carousels-list { display: none; }
+    .carousels-list .cl-item {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 14px; background: #111; border-radius: 8px;
+      margin-bottom: 6px; cursor: pointer; transition: background 0.15s;
+    }
+    .carousels-list .cl-item:hover { background: #1a1a1a; }
+    .carousels-list .cl-title { font-size: 13px; color: #ccc; }
+    .carousels-list .cl-slides { font-size: 11px; color: #555; }
+    .carousels-list .cl-arrow { color: #444; font-size: 16px; }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <h1>📖 Book Carousel</h1>
+    <p>Trasforma i tuoi libri in caroselli virali</p>
+  </div>
+
+  <div class="drop-zone" id="drop-zone">
+    <div class="icon">📄</div>
+    <p><strong>Trascina il PDF qui</strong><br>oppure tocca per selezionarlo</p>
+    <div id="file-name"></div>
+    <input type="file" id="pdf-input" accept=".pdf" style="display:none">
+  </div>
+
+  <div id="chatgpt-status">
+    <div class="dot"></div>
+    <span id="status-text">Apri ChatGPT in una scheda...</span>
+  </div>
+
+  <div id="chapter-info">
+    <div class="cap-label">Prossimo capitolo</div>
+    <div class="cap-num" id="cap-num">1</div>
+    <div class="cap-sub" id="cap-sub">Pronto per generare il primo carosello</div>
+  </div>
+
+  <div id="status-log"></div>
+
+  <button class="btn btn-primary" id="btn-generate" disabled>✨ Genera Capitolo 1</button>
+  <button class="btn btn-secondary" id="btn-open-chatgpt">Apri ChatGPT</button>
+  <button class="btn btn-danger" id="btn-reset" style="display:none">↺ Ricomincia da capo</button>
+
+  <hr class="divider">
+
+  <div class="section-title" id="cl-label" style="display:none">Caroselli generati</div>
+  <div class="carousels-list" id="carousels-list"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
