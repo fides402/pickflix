@@ -1,0 +1,105 @@
+body {
+  font-family: system-ui, sans-serif;
+  background: #12141a;
+  color: #e8e8ec;
+  margin: 0;
+}
+
+.app {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.panel {
+  background: #1b1e27;
+  border: 1px solid #2a2e3a;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-size: 22px;
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+input[type="file"],
+select,
+textarea {
+  display: block;
+  width: 100%;
+  margin-top: 4px;
+  background: #12141a;
+  color: #e8e8ec;
+  border: 1px solid #2a2e3a;
+  border-radius: 4px;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+textarea {
+  min-height: 60px;
+}
+
+.stage-checkboxes label {
+  display: inline-block;
+  margin-right: 16px;
+}
+
+.stage-checkboxes input {
+  width: auto;
+  display: inline;
+  margin-right: 4px;
+}
+
+button {
+  background: #4f9dff;
+  color: #0b0d12;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.hint {
+  color: #9aa0ac;
+  font-size: 13px;
+}
+
+.error {
+  color: #ff6b6b;
+}
+
+.summary {
+  background: #12141a;
+  border-left: 3px solid #4f9dff;
+  padding: 8px 12px;
+  font-style: italic;
+}
+
+.downloads {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.downloads a {
+  color: #4f9dff;
+}
+
+.chart {
+  background: #12141a;
+  border-radius: 4px;
+}

@@ -1,0 +1,4 @@
+# Optional, install only on the machine that actually hosts real VST3/AU plugins
+# (this sandbox has no plugins installed, so DawDreamerPluginHost cannot be
+# exercised here — SimulatedPluginHost is used instead, see services/plugin_host.py)
+dawdreamer==0.9.6
