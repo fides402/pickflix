@@ -83,11 +83,31 @@ actually accepts the file. If it doesn't load, fall back to the verified
 path: load `/jobs/{id}/container-manifest` via the "Load Chain Manifest..."
 button in this plugin's editor, then use the DAW's own "save preset".
 
+## VST2 plugins
+
+The scanner and the matching/optimization step (DawDreamer, Python side)
+support VST2 (`.dll` on Windows) exactly like VST3 -- add your VST2 folder
+(e.g. `C:\Program Files\Steinberg\VSTPlugins`) to `PLUGIN_SCAN_PATHS` and
+they'll show up in the UI the same way, since `make_plugin_processor()`
+loads either format transparently.
+
+**This compiled container, however, only registers VST3** via
+`formatManager.addDefaultFormats()`. Hosting a VST2 stage as a sub-plugin
+*inside* this container additionally requires JUCE's `VSTPluginFormat`,
+which needs the VST2 SDK -- Steinberg stopped distributing it to new
+licensees around 2018, so it has to be sourced and added to the JUCE build
+separately (out of scope here; not something bundled or fetched for you).
+Until that's set up, a chain containing a VST2 stage can be matched/optimized
+fine, but its `container_export.py` output will list that stage's bundle
+path pointing at a `.dll` this container can't actually load -- use the
+manual per-plugin preset workflow (or drop VST2 stages from the chain) for
+those until VST2 hosting is added to this build.
+
 ## Known limitations (v1)
 
 - Only VST3 is registered (`formatManager.addDefaultFormats()` will pick up
   whatever formats JUCE was built with -- add AU explicitly if you need it on
-  macOS).
+  macOS, or the VST2 SDK for VST2 sub-plugin hosting, see above).
 - Plugin instantiation is via the synchronous `createPluginFor` overload,
   which works for VST3 but not for formats that require the async API (e.g.
   AUv3). Swap in the callback-based overload if you add those.

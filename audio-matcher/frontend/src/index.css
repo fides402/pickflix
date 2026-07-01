@@ -52,6 +52,15 @@ textarea {
   margin-right: 16px;
 }
 
+.format-badge {
+  font-size: 11px;
+  color: #9aa0ac;
+  border: 1px solid #2a2e3a;
+  border-radius: 3px;
+  padding: 1px 4px;
+  margin-left: 2px;
+}
+
 .stage-checkboxes input {
   width: auto;
   display: inline;

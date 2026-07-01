@@ -40,6 +40,31 @@ def test_scan_ignores_missing_paths():
     assert scan_paths(["/nonexistent/path/xyz"]) == []
 
 
+def test_scan_finds_vst2_dlls(tmp_path):
+    (tmp_path / "SomeVST2Synth.dll").write_bytes(b"fake dll bytes")
+    plugins = scan_paths([str(tmp_path)])
+    assert len(plugins) == 1
+    p = plugins[0]
+    assert p.format == "VST2"
+    assert p.name == "SomeVST2Synth"
+    assert p.metadata_source == "filename-fallback"
+    assert p.bundle_path.endswith("SomeVST2Synth.dll")
+
+
+def test_scan_finds_both_vst3_and_vst2_in_same_folder(tmp_path):
+    _make_fake_bundle(tmp_path, "SomeVST3", with_moduleinfo=False)
+    (tmp_path / "SomeVST2.dll").write_bytes(b"fake")
+    plugins = scan_paths([str(tmp_path)])
+    formats = {p.format for p in plugins}
+    assert formats == {"VST3", "VST2"}
+
+
+def test_vst3_entries_default_to_vst3_format(tmp_path):
+    _make_fake_bundle(tmp_path, "SurgeEQ", with_moduleinfo=True)
+    plugins = scan_paths([str(tmp_path)])
+    assert plugins[0].format == "VST3"
+
+
 def _make_bundle_with_cid(root, name: str, cid: str, category: str = "Audio Module Class"):
     bundle = root / f"{name}.vst3" / "Contents"
     bundle.mkdir(parents=True)

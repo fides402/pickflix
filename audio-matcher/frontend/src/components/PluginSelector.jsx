@@ -41,7 +41,7 @@ export default function PluginSelector({ selectedTopology, onChangeTopology, sel
         topologia all&apos;LLM.
       </p>
 
-      <h4>Plugin VST3 reali trovati sulla macchina</h4>
+      <h4>Plugin VST3/VST2 reali trovati sulla macchina</h4>
       {error && <p className="error">Scan non disponibile: {error}</p>}
       {!error && scanned.plugins.length === 0 && (
         <p className="hint">
@@ -59,7 +59,7 @@ export default function PluginSelector({ selectedTopology, onChangeTopology, sel
                 disabled={hasSimulatedSelection}
                 onChange={() => togglePlugin(p.id)}
               />
-              {p.name}
+              {p.name} <span className="format-badge">{p.format}</span>
             </label>
           ))}
         </div>

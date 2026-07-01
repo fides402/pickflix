@@ -18,6 +18,7 @@ async def list_plugins():
                 "id": p.id,
                 "name": p.name,
                 "vendor": p.vendor,
+                "format": p.format,
                 "bundle_path": p.bundle_path,
                 "metadata_source": p.metadata_source,
                 "classes": [{"name": c.name, "category": c.category} for c in p.classes],
