@@ -1,6 +1,6 @@
 import json
 
-from app.services.plugin_scanner import scan_paths
+from app.services.plugin_scanner import audio_module_cid, scan_paths
 
 
 def _make_fake_bundle(root, name: str, with_moduleinfo: bool) -> None:
@@ -38,3 +38,30 @@ def test_scan_falls_back_without_moduleinfo(tmp_path):
 
 def test_scan_ignores_missing_paths():
     assert scan_paths(["/nonexistent/path/xyz"]) == []
+
+
+def _make_bundle_with_cid(root, name: str, cid: str, category: str = "Audio Module Class"):
+    bundle = root / f"{name}.vst3" / "Contents"
+    bundle.mkdir(parents=True)
+    (bundle / "moduleinfo.json").write_text(
+        json.dumps(
+            {
+                "Factory Info": {"Vendor": "Test Vendor"},
+                "Classes": [{"Name": name, "Category": category, "CID": cid}],
+            }
+        )
+    )
+
+
+def test_audio_module_cid_extracted_from_moduleinfo(tmp_path):
+    cid = "AABBCCDD11223344AABBCCDD11223344"
+    _make_bundle_with_cid(tmp_path, "ContainerVST3", cid)
+    plugins = scan_paths([str(tmp_path)])
+    assert audio_module_cid(plugins[0]) == cid
+
+
+def test_audio_module_cid_falls_back_to_first_class_if_no_audio_module_category(tmp_path):
+    cid = "00112233445566778899AABBCCDDEEFF"
+    _make_bundle_with_cid(tmp_path, "OtherPlugin", cid, category="Fx|Dynamics")
+    plugins = scan_paths([str(tmp_path)])
+    assert audio_module_cid(plugins[0]) == cid

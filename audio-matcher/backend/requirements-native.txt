@@ -1,4 +1,7 @@
-# Optional, install only on the machine that actually hosts real VST3/AU plugins
-# (this sandbox has no plugins installed, so DawDreamerPluginHost cannot be
-# exercised here — SimulatedPluginHost is used instead, see services/plugin_host.py)
-dawdreamer==0.9.6
+# Required for DawDreamerPluginHost (real VST3/AU automation) -- SimulatedPluginHost
+# needs none of this. The 0.8.3 API (make_plugin_processor, set_parameter(index,
+# normalized_value), load_graph, get_audio(name), save_state/load_state) was
+# verified directly against this installed version; a real plugin binary was
+# never available to render through it in the environment that wrote this, so
+# only the API surface itself is confirmed, not an end-to-end render.
+dawdreamer==0.8.3

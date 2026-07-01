@@ -39,25 +39,49 @@ chain into `chain_manifest.json`:
 ```json
 {
   "chain": [
-    { "bundle_path": "/path/to/SomeEQ.vst3", "parameters": { "Gain": 0.7 } },
-    { "bundle_path": "/path/to/SomeComp.vst3", "parameters": { "Ratio": 0.4 } }
+    { "bundle_path": "/path/to/SomeEQ.vst3", "state_chunk_base64": "..." },
+    { "bundle_path": "/path/to/SomeComp.vst3", "state_chunk_base64": "..." }
   ]
 }
 ```
-`ContainerProcessor::setStateInformation` (or the dev-only "Load Chain
-Manifest..." button in the editor) parses this and instantiates each
-sub-plugin via `AudioPluginFormatManager`, matching parameters by name.
+`state_chunk_base64` is the plugin's raw state -- on the backend it comes from
+DawDreamer's `PluginProcessor.save_state()` (verified against the installed
+`dawdreamer` package: it writes the same kind of binary blob a DAW's
+`getStateInformation` would produce). `ContainerProcessor::setStateInformation`
+(or the dev-only "Load Chain Manifest..." button in the editor) decodes it and
+calls the real sub-plugin's own `setStateInformation` directly -- which also
+restores non-parameter state (e.g. a sampler's loaded sample), not just
+`AudioProcessorParameter` values.
 
-**Parameter values are pre-normalized to `[0, 1]`** -- the convention every
-`AudioProcessorParameter` uses internally -- so the container plugin can set
-them directly with no per-plugin unit conversion. This is the reason
-`DawDreamerPluginHost` (see `backend/app/services/plugin_host.py`) is the
-intended source of real chains for this exporter: it automates real VST3
-parameters directly, so its output is already in the right units. Chains
-produced by `SimulatedPluginHost` (the numpy/scipy DSP stand-ins used to prove
-the optimizer works without any VST3 plugins installed) have no `plugin_ref`
+A `parameters` object (values pre-normalized to `[0, 1]`, matched by name) is
+still accepted as a fallback for manifests built without a state chunk, but
+`state_chunk_base64` is preferred whenever present. Chains produced by
+`SimulatedPluginHost` (the numpy/scipy DSP stand-ins used to prove the
+optimizer works without any VST3 plugins installed) have no `plugin_ref`
 bundle path at all -- `container_export.py` reports those stages as
 `unresolved_simulated_stages` rather than silently emitting a broken preset.
+
+## Getting a .vstpreset without opening a DAW (experimental)
+
+Once you've built this plugin, add its install folder to `PLUGIN_SCAN_PATHS`
+in `backend/.env` so the scanner picks it up (it reads the plugin's own
+`moduleinfo.json`, generated automatically by the VST3 SDK, to get its real
+class ID). Then:
+
+```
+GET /jobs/{id}/vstpreset?container_plugin_id=<its id from GET /plugins>
+```
+
+writes a real `.vstpreset` file directly -- `backend/app/services/vstpreset_writer.py`
+implements Steinberg's documented binary format (confirmed against
+`steinbergmedia/vst3_public_sdk`'s own source, not reconstructed from memory)
+combined with this plugin's class ID and the chain manifest as its component
+state. This has been round-trip tested against its own reader in
+`tests/test_vstpreset_writer.py`, but there was no compiled build of this
+plugin nor a real DAW available while writing it to confirm a real host
+actually accepts the file. If it doesn't load, fall back to the verified
+path: load `/jobs/{id}/container-manifest` via the "Load Chain Manifest..."
+button in this plugin's editor, then use the DAW's own "save preset".
 
 ## Known limitations (v1)
 
@@ -67,9 +91,5 @@ bundle path at all -- `container_export.py` reports those stages as
 - Plugin instantiation is via the synchronous `createPluginFor` overload,
   which works for VST3 but not for formats that require the async API (e.g.
   AUv3). Swap in the callback-based overload if you add those.
-- Only `AudioProcessorParameter` values are restored, not opaque internal
-  state (e.g. a sampler's loaded sample, a convolution reverb's impulse
-  response). Plugins that need more than their exposed parameters to fully
-  reproduce their sound aren't fully covered yet.
 - Channel layouts are assumed compatible (stereo in, stereo out) across the
   whole chain; no bus negotiation between stages.

@@ -49,8 +49,12 @@ juce::AudioProcessorEditor* ContainerProcessor::createEditor()
     return new ContainerEditor(*this);
 }
 
-void ContainerProcessor::instantiateStage(const juce::String& bundlePath, const juce::var& parameters)
+void ContainerProcessor::instantiateStage(const juce::var& stageVar)
 {
+    const auto bundlePath = stageVar.getProperty("bundle_path", juce::var()).toString();
+    if (bundlePath.isEmpty())
+        return;
+
     juce::OwnedArray<juce::PluginDescription> descriptions;
     for (auto* format : formatManager.getFormats())
         format->findAllTypesForFile(descriptions, bundlePath);
@@ -73,11 +77,24 @@ void ContainerProcessor::instantiateStage(const juce::String& bundlePath, const 
 
     instance->prepareToPlay(lastSampleRate, lastBlockSize);
 
-    // Parameter values in the manifest are pre-normalized to [0, 1] (the
-    // convention every AudioProcessorParameter uses internally) so this stays
-    // a plain name match -- no per-plugin unit conversion here.
-    if (auto* obj = parameters.getDynamicObject())
+    // Prefer the raw state chunk (round-trips through the plugin's own
+    // setStateInformation, so it also restores non-parameter state like a
+    // sampler's loaded sample) -- the same blob DawDreamer's save_state
+    // produces on the backend. Named parameters are a fallback only, for
+    // manifests that don't carry a state chunk.
+    const auto stateChunkBase64 = stageVar.getProperty("state_chunk_base64", juce::var()).toString();
+    if (stateChunkBase64.isNotEmpty())
     {
+        juce::MemoryBlock chunk;
+        if (chunk.fromBase64Encoding(stateChunkBase64))
+            instance->setStateInformation(chunk.getData(), (int) chunk.getSize());
+        else
+            DBG("ContainerProcessor: failed to decode state_chunk_base64 for " << bundlePath);
+    }
+    else if (auto* obj = stageVar.getProperty("parameters", juce::var()).getDynamicObject())
+    {
+        // Parameter values in the manifest are pre-normalized to [0, 1] (the
+        // convention every AudioProcessorParameter uses internally).
         for (auto& prop : obj->getProperties())
         {
             const auto paramName = prop.name.toString();
@@ -101,15 +118,8 @@ void ContainerProcessor::loadChainFromManifest(const juce::var& manifestJson)
     chain.clear();
     auto chainVar = manifestJson.getProperty("chain", juce::var());
     if (auto* arr = chainVar.getArray())
-    {
         for (auto& stage : *arr)
-        {
-            auto bundlePath = stage.getProperty("bundle_path", juce::var()).toString();
-            auto parameters = stage.getProperty("parameters", juce::var());
-            if (bundlePath.isNotEmpty())
-                instantiateStage(bundlePath, parameters);
-        }
-    }
+            instantiateStage(stage);
 }
 
 juce::var ContainerProcessor::currentManifestAsVar() const
@@ -120,11 +130,12 @@ juce::var ContainerProcessor::currentManifestAsVar() const
         auto stageObj = std::make_unique<juce::DynamicObject>();
         stageObj->setProperty("bundle_path", entry.bundlePath);
 
-        auto paramsObj = std::make_unique<juce::DynamicObject>();
         if (entry.instance != nullptr)
-            for (auto* param : entry.instance->getParameters())
-                paramsObj->setProperty(param->getName(128), param->getValue());
-        stageObj->setProperty("parameters", juce::var(paramsObj.release()));
+        {
+            juce::MemoryBlock chunk;
+            entry.instance->getStateInformation(chunk);
+            stageObj->setProperty("state_chunk_base64", chunk.toBase64Encoding());
+        }
 
         chainArray.add(juce::var(stageObj.release()));
     }

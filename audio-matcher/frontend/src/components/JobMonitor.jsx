@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import { fetchJob, manifestUrl, containerManifestUrl, audioUrl } from "../api.js";
+import { fetchJob, manifestUrl, containerManifestUrl, vstPresetUrl, audioUrl } from "../api.js";
 import ConvergenceChart from "./ConvergenceChart.jsx";
 
 const TERMINAL_STATES = new Set(["done", "failed"]);
 
 export default function JobMonitor({ jobId }) {
   const [job, setJob] = useState(null);
+  const [containerPluginId, setContainerPluginId] = useState("");
 
   useEffect(() => {
     let cancelled = false;
@@ -68,6 +69,26 @@ export default function JobMonitor({ jobId }) {
           <a href={audioUrl(jobId)} download>
             Audio elaborato (.wav)
           </a>
+        </div>
+      )}
+      {job.status === "done" && (
+        <div className="panel" style={{ marginTop: 12 }}>
+          <h4>Export .vstpreset diretto (sperimentale)</h4>
+          <p className="hint">
+            Richiede di aver compilato container-plugin/ e averlo aggiunto a PLUGIN_SCAN_PATHS. Inserisci
+            l&apos;id con cui compare in GET /plugins.
+          </p>
+          <input
+            type="text"
+            placeholder="id del Container VST3 compilato"
+            value={containerPluginId}
+            onChange={(e) => setContainerPluginId(e.target.value)}
+          />
+          {containerPluginId && (
+            <a href={vstPresetUrl(jobId, containerPluginId)} download>
+              Scarica chain.vstpreset
+            </a>
+          )}
         </div>
       )}
     </div>

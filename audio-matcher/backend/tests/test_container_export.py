@@ -12,10 +12,24 @@ def test_manifest_marks_simulated_only_chain_unresolved():
     assert manifest["chain"] == []
 
 
-def test_manifest_builds_real_chain_when_plugin_ref_present():
+def test_manifest_falls_back_to_named_params_without_state_chunk():
     chain = [
         {"plugin_type": "eq3", "plugin_ref": "/plugins/SomeEQ.vst3", "params": {"Gain": 0.7}},
     ]
     manifest = build_container_manifest(chain)
     assert manifest["ready"] is True
     assert manifest["chain"] == [{"bundle_path": "/plugins/SomeEQ.vst3", "parameters": {"Gain": 0.7}}]
+
+
+def test_manifest_prefers_raw_state_chunk_over_named_params():
+    chain = [
+        {
+            "plugin_type": "real:someeq",
+            "plugin_ref": "/plugins/SomeEQ.vst3",
+            "params": {"0": 0.7},
+            "state_chunk_base64": "QUJD",
+        },
+    ]
+    manifest = build_container_manifest(chain)
+    assert manifest["ready"] is True
+    assert manifest["chain"] == [{"bundle_path": "/plugins/SomeEQ.vst3", "state_chunk_base64": "QUJD"}]

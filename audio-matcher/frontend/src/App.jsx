@@ -6,6 +6,7 @@ import JobMonitor from "./components/JobMonitor.jsx";
 
 export default function App() {
   const [topology, setTopology] = useState([]);
+  const [pluginIds, setPluginIds] = useState([]);
   const [jobId, setJobId] = useState(null);
 
   return (
@@ -18,8 +19,13 @@ export default function App() {
       </p>
 
       <ModelSelector />
-      <PluginSelector selectedTopology={topology} onChangeTopology={setTopology} />
-      <UploadPanel topology={topology} onJobCreated={setJobId} />
+      <PluginSelector
+        selectedTopology={topology}
+        onChangeTopology={setTopology}
+        selectedPluginIds={pluginIds}
+        onChangePluginIds={setPluginIds}
+      />
+      <UploadPanel topology={topology} pluginIds={pluginIds} onJobCreated={setJobId} />
 
       {jobId && <JobMonitor jobId={jobId} />}
     </div>

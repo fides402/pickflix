@@ -12,12 +12,13 @@ export async function fetchPlugins() {
   return res.json();
 }
 
-export async function createJob({ referenceFile, sampleFile, goalText, topology }) {
+export async function createJob({ referenceFile, sampleFile, goalText, topology, pluginIds }) {
   const form = new FormData();
   form.append("reference", referenceFile);
   form.append("sample", sampleFile);
   form.append("goal_text", goalText);
   form.append("topology", topology.join(","));
+  form.append("selected_plugin_ids", (pluginIds || []).join(","));
 
   const res = await fetch(`${BASE}/jobs`, { method: "POST", body: form });
   if (!res.ok) throw new Error("failed to create job");
@@ -36,6 +37,10 @@ export function manifestUrl(jobId) {
 
 export function containerManifestUrl(jobId) {
   return `${BASE}/jobs/${jobId}/container-manifest`;
+}
+
+export function vstPresetUrl(jobId, containerPluginId) {
+  return `${BASE}/jobs/${jobId}/vstpreset?container_plugin_id=${encodeURIComponent(containerPluginId)}`;
 }
 
 export function audioUrl(jobId) {

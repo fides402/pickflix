@@ -36,9 +36,11 @@ public:
     void setStateInformation(const void* data, int sizeInBytes) override;
 
     // Loads (or reloads) the chain from a manifest produced by the backend:
-    // { "chain": [ { "bundle_path": "...", "parameters": { "Name": 0.0-1.0, ... } }, ... ] }
-    // Parameter values are expected pre-normalized to [0, 1] -- see README.md
-    // for why that's the contract instead of native-unit values.
+    // { "chain": [ { "bundle_path": "...", "state_chunk_base64": "..." }, ... ] }
+    // state_chunk_base64 is the plugin's raw getStateInformation/save_state
+    // blob and is preferred when present; a "parameters" object (values
+    // pre-normalized to [0, 1]) is used as a fallback if it's absent -- see
+    // README.md.
     void loadChainFromManifest(const juce::var& manifestJson);
     juce::var currentManifestAsVar() const;
 
@@ -55,7 +57,7 @@ private:
     double lastSampleRate = 44100.0;
     int lastBlockSize = 512;
 
-    void instantiateStage(const juce::String& bundlePath, const juce::var& parameters);
+    void instantiateStage(const juce::var& stageVar);
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(ContainerProcessor)
 };

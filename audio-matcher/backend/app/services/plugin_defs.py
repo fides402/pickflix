@@ -1,14 +1,18 @@
-"""Parameter specs for the simulated plugin types used by SimulatedPluginHost.
+"""Parameter specs for both the simulated stage types (SimulatedPluginHost)
+and real VST3 plugins selected by the user (DawDreamerPluginHost).
 
-These stand in for real VST3 categories (EQ / compressor / saturation / reverb)
-so the matching loop (feature extraction -> optimizer -> convergence) can be
-built and proven end-to-end in an environment with no VST3 plugins installed.
-DawDreamerPluginHost (see plugin_host.py) implements the same render() contract
-against real plugins and is meant to be swapped in on a machine that has them.
+Simulated types stand in for VST3 categories (EQ / compressor / saturation /
+reverb) so the matching loop can be built and proven end-to-end without any
+VST3 plugins installed. Real plugins are registered dynamically at runtime
+(see register_real_plugin): DawDreamer's set_parameter(index, value) always
+takes a value normalized to [0, 1] regardless of the plugin's native units
+(confirmed against the installed dawdreamer package), so every real
+parameter's bounds are simply [0, 1] -- there is no per-plugin unit
+conversion to discover, only the parameter count and names.
 """
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 
 @dataclass
@@ -50,14 +54,61 @@ PLUGIN_PARAM_SPECS: dict[str, list[ParamSpec]] = {
 }
 
 
+@dataclass
+class RealPluginRegistration:
+    bundle_path: str
+    param_specs: list[ParamSpec]  # name == str(dawdreamer parameter index)
+    display_names: list[str] = field(default_factory=list)  # same order, human-readable
+
+
+_REAL_PLUGIN_REGISTRY: dict[str, RealPluginRegistration] = {}
+
+
+def register_real_plugin(plugin_type: str, bundle_path: str, display_names: list[str]) -> None:
+    """Registers a real VST3 plugin (found by the scanner, chosen by the user)
+    under a synthetic type string (e.g. "real:<plugin_id>") so the existing
+    optimizer/plugin_defs machinery -- built and tested against the four
+    simulated types -- can drive it identically, with no separate code path.
+    display_names[i] is whatever DawDreamer's get_parameter_name(i) returned;
+    the ParamSpec.name stays the string index since that's what
+    DawDreamerPluginHost.set_parameter(index, value) actually needs.
+    """
+    specs = [ParamSpec(name=str(i), low=0.0, high=1.0, default=0.5) for i in range(len(display_names))]
+    _REAL_PLUGIN_REGISTRY[plugin_type] = RealPluginRegistration(bundle_path, specs, display_names)
+
+
+def is_real_plugin(plugin_type: str) -> bool:
+    return plugin_type in _REAL_PLUGIN_REGISTRY
+
+
+def real_plugin_bundle_path(plugin_type: str) -> str:
+    return _REAL_PLUGIN_REGISTRY[plugin_type].bundle_path
+
+
+def real_plugin_display_names(plugin_type: str) -> list[str]:
+    return _REAL_PLUGIN_REGISTRY[plugin_type].display_names
+
+
+def _specs_for(plugin_type: str) -> list[ParamSpec]:
+    if plugin_type in PLUGIN_PARAM_SPECS:
+        return PLUGIN_PARAM_SPECS[plugin_type]
+    if plugin_type in _REAL_PLUGIN_REGISTRY:
+        return _REAL_PLUGIN_REGISTRY[plugin_type].param_specs
+    raise KeyError(f"Unknown plugin type: {plugin_type!r} (not simulated, not registered as real)")
+
+
 def default_params(plugin_type: str) -> dict[str, float]:
-    return {p.name: p.default for p in PLUGIN_PARAM_SPECS[plugin_type]}
+    return {p.name: p.default for p in _specs_for(plugin_type)}
 
 
 def identity_params(plugin_type: str) -> dict[str, float]:
     """True bypass params, distinct from default_params: e.g. the compressor's
     default ratio (3.0) already compresses, so it is NOT a no-op like the
-    other plugin types' defaults are."""
+    other plugin types' defaults are. For real plugins there is no reliable
+    universal bypass state (no generic way to detect a "mix"/"bypass"
+    parameter by name), so this just returns the neutral 0.5 default --
+    optimize_chain_greedy's fallback also compares against skipping the
+    stage/chain entirely, which is the real safety net for real plugins."""
     params = default_params(plugin_type)
     if plugin_type == "compressor":
         params["ratio"] = 1.0
@@ -66,8 +117,8 @@ def identity_params(plugin_type: str) -> dict[str, float]:
 
 
 def bounds(plugin_type: str) -> list[tuple[float, float]]:
-    return [(p.low, p.high) for p in PLUGIN_PARAM_SPECS[plugin_type]]
+    return [(p.low, p.high) for p in _specs_for(plugin_type)]
 
 
 def param_names(plugin_type: str) -> list[str]:
-    return [p.name for p in PLUGIN_PARAM_SPECS[plugin_type]]
+    return [p.name for p in _specs_for(plugin_type)]

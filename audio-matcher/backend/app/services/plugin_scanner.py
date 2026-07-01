@@ -16,6 +16,7 @@ from pathlib import Path
 class PluginClass:
     name: str
     category: str
+    cid: str | None = None  # 32-char hex VST3 class ID, needed to write a .vstpreset for this class
 
 
 @dataclass
@@ -44,7 +45,7 @@ def _read_moduleinfo(bundle: Path) -> dict | None:
 def _plugin_from_moduleinfo(bundle: Path, info: dict) -> PluginInfo:
     factory = info.get("Factory Info", {})
     classes = [
-        PluginClass(name=c.get("Name", "Unknown"), category=c.get("Category", "Unknown"))
+        PluginClass(name=c.get("Name", "Unknown"), category=c.get("Category", "Unknown"), cid=c.get("CID"))
         for c in info.get("Classes", [])
     ]
     return PluginInfo(
@@ -66,6 +67,15 @@ def _plugin_from_filename(bundle: Path) -> PluginInfo:
         classes=[],
         metadata_source="filename-fallback",
     )
+
+
+def audio_module_cid(info: PluginInfo) -> str | None:
+    """The class ID a .vstpreset needs for this plugin's main audio
+    processor -- moduleinfo.json labels it Category == "Audio Module Class"."""
+    for c in info.classes:
+        if c.category == "Audio Module Class" and c.cid:
+            return c.cid
+    return info.classes[0].cid if info.classes else None
 
 
 def scan_paths(paths: list[str]) -> list[PluginInfo]:

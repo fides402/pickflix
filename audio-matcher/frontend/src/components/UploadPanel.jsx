@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { createJob } from "../api.js";
 
-export default function UploadPanel({ topology, onJobCreated }) {
+export default function UploadPanel({ topology, pluginIds, onJobCreated }) {
   const [referenceFile, setReferenceFile] = useState(null);
   const [sampleFile, setSampleFile] = useState(null);
   const [goalText, setGoalText] = useState("");
@@ -17,7 +17,7 @@ export default function UploadPanel({ topology, onJobCreated }) {
     setSubmitting(true);
     setError(null);
     try {
-      const { job_id } = await createJob({ referenceFile, sampleFile, goalText, topology });
+      const { job_id } = await createJob({ referenceFile, sampleFile, goalText, topology, pluginIds });
       onJobCreated(job_id);
     } catch (err) {
       setError(err.message);
