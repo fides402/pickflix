@@ -1071,27 +1071,27 @@
   ],
   "trending_films": [
     {
+      "title": "Odissea",
+      "image": "https://image.tmdb.org/t/p/w500/qQhInj9fw3S2bMbiEujVldthgKe.jpg",
+      "link": "https://altadefinizionepremium.com/p/odissea",
+      "rating": "6.9"
+    },
+    {
       "title": "Backrooms",
       "image": "https://image.tmdb.org/t/p/w500/mene1ewQ03sW3aievfnaCyEZD8t.jpg",
       "link": "https://altadefinizionepremium.com/p/backrooms",
-      "rating": "6.9"
+      "rating": "7.0"
+    },
+    {
+      "title": "Obsession",
+      "image": "https://image.tmdb.org/t/p/w500/KUzJSsW6pFy1Dbw7rp1PKrzvfL.jpg",
+      "link": "https://altadefinizionepremium.com/p/obsession",
+      "rating": "8.3"
     },
     {
       "title": "The Furious",
       "image": "https://image.tmdb.org/t/p/w500/eQnZqgBZ1tbdCh8IWGHYpc61Lj4.jpg",
       "link": "https://altadefinizionepremium.com/p/the-furious",
-      "rating": "7.5"
-    },
-    {
-      "title": "Obsession",
-      "image": "https://image.tmdb.org/t/p/w500/yUoqSYvBaikPsEasT8BjvmEaANU.jpg",
-      "link": "https://altadefinizionepremium.com/p/obsession",
-      "rating": "8.2"
-    },
-    {
-      "title": "Toy Story 5",
-      "image": "https://image.tmdb.org/t/p/w500/i7eQGriXCmNpScSVzepNHn9nMPM.jpg",
-      "link": "https://altadefinizionepremium.com/p/toy-story-5",
       "rating": "7.4"
     },
     {
@@ -1101,28 +1101,10 @@
       "rating": "6.8"
     },
     {
-      "title": "Il Capofamiglia",
-      "image": "https://image.tmdb.org/t/p/w500/qa29IYc4NYRFjiLwLL0exoLHhKv.jpg",
-      "link": "https://altadefinizionepremium.com/p/il-capofamiglia",
-      "rating": "7.1"
-    },
-    {
-      "title": "Passenger",
-      "image": "https://image.tmdb.org/t/p/w500/vqtX2uwAq4ziVR3V3aC2yqypR9k.jpg",
-      "link": "https://altadefinizionepremium.com/p/passenger",
-      "rating": "7.2"
-    },
-    {
-      "title": "Michael",
-      "image": "https://image.tmdb.org/t/p/w500/xUjMqG7GH6md8qX5e3MyLAzAYSZ.jpg",
-      "link": "https://altadefinizionepremium.com/p/michael",
-      "rating": "8.7"
-    },
-    {
-      "title": "L'ultima missione: Project Hail Mary",
-      "image": "https://image.tmdb.org/t/p/w500/xfwpfBtZ255ceVKEj2CK7mmYjF6.jpg",
-      "link": "https://altadefinizionepremium.com/p/l-ultima-missione-project-hail-mary",
-      "rating": "8.7"
+      "title": "Toy Story 5",
+      "image": "https://image.tmdb.org/t/p/w500/i7eQGriXCmNpScSVzepNHn9nMPM.jpg",
+      "link": "https://altadefinizionepremium.com/p/toy-story-5",
+      "rating": "7.4"
     },
     {
       "title": "Hope",
@@ -1131,42 +1113,60 @@
       "rating": "8.2"
     },
     {
+      "title": "Il Capofamiglia",
+      "image": "https://image.tmdb.org/t/p/w500/qa29IYc4NYRFjiLwLL0exoLHhKv.jpg",
+      "link": "https://altadefinizionepremium.com/p/il-capofamiglia",
+      "rating": "7.3"
+    },
+    {
+      "title": "Passenger",
+      "image": "https://image.tmdb.org/t/p/w500/vqtX2uwAq4ziVR3V3aC2yqypR9k.jpg",
+      "link": "https://altadefinizionepremium.com/p/passenger",
+      "rating": "7.2"
+    },
+    {
+      "title": "Descendants: Wicked Wonderland",
+      "image": "https://image.tmdb.org/t/p/w500/tPbMu1LH4YzyvG2a9X5qYERHmIv.jpg",
+      "link": "https://altadefinizionepremium.com/p/descendants-wicked-wonderland",
+      "rating": "9.0"
+    },
+    {
+      "title": "Michael",
+      "image": "https://image.tmdb.org/t/p/w500/xUjMqG7GH6md8qX5e3MyLAzAYSZ.jpg",
+      "link": "https://altadefinizionepremium.com/p/michael",
+      "rating": "8.7"
+    },
+    {
       "title": "The Invite - Il piacere è tutto nostro",
       "image": "https://image.tmdb.org/t/p/w500/p9kaEC6mE6oNFhZjkbA1ALuvv2q.jpg",
       "link": "https://altadefinizionepremium.com/p/the-invite-il-piacere-tutto-nostro",
       "rating": "7.6"
     },
     {
-      "title": "Normal",
-      "image": "https://image.tmdb.org/t/p/w500/g8JqVRu2eC5SGJd9idauTXurMl2.jpg",
-      "link": "https://altadefinizionepremium.com/p/normal",
-      "rating": "7.1"
+      "title": "L'ultima missione: Project Hail Mary",
+      "image": "https://image.tmdb.org/t/p/w500/xfwpfBtZ255ceVKEj2CK7mmYjF6.jpg",
+      "link": "https://altadefinizionepremium.com/p/l-ultima-missione-project-hail-mary",
+      "rating": "8.7"
     },
     {
-      "title": "Enola Holmes 3",
-      "image": "https://image.tmdb.org/t/p/w500/zRAFS10kZ0o8IyOLe2HVMsUgEXO.jpg",
-      "link": "https://altadefinizionepremium.com/p/enola-holmes-3",
-      "rating": "7.0"
-    },
-    {
-      "title": "Super Mario Galaxy Il Film",
-      "image": "https://image.tmdb.org/t/p/w500/3OfIG4QIEkumrWQXrcCq8bUlv01.jpg",
-      "link": "https://altadefinizionepremium.com/p/super-mario-galaxy-il-film",
-      "rating": "8.3"
+      "title": "Pecore sotto copertura",
+      "image": "https://image.tmdb.org/t/p/w500/hWELMex5ZbcdULp4M8CECiWBBkO.jpg",
+      "link": "https://altadefinizionepremium.com/p/pecore-sotto-copertura",
+      "rating": "7.9"
     }
   ],
   "trending_series": [
-    {
-      "title": "House of the Dragon",
-      "image": "https://image.tmdb.org/t/p/w500/paD01zRRCY3lXo038pvs2Avu0Q7.jpg",
-      "link": "https://altadefinizionepremium.com/p/house-of-the-dragon",
-      "rating": "8.4"
-    },
     {
       "title": "Silo",
       "image": "https://image.tmdb.org/t/p/w500/pmr33vtyZdanSvptAmvngpdB4v3.jpg",
       "link": "https://altadefinizionepremium.com/p/silo",
       "rating": "8.2"
+    },
+    {
+      "title": "House of the Dragon",
+      "image": "https://image.tmdb.org/t/p/w500/paD01zRRCY3lXo038pvs2Avu0Q7.jpg",
+      "link": "https://altadefinizionepremium.com/p/house-of-the-dragon",
+      "rating": "8.4"
     },
     {
       "title": "One Piece",
@@ -1175,10 +1175,10 @@
       "rating": "8.7"
     },
     {
-      "title": "X-Men '97",
-      "image": "https://image.tmdb.org/t/p/w500/gU4ezBtf2K9t4AsYjbSsYd8Gzga.jpg",
-      "link": "https://altadefinizionepremium.com/p/x-men-97",
-      "rating": "8.6"
+      "title": "Rick and Morty",
+      "image": "https://image.tmdb.org/t/p/w500/owhkU6KRqdXoUQpjV8uyZGPtX58.jpg",
+      "link": "https://altadefinizionepremium.com/p/rick-and-morty",
+      "rating": "8.7"
     },
     {
       "title": "THE GHOST IN THE SHELL",
@@ -1193,10 +1193,10 @@
       "rating": "7.5"
     },
     {
-      "title": "Rick and Morty",
-      "image": "https://image.tmdb.org/t/p/w500/owhkU6KRqdXoUQpjV8uyZGPtX58.jpg",
-      "link": "https://altadefinizionepremium.com/p/rick-and-morty",
-      "rating": "8.7"
+      "title": "X-Men '97",
+      "image": "https://image.tmdb.org/t/p/w500/gU4ezBtf2K9t4AsYjbSsYd8Gzga.jpg",
+      "link": "https://altadefinizionepremium.com/p/x-men-97",
+      "rating": "8.6"
     },
     {
       "title": "Mushoku Tensei: Jobless Reincarnation",
@@ -1205,16 +1205,34 @@
       "rating": "8.5"
     },
     {
+      "title": "Cape Fear",
+      "image": "https://image.tmdb.org/t/p/w500/3ZLy3cfQa9prahoRq1teMmr5pvW.jpg",
+      "link": "https://altadefinizionepremium.com/p/cape-fear",
+      "rating": "7.0"
+    },
+    {
+      "title": "Smoking Behind the Supermarket with You",
+      "image": "https://image.tmdb.org/t/p/w500/aRTMLZWEtBUy4fG01aqVicRD2wx.jpg",
+      "link": "https://altadefinizionepremium.com/p/smoking-behind-the-supermarket-with-you",
+      "rating": "9.0"
+    },
+    {
+      "title": "The East Palace",
+      "image": "https://image.tmdb.org/t/p/w500/szXuLTuOWUJ1YXNIr5HEDzGXTEZ.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-east-palace",
+      "rating": "10.0"
+    },
+    {
       "title": "Star City",
       "image": "https://image.tmdb.org/t/p/w500/b8VtW6IEIyEWYdnJHx8bG8RdAak.jpg",
       "link": "https://altadefinizionepremium.com/p/star-city",
       "rating": "7.6"
     },
     {
-      "title": "Saga of Tanya the Evil",
-      "image": "https://image.tmdb.org/t/p/w500/y0NcqaEx6Md4MPcDWHAr8e5CQfF.jpg",
-      "link": "https://altadefinizionepremium.com/p/saga-of-tanya-the-evil",
-      "rating": "8.2"
+      "title": "Chainsmoker Cat",
+      "image": "https://image.tmdb.org/t/p/w500/1OEYjA3bpPlXNPwV51WJhGWx8Mk.jpg",
+      "link": "https://altadefinizionepremium.com/p/chainsmoker-cat",
+      "rating": "8.8"
     },
     {
       "title": "FROM",
@@ -1223,34 +1241,16 @@
       "rating": "8.5"
     },
     {
-      "title": "그대에게 드림",
-      "image": "https://image.tmdb.org/t/p/w500/6Xo53LDGp8QYc8gqEFyoAvnwciX.jpg",
-      "link": "https://altadefinizionepremium.com/p/",
-      "rating": "6.5"
-    },
-    {
-      "title": "The Bear",
-      "image": "https://image.tmdb.org/t/p/w500/eKfVzzEazSIjJMrw9ADa2x8ksLz.jpg",
-      "link": "https://altadefinizionepremium.com/p/the-bear",
-      "rating": "8.1"
-    },
-    {
       "title": "Re:ZERO -Starting Life in Another World-",
       "image": "https://image.tmdb.org/t/p/w500/ccG0ZfXOQ0834bIus4SwZrXtkyM.jpg",
       "link": "https://altadefinizionepremium.com/p/re-zero-starting-life-in-another-world",
       "rating": "8.0"
-    },
-    {
-      "title": "Clevatess",
-      "image": "https://image.tmdb.org/t/p/w500/avajalKjBP5QjwIEb5Xs8QXg1K.jpg",
-      "link": "https://altadefinizionepremium.com/p/clevatess",
-      "rating": "7.9"
     }
   ],
   "now_playing": [
     {
       "title": "Obsession",
-      "image": "https://image.tmdb.org/t/p/w500/yUoqSYvBaikPsEasT8BjvmEaANU.jpg",
+      "image": "https://image.tmdb.org/t/p/w500/KUzJSsW6pFy1Dbw7rp1PKrzvfL.jpg",
       "link": "https://altadefinizionepremium.com/p/obsession",
       "rating": "8.2"
     },
@@ -1282,13 +1282,19 @@
       "title": "The Furious",
       "image": "https://image.tmdb.org/t/p/w500/eQnZqgBZ1tbdCh8IWGHYpc61Lj4.jpg",
       "link": "https://altadefinizionepremium.com/p/the-furious",
-      "rating": "7.5"
+      "rating": "7.4"
     },
     {
       "title": "Deep Water - Incubo degli abissi",
       "image": "https://image.tmdb.org/t/p/w500/ejYdwL5CAtekoZ3zV4hYRAQUmgN.jpg",
       "link": "https://altadefinizionepremium.com/p/deep-water-incubo-degli-abissi",
       "rating": "7.4"
+    },
+    {
+      "title": "Odissea",
+      "image": "https://image.tmdb.org/t/p/w500/qQhInj9fw3S2bMbiEujVldthgKe.jpg",
+      "link": "https://altadefinizionepremium.com/p/odissea",
+      "rating": "7.1"
     },
     {
       "title": "Michael",
@@ -1309,10 +1315,16 @@
       "rating": "7.7"
     },
     {
+      "title": "Little Brother",
+      "image": "https://image.tmdb.org/t/p/w500/hIJpXb7Xaje2mebN9ylsS7blQzP.jpg",
+      "link": "https://altadefinizionepremium.com/p/little-brother",
+      "rating": "6.5"
+    },
+    {
       "title": "ਸਤਲੁਜ",
       "image": "https://image.tmdb.org/t/p/w500/7ia3nAM4q9sBy8g3SVEVgRAcsKd.jpg",
       "link": "https://altadefinizionepremium.com/p/",
-      "rating": "8.0"
+      "rating": "7.2"
     },
     {
       "title": "Enola Holmes 3",
@@ -1327,6 +1339,12 @@
       "rating": "7.9"
     },
     {
+      "title": "Simpsley",
+      "image": "https://image.tmdb.org/t/p/w500/qkJefER6Ym4v2KC1v4qK34AlcVo.jpg",
+      "link": "https://altadefinizionepremium.com/p/simpsley",
+      "rating": "8.0"
+    },
+    {
       "title": "Messaggi per Isabelle",
       "image": "https://image.tmdb.org/t/p/w500/oaxqHkmpDNTNYnEr79bW6k6VpUA.jpg",
       "link": "https://altadefinizionepremium.com/p/messaggi-per-isabelle",
@@ -1339,15 +1357,15 @@
       "rating": "7.4"
     },
     {
-      "title": "Simpsley",
-      "image": "https://image.tmdb.org/t/p/w500/qkJefER6Ym4v2KC1v4qK34AlcVo.jpg",
-      "link": "https://altadefinizionepremium.com/p/simpsley",
-      "rating": "8.0"
-    },
-    {
       "title": "È colpa tua: Londra",
       "image": "https://image.tmdb.org/t/p/w500/AjhkEhNvJf7xaqrnahl0zjjgOgq.jpg",
       "link": "https://altadefinizionepremium.com/p/colpa-tua-londra",
+      "rating": "7.5"
+    },
+    {
+      "title": "இதயம் முரளி",
+      "image": "https://image.tmdb.org/t/p/w500/iZzR7fYiJ3bGew8liRPxipPDEfj.jpg",
+      "link": "https://altadefinizionepremium.com/p/",
       "rating": "7.5"
     },
     {
@@ -1369,16 +1387,16 @@
       "rating": "7.2"
     },
     {
-      "title": "Hokum",
-      "image": "https://image.tmdb.org/t/p/w500/x6rHcQFiYcczLQPrmxXPAicm54E.jpg",
-      "link": "https://altadefinizionepremium.com/p/hokum",
-      "rating": "6.9"
-    },
-    {
       "title": "KPop Demon Hunters",
       "image": "https://image.tmdb.org/t/p/w500/uPkg9Wz1WEWQZoHkNNe3Dc49z0t.jpg",
       "link": "https://altadefinizionepremium.com/p/kpop-demon-hunters",
       "rating": "8.0"
+    },
+    {
+      "title": "Hokum",
+      "image": "https://image.tmdb.org/t/p/w500/x6rHcQFiYcczLQPrmxXPAicm54E.jpg",
+      "link": "https://altadefinizionepremium.com/p/hokum",
+      "rating": "6.9"
     },
     {
       "title": "Finché morte non ci separi 2",
@@ -1393,8 +1411,14 @@
       "rating": "7.6"
     },
     {
+      "title": "Triangle",
+      "image": "https://image.tmdb.org/t/p/w500/yUD8ycP4pXo5T9viEyxEMMtGwqR.jpg",
+      "link": "https://altadefinizionepremium.com/p/triangle",
+      "rating": "6.9"
+    },
+    {
       "title": "Normal",
-      "image": "https://image.tmdb.org/t/p/w500/g8JqVRu2eC5SGJd9idauTXurMl2.jpg",
+      "image": "https://image.tmdb.org/t/p/w500/38n0tIc9c1cn5C3IMhjnIFJtwfz.jpg",
       "link": "https://altadefinizionepremium.com/p/normal",
       "rating": "7.1"
     },
@@ -1449,10 +1473,22 @@
       "rating": "8.5"
     },
     {
+      "title": "Jeopardy!",
+      "image": "https://image.tmdb.org/t/p/w500/hfz0IgebqGENG6ZnuqKQKMFk2vy.jpg",
+      "link": "https://altadefinizionepremium.com/p/jeopardy",
+      "rating": "6.9"
+    },
+    {
       "title": "Rick and Morty",
       "image": "https://image.tmdb.org/t/p/w500/owhkU6KRqdXoUQpjV8uyZGPtX58.jpg",
       "link": "https://altadefinizionepremium.com/p/rick-and-morty",
       "rating": "8.7"
+    },
+    {
+      "title": "Good Mythical Morning",
+      "image": "https://image.tmdb.org/t/p/w500/jMpBQr2aNOFAI6wsC47zsOG6qOh.jpg",
+      "link": "https://altadefinizionepremium.com/p/good-mythical-morning",
+      "rating": "6.9"
     },
     {
       "title": "Criminal Minds",
@@ -1464,19 +1500,7 @@
       "title": "Chainsmoker Cat",
       "image": "https://image.tmdb.org/t/p/w500/1OEYjA3bpPlXNPwV51WJhGWx8Mk.jpg",
       "link": "https://altadefinizionepremium.com/p/chainsmoker-cat",
-      "rating": "8.7"
-    },
-    {
-      "title": "仙逆",
-      "image": "https://image.tmdb.org/t/p/w500/mCt5qgkOYEvuHSiSwNByMv6LMoB.jpg",
-      "link": "https://altadefinizionepremium.com/p/",
-      "rating": "8.3"
-    },
-    {
-      "title": "嫁入高门",
-      "image": "https://image.tmdb.org/t/p/w500/8cp0T45VlImvWqnuJXxTEoDwKjG.jpg",
-      "link": "https://altadefinizionepremium.com/p/",
-      "rating": "10.0"
+      "rating": "8.8"
     },
     {
       "title": "Agent Kim Reactivated",
@@ -1485,22 +1509,16 @@
       "rating": "7.5"
     },
     {
-      "title": "런닝맨",
-      "image": "https://image.tmdb.org/t/p/w500/15SMnscZqd7HZ0bzruatOcKUlOV.jpg",
+      "title": "仙逆",
+      "image": "https://image.tmdb.org/t/p/w500/mCt5qgkOYEvuHSiSwNByMv6LMoB.jpg",
       "link": "https://altadefinizionepremium.com/p/",
-      "rating": "8.2"
+      "rating": "8.3"
     },
     {
       "title": "ちびまる子ちゃん",
       "image": "https://image.tmdb.org/t/p/w500/auruoMM9a9c4diotHvI5v7dKFbF.jpg",
       "link": "https://altadefinizionepremium.com/p/",
       "rating": "7.8"
-    },
-    {
-      "title": "PAW Patrol - La squadra dei cuccioli",
-      "image": "https://image.tmdb.org/t/p/w500/f1JFyKTzru9v7bNnMPGYe3SzEeu.jpg",
-      "link": "https://altadefinizionepremium.com/p/paw-patrol-la-squadra-dei-cuccioli",
-      "rating": "7.0"
     }
   ]
 }
