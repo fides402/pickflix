@@ -603,7 +603,7 @@
     {
       "title": "Carol",
       "rating": "7.2",
-      "image": "https://image.tmdb.org/t/p/w500/dGd9pG4PGzpJbdbPEnFxKrJ24z8.jpg",
+      "image": "https://image.tmdb.org/t/p/w500/6eSuNLVYKiZZ17m2NXu95Islyuu.jpg",
       "link": "https://altadefinizionepremium.com/p/carol"
     },
     {
@@ -1074,7 +1074,7 @@
       "title": "Spider-Man: Brand New Day",
       "image": "https://image.tmdb.org/t/p/w500/dNo4TkJc86EbrRKQofiyuTip46Q.jpg",
       "link": "https://altadefinizionepremium.com/p/spider-man-brand-new-day",
-      "rating": "8.0"
+      "rating": "7.9"
     },
     {
       "title": "Odissea",
@@ -1083,28 +1083,34 @@
       "rating": "8.0"
     },
     {
-      "title": "La casa - Il rogo del Male",
-      "image": "https://image.tmdb.org/t/p/w500/kOk4sSTUJVuC4qDUoGu1JkrJ9UT.jpg",
-      "link": "https://altadefinizionepremium.com/p/la-casa-il-rogo-del-male",
-      "rating": "7.9"
-    },
-    {
       "title": "Obsession",
       "image": "https://image.tmdb.org/t/p/w500/KUzJSsW6pFy1Dbw7rp1PKrzvfL.jpg",
       "link": "https://altadefinizionepremium.com/p/obsession",
       "rating": "8.2"
     },
     {
+      "title": "La casa - Il rogo del Male",
+      "image": "https://image.tmdb.org/t/p/w500/kOk4sSTUJVuC4qDUoGu1JkrJ9UT.jpg",
+      "link": "https://altadefinizionepremium.com/p/la-casa-il-rogo-del-male",
+      "rating": "7.9"
+    },
+    {
       "title": "Supergirl",
       "image": "https://image.tmdb.org/t/p/w500/s8JXiMG0skg5onZi49d7n2nuXjs.jpg",
       "link": "https://altadefinizionepremium.com/p/supergirl",
-      "rating": "6.7"
+      "rating": "6.8"
     },
     {
-      "title": "La bocca del diavolo",
-      "image": "https://image.tmdb.org/t/p/w500/cr2B7TDlwajwUjRDreX4Yz6vhZ7.jpg",
-      "link": "https://altadefinizionepremium.com/p/la-bocca-del-diavolo",
-      "rating": "6.5"
+      "title": "Soulm8te",
+      "image": "https://image.tmdb.org/t/p/w500/bNErActDctl6cdUGw9pnjSCmyhQ.jpg",
+      "link": "https://altadefinizionepremium.com/p/soulm8te",
+      "rating": "6.6"
+    },
+    {
+      "title": "Backrooms",
+      "image": "https://image.tmdb.org/t/p/w500/mene1ewQ03sW3aievfnaCyEZD8t.jpg",
+      "link": "https://altadefinizionepremium.com/p/backrooms",
+      "rating": "7.1"
     },
     {
       "title": "Disclosure Day",
@@ -1113,16 +1119,10 @@
       "rating": "7.4"
     },
     {
-      "title": "Soulm8te",
-      "image": "https://image.tmdb.org/t/p/w500/bNErActDctl6cdUGw9pnjSCmyhQ.jpg",
-      "link": "https://altadefinizionepremium.com/p/soulm8te",
+      "title": "La bocca del diavolo",
+      "image": "https://image.tmdb.org/t/p/w500/cr2B7TDlwajwUjRDreX4Yz6vhZ7.jpg",
+      "link": "https://altadefinizionepremium.com/p/la-bocca-del-diavolo",
       "rating": "6.5"
-    },
-    {
-      "title": "Backrooms",
-      "image": "https://image.tmdb.org/t/p/w500/mene1ewQ03sW3aievfnaCyEZD8t.jpg",
-      "link": "https://altadefinizionepremium.com/p/backrooms",
-      "rating": "7.1"
     },
     {
       "title": "Avatar Aang: L’ultimo dominatore dell’aria",
@@ -1134,13 +1134,7 @@
       "title": "Masters of the Universe",
       "image": "https://image.tmdb.org/t/p/w500/bEEDkPSeSYJWQyXjjFzG81obzM2.jpg",
       "link": "https://altadefinizionepremium.com/p/masters-of-the-universe",
-      "rating": "7.2"
-    },
-    {
-      "title": "Toy Story 5",
-      "image": "https://image.tmdb.org/t/p/w500/i7eQGriXCmNpScSVzepNHn9nMPM.jpg",
-      "link": "https://altadefinizionepremium.com/p/toy-story-5",
-      "rating": "7.4"
+      "rating": "7.3"
     },
     {
       "title": "L'ultima missione: Project Hail Mary",
@@ -1149,37 +1143,55 @@
       "rating": "8.7"
     },
     {
+      "title": "Michael",
+      "image": "https://image.tmdb.org/t/p/w500/xUjMqG7GH6md8qX5e3MyLAzAYSZ.jpg",
+      "link": "https://altadefinizionepremium.com/p/michael",
+      "rating": "8.7"
+    },
+    {
+      "title": "Toy Story 5",
+      "image": "https://image.tmdb.org/t/p/w500/i7eQGriXCmNpScSVzepNHn9nMPM.jpg",
+      "link": "https://altadefinizionepremium.com/p/toy-story-5",
+      "rating": "7.4"
+    },
+    {
       "title": "Il diavolo veste Prada 2",
       "image": "https://image.tmdb.org/t/p/w500/xASsfTW9eBs0PT6d6YbvJ6e5jxH.jpg",
       "link": "https://altadefinizionepremium.com/p/il-diavolo-veste-prada-2",
       "rating": "7.1"
     },
     {
-      "title": "Star Wars: The Mandalorian and Grogu",
-      "image": "https://image.tmdb.org/t/p/w500/4v442cNP1nOhjjmf2l4Id2oWeR.jpg",
-      "link": "https://altadefinizionepremium.com/p/star-wars-the-mandalorian-and-grogu",
-      "rating": "7.4"
-    },
-    {
       "title": "La fine di Oak Street",
       "image": "https://image.tmdb.org/t/p/w500/3sBzqJcVjl4VKb9ULS569IIiUwu.jpg",
       "link": "https://altadefinizionepremium.com/p/la-fine-di-oak-street",
-      "rating": "8.3"
-    },
-    {
-      "title": "Colony",
-      "image": "https://image.tmdb.org/t/p/w500/thK6glS5pklrlijsgSN6Hw9GLQK.jpg",
-      "link": "https://altadefinizionepremium.com/p/colony",
-      "rating": "8.1"
+      "rating": "7.6"
     },
     {
       "title": "Lucky Strike",
       "image": "https://image.tmdb.org/t/p/w500/kzRAd7mj39ZY3FGNrDdZjqx56tn.jpg",
       "link": "https://altadefinizionepremium.com/p/lucky-strike",
       "rating": "7.4"
+    },
+    {
+      "title": "Robin Hood - Il prezzo del sangue",
+      "image": "https://image.tmdb.org/t/p/w500/knUCsVWsLv5583lsvs2cP1VRrGx.jpg",
+      "link": "https://altadefinizionepremium.com/p/robin-hood-il-prezzo-del-sangue",
+      "rating": "6.5"
     }
   ],
   "trending_series": [
+    {
+      "title": "Silo",
+      "image": "https://image.tmdb.org/t/p/w500/pmr33vtyZdanSvptAmvngpdB4v3.jpg",
+      "link": "https://altadefinizionepremium.com/p/silo",
+      "rating": "8.2"
+    },
+    {
+      "title": "The Shards",
+      "image": "https://image.tmdb.org/t/p/w500/wP0GdqwVu2g1y3q1KzBXuSrdTvX.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-shards",
+      "rating": "8.2"
+    },
     {
       "title": "Ted Lasso",
       "image": "https://image.tmdb.org/t/p/w500/uRHsiw1wLxPHFXkkv4Ix1s0O6f4.jpg",
@@ -1193,16 +1205,16 @@
       "rating": "7.0"
     },
     {
-      "title": "Cent'anni di solitudine",
-      "image": "https://image.tmdb.org/t/p/w500/q1mmRCEwImIcmA18AmhY0OsMuOi.jpg",
-      "link": "https://altadefinizionepremium.com/p/cent-anni-di-solitudine",
-      "rating": "7.9"
-    },
-    {
       "title": "House of the Dragon",
       "image": "https://image.tmdb.org/t/p/w500/paD01zRRCY3lXo038pvs2Avu0Q7.jpg",
       "link": "https://altadefinizionepremium.com/p/house-of-the-dragon",
       "rating": "8.4"
+    },
+    {
+      "title": "Operazione speciale: Lioness",
+      "image": "https://image.tmdb.org/t/p/w500/ffsmgdEdbY0JLThEXK2L5T3MsDc.jpg",
+      "link": "https://altadefinizionepremium.com/p/operazione-speciale-lioness",
+      "rating": "8.0"
     },
     {
       "title": "Bleach",
@@ -1217,28 +1229,10 @@
       "rating": "8.4"
     },
     {
-      "title": "Operazione speciale: Lioness",
-      "image": "https://image.tmdb.org/t/p/w500/ffsmgdEdbY0JLThEXK2L5T3MsDc.jpg",
-      "link": "https://altadefinizionepremium.com/p/operazione-speciale-lioness",
-      "rating": "8.0"
-    },
-    {
-      "title": "Silo",
-      "image": "https://image.tmdb.org/t/p/w500/pmr33vtyZdanSvptAmvngpdB4v3.jpg",
-      "link": "https://altadefinizionepremium.com/p/silo",
-      "rating": "8.2"
-    },
-    {
-      "title": "X-Men '97",
-      "image": "https://image.tmdb.org/t/p/w500/gU4ezBtf2K9t4AsYjbSsYd8Gzga.jpg",
-      "link": "https://altadefinizionepremium.com/p/x-men-97",
-      "rating": "8.7"
-    },
-    {
-      "title": "Lucky",
-      "image": "https://image.tmdb.org/t/p/w500/5TO5TP3Q6sVDw2NQ5eZ9OZ56MjB.jpg",
-      "link": "https://altadefinizionepremium.com/p/lucky",
-      "rating": "7.4"
+      "title": "Sterling Point - l'isola dei segreti",
+      "image": "https://image.tmdb.org/t/p/w500/eRJmTnQrdmodTARDmI3z2tRFEZU.jpg",
+      "link": "https://altadefinizionepremium.com/p/sterling-point-l-isola-dei-segreti",
+      "rating": "6.7"
     },
     {
       "title": "One Piece",
@@ -1247,10 +1241,28 @@
       "rating": "8.7"
     },
     {
-      "title": "A Shop for Killers",
-      "image": "https://image.tmdb.org/t/p/w500/gfw41bHY2boxVse5l8M6m0sft5n.jpg",
-      "link": "https://altadefinizionepremium.com/p/a-shop-for-killers",
-      "rating": "8.4"
+      "title": "Uno splendido errore",
+      "image": "https://image.tmdb.org/t/p/w500/oJ8SVHRe9ZzZMRSJAfebGdp78Yl.jpg",
+      "link": "https://altadefinizionepremium.com/p/uno-splendido-errore",
+      "rating": "7.8"
+    },
+    {
+      "title": "Stuart Fails to Save the Universe",
+      "image": "https://image.tmdb.org/t/p/w500/vM6B0dqOB2YdXEaA7bjq5LuXEo.jpg",
+      "link": "https://altadefinizionepremium.com/p/stuart-fails-to-save-the-universe",
+      "rating": "9.3"
+    },
+    {
+      "title": "Lucky",
+      "image": "https://image.tmdb.org/t/p/w500/5TO5TP3Q6sVDw2NQ5eZ9OZ56MjB.jpg",
+      "link": "https://altadefinizionepremium.com/p/lucky",
+      "rating": "7.4"
+    },
+    {
+      "title": "Cent'anni di solitudine",
+      "image": "https://image.tmdb.org/t/p/w500/q1mmRCEwImIcmA18AmhY0OsMuOi.jpg",
+      "link": "https://altadefinizionepremium.com/p/cent-anni-di-solitudine",
+      "rating": "7.9"
     },
     {
       "title": "Rick and Morty",
@@ -1259,28 +1271,28 @@
       "rating": "8.7"
     },
     {
-      "title": "Furious",
-      "image": "https://image.tmdb.org/t/p/w500/xnxxrEKtBaIcI1ewq50pLkOMU6u.jpg",
-      "link": "https://altadefinizionepremium.com/p/furious",
-      "rating": "6.5"
-    },
-    {
       "title": "Cape Fear",
       "image": "https://image.tmdb.org/t/p/w500/3ZLy3cfQa9prahoRq1teMmr5pvW.jpg",
       "link": "https://altadefinizionepremium.com/p/cape-fear",
       "rating": "7.2"
     },
     {
-      "title": "Batman: Caped Crusader",
-      "image": "https://image.tmdb.org/t/p/w500/zCHmmoqtLsIsou866osiWtIWmoA.jpg",
-      "link": "https://altadefinizionepremium.com/p/batman-caped-crusader",
-      "rating": "7.3"
+      "title": "Furious",
+      "image": "https://image.tmdb.org/t/p/w500/xnxxrEKtBaIcI1ewq50pLkOMU6u.jpg",
+      "link": "https://altadefinizionepremium.com/p/furious",
+      "rating": "6.5"
     },
     {
-      "title": "Stuart Fails to Save the Universe",
-      "image": "https://image.tmdb.org/t/p/w500/txj8ujTZwGUjpCdhCsQBnTlh4aS.jpg",
-      "link": "https://altadefinizionepremium.com/p/stuart-fails-to-save-the-universe",
-      "rating": "9.3"
+      "title": "Star Trek: Strange New Worlds",
+      "image": "https://image.tmdb.org/t/p/w500/oxraC4lVqWw5mNQHKjTc2f6zPlu.jpg",
+      "link": "https://altadefinizionepremium.com/p/star-trek-strange-new-worlds",
+      "rating": "7.9"
+    },
+    {
+      "title": "Sugar",
+      "image": "https://image.tmdb.org/t/p/w500/tLmwLYiI7EpPbhgmdeivNGY0xw7.jpg",
+      "link": "https://altadefinizionepremium.com/p/sugar",
+      "rating": "7.1"
     }
   ],
   "now_playing": [
@@ -1288,7 +1300,7 @@
       "title": "Spider-Man: Brand New Day",
       "image": "https://image.tmdb.org/t/p/w500/dNo4TkJc86EbrRKQofiyuTip46Q.jpg",
       "link": "https://altadefinizionepremium.com/p/spider-man-brand-new-day",
-      "rating": "8.0"
+      "rating": "7.9"
     },
     {
       "title": "Odissea",
@@ -1306,13 +1318,19 @@
       "title": "Supergirl",
       "image": "https://image.tmdb.org/t/p/w500/s8JXiMG0skg5onZi49d7n2nuXjs.jpg",
       "link": "https://altadefinizionepremium.com/p/supergirl",
-      "rating": "6.7"
+      "rating": "6.8"
     },
     {
       "title": "Obsession",
       "image": "https://image.tmdb.org/t/p/w500/KUzJSsW6pFy1Dbw7rp1PKrzvfL.jpg",
       "link": "https://altadefinizionepremium.com/p/obsession",
       "rating": "8.2"
+    },
+    {
+      "title": "Robin Hood - Il prezzo del sangue",
+      "image": "https://image.tmdb.org/t/p/w500/knUCsVWsLv5583lsvs2cP1VRrGx.jpg",
+      "link": "https://altadefinizionepremium.com/p/robin-hood-il-prezzo-del-sangue",
+      "rating": "6.5"
     },
     {
       "title": "Toy Story 5",
@@ -1345,28 +1363,28 @@
       "rating": "8.1"
     },
     {
-      "title": "Scary Movie",
-      "image": "https://image.tmdb.org/t/p/w500/AaTg95kewgcTNyGYxm3VmH3RSj5.jpg",
-      "link": "https://altadefinizionepremium.com/p/scary-movie",
-      "rating": "6.5"
+      "title": "La casa - Il rogo del Male",
+      "image": "https://image.tmdb.org/t/p/w500/kOk4sSTUJVuC4qDUoGu1JkrJ9UT.jpg",
+      "link": "https://altadefinizionepremium.com/p/la-casa-il-rogo-del-male",
+      "rating": "7.9"
     },
     {
       "title": "The Debt Collector",
       "image": "https://image.tmdb.org/t/p/w500/2h4ikWt6TddvIAhMdS3WGVXhaRf.jpg",
       "link": "https://altadefinizionepremium.com/p/the-debt-collector",
-      "rating": "7.6"
-    },
-    {
-      "title": "La casa - Il rogo del Male",
-      "image": "https://image.tmdb.org/t/p/w500/kOk4sSTUJVuC4qDUoGu1JkrJ9UT.jpg",
-      "link": "https://altadefinizionepremium.com/p/la-casa-il-rogo-del-male",
-      "rating": "7.8"
+      "rating": "7.7"
     },
     {
       "title": "Soulm8te",
       "image": "https://image.tmdb.org/t/p/w500/bNErActDctl6cdUGw9pnjSCmyhQ.jpg",
       "link": "https://altadefinizionepremium.com/p/soulm8te",
-      "rating": "6.5"
+      "rating": "6.6"
+    },
+    {
+      "title": "Твоё сердце будет разбито",
+      "image": "https://image.tmdb.org/t/p/w500/iGpMm603GUKH2SiXB2S5m4sZ17t.jpg",
+      "link": "https://altadefinizionepremium.com/p/",
+      "rating": "7.0"
     },
     {
       "title": "The Furious",
@@ -1399,22 +1417,22 @@
       "rating": "7.2"
     },
     {
+      "title": "Lucky Strike",
+      "image": "https://image.tmdb.org/t/p/w500/kzRAd7mj39ZY3FGNrDdZjqx56tn.jpg",
+      "link": "https://altadefinizionepremium.com/p/lucky-strike",
+      "rating": "7.4"
+    },
+    {
       "title": "Descendants: Wicked Wonderland",
       "image": "https://image.tmdb.org/t/p/w500/rzZI2kDOItoYgxgznFgysh2lxss.jpg",
       "link": "https://altadefinizionepremium.com/p/descendants-wicked-wonderland",
       "rating": "7.6"
     },
     {
-      "title": "Matrix",
-      "image": "https://image.tmdb.org/t/p/w500/yQZX4scmfYtj4ccKFNGZJlOj1y9.jpg",
-      "link": "https://altadefinizionepremium.com/p/matrix",
-      "rating": "8.3"
-    },
-    {
-      "title": "Terminator",
-      "image": "https://image.tmdb.org/t/p/w500/3oi7iQwFwSALSsZRtAOnRX4WUPp.jpg",
-      "link": "https://altadefinizionepremium.com/p/terminator",
-      "rating": "7.7"
+      "title": "The Shadow's Edge - Colpo su colpo",
+      "image": "https://image.tmdb.org/t/p/w500/aTq2VZLuQzwfCPiBlWeJG8z6XKD.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-shadow-s-edge-colpo-su-colpo",
+      "rating": "7.9"
     },
     {
       "title": "Todo lo que nunca fuimos",
@@ -1423,28 +1441,22 @@
       "rating": "7.7"
     },
     {
-      "title": "Lucky Strike",
-      "image": "https://image.tmdb.org/t/p/w500/kzRAd7mj39ZY3FGNrDdZjqx56tn.jpg",
-      "link": "https://altadefinizionepremium.com/p/lucky-strike",
-      "rating": "7.4"
+      "title": "Matrix",
+      "image": "https://image.tmdb.org/t/p/w500/yQZX4scmfYtj4ccKFNGZJlOj1y9.jpg",
+      "link": "https://altadefinizionepremium.com/p/matrix",
+      "rating": "8.3"
     },
     {
       "title": "La fine di Oak Street",
       "image": "https://image.tmdb.org/t/p/w500/3sBzqJcVjl4VKb9ULS569IIiUwu.jpg",
       "link": "https://altadefinizionepremium.com/p/la-fine-di-oak-street",
-      "rating": "8.3"
-    },
-    {
-      "title": "Snoopy presenta: Sei a casa, Snoopy",
-      "image": "https://image.tmdb.org/t/p/w500/iczBI8DAMcWdgSkMFxFzSFcSEMw.jpg",
-      "link": "https://altadefinizionepremium.com/p/snoopy-presenta-sei-a-casa-snoopy",
-      "rating": "7.9"
-    },
-    {
-      "title": "Finché morte non ci separi 2",
-      "image": "https://image.tmdb.org/t/p/w500/fro6xA6STLdHJRyoleRGIerwKC.jpg",
-      "link": "https://altadefinizionepremium.com/p/finch-morte-non-ci-separi-2",
       "rating": "7.6"
+    },
+    {
+      "title": "Terminator",
+      "image": "https://image.tmdb.org/t/p/w500/3oi7iQwFwSALSsZRtAOnRX4WUPp.jpg",
+      "link": "https://altadefinizionepremium.com/p/terminator",
+      "rating": "7.7"
     },
     {
       "title": "Le pagine della nostra vita",
@@ -1453,10 +1465,34 @@
       "rating": "7.9"
     },
     {
+      "title": "Snoopy presenta: Sei a casa, Snoopy",
+      "image": "https://image.tmdb.org/t/p/w500/iczBI8DAMcWdgSkMFxFzSFcSEMw.jpg",
+      "link": "https://altadefinizionepremium.com/p/snoopy-presenta-sei-a-casa-snoopy",
+      "rating": "8.0"
+    },
+    {
+      "title": "八仙！",
+      "image": "https://image.tmdb.org/t/p/w500/ds5F1KKB1co55NXqS5rpioWA4z1.jpg",
+      "link": "https://altadefinizionepremium.com/p/",
+      "rating": "8.1"
+    },
+    {
+      "title": "PAW Patrol - Missione Dinosauri",
+      "image": "https://image.tmdb.org/t/p/w500/r5XkrcTtb7O2YeblRDpkuwh9ued.jpg",
+      "link": "https://altadefinizionepremium.com/p/paw-patrol-missione-dinosauri",
+      "rating": "7.3"
+    },
+    {
+      "title": "Finché morte non ci separi 2",
+      "image": "https://image.tmdb.org/t/p/w500/fro6xA6STLdHJRyoleRGIerwKC.jpg",
+      "link": "https://altadefinizionepremium.com/p/finch-morte-non-ci-separi-2",
+      "rating": "7.6"
+    },
+    {
       "title": "Hokum",
       "image": "https://image.tmdb.org/t/p/w500/nhF54SQmeaMUODgRKEuMMJoTysT.jpg",
       "link": "https://altadefinizionepremium.com/p/hokum",
-      "rating": "6.9"
+      "rating": "7.0"
     },
     {
       "title": "The Invite - Il piacere è tutto nostro",
@@ -1471,28 +1507,10 @@
       "rating": "8.5"
     },
     {
-      "title": "八仙！",
-      "image": "https://image.tmdb.org/t/p/w500/ds5F1KKB1co55NXqS5rpioWA4z1.jpg",
-      "link": "https://altadefinizionepremium.com/p/",
-      "rating": "8.2"
-    },
-    {
       "title": "Blade Runner",
       "image": "https://image.tmdb.org/t/p/w500/2mPclQ5v9YK0eqCefvav3YsYPYI.jpg",
       "link": "https://altadefinizionepremium.com/p/blade-runner",
       "rating": "7.9"
-    },
-    {
-      "title": "Alien",
-      "image": "https://image.tmdb.org/t/p/w500/2lFDSdjBhJBQ2TDkfOel2O2V3dF.jpg",
-      "link": "https://altadefinizionepremium.com/p/alien",
-      "rating": "8.2"
-    },
-    {
-      "title": "Marty Supreme",
-      "image": "https://image.tmdb.org/t/p/w500/et9WEOYIel2xTEPL1xwBkifgO2V.jpg",
-      "link": "https://altadefinizionepremium.com/p/marty-supreme",
-      "rating": "7.4"
     },
     {
       "title": "Tuner - L’accordatore",
@@ -1527,38 +1545,26 @@
       "rating": "8.1"
     },
     {
-      "title": "Bleach",
-      "image": "https://image.tmdb.org/t/p/w500/e0kKmeM8R7Kersh5N2PPzIRNRhr.jpg",
-      "link": "https://altadefinizionepremium.com/p/bleach",
-      "rating": "8.4"
-    },
-    {
       "title": "Mushoku Tensei: Jobless Reincarnation",
       "image": "https://image.tmdb.org/t/p/w500/sviEqFIPJW5gFtuYy8XyE0Uscid.jpg",
       "link": "https://altadefinizionepremium.com/p/mushoku-tensei-jobless-reincarnation",
       "rating": "8.5"
     },
     {
-      "title": "Futurama",
-      "image": "https://image.tmdb.org/t/p/w500/eM8bbTn8C8vUwwS6upzzm7gX31u.jpg",
-      "link": "https://altadefinizionepremium.com/p/futurama",
+      "title": "Ted Lasso",
+      "image": "https://image.tmdb.org/t/p/w500/uRHsiw1wLxPHFXkkv4Ix1s0O6f4.jpg",
+      "link": "https://altadefinizionepremium.com/p/ted-lasso",
+      "rating": "8.3"
+    },
+    {
+      "title": "Bleach",
+      "image": "https://image.tmdb.org/t/p/w500/e0kKmeM8R7Kersh5N2PPzIRNRhr.jpg",
+      "link": "https://altadefinizionepremium.com/p/bleach",
       "rating": "8.4"
     },
     {
       "title": "仙逆",
       "image": "https://image.tmdb.org/t/p/w500/mCt5qgkOYEvuHSiSwNByMv6LMoB.jpg",
-      "link": "https://altadefinizionepremium.com/p/",
-      "rating": "8.2"
-    },
-    {
-      "title": "Jornal Nacional",
-      "image": "https://image.tmdb.org/t/p/w500/g0x9tcHp8SV8UH4yq40g5zu6phu.jpg",
-      "link": "https://altadefinizionepremium.com/p/jornal-nacional",
-      "rating": "7.0"
-    },
-    {
-      "title": "런닝맨",
-      "image": "https://image.tmdb.org/t/p/w500/15SMnscZqd7HZ0bzruatOcKUlOV.jpg",
       "link": "https://altadefinizionepremium.com/p/",
       "rating": "8.2"
     },
@@ -1569,21 +1575,39 @@
       "rating": "7.4"
     },
     {
+      "title": "Futurama",
+      "image": "https://image.tmdb.org/t/p/w500/eM8bbTn8C8vUwwS6upzzm7gX31u.jpg",
+      "link": "https://altadefinizionepremium.com/p/futurama",
+      "rating": "8.4"
+    },
+    {
+      "title": "スターダム・ワールドのスターダム",
+      "image": "https://image.tmdb.org/t/p/w500/liGgY9uimx9jmv89x49jHtb8Ndl.jpg",
+      "link": "https://altadefinizionepremium.com/p/",
+      "rating": "8.7"
+    },
+    {
+      "title": "런닝맨",
+      "image": "https://image.tmdb.org/t/p/w500/15SMnscZqd7HZ0bzruatOcKUlOV.jpg",
+      "link": "https://altadefinizionepremium.com/p/",
+      "rating": "8.2"
+    },
+    {
       "title": "All Elite Wrestling: Dynamite",
       "image": "https://image.tmdb.org/t/p/w500/gPNWVCp0zrHRmwfovUpUQO44sts.jpg",
       "link": "https://altadefinizionepremium.com/p/all-elite-wrestling-dynamite",
       "rating": "8.0"
     },
     {
-      "title": "Ted Lasso",
-      "image": "https://image.tmdb.org/t/p/w500/uRHsiw1wLxPHFXkkv4Ix1s0O6f4.jpg",
-      "link": "https://altadefinizionepremium.com/p/ted-lasso",
-      "rating": "8.3"
+      "title": "X-Men '97",
+      "image": "https://image.tmdb.org/t/p/w500/gU4ezBtf2K9t4AsYjbSsYd8Gzga.jpg",
+      "link": "https://altadefinizionepremium.com/p/x-men-97",
+      "rating": "8.7"
     },
     {
-      "title": "PAW Patrol - La squadra dei cuccioli",
-      "image": "https://image.tmdb.org/t/p/w500/f1JFyKTzru9v7bNnMPGYe3SzEeu.jpg",
-      "link": "https://altadefinizionepremium.com/p/paw-patrol-la-squadra-dei-cuccioli",
+      "title": "Jornal Nacional",
+      "image": "https://image.tmdb.org/t/p/w500/g0x9tcHp8SV8UH4yq40g5zu6phu.jpg",
+      "link": "https://altadefinizionepremium.com/p/jornal-nacional",
       "rating": "7.0"
     }
   ]
