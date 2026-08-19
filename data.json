@@ -819,7 +819,7 @@
     {
       "title": "Wonder",
       "rating": "7.9",
-      "image": "https://image.tmdb.org/t/p/w500/9pMD8L0vEn5cgreXFX6IVinwzhs.jpg",
+      "image": "https://image.tmdb.org/t/p/w500/tkaduqdhFrF1vp8L55OJfB5jw8Z.jpg",
       "link": "https://altadefinizionepremium.com/p/wonder"
     },
     {
@@ -1077,12 +1077,6 @@
       "rating": "7.9"
     },
     {
-      "title": "Odissea",
-      "image": "https://image.tmdb.org/t/p/w500/qQhInj9fw3S2bMbiEujVldthgKe.jpg",
-      "link": "https://altadefinizionepremium.com/p/odissea",
-      "rating": "8.0"
-    },
-    {
       "title": "Minions & Monsters",
       "image": "https://image.tmdb.org/t/p/w500/glzOv4Vzr6ZHP0ToHqLakF5fkfk.jpg",
       "link": "https://altadefinizionepremium.com/p/minions-monsters",
@@ -1092,13 +1086,19 @@
       "title": "Toy Story 5",
       "image": "https://image.tmdb.org/t/p/w500/i7eQGriXCmNpScSVzepNHn9nMPM.jpg",
       "link": "https://altadefinizionepremium.com/p/toy-story-5",
-      "rating": "7.4"
+      "rating": "7.8"
+    },
+    {
+      "title": "Odissea",
+      "image": "https://image.tmdb.org/t/p/w500/qQhInj9fw3S2bMbiEujVldthgKe.jpg",
+      "link": "https://altadefinizionepremium.com/p/odissea",
+      "rating": "8.0"
     },
     {
       "title": "La fine di Oak Street",
       "image": "https://image.tmdb.org/t/p/w500/3sBzqJcVjl4VKb9ULS569IIiUwu.jpg",
       "link": "https://altadefinizionepremium.com/p/la-fine-di-oak-street",
-      "rating": "6.7"
+      "rating": "6.6"
     },
     {
       "title": "Obsession",
@@ -1125,12 +1125,6 @@
       "rating": "7.5"
     },
     {
-      "title": "Supergirl",
-      "image": "https://image.tmdb.org/t/p/w500/s8JXiMG0skg5onZi49d7n2nuXjs.jpg",
-      "link": "https://altadefinizionepremium.com/p/supergirl",
-      "rating": "6.7"
-    },
-    {
       "title": "Backrooms",
       "image": "https://image.tmdb.org/t/p/w500/mene1ewQ03sW3aievfnaCyEZD8t.jpg",
       "link": "https://altadefinizionepremium.com/p/backrooms",
@@ -1140,7 +1134,7 @@
       "title": "Don't Say Good Luck",
       "image": "https://image.tmdb.org/t/p/w500/dgTKahWonzVLeN8Lm22WR2S7D0A.jpg",
       "link": "https://altadefinizionepremium.com/p/don-t-say-good-luck",
-      "rating": "7.0"
+      "rating": "7.1"
     },
     {
       "title": "L'ultima missione: Project Hail Mary",
@@ -1149,10 +1143,16 @@
       "rating": "8.7"
     },
     {
+      "title": "Supergirl",
+      "image": "https://image.tmdb.org/t/p/w500/s8JXiMG0skg5onZi49d7n2nuXjs.jpg",
+      "link": "https://altadefinizionepremium.com/p/supergirl",
+      "rating": "6.7"
+    },
+    {
       "title": "Young Washington",
       "image": "https://image.tmdb.org/t/p/w500/6CdoTKnRQHJkjRGxTefFGkPQplB.jpg",
       "link": "https://altadefinizionepremium.com/p/young-washington",
-      "rating": "7.9"
+      "rating": "7.7"
     },
     {
       "title": "La casa - Il rogo del Male",
@@ -1161,16 +1161,16 @@
       "rating": "7.9"
     },
     {
+      "title": "The Furious",
+      "image": "https://image.tmdb.org/t/p/w500/eQnZqgBZ1tbdCh8IWGHYpc61Lj4.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-furious",
+      "rating": "8.1"
+    },
+    {
       "title": "Jackass: Best and Last",
       "image": "https://image.tmdb.org/t/p/w500/tfgccePxnswMqhmtxafliLlcCVR.jpg",
       "link": "https://altadefinizionepremium.com/p/jackass-best-and-last",
       "rating": "7.5"
-    },
-    {
-      "title": "The Furious",
-      "image": "https://image.tmdb.org/t/p/w500/eQnZqgBZ1tbdCh8IWGHYpc61Lj4.jpg",
-      "link": "https://altadefinizionepremium.com/p/the-furious",
-      "rating": "8.0"
     }
   ],
   "trending_series": [
@@ -1178,7 +1178,7 @@
       "title": "Lanterns",
       "image": "https://image.tmdb.org/t/p/w500/sY2gOwvAy1rkYXJWfwNyy605tw0.jpg",
       "link": "https://altadefinizionepremium.com/p/lanterns",
-      "rating": "8.0"
+      "rating": "8.1"
     },
     {
       "title": "Reacher",
@@ -1187,15 +1187,57 @@
       "rating": "8.1"
     },
     {
+      "title": "House of the Dragon",
+      "image": "https://image.tmdb.org/t/p/w500/paD01zRRCY3lXo038pvs2Avu0Q7.jpg",
+      "link": "https://altadefinizionepremium.com/p/house-of-the-dragon",
+      "rating": "8.4"
+    },
+    {
       "title": "Silo",
       "image": "https://image.tmdb.org/t/p/w500/pmr33vtyZdanSvptAmvngpdB4v3.jpg",
       "link": "https://altadefinizionepremium.com/p/silo",
       "rating": "8.2"
     },
     {
-      "title": "House of the Dragon",
-      "image": "https://image.tmdb.org/t/p/w500/paD01zRRCY3lXo038pvs2Avu0Q7.jpg",
-      "link": "https://altadefinizionepremium.com/p/house-of-the-dragon",
+      "title": "Lucky",
+      "image": "https://image.tmdb.org/t/p/w500/5TO5TP3Q6sVDw2NQ5eZ9OZ56MjB.jpg",
+      "link": "https://altadefinizionepremium.com/p/lucky",
+      "rating": "7.3"
+    },
+    {
+      "title": "Ted Lasso",
+      "image": "https://image.tmdb.org/t/p/w500/uRHsiw1wLxPHFXkkv4Ix1s0O6f4.jpg",
+      "link": "https://altadefinizionepremium.com/p/ted-lasso",
+      "rating": "8.4"
+    },
+    {
+      "title": "One Piece",
+      "image": "https://image.tmdb.org/t/p/w500/8f33Q5AuM2G5ZqFeusbIqDjr3cI.jpg",
+      "link": "https://altadefinizionepremium.com/p/one-piece",
+      "rating": "8.8"
+    },
+    {
+      "title": "Operazione speciale: Lioness",
+      "image": "https://image.tmdb.org/t/p/w500/ffsmgdEdbY0JLThEXK2L5T3MsDc.jpg",
+      "link": "https://altadefinizionepremium.com/p/operazione-speciale-lioness",
+      "rating": "8.1"
+    },
+    {
+      "title": "Bleach",
+      "image": "https://image.tmdb.org/t/p/w500/e0kKmeM8R7Kersh5N2PPzIRNRhr.jpg",
+      "link": "https://altadefinizionepremium.com/p/bleach",
+      "rating": "8.4"
+    },
+    {
+      "title": "X-Men '97",
+      "image": "https://image.tmdb.org/t/p/w500/gU4ezBtf2K9t4AsYjbSsYd8Gzga.jpg",
+      "link": "https://altadefinizionepremium.com/p/x-men-97",
+      "rating": "8.7"
+    },
+    {
+      "title": "A Shop for Killers",
+      "image": "https://image.tmdb.org/t/p/w500/gfw41bHY2boxVse5l8M6m0sft5n.jpg",
+      "link": "https://altadefinizionepremium.com/p/a-shop-for-killers",
       "rating": "8.4"
     },
     {
@@ -1205,64 +1247,10 @@
       "rating": "8.4"
     },
     {
-      "title": "Operazione speciale: Lioness",
-      "image": "https://image.tmdb.org/t/p/w500/ffsmgdEdbY0JLThEXK2L5T3MsDc.jpg",
-      "link": "https://altadefinizionepremium.com/p/operazione-speciale-lioness",
-      "rating": "8.1"
-    },
-    {
-      "title": "X-Men '97",
-      "image": "https://image.tmdb.org/t/p/w500/gU4ezBtf2K9t4AsYjbSsYd8Gzga.jpg",
-      "link": "https://altadefinizionepremium.com/p/x-men-97",
-      "rating": "8.7"
-    },
-    {
-      "title": "One Piece",
-      "image": "https://image.tmdb.org/t/p/w500/8f33Q5AuM2G5ZqFeusbIqDjr3cI.jpg",
-      "link": "https://altadefinizionepremium.com/p/one-piece",
-      "rating": "8.8"
-    },
-    {
-      "title": "Bleach",
-      "image": "https://image.tmdb.org/t/p/w500/e0kKmeM8R7Kersh5N2PPzIRNRhr.jpg",
-      "link": "https://altadefinizionepremium.com/p/bleach",
-      "rating": "8.4"
-    },
-    {
-      "title": "Ted Lasso",
-      "image": "https://image.tmdb.org/t/p/w500/uRHsiw1wLxPHFXkkv4Ix1s0O6f4.jpg",
-      "link": "https://altadefinizionepremium.com/p/ted-lasso",
-      "rating": "8.4"
-    },
-    {
-      "title": "Lucky",
-      "image": "https://image.tmdb.org/t/p/w500/5TO5TP3Q6sVDw2NQ5eZ9OZ56MjB.jpg",
-      "link": "https://altadefinizionepremium.com/p/lucky",
-      "rating": "7.3"
-    },
-    {
-      "title": "A Shop for Killers",
-      "image": "https://image.tmdb.org/t/p/w500/gfw41bHY2boxVse5l8M6m0sft5n.jpg",
-      "link": "https://altadefinizionepremium.com/p/a-shop-for-killers",
-      "rating": "8.4"
-    },
-    {
       "title": "九门",
       "image": "https://image.tmdb.org/t/p/w500/bkyBY4EYv1htCkgmgVNfVrJ7qqW.jpg",
       "link": "https://altadefinizionepremium.com/p/",
       "rating": "6.8"
-    },
-    {
-      "title": "C'è sempre il sole a Philadelphia",
-      "image": "https://image.tmdb.org/t/p/w500/FLlFSUjMDQ2ig8pwcGKOdJRUYS.jpg",
-      "link": "https://altadefinizionepremium.com/p/c-sempre-il-sole-a-philadelphia",
-      "rating": "8.3"
-    },
-    {
-      "title": "Furious",
-      "image": "https://image.tmdb.org/t/p/w500/xnxxrEKtBaIcI1ewq50pLkOMU6u.jpg",
-      "link": "https://altadefinizionepremium.com/p/furious",
-      "rating": "7.0"
     },
     {
       "title": "Re:ZERO -Starting Life in Another World-",
@@ -1277,16 +1265,28 @@
       "rating": "7.5"
     },
     {
+      "title": "C'è sempre il sole a Philadelphia",
+      "image": "https://image.tmdb.org/t/p/w500/FLlFSUjMDQ2ig8pwcGKOdJRUYS.jpg",
+      "link": "https://altadefinizionepremium.com/p/c-sempre-il-sole-a-philadelphia",
+      "rating": "8.3"
+    },
+    {
+      "title": "Furious",
+      "image": "https://image.tmdb.org/t/p/w500/xnxxrEKtBaIcI1ewq50pLkOMU6u.jpg",
+      "link": "https://altadefinizionepremium.com/p/furious",
+      "rating": "7.0"
+    },
+    {
+      "title": "Star Trek: Strange New Worlds",
+      "image": "https://image.tmdb.org/t/p/w500/oxraC4lVqWw5mNQHKjTc2f6zPlu.jpg",
+      "link": "https://altadefinizionepremium.com/p/star-trek-strange-new-worlds",
+      "rating": "7.9"
+    },
+    {
       "title": "Our Sticky Love",
       "image": "https://image.tmdb.org/t/p/w500/ny8zYj40mWGTgKJi1a8hjNFUj9n.jpg",
       "link": "https://altadefinizionepremium.com/p/our-sticky-love",
       "rating": "8.6"
-    },
-    {
-      "title": "Rick and Morty",
-      "image": "https://image.tmdb.org/t/p/w500/owhkU6KRqdXoUQpjV8uyZGPtX58.jpg",
-      "link": "https://altadefinizionepremium.com/p/rick-and-morty",
-      "rating": "8.7"
     }
   ],
   "now_playing": [
@@ -1309,6 +1309,18 @@
       "rating": "7.5"
     },
     {
+      "title": "Colony",
+      "image": "https://image.tmdb.org/t/p/w500/thK6glS5pklrlijsgSN6Hw9GLQK.jpg",
+      "link": "https://altadefinizionepremium.com/p/colony",
+      "rating": "8.1"
+    },
+    {
+      "title": "Toy Story 5",
+      "image": "https://image.tmdb.org/t/p/w500/i7eQGriXCmNpScSVzepNHn9nMPM.jpg",
+      "link": "https://altadefinizionepremium.com/p/toy-story-5",
+      "rating": "7.7"
+    },
+    {
       "title": "The Last House",
       "image": "https://image.tmdb.org/t/p/w500/6JU7E8Vv2M11egkctWVOScxWR75.jpg",
       "link": "https://altadefinizionepremium.com/p/the-last-house",
@@ -1321,22 +1333,10 @@
       "rating": "8.2"
     },
     {
-      "title": "Colony",
-      "image": "https://image.tmdb.org/t/p/w500/thK6glS5pklrlijsgSN6Hw9GLQK.jpg",
-      "link": "https://altadefinizionepremium.com/p/colony",
-      "rating": "8.1"
-    },
-    {
-      "title": "Toy Story 5",
-      "image": "https://image.tmdb.org/t/p/w500/i7eQGriXCmNpScSVzepNHn9nMPM.jpg",
-      "link": "https://altadefinizionepremium.com/p/toy-story-5",
-      "rating": "7.4"
-    },
-    {
       "title": "La fine di Oak Street",
       "image": "https://image.tmdb.org/t/p/w500/3sBzqJcVjl4VKb9ULS569IIiUwu.jpg",
       "link": "https://altadefinizionepremium.com/p/la-fine-di-oak-street",
-      "rating": "6.7"
+      "rating": "6.6"
     },
     {
       "title": "La casa - Il rogo del Male",
@@ -1348,7 +1348,7 @@
       "title": "Soulm8te",
       "image": "https://image.tmdb.org/t/p/w500/bNErActDctl6cdUGw9pnjSCmyhQ.jpg",
       "link": "https://altadefinizionepremium.com/p/soulm8te",
-      "rating": "7.1"
+      "rating": "7.2"
     },
     {
       "title": "Backrooms",
@@ -1363,16 +1363,28 @@
       "rating": "6.6"
     },
     {
+      "title": "Avatar Aang: L’ultimo dominatore dell’aria",
+      "image": "https://image.tmdb.org/t/p/w500/nOmKZmxMX9xdDnvlId9kIV4TBxI.jpg",
+      "link": "https://altadefinizionepremium.com/p/avatar-aang-l-ultimo-dominatore-dell-aria",
+      "rating": "9.2"
+    },
+    {
       "title": "The Invite - Il piacere è tutto nostro",
       "image": "https://image.tmdb.org/t/p/w500/p9kaEC6mE6oNFhZjkbA1ALuvv2q.jpg",
       "link": "https://altadefinizionepremium.com/p/the-invite-il-piacere-tutto-nostro",
       "rating": "7.4"
     },
     {
-      "title": "Avatar Aang: L’ultimo dominatore dell’aria",
-      "image": "https://image.tmdb.org/t/p/w500/nOmKZmxMX9xdDnvlId9kIV4TBxI.jpg",
-      "link": "https://altadefinizionepremium.com/p/avatar-aang-l-ultimo-dominatore-dell-aria",
-      "rating": "9.2"
+      "title": "Jackass: Best and Last",
+      "image": "https://image.tmdb.org/t/p/w500/tfgccePxnswMqhmtxafliLlcCVR.jpg",
+      "link": "https://altadefinizionepremium.com/p/jackass-best-and-last",
+      "rating": "7.5"
+    },
+    {
+      "title": "Твоё сердце будет разбито",
+      "image": "https://image.tmdb.org/t/p/w500/iGpMm603GUKH2SiXB2S5m4sZ17t.jpg",
+      "link": "https://altadefinizionepremium.com/p/",
+      "rating": "7.1"
     },
     {
       "title": "Lucky Strike",
@@ -1387,28 +1399,16 @@
       "rating": "6.8"
     },
     {
-      "title": "Твоё сердце будет разбито",
-      "image": "https://image.tmdb.org/t/p/w500/iGpMm603GUKH2SiXB2S5m4sZ17t.jpg",
-      "link": "https://altadefinizionepremium.com/p/",
-      "rating": "7.1"
-    },
-    {
       "title": "The Furious",
       "image": "https://image.tmdb.org/t/p/w500/eQnZqgBZ1tbdCh8IWGHYpc61Lj4.jpg",
       "link": "https://altadefinizionepremium.com/p/the-furious",
-      "rating": "8.0"
-    },
-    {
-      "title": "Jackass: Best and Last",
-      "image": "https://image.tmdb.org/t/p/w500/tfgccePxnswMqhmtxafliLlcCVR.jpg",
-      "link": "https://altadefinizionepremium.com/p/jackass-best-and-last",
-      "rating": "7.5"
+      "rating": "8.1"
     },
     {
       "title": "The Debt Collector",
       "image": "https://image.tmdb.org/t/p/w500/2h4ikWt6TddvIAhMdS3WGVXhaRf.jpg",
       "link": "https://altadefinizionepremium.com/p/the-debt-collector",
-      "rating": "8.0"
+      "rating": "7.9"
     },
     {
       "title": "விஸ்வநாத் & சன்ஸ்",
@@ -1420,6 +1420,12 @@
       "title": "Deep Water - Incubo degli abissi",
       "image": "https://image.tmdb.org/t/p/w500/ejYdwL5CAtekoZ3zV4hYRAQUmgN.jpg",
       "link": "https://altadefinizionepremium.com/p/deep-water-incubo-degli-abissi",
+      "rating": "7.1"
+    },
+    {
+      "title": "Don't Say Good Luck",
+      "image": "https://image.tmdb.org/t/p/w500/dgTKahWonzVLeN8Lm22WR2S7D0A.jpg",
+      "link": "https://altadefinizionepremium.com/p/don-t-say-good-luck",
       "rating": "7.1"
     },
     {
@@ -1435,12 +1441,6 @@
       "rating": "7.4"
     },
     {
-      "title": "Don't Say Good Luck",
-      "image": "https://image.tmdb.org/t/p/w500/dgTKahWonzVLeN8Lm22WR2S7D0A.jpg",
-      "link": "https://altadefinizionepremium.com/p/don-t-say-good-luck",
-      "rating": "7.1"
-    },
-    {
       "title": "欢迎来龙餐馆",
       "image": "https://image.tmdb.org/t/p/w500/2OJX7udqqpk5c82pXXdL2hnny0D.jpg",
       "link": "https://altadefinizionepremium.com/p/",
@@ -1450,7 +1450,7 @@
       "title": "Young Washington",
       "image": "https://image.tmdb.org/t/p/w500/6CdoTKnRQHJkjRGxTefFGkPQplB.jpg",
       "link": "https://altadefinizionepremium.com/p/young-washington",
-      "rating": "7.8"
+      "rating": "7.7"
     },
     {
       "title": "Matrix",
@@ -1489,12 +1489,6 @@
       "rating": "7.0"
     },
     {
-      "title": "இதயம் முரளி",
-      "image": "https://image.tmdb.org/t/p/w500/8gfs5OsGINENFAl0h1XZPNup9lI.jpg",
-      "link": "https://altadefinizionepremium.com/p/",
-      "rating": "7.3"
-    },
-    {
       "title": "La città incantata",
       "image": "https://image.tmdb.org/t/p/w500/3PV6lq9BNmoyyDXr5tdNeeESEMn.jpg",
       "link": "https://altadefinizionepremium.com/p/la-citt-incantata",
@@ -1507,10 +1501,16 @@
       "rating": "7.4"
     },
     {
-      "title": "Temporale a Sesame Street",
-      "image": "https://image.tmdb.org/t/p/w500/w4GrHRGgRQOYG95f2oVLYzGJ4Md.jpg",
-      "link": "https://altadefinizionepremium.com/p/temporale-a-sesame-street",
-      "rating": "6.6"
+      "title": "WALL•E",
+      "image": "https://image.tmdb.org/t/p/w500/1ZkFCJwN6hNUdNZUIUCeugja06j.jpg",
+      "link": "https://altadefinizionepremium.com/p/wall-e",
+      "rating": "8.1"
+    },
+    {
+      "title": "இதயம் முரளி",
+      "image": "https://image.tmdb.org/t/p/w500/8gfs5OsGINENFAl0h1XZPNup9lI.jpg",
+      "link": "https://altadefinizionepremium.com/p/",
+      "rating": "7.3"
     },
     {
       "title": "Saccharine",
@@ -1525,34 +1525,28 @@
       "rating": "7.9"
     },
     {
-      "title": "Terminator",
-      "image": "https://image.tmdb.org/t/p/w500/3oi7iQwFwSALSsZRtAOnRX4WUPp.jpg",
-      "link": "https://altadefinizionepremium.com/p/terminator",
-      "rating": "7.7"
-    },
-    {
-      "title": "WALL•E",
-      "image": "https://image.tmdb.org/t/p/w500/1ZkFCJwN6hNUdNZUIUCeugja06j.jpg",
-      "link": "https://altadefinizionepremium.com/p/wall-e",
-      "rating": "8.1"
-    },
-    {
-      "title": "டிசி",
-      "image": "https://image.tmdb.org/t/p/w500/cm1uBPBUDfSIZXhWxsp1zzlKnf.jpg",
-      "link": "https://altadefinizionepremium.com/p/",
-      "rating": "8.0"
-    },
-    {
-      "title": "Hokum",
-      "image": "https://image.tmdb.org/t/p/w500/nhF54SQmeaMUODgRKEuMMJoTysT.jpg",
-      "link": "https://altadefinizionepremium.com/p/hokum",
-      "rating": "6.9"
-    },
-    {
       "title": "Your Name.",
       "image": "https://image.tmdb.org/t/p/w500/uyOd5E0dNTp2AJAJWv0V3asf31u.jpg",
       "link": "https://altadefinizionepremium.com/p/your-name",
       "rating": "8.5"
+    },
+    {
+      "title": "One Night Only - Quando tutto è possibile",
+      "image": "https://image.tmdb.org/t/p/w500/gSWPoxU6e0C4tAQNq5a5zjNGmuN.jpg",
+      "link": "https://altadefinizionepremium.com/p/one-night-only-quando-tutto-possibile",
+      "rating": "6.8"
+    },
+    {
+      "title": "Camp Miasma - Adolescenza, sesso e morte",
+      "image": "https://image.tmdb.org/t/p/w500/oSbPv3AbfXKEoboItK2DeDK397S.jpg",
+      "link": "https://altadefinizionepremium.com/p/camp-miasma-adolescenza-sesso-e-morte",
+      "rating": "7.2"
+    },
+    {
+      "title": "Mutiny",
+      "image": "https://image.tmdb.org/t/p/w500/lsYSWqj6i2iyUDJoLA2cazFJYlC.jpg",
+      "link": "https://altadefinizionepremium.com/p/mutiny",
+      "rating": "9.5"
     }
   ],
   "on_air": [
@@ -1572,7 +1566,7 @@
       "title": "Lanterns",
       "image": "https://image.tmdb.org/t/p/w500/sY2gOwvAy1rkYXJWfwNyy605tw0.jpg",
       "link": "https://altadefinizionepremium.com/p/lanterns",
-      "rating": "8.0"
+      "rating": "8.1"
     },
     {
       "title": "Silo",
@@ -1587,10 +1581,10 @@
       "rating": "8.4"
     },
     {
-      "title": "All Elite Wrestling: Dynamite",
-      "image": "https://image.tmdb.org/t/p/w500/gPNWVCp0zrHRmwfovUpUQO44sts.jpg",
-      "link": "https://altadefinizionepremium.com/p/all-elite-wrestling-dynamite",
-      "rating": "8.0"
+      "title": "Raw",
+      "image": "https://image.tmdb.org/t/p/w500/fstEe6RsyNyPUnMwNcL20iNl0nE.jpg",
+      "link": "https://altadefinizionepremium.com/p/raw",
+      "rating": "6.8"
     },
     {
       "title": "Mushoku Tensei: Jobless Reincarnation",
@@ -1599,40 +1593,28 @@
       "rating": "8.4"
     },
     {
-      "title": "Raw",
-      "image": "https://image.tmdb.org/t/p/w500/fstEe6RsyNyPUnMwNcL20iNl0nE.jpg",
-      "link": "https://altadefinizionepremium.com/p/raw",
-      "rating": "6.8"
+      "title": "All Elite Wrestling: Dynamite",
+      "image": "https://image.tmdb.org/t/p/w500/gPNWVCp0zrHRmwfovUpUQO44sts.jpg",
+      "link": "https://altadefinizionepremium.com/p/all-elite-wrestling-dynamite",
+      "rating": "8.0"
+    },
+    {
+      "title": "Ascendance of a Bookworm",
+      "image": "https://image.tmdb.org/t/p/w500/cBgA4PdYNr0EqXB1naRe1ndrC33.jpg",
+      "link": "https://altadefinizionepremium.com/p/ascendance-of-a-bookworm",
+      "rating": "8.1"
+    },
+    {
+      "title": "Jornal Nacional",
+      "image": "https://image.tmdb.org/t/p/w500/g0x9tcHp8SV8UH4yq40g5zu6phu.jpg",
+      "link": "https://altadefinizionepremium.com/p/jornal-nacional",
+      "rating": "7.0"
     },
     {
       "title": "Bleach",
       "image": "https://image.tmdb.org/t/p/w500/e0kKmeM8R7Kersh5N2PPzIRNRhr.jpg",
       "link": "https://altadefinizionepremium.com/p/bleach",
       "rating": "8.4"
-    },
-    {
-      "title": "Futurama",
-      "image": "https://image.tmdb.org/t/p/w500/eM8bbTn8C8vUwwS6upzzm7gX31u.jpg",
-      "link": "https://altadefinizionepremium.com/p/futurama",
-      "rating": "8.4"
-    },
-    {
-      "title": "Lucky",
-      "image": "https://image.tmdb.org/t/p/w500/5TO5TP3Q6sVDw2NQ5eZ9OZ56MjB.jpg",
-      "link": "https://altadefinizionepremium.com/p/lucky",
-      "rating": "7.3"
-    },
-    {
-      "title": "PAW Patrol - La squadra dei cuccioli",
-      "image": "https://image.tmdb.org/t/p/w500/f1JFyKTzru9v7bNnMPGYe3SzEeu.jpg",
-      "link": "https://altadefinizionepremium.com/p/paw-patrol-la-squadra-dei-cuccioli",
-      "rating": "7.0"
-    },
-    {
-      "title": "Re:ZERO -Starting Life in Another World-",
-      "image": "https://image.tmdb.org/t/p/w500/ccG0ZfXOQ0834bIus4SwZrXtkyM.jpg",
-      "link": "https://altadefinizionepremium.com/p/re-zero-starting-life-in-another-world",
-      "rating": "8.1"
     }
   ]
 }
