@@ -1071,27 +1071,21 @@
   ],
   "trending_films": [
     {
-      "title": "Odissea",
-      "image": "https://image.tmdb.org/t/p/w500/qQhInj9fw3S2bMbiEujVldthgKe.jpg",
-      "link": "https://altadefinizionepremium.com/p/odissea",
-      "rating": "8.0"
-    },
-    {
       "title": "Spider-Man: Brand New Day",
       "image": "https://image.tmdb.org/t/p/w500/vKHjwe9tSPWSkiv3m8Iq1nVedOT.jpg",
       "link": "https://altadefinizionepremium.com/p/spider-man-brand-new-day",
       "rating": "7.9"
     },
     {
+      "title": "Odissea",
+      "image": "https://image.tmdb.org/t/p/w500/qQhInj9fw3S2bMbiEujVldthgKe.jpg",
+      "link": "https://altadefinizionepremium.com/p/odissea",
+      "rating": "8.0"
+    },
+    {
       "title": "The Last Sunrise. L'estate delle prime volte",
       "image": "https://image.tmdb.org/t/p/w500/w4e0I3cLcEoYmWSDL2uCNSIJ5Dj.jpg",
       "link": "https://altadefinizionepremium.com/p/the-last-sunrise-l-estate-delle-prime-volte",
-      "rating": "7.4"
-    },
-    {
-      "title": "The Dog Stars - Le stelle dopo la fine",
-      "image": "https://image.tmdb.org/t/p/w500/2QUzsotrBTMF78xwmePCTX7EqpX.jpg",
-      "link": "https://altadefinizionepremium.com/p/the-dog-stars-le-stelle-dopo-la-fine",
       "rating": "7.2"
     },
     {
@@ -1107,16 +1101,16 @@
       "rating": "8.3"
     },
     {
-      "title": "Insidious - Fuori dall’Altrove",
-      "image": "https://image.tmdb.org/t/p/w500/eszahdPOeElmK3DSNXW44Qb0aNh.jpg",
-      "link": "https://altadefinizionepremium.com/p/insidious-fuori-dall-altrove",
-      "rating": "6.5"
+      "title": "Motor City",
+      "image": "https://image.tmdb.org/t/p/w500/dx2dblJL3GAKcXXXPjC2FSaMTWW.jpg",
+      "link": "https://altadefinizionepremium.com/p/motor-city",
+      "rating": "6.8"
     },
     {
-      "title": "Grand Theft Auto VI: Una lunga anteprima",
-      "image": "https://image.tmdb.org/t/p/w500/5QRfMgept54uq06JtP1nBiR7s5s.jpg",
-      "link": "https://altadefinizionepremium.com/p/grand-theft-auto-vi-una-lunga-anteprima",
-      "rating": "9.0"
+      "title": "The Dog Stars - Le stelle dopo la fine",
+      "image": "https://image.tmdb.org/t/p/w500/2QUzsotrBTMF78xwmePCTX7EqpX.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-dog-stars-le-stelle-dopo-la-fine",
+      "rating": "7.1"
     },
     {
       "title": "Backrooms",
@@ -1125,46 +1119,52 @@
       "rating": "7.1"
     },
     {
-      "title": "Coyote vs. Acme",
-      "image": "https://image.tmdb.org/t/p/w500/x2AtkVKU8IDgeScz354aqoYjUQG.jpg",
-      "link": "https://altadefinizionepremium.com/p/coyote-vs-acme",
-      "rating": "7.5"
-    },
-    {
       "title": "La captura",
       "image": "https://image.tmdb.org/t/p/w500/iwCeOpuBtuTP1kLosqgniey5OvX.jpg",
       "link": "https://altadefinizionepremium.com/p/la-captura",
-      "rating": "8.8"
-    },
-    {
-      "title": "Motor City",
-      "image": "https://image.tmdb.org/t/p/w500/dx2dblJL3GAKcXXXPjC2FSaMTWW.jpg",
-      "link": "https://altadefinizionepremium.com/p/motor-city",
-      "rating": "6.7"
-    },
-    {
-      "title": "Batman: Knightfall Part 1: Knightfall",
-      "image": "https://image.tmdb.org/t/p/w500/360qdtu2hLnqMu8SVHMywn420w1.jpg",
-      "link": "https://altadefinizionepremium.com/p/batman-knightfall-part-1-knightfall",
-      "rating": "9.0"
-    },
-    {
-      "title": "La casa - Il rogo del Male",
-      "image": "https://image.tmdb.org/t/p/w500/kOk4sSTUJVuC4qDUoGu1JkrJ9UT.jpg",
-      "link": "https://altadefinizionepremium.com/p/la-casa-il-rogo-del-male",
-      "rating": "7.8"
+      "rating": "8.7"
     },
     {
       "title": "Minions & Monsters",
       "image": "https://image.tmdb.org/t/p/w500/glzOv4Vzr6ZHP0ToHqLakF5fkfk.jpg",
       "link": "https://altadefinizionepremium.com/p/minions-monsters",
-      "rating": "7.6"
+      "rating": "7.5"
+    },
+    {
+      "title": "La casa - Il rogo del Male",
+      "image": "https://image.tmdb.org/t/p/w500/kLxEGoygDHbOvxJIclXZbieoX45.jpg",
+      "link": "https://altadefinizionepremium.com/p/la-casa-il-rogo-del-male",
+      "rating": "7.8"
+    },
+    {
+      "title": "Coyote vs. Acme",
+      "image": "https://image.tmdb.org/t/p/w500/x2AtkVKU8IDgeScz354aqoYjUQG.jpg",
+      "link": "https://altadefinizionepremium.com/p/coyote-vs-acme",
+      "rating": "8.0"
+    },
+    {
+      "title": "Insidious - Fuori dall’Altrove",
+      "image": "https://image.tmdb.org/t/p/w500/eszahdPOeElmK3DSNXW44Qb0aNh.jpg",
+      "link": "https://altadefinizionepremium.com/p/insidious-fuori-dall-altrove",
+      "rating": "6.5"
     },
     {
       "title": "The Invite - Il piacere è tutto nostro",
       "image": "https://image.tmdb.org/t/p/w500/p9kaEC6mE6oNFhZjkbA1ALuvv2q.jpg",
       "link": "https://altadefinizionepremium.com/p/the-invite-il-piacere-tutto-nostro",
       "rating": "7.3"
+    },
+    {
+      "title": "Grand Theft Auto VI: Una lunga anteprima",
+      "image": "https://image.tmdb.org/t/p/w500/5QRfMgept54uq06JtP1nBiR7s5s.jpg",
+      "link": "https://altadefinizionepremium.com/p/grand-theft-auto-vi-una-lunga-anteprima",
+      "rating": "8.9"
+    },
+    {
+      "title": "La donna senza passato",
+      "image": "https://image.tmdb.org/t/p/w500/ygjM2KHwJbUPKmx0uEZ8OdTBc1L.jpg",
+      "link": "https://altadefinizionepremium.com/p/la-donna-senza-passato",
+      "rating": "6.7"
     }
   ],
   "trending_series": [
@@ -1175,10 +1175,22 @@
       "rating": "8.2"
     },
     {
+      "title": "Lanterns",
+      "image": "https://image.tmdb.org/t/p/w500/sY2gOwvAy1rkYXJWfwNyy605tw0.jpg",
+      "link": "https://altadefinizionepremium.com/p/lanterns",
+      "rating": "8.2"
+    },
+    {
       "title": "Dark Matter",
       "image": "https://image.tmdb.org/t/p/w500/5DyYSRwdop0LWqbKFUBtrfFday.jpg",
       "link": "https://altadefinizionepremium.com/p/dark-matter",
       "rating": "7.8"
+    },
+    {
+      "title": "Bleach",
+      "image": "https://image.tmdb.org/t/p/w500/e0kKmeM8R7Kersh5N2PPzIRNRhr.jpg",
+      "link": "https://altadefinizionepremium.com/p/bleach",
+      "rating": "8.4"
     },
     {
       "title": "Reacher",
@@ -1187,21 +1199,15 @@
       "rating": "8.1"
     },
     {
-      "title": "Lanterns",
-      "image": "https://image.tmdb.org/t/p/w500/sY2gOwvAy1rkYXJWfwNyy605tw0.jpg",
-      "link": "https://altadefinizionepremium.com/p/lanterns",
-      "rating": "8.2"
-    },
-    {
       "title": "Mousetrap - Identità rubata",
       "image": "https://image.tmdb.org/t/p/w500/z1xv9CKt7HmXgS6azNB563mU2FB.jpg",
       "link": "https://altadefinizionepremium.com/p/mousetrap-identit-rubata",
       "rating": "9.0"
     },
     {
-      "title": "Bleach",
-      "image": "https://image.tmdb.org/t/p/w500/e0kKmeM8R7Kersh5N2PPzIRNRhr.jpg",
-      "link": "https://altadefinizionepremium.com/p/bleach",
+      "title": "House of the Dragon",
+      "image": "https://image.tmdb.org/t/p/w500/paD01zRRCY3lXo038pvs2Avu0Q7.jpg",
+      "link": "https://altadefinizionepremium.com/p/house-of-the-dragon",
       "rating": "8.4"
     },
     {
@@ -1211,10 +1217,16 @@
       "rating": "8.4"
     },
     {
-      "title": "I Simpson",
-      "image": "https://image.tmdb.org/t/p/w500/fxLooktejTUqCvZl9ARhKMFNpbf.jpg",
-      "link": "https://altadefinizionepremium.com/p/i-simpson",
-      "rating": "8.0"
+      "title": "Operazione speciale: Lioness",
+      "image": "https://image.tmdb.org/t/p/w500/ffsmgdEdbY0JLThEXK2L5T3MsDc.jpg",
+      "link": "https://altadefinizionepremium.com/p/operazione-speciale-lioness",
+      "rating": "8.1"
+    },
+    {
+      "title": "One Piece",
+      "image": "https://image.tmdb.org/t/p/w500/8f33Q5AuM2G5ZqFeusbIqDjr3cI.jpg",
+      "link": "https://altadefinizionepremium.com/p/one-piece",
+      "rating": "8.8"
     },
     {
       "title": "Outer Banks",
@@ -1223,16 +1235,10 @@
       "rating": "8.2"
     },
     {
-      "title": "Operazione speciale: Lioness",
-      "image": "https://image.tmdb.org/t/p/w500/ffsmgdEdbY0JLThEXK2L5T3MsDc.jpg",
-      "link": "https://altadefinizionepremium.com/p/operazione-speciale-lioness",
-      "rating": "8.1"
-    },
-    {
-      "title": "Stuart Fails to Save the Universe",
-      "image": "https://image.tmdb.org/t/p/w500/txj8ujTZwGUjpCdhCsQBnTlh4aS.jpg",
-      "link": "https://altadefinizionepremium.com/p/stuart-fails-to-save-the-universe",
-      "rating": "9.0"
+      "title": "凡人修仙传",
+      "image": "https://image.tmdb.org/t/p/w500/u1VRjvvCIVwb1MUhoxSAUimhoKZ.jpg",
+      "link": "https://altadefinizionepremium.com/p/",
+      "rating": "8.4"
     },
     {
       "title": "Lucky",
@@ -1241,16 +1247,22 @@
       "rating": "7.3"
     },
     {
-      "title": "Star Trek: Strange New Worlds",
-      "image": "https://image.tmdb.org/t/p/w500/oxraC4lVqWw5mNQHKjTc2f6zPlu.jpg",
-      "link": "https://altadefinizionepremium.com/p/star-trek-strange-new-worlds",
-      "rating": "7.9"
+      "title": "Stuart Fails to Save the Universe",
+      "image": "https://image.tmdb.org/t/p/w500/txj8ujTZwGUjpCdhCsQBnTlh4aS.jpg",
+      "link": "https://altadefinizionepremium.com/p/stuart-fails-to-save-the-universe",
+      "rating": "9.0"
     },
     {
-      "title": "One Piece",
-      "image": "https://image.tmdb.org/t/p/w500/8f33Q5AuM2G5ZqFeusbIqDjr3cI.jpg",
-      "link": "https://altadefinizionepremium.com/p/one-piece",
-      "rating": "8.8"
+      "title": "I Simpson",
+      "image": "https://image.tmdb.org/t/p/w500/fxLooktejTUqCvZl9ARhKMFNpbf.jpg",
+      "link": "https://altadefinizionepremium.com/p/i-simpson",
+      "rating": "8.0"
+    },
+    {
+      "title": "The Shards",
+      "image": "https://image.tmdb.org/t/p/w500/wP0GdqwVu2g1y3q1KzBXuSrdTvX.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-shards",
+      "rating": "7.7"
     },
     {
       "title": "Re:ZERO -Starting Life in Another World-",
@@ -1262,25 +1274,13 @@
       "title": "Beauty in Black",
       "image": "https://image.tmdb.org/t/p/w500/xKk4bFCCpZ9tvjUykvvMYLSBnjo.jpg",
       "link": "https://altadefinizionepremium.com/p/beauty-in-black",
-      "rating": "8.2"
+      "rating": "8.3"
     },
     {
-      "title": "早春晴朗",
-      "image": "https://image.tmdb.org/t/p/w500/nLWFbYv1r99Yy7dWvjoxMRegoe0.jpg",
-      "link": "https://altadefinizionepremium.com/p/",
-      "rating": "9.0"
-    },
-    {
-      "title": "House of the Dragon",
-      "image": "https://image.tmdb.org/t/p/w500/paD01zRRCY3lXo038pvs2Avu0Q7.jpg",
-      "link": "https://altadefinizionepremium.com/p/house-of-the-dragon",
-      "rating": "8.4"
-    },
-    {
-      "title": "Furious",
-      "image": "https://image.tmdb.org/t/p/w500/xnxxrEKtBaIcI1ewq50pLkOMU6u.jpg",
-      "link": "https://altadefinizionepremium.com/p/furious",
-      "rating": "7.1"
+      "title": "Cent'anni di solitudine",
+      "image": "https://image.tmdb.org/t/p/w500/xVl3RuZdXnvDS5dS3XHZcbafxX.jpg",
+      "link": "https://altadefinizionepremium.com/p/cent-anni-di-solitudine",
+      "rating": "8.0"
     }
   ],
   "now_playing": [
@@ -1300,19 +1300,13 @@
       "title": "La captura",
       "image": "https://image.tmdb.org/t/p/w500/iwCeOpuBtuTP1kLosqgniey5OvX.jpg",
       "link": "https://altadefinizionepremium.com/p/la-captura",
-      "rating": "8.8"
+      "rating": "8.7"
     },
     {
       "title": "The Last Sunrise. L'estate delle prime volte",
       "image": "https://image.tmdb.org/t/p/w500/w4e0I3cLcEoYmWSDL2uCNSIJ5Dj.jpg",
       "link": "https://altadefinizionepremium.com/p/the-last-sunrise-l-estate-delle-prime-volte",
-      "rating": "7.4"
-    },
-    {
-      "title": "Obsession",
-      "image": "https://image.tmdb.org/t/p/w500/KUzJSsW6pFy1Dbw7rp1PKrzvfL.jpg",
-      "link": "https://altadefinizionepremium.com/p/obsession",
-      "rating": "8.2"
+      "rating": "7.2"
     },
     {
       "title": "Toy Story 5",
@@ -1321,10 +1315,16 @@
       "rating": "8.3"
     },
     {
+      "title": "Obsession",
+      "image": "https://image.tmdb.org/t/p/w500/KUzJSsW6pFy1Dbw7rp1PKrzvfL.jpg",
+      "link": "https://altadefinizionepremium.com/p/obsession",
+      "rating": "8.2"
+    },
+    {
       "title": "Minions & Monsters",
       "image": "https://image.tmdb.org/t/p/w500/glzOv4Vzr6ZHP0ToHqLakF5fkfk.jpg",
       "link": "https://altadefinizionepremium.com/p/minions-monsters",
-      "rating": "7.6"
+      "rating": "7.5"
     },
     {
       "title": "Pinocchio: Unstrung",
@@ -1346,7 +1346,7 @@
     },
     {
       "title": "La casa - Il rogo del Male",
-      "image": "https://image.tmdb.org/t/p/w500/kOk4sSTUJVuC4qDUoGu1JkrJ9UT.jpg",
+      "image": "https://image.tmdb.org/t/p/w500/kLxEGoygDHbOvxJIclXZbieoX45.jpg",
       "link": "https://altadefinizionepremium.com/p/la-casa-il-rogo-del-male",
       "rating": "7.8"
     },
@@ -1360,7 +1360,7 @@
       "title": "Motor City",
       "image": "https://image.tmdb.org/t/p/w500/dx2dblJL3GAKcXXXPjC2FSaMTWW.jpg",
       "link": "https://altadefinizionepremium.com/p/motor-city",
-      "rating": "6.7"
+      "rating": "6.8"
     },
     {
       "title": "Твоё сердце будет разбито",
@@ -1381,15 +1381,15 @@
       "rating": "6.5"
     },
     {
-      "title": "Lucky Strike",
-      "image": "https://image.tmdb.org/t/p/w500/2iw2JNP3TwyXYURW1DZCVhQaGWX.jpg",
-      "link": "https://altadefinizionepremium.com/p/lucky-strike",
-      "rating": "7.2"
-    },
-    {
       "title": "The Dog Stars - Le stelle dopo la fine",
       "image": "https://image.tmdb.org/t/p/w500/2QUzsotrBTMF78xwmePCTX7EqpX.jpg",
       "link": "https://altadefinizionepremium.com/p/the-dog-stars-le-stelle-dopo-la-fine",
+      "rating": "7.1"
+    },
+    {
+      "title": "Lucky Strike",
+      "image": "https://image.tmdb.org/t/p/w500/2iw2JNP3TwyXYURW1DZCVhQaGWX.jpg",
+      "link": "https://altadefinizionepremium.com/p/lucky-strike",
       "rating": "7.2"
     },
     {
@@ -1435,6 +1435,12 @@
       "rating": "8.7"
     },
     {
+      "title": "Coyote vs. Acme",
+      "image": "https://image.tmdb.org/t/p/w500/x2AtkVKU8IDgeScz354aqoYjUQG.jpg",
+      "link": "https://altadefinizionepremium.com/p/coyote-vs-acme",
+      "rating": "7.8"
+    },
+    {
       "title": "Leviticus",
       "image": "https://image.tmdb.org/t/p/w500/gnAsZvBygplNpp8PtjoTEYv3VPB.jpg",
       "link": "https://altadefinizionepremium.com/p/leviticus",
@@ -1465,16 +1471,16 @@
       "rating": "8.2"
     },
     {
-      "title": "Coyote vs. Acme",
-      "image": "https://image.tmdb.org/t/p/w500/x2AtkVKU8IDgeScz354aqoYjUQG.jpg",
-      "link": "https://altadefinizionepremium.com/p/coyote-vs-acme",
-      "rating": "7.5"
-    },
-    {
       "title": "Harry Potter e la pietra filosofale",
       "image": "https://image.tmdb.org/t/p/w500/4PBGbvbZKYBuTv5segH7i96sl9X.jpg",
       "link": "https://altadefinizionepremium.com/p/harry-potter-e-la-pietra-filosofale",
       "rating": "7.9"
+    },
+    {
+      "title": "La donna senza passato",
+      "image": "https://image.tmdb.org/t/p/w500/ygjM2KHwJbUPKmx0uEZ8OdTBc1L.jpg",
+      "link": "https://altadefinizionepremium.com/p/la-donna-senza-passato",
+      "rating": "7.1"
     },
     {
       "title": "விஸ்வநாத் & சன்ஸ்",
@@ -1492,24 +1498,12 @@
       "title": "Un hijo propio - Un figlio tutto mio",
       "image": "https://image.tmdb.org/t/p/w500/3QylEx2tqfX8MXswK4oGdJUOExB.jpg",
       "link": "https://altadefinizionepremium.com/p/un-hijo-propio-un-figlio-tutto-mio",
-      "rating": "8.3"
-    },
-    {
-      "title": "Harry Potter e i Doni della Morte - Parte 1",
-      "image": "https://image.tmdb.org/t/p/w500/m5MdXW22RHKtYK8LGukJCJhoHMZ.jpg",
-      "link": "https://altadefinizionepremium.com/p/harry-potter-e-i-doni-della-morte-parte-1",
-      "rating": "7.7"
+      "rating": "8.5"
     },
     {
       "title": "Harry Potter e i Doni della Morte - Parte 2",
       "image": "https://image.tmdb.org/t/p/w500/mZDiE6gowRmcdm9ON5GPDRvmFRq.jpg",
       "link": "https://altadefinizionepremium.com/p/harry-potter-e-i-doni-della-morte-parte-2",
-      "rating": "8.1"
-    },
-    {
-      "title": "Todo lo que nunca fuimos",
-      "image": "https://image.tmdb.org/t/p/w500/zqxIT48mWFsC4NSjGEHAcp1pjEo.jpg",
-      "link": "https://altadefinizionepremium.com/p/todo-lo-que-nunca-fuimos",
       "rating": "8.1"
     },
     {
@@ -1519,34 +1513,40 @@
       "rating": "8.2"
     },
     {
+      "title": "Todo lo que nunca fuimos",
+      "image": "https://image.tmdb.org/t/p/w500/zqxIT48mWFsC4NSjGEHAcp1pjEo.jpg",
+      "link": "https://altadefinizionepremium.com/p/todo-lo-que-nunca-fuimos",
+      "rating": "8.1"
+    },
+    {
+      "title": "เพื่อนรัก เพื่อนลับ",
+      "image": "https://image.tmdb.org/t/p/w500/5XhXoKGzI2sLjDixWUUzVqDRnzt.jpg",
+      "link": "https://altadefinizionepremium.com/p/",
+      "rating": "7.0"
+    },
+    {
+      "title": "Harry Potter e i Doni della Morte - Parte 1",
+      "image": "https://image.tmdb.org/t/p/w500/m5MdXW22RHKtYK8LGukJCJhoHMZ.jpg",
+      "link": "https://altadefinizionepremium.com/p/harry-potter-e-i-doni-della-morte-parte-1",
+      "rating": "7.7"
+    },
+    {
       "title": "Harry Potter e la camera dei segreti",
       "image": "https://image.tmdb.org/t/p/w500/fuW3lmo0SNI59riA7rKaLv3HT8F.jpg",
       "link": "https://altadefinizionepremium.com/p/harry-potter-e-la-camera-dei-segreti",
       "rating": "7.7"
     },
     {
-      "title": "Don't Say Good Luck",
-      "image": "https://image.tmdb.org/t/p/w500/dgTKahWonzVLeN8Lm22WR2S7D0A.jpg",
-      "link": "https://altadefinizionepremium.com/p/don-t-say-good-luck",
-      "rating": "7.2"
+      "title": "The Drama - Un segreto è per sempre",
+      "image": "https://image.tmdb.org/t/p/w500/3zdr031LjTG71QyeC7mWdyU19bE.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-drama-un-segreto-per-sempre",
+      "rating": "6.9"
     },
     {
-      "title": "Harry Potter e il calice di fuoco",
-      "image": "https://image.tmdb.org/t/p/w500/ghM7AvW4MWY9casNIjltqzCMjJQ.jpg",
-      "link": "https://altadefinizionepremium.com/p/harry-potter-e-il-calice-di-fuoco",
-      "rating": "7.8"
-    },
-    {
-      "title": "LEGO Disney Princess: Un Magico Scompiglio",
-      "image": "https://image.tmdb.org/t/p/w500/nwqGLMXGertU7gd5Dpbvk8TWMcK.jpg",
-      "link": "https://altadefinizionepremium.com/p/lego-disney-princess-un-magico-scompiglio",
-      "rating": "8.0"
-    },
-    {
-      "title": "Harry Potter e il prigioniero di Azkaban",
-      "image": "https://image.tmdb.org/t/p/w500/awKY7JPZpNvWWLCPViqmC5j8brj.jpg",
-      "link": "https://altadefinizionepremium.com/p/harry-potter-e-il-prigioniero-di-azkaban",
-      "rating": "8.0"
+      "title": "Yellow Mirror",
+      "image": "https://image.tmdb.org/t/p/w500/oHd2iGBWd7MTOlRL93aoryetAOe.jpg",
+      "link": "https://altadefinizionepremium.com/p/yellow-mirror",
+      "rating": "7.7"
     }
   ],
   "on_air": [
