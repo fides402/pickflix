@@ -280,8 +280,10 @@ button {
   left: 0;
   right: 0;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  gap: 0.6rem;
   padding: 1rem 1.5rem;
   transition: opacity 260ms ease, transform 260ms ease;
   z-index: 5;
@@ -301,7 +303,20 @@ button {
 
 .top-bar-actions {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .top-bar {
+    padding: 0.7rem 0.9rem;
+  }
+  .reader-canvas {
+    padding: 4vh 5vw;
+  }
+  .controls-bar {
+    padding: 0.8rem 0.9rem 1rem;
+  }
 }
 
 .pill-toggle {

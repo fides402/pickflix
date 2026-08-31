@@ -54,7 +54,9 @@ export class ChatGptLiveSession {
     const parsed = extractJson(response.responseText);
     const units = extractUnitsArray(parsed);
     if (!units) {
-      throw new Error("La risposta di ChatGPT non contiene un campo 'units' valido.");
+      throw new Error(
+        `La risposta di ChatGPT non contiene un campo 'units' valido. Anteprima della risposta ricevuta:\n"${preview(response.responseText)}"`,
+      );
     }
 
     const namespacedUnits = units.map((unit) => {
@@ -154,4 +156,9 @@ function extractUnitsArray(parsed: unknown): unknown[] | null {
     return (parsed as { units: unknown[] }).units;
   }
   return null;
+}
+
+function preview(text: string, maxLength = 300): string {
+  const trimmed = text.trim();
+  return trimmed.length > maxLength ? `${trimmed.slice(0, maxLength)}…` : trimmed;
 }

@@ -37,10 +37,15 @@ export function ReaderCanvas({ onHome }: Props) {
 
   const [controlsVisible, setControlsVisible] = useState(true);
   const idleTimer = useRef<number | undefined>(undefined);
+  // Touch devices have no hover/mousemove to bring controls back — auto-hiding
+  // them there just makes them disappear with no obvious way to get them back.
+  const isCoarsePointer =
+    typeof window !== "undefined" && !!window.matchMedia?.("(pointer: coarse)").matches;
 
   const revealControls = () => {
     setControlsVisible(true);
     window.clearTimeout(idleTimer.current);
+    if (isCoarsePointer) return;
     idleTimer.current = window.setTimeout(() => {
       if (isPlaying) setControlsVisible(false);
     }, IDLE_HIDE_MS);
@@ -94,7 +99,12 @@ export function ReaderCanvas({ onHome }: Props) {
   const nextUnits = document.units.slice(currentIndex + 1);
 
   return (
-    <div className="app-shell" onMouseMove={revealControls} onClick={revealControls}>
+    <div
+      className="app-shell"
+      onMouseMove={revealControls}
+      onClick={revealControls}
+      onTouchStart={revealControls}
+    >
       <TopBar visible={controlsVisible} regime={regime} onHome={onHome} />
 
       <div className="reader-canvas">

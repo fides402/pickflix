@@ -1,9 +1,8 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { validateReadingDocumentJson } from "../../providers/validateReadingDocumentJson";
 import { useReaderStore } from "../../store/readerStore";
 
 export function JsonImporter() {
-  const inputRef = useRef<HTMLInputElement>(null);
   const loadDocument = useReaderStore((s) => s.loadDocument);
   const [errors, setErrors] = useState<string[] | null>(null);
 
@@ -27,13 +26,13 @@ export function JsonImporter() {
 
   return (
     <>
-      <label className="action-card" onClick={() => inputRef.current?.click()}>
+      <label className="action-card">
         <h3>Importa JSON con punteggi</h3>
         <p>
           Carica il JSON generato da ChatGPT (o compilato a mano) con testo e punteggi semantici già insieme:
           è la via per la lettura davvero adattiva.
         </p>
-        <input ref={inputRef} type="file" accept="application/json,.json" onChange={handleChange} />
+        <input type="file" accept="application/json,.json" onChange={handleChange} />
       </label>
       {errors && (
         <div className="import-error">

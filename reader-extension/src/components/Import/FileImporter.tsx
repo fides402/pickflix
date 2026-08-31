@@ -1,11 +1,10 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { importFile, FileImportError, type FileImportResult } from "../../providers/fileImport";
 import { buildChatGptPrompt } from "../../providers/chatGptPromptTemplate";
 import { startLiveSession } from "../../providers/liveSessionManager";
 import { useReaderStore } from "../../store/readerStore";
 
 export function FileImporter() {
-  const inputRef = useRef<HTMLInputElement>(null);
   const loadDocument = useReaderStore((s) => s.loadDocument);
   const setLiveSessionStatus = useReaderStore((s) => s.setLiveSessionStatus);
   const [loading, setLoading] = useState(false);
@@ -72,13 +71,13 @@ export function FileImporter() {
 
   return (
     <>
-      <label className="action-card" onClick={() => inputRef.current?.click()}>
+      <label className="action-card">
         <h3>Carica PDF o TXT</h3>
         <p>
           Estrae il testo direttamente nell'estensione. Da qui puoi generare i punteggi in automatico con ChatGPT,
           copiare un prompt manuale, oppure leggere subito in modalità statica.
         </p>
-        <input ref={inputRef} type="file" accept=".pdf,.txt,application/pdf,text/plain" onChange={handleChange} />
+        <input type="file" accept=".pdf,.txt,application/pdf,text/plain" onChange={handleChange} />
       </label>
 
       {loading && <div className="import-error" style={{ background: "transparent", color: "var(--text-secondary)", border: "none" }}>Estrazione del testo in corso…</div>}
