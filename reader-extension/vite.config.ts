@@ -13,10 +13,13 @@ export default defineConfig({
       input: {
         reader: `${dirname}reader.html`,
         background: `${dirname}src/background.ts`,
+        chatgptBridge: `${dirname}src/contentScripts/chatgptBridge.ts`,
       },
       output: {
         entryFileNames: (chunk) =>
-          chunk.name === "background" ? "background.js" : "assets/[name]-[hash].js",
+          chunk.name === "background" || chunk.name === "chatgptBridge"
+            ? "[name].js"
+            : "assets/[name]-[hash].js",
         chunkFileNames: "assets/[name]-[hash].js",
         assetFileNames: "assets/[name]-[hash][extname]",
       },

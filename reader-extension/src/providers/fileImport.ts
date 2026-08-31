@@ -3,20 +3,29 @@ import { segmentPlainText } from "./textSegmentation";
 
 export class FileImportError extends Error {}
 
-export async function importTextFile(file: File): Promise<ReadingDocument> {
+export type FileImportResult = {
+  document: ReadingDocument;
+  /** the pristine extracted text (paragraph breaks intact), for the ChatGPT prompt/live pipeline */
+  rawText: string;
+};
+
+export async function importTextFile(file: File): Promise<FileImportResult> {
   const text = await file.text();
   if (!text.trim()) {
     throw new FileImportError("Il file di testo è vuoto.");
   }
   return {
-    title: stripExtension(file.name),
-    units: segmentPlainText(text, "txt"),
-    hasSemanticScores: false,
-    source: "text-import",
+    rawText: text,
+    document: {
+      title: stripExtension(file.name),
+      units: segmentPlainText(text, "txt"),
+      hasSemanticScores: false,
+      source: "text-import",
+    },
   };
 }
 
-export async function importPdfFile(file: File): Promise<ReadingDocument> {
+export async function importPdfFile(file: File): Promise<FileImportResult> {
   const pdfjsLib = await import("pdfjs-dist");
   const workerUrl = (await import("pdfjs-dist/build/pdf.worker.min.mjs?url")).default;
   pdfjsLib.GlobalWorkerOptions.workerSrc = workerUrl;
@@ -45,14 +54,17 @@ export async function importPdfFile(file: File): Promise<ReadingDocument> {
   }
 
   return {
-    title: stripExtension(file.name),
-    units: segmentPlainText(fullText, "pdf"),
-    hasSemanticScores: false,
-    source: "pdf-import",
+    rawText: fullText,
+    document: {
+      title: stripExtension(file.name),
+      units: segmentPlainText(fullText, "pdf"),
+      hasSemanticScores: false,
+      source: "pdf-import",
+    },
   };
 }
 
-export async function importFile(file: File): Promise<ReadingDocument> {
+export async function importFile(file: File): Promise<FileImportResult> {
   const name = file.name.toLowerCase();
   if (name.endsWith(".pdf") || file.type === "application/pdf") {
     return importPdfFile(file);

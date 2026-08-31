@@ -17,6 +17,7 @@ export function TopBar({ visible, regime, onHome }: Props) {
   const toggleDebugPanel = useReaderStore((s) => s.toggleDebugPanel);
   const theme = useReaderStore((s) => s.settings.theme);
   const updateSettings = useReaderStore((s) => s.updateSettings);
+  const liveSession = useReaderStore((s) => s.liveSession);
   const [settingsOpen, setSettingsOpen] = useState(false);
 
   if (!document) return null;
@@ -34,6 +35,22 @@ export function TopBar({ visible, regime, onHome }: Props) {
       </div>
 
       <div className="top-bar-actions">
+        {liveSession.active && (
+          <span
+            className="pill-toggle"
+            title={liveSession.error ?? "Pipeline ChatGPT live"}
+            style={liveSession.error ? { borderColor: "#c0392b", color: "#c0392b" } : undefined}
+          >
+            {liveSession.error
+              ? "ChatGPT: errore ⚠"
+              : liveSession.generating
+                ? "Genero round successivo…"
+                : liveSession.hasMore
+                  ? `Round ${liveSession.roundsDone}/${liveSession.roundsTotal}+`
+                  : "Tutti i round generati"}
+          </span>
+        )}
+
         <button
           className="pill-toggle"
           data-active={theme === "dark"}

@@ -3,6 +3,7 @@ import { useReaderStore } from "../../store/readerStore";
 import { useReadingEngine } from "../../hooks/useReadingEngine";
 import { useReaderPlayback } from "../../hooks/useReaderPlayback";
 import { useAttentionState } from "../../hooks/useAttentionState";
+import { useLiveRoundPrefetch } from "../../hooks/useLiveRoundPrefetch";
 import { SemanticUnitView } from "./SemanticUnitView";
 import { ContextStack } from "./ContextStack";
 import { ReaderControls } from "./ReaderControls";
@@ -27,6 +28,7 @@ export function ReaderCanvas({ onHome }: Props) {
 
   useReaderPlayback();
   useAttentionState();
+  useLiveRoundPrefetch();
   const { unit, regime, visual } = useReadingEngine();
 
   const prefersReducedMotion =
