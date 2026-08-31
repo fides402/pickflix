@@ -29,12 +29,24 @@ const SEND_BUTTON_SELECTORS = [
   'button[aria-label*="Invia" i]',
 ];
 
-const STOP_BUTTON_SELECTORS = ['[data-testid="stop-button"]', 'button[aria-label*="Stop" i]'];
+const STOP_BUTTON_SELECTORS = [
+  '[data-testid="stop-button"]',
+  'button[aria-label*="Stop" i]',
+  'button[aria-label*="Interrompi" i]',
+  'button[aria-label*="Ferma" i]',
+];
 
 const ASSISTANT_MESSAGE_SELECTOR = '[data-message-author-role="assistant"]';
 
 const RESPONSE_TIMEOUT_MS = 150000;
-const STABILITY_WINDOW_MS = 1400;
+// Fast path: the stop/streaming button was seen and has now disappeared — a
+// reliable positive "done" signal, so a short stability window is enough.
+const STABLE_WINDOW_WITH_SIGNAL_MS = 1500;
+// Slow, conservative path: we never managed to detect the stop button at all
+// (selector mismatch, different locale, redesign, ...). Text merely looking
+// unchanged between two 400ms polls is NOT enough evidence it's finished —
+// require a much longer, uninterrupted stable window before trusting it.
+const STABLE_WINDOW_NO_SIGNAL_MS = 4500;
 const POLL_INTERVAL_MS = 400;
 
 function queryFirst(selectors: string[]): Element | null {
@@ -96,13 +108,13 @@ async function waitForReply(): Promise<string> {
   const startedAt = Date.now();
   let lastText = "";
   let stableSince = 0;
-  let sawStreamingStart = false;
+  let everSawStopButton = false;
 
   while (Date.now() - startedAt < RESPONSE_TIMEOUT_MS) {
     await sleep(POLL_INTERVAL_MS);
 
-    const stopButton = queryFirst(STOP_BUTTON_SELECTORS);
-    if (stopButton) sawStreamingStart = true;
+    const stopButtonPresent = !!queryFirst(STOP_BUTTON_SELECTORS);
+    if (stopButtonPresent) everSawStopButton = true;
 
     const messages = document.querySelectorAll(ASSISTANT_MESSAGE_SELECTOR);
     const last = messages[messages.length - 1];
@@ -110,15 +122,22 @@ async function waitForReply(): Promise<string> {
 
     if (currentText && currentText === lastText) {
       if (stableSince === 0) stableSince = Date.now();
-      const stableLongEnough = Date.now() - stableSince >= STABILITY_WINDOW_MS;
-      const streamingFinished = sawStreamingStart ? !stopButton : Date.now() - startedAt > 3000;
-      if (stableLongEnough && streamingFinished) {
-        return currentText;
-      }
     } else {
       stableSince = 0;
     }
     lastText = currentText;
+    if (!currentText || stableSince === 0) continue;
+
+    const stableMs = Date.now() - stableSince;
+
+    if (everSawStopButton) {
+      // We have a reliable signal: only trust stability once the stop
+      // button has actually gone away (never while it's still showing,
+      // no matter how "stable" the text looks mid-stream).
+      if (!stopButtonPresent && stableMs >= STABLE_WINDOW_WITH_SIGNAL_MS) return currentText;
+    } else if (stableMs >= STABLE_WINDOW_NO_SIGNAL_MS) {
+      return currentText;
+    }
   }
 
   throw new Error("Timeout: ChatGPT non ha risposto in tempo (l'interfaccia potrebbe essere cambiata o la risposta è troppo lunga).");

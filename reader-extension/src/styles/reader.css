@@ -215,8 +215,14 @@ button {
 
 .controls-row {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 0.9rem;
+  gap: 0.6rem 0.9rem;
+}
+
+.controls-row input[type="range"] {
+  flex: 1 1 8rem;
+  min-width: 6rem;
 }
 
 .icon-button {
@@ -299,6 +305,10 @@ button {
   font-family: "Literata", serif;
   font-size: 0.95rem;
   color: var(--text-secondary);
+  max-width: 60vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .top-bar-actions {
