@@ -4,7 +4,10 @@ import type { SemanticUnit } from "../models/SemanticUnit";
 // Must match background.ts's ROUND_REQUEST_TYPE exactly.
 const ROUND_REQUEST_TYPE = "ADAPTIVE_READER_ROUND_REQUEST";
 
-const CHARS_PER_ROUND = 3200;
+// Smaller rounds mean a shorter JSON reply per request, which is both
+// faster and less likely to hit any long-message rendering quirk on
+// chatgpt.com's side while the content script waits for it to finish.
+const CHARS_PER_ROUND = 1800;
 
 type BackgroundResponse = { ok: true; responseText: string } | { ok: false; error: string };
 

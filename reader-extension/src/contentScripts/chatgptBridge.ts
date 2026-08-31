@@ -61,6 +61,31 @@ function sleep(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+/**
+ * Content-aware completion check: a truncated/mid-stream capture almost
+ * never happens to be valid, complete JSON with a "units" array, so this is
+ * a much stronger correctness signal than any timing heuristic. Whatever the
+ * real cause of a premature snapshot is (rendering not caught up yet, a
+ * virtualized/collapsed long code block, ...), this refuses to accept it
+ * until it actually parses.
+ */
+function looksLikeCompleteJson(raw: string): boolean {
+  const stripped = raw
+    .trim()
+    .replace(/^```(json)?/i, "")
+    .replace(/```$/, "")
+    .trim();
+  const start = stripped.indexOf("{");
+  const end = stripped.lastIndexOf("}");
+  if (start < 0 || end <= start) return false;
+  try {
+    const parsed = JSON.parse(stripped.slice(start, end + 1));
+    return !!parsed && typeof parsed === "object" && Array.isArray((parsed as { units?: unknown }).units);
+  } catch {
+    return false;
+  }
+}
+
 function setComposerText(el: Element, text: string): void {
   const target = el as HTMLElement;
   target.focus();
@@ -127,6 +152,10 @@ async function waitForReply(): Promise<string> {
     }
     lastText = currentText;
     if (!currentText || stableSince === 0) continue;
+    // Never accept a fragment that isn't even valid, complete JSON yet —
+    // this is what actually caught the real bug (a mid-stream snapshot that
+    // "looked stable" for a moment but was nowhere near finished).
+    if (!looksLikeCompleteJson(currentText)) continue;
 
     const stableMs = Date.now() - stableSince;
 
@@ -140,7 +169,9 @@ async function waitForReply(): Promise<string> {
     }
   }
 
-  throw new Error("Timeout: ChatGPT non ha risposto in tempo (l'interfaccia potrebbe essere cambiata o la risposta è troppo lunga).");
+  throw new Error(
+    "Timeout: la risposta di ChatGPT non è mai apparsa completa in tempo (l'interfaccia potrebbe essere cambiata, la risposta potrebbe essere troppo lunga per il rendering della pagina, o il testo per round è troppo grande).",
+  );
 }
 
 async function handleSend(text: string): Promise<{ ok: true; responseText: string } | { ok: false; error: string }> {
