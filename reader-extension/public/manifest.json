@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Adaptive Immersive Reader",
+  "version": "0.1.0",
+  "description": "Trasforma un libro in un'esperienza di lettura immersiva e adattiva: la tipografia reagisce al significato del testo.",
+  "action": {
+    "default_title": "Apri l'Adaptive Reader"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "permissions": ["storage"],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  }
+}
