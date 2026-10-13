@@ -43,7 +43,7 @@ class Aggregator(private val center: ArtistHit) {
         s.producers.forEach { it.put(Role.PRODUCER) }
         s.writers.forEach { it.put(Role.WRITER) }
         s.featured.forEach { it.put(Role.FEATURING) }
-        s.custom.forEach { p -> p.artists.forEach { it.put(geniusRole(p.label)) } }
+        s.custom.filter { isPersonRole(it.label) }.forEach { p -> p.artists.forEach { it.put(geniusRole(p.label)) } }
     }
 
     fun snapshot(limit: Int = 150): List<Collaborator> = people.values
@@ -57,6 +57,13 @@ class Aggregator(private val center: ArtistHit) {
         "recording", "engineer", "mastering", "sound", "audio", "balance" -> Role.ENGINEER
         "writer", "composer", "lyricist" -> Role.WRITER
         else -> Role.PERFORMER
+    }
+
+    /** Genius also lists labels, publishers and video crew: they are not music collaborators. */
+    private fun isPersonRole(label: String): Boolean {
+        val l = label.lowercase()
+        return listOf("distribut", "label", "publish", "copyright", "©", "℗", "video", "artwork", "cover", "photograph", "design", "manufactur", "licens", "marketing", "a&r")
+            .none { it in l }
     }
 
     private fun geniusRole(label: String): Role {

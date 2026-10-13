@@ -126,8 +126,12 @@ class Genius(private val token: String) {
     }
 
     suspend fun findArtistId(name: String): Long? {
-        val r = call<GnSearch>("/search", "q" to name)
-        return r.hits.mapNotNull { it.result.primary }.firstOrNull { it.name.equals(name, true) }?.id
+        for (page in 1..3) {
+            val r = call<GnSearch>("/search", "q" to name, "page" to page.toString(), "per_page" to "20")
+            r.hits.mapNotNull { it.result.primary }.firstOrNull { it.name.equals(name, true) }?.let { return it.id }
+            if (r.hits.isEmpty()) break
+        }
+        return null
     }
 
     suspend fun songIds(artistId: Long, maxSongs: Int): List<GnSongLite> {
