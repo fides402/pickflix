@@ -64,6 +64,7 @@ fun NetworkScreen(
     onExplore: (Collaborator) -> Unit,
     onBack: () -> Unit,
     onGeniusSetup: () -> Unit = {},
+    onRetry: () -> Unit = {},
     animateIn: Boolean = LocalMotion.current,
 ) {
     var pan by remember { mutableStateOf(Offset.Zero) }
@@ -71,11 +72,13 @@ fun NetworkScreen(
     val all = state?.collabs.orEmpty()
     val visible = remember(all, filter) { all.filter { filter == null || filter in it.roles }.take(60) }
     val selected = visible.firstOrNull { it.id == selectedId }
+    val ready = state != null && !state.loading
+    val failed = state != null && !state.loading && state.error != null && all.isEmpty()
 
     Box(Modifier.fillMaxSize()) {
         TangentRings(Modifier.fillMaxSize(), shift = Offset(pan.x * .06f, pan.y * .06f))
 
-        if (state != null) GraphLayer(state.center, visible, avatars, selected?.id, scale, pan,
+        if (state != null && ready && !failed) GraphLayer(state.center, visible, avatars, selected?.id, scale, pan,
             onTransform = { p, z -> pan += p; scale = (scale * z).coerceIn(.45f, 3f) },
             onSelect = onSelect, animateIn = animateIn)
 
@@ -95,11 +98,13 @@ fun NetworkScreen(
                 text = when {
                     state == null -> ""
                     state.error != null && all.isEmpty() -> state.error
-                    all.isEmpty() && state.loading -> "Analisi delle registrazioni…"
-                    else -> "Una rete di ${visible.size} persone" + if (state.loading) " · analisi in corso" else ""
+                    state.loading -> ""
+                    else -> "Una rete di ${visible.size} persone"
                 },
                 modifier = Modifier.padding(horizontal = 20.dp),
             )
+            AnimatedVisibility(visible = ready && !failed, enter = fadeIn(tween(450, 150)) + slideInVertically(tween(450, 150, Poster)) { -it / 3 }) {
+              Column {
             if (state != null && !state.geniusOn) {
                 Box(
                     Modifier.padding(start = 20.dp, top = 10.dp).background(P.Ink).tap(onClick = onGeniusSetup)
@@ -112,17 +117,35 @@ fun NetworkScreen(
                     Chip("${r.label} ${all.count { r in it.roles }}", filter == r) { onFilter(r) }
                 }
             }
+              }
+            }
         }
 
-        Column(
-            Modifier.align(Alignment.CenterEnd).padding(end = 16.dp),
-            verticalArrangement = Arrangement.spacedBy(6.dp),
+        if (ready && !failed) {
+            Column(
+                Modifier.align(Alignment.CenterEnd).padding(end = 16.dp).enter(3),
+                verticalArrangement = Arrangement.spacedBy(6.dp),
+            ) {
+                ZoomBtn("+") { scale = (scale * 1.25f).coerceIn(.45f, 3f) }
+                ZoomBtn("−") { scale = (scale / 1.25f).coerceIn(.45f, 3f) }
+            }
+            Footer(state, visible.size, Modifier.align(Alignment.BottomStart).padding(bottom = NavHeight + 4.dp).enter(2))
+        }
+
+        AnimatedVisibility(
+            visible = state != null && !ready,
+            modifier = Modifier.align(Alignment.BottomStart).padding(bottom = NavHeight + 28.dp),
+            exit = fadeOut(tween(420)) + slideOutVertically(tween(420)) { it / 6 },
+        ) { if (state != null) NetworkLoader(state, Modifier.fillMaxWidth()) }
+
+        if (failed && state != null) Column(
+            Modifier.align(Alignment.BottomStart).padding(start = 20.dp, bottom = NavHeight + 40.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp),
         ) {
-            ZoomBtn("+") { scale = (scale * 1.25f).coerceIn(.45f, 3f) }
-            ZoomBtn("−") { scale = (scale / 1.25f).coerceIn(.45f, 3f) }
+            BasicText("non\nriesco.", style = T.display.copy(fontSize = 64.sp, lineHeight = 58.sp, color = P.Paper))
+            Micro(state.error ?: "Errore di rete")
+            Box(Modifier.background(P.Ink).tap(onClick = onRetry).padding(horizontal = 12.dp, vertical = 10.dp)) { Micro("Riprova", color = P.Paper, weight = 700) }
         }
-
-        Footer(state, visible.size, Modifier.align(Alignment.BottomStart).padding(bottom = NavHeight + 4.dp))
 
         AnimatedVisibility(
             visible = selected != null,

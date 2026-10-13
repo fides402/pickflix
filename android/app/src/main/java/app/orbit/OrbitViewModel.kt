@@ -88,13 +88,24 @@ class OrbitViewModel(app: Application) : AndroidViewModel(app) {
         return false
     }
 
+    fun retry() {
+        val hit = trail.lastOrNull() ?: return
+        cache.remove(hit.id)
+        loadNetwork(hit)
+    }
+
+    /**
+     * The network is built off-screen: the UI only shows a progress screen until MusicBrainz, Genius
+     * and the artist photos are all ready, then reveals the finished graph at once.
+     */
     private fun loadNetwork(hit: ArtistHit) {
         netJob?.cancel()
         selectedId = null
         roleFilter = null
         cache[hit.id]?.let { network = it; fetchAvatars(it); return }
         val gOn = geniusToken.isNotBlank()
-        network = NetworkState(hit, geniusOn = gOn, genius = if (gOn) "Genius: ricerca artista…" else null)
+        network = NetworkState(hit, geniusOn = gOn, genius = if (gOn) "Genius: ricerca artista…" else null,
+            progress = Progress(phase = "Avvio"))
         netJob = viewModelScope.launch {
             val agg = Aggregator(hit)
             var offset = 0
@@ -103,22 +114,29 @@ class OrbitViewModel(app: Application) : AndroidViewModel(app) {
             var mbError: String? = null
             var gDone = !gOn
             var gStatus: String? = if (gOn) "Genius: ricerca artista…" else null
-            var firstAvatars = false
+            var gP = 0f
+            var aP = 0f
+            var phase = "MusicBrainz"
+            var allDone = false
+            var latest: String? = null
 
             fun publish() {
-                val loading = !(mbDone && gDone)
+                val cap = minOf(total, MAX_RECORDINGS)
+                val mbP = if (mbDone) 1f else if (cap > 0) (offset.toFloat() / cap).coerceIn(0f, 1f) else 0f
+                val g = if (!gOn || gDone) 1f else gP
+                val overall = if (gOn) .38f * mbP + .42f * g + .20f * aP else .76f * mbP + .24f * aP
+                val snap = agg.snapshot()
                 val s = NetworkState(
-                    hit, agg.snapshot(), offset, total, loading,
-                    error = mbError.takeIf { agg.snapshot().isEmpty() }, genius = gStatus, geniusOn = gOn,
+                    hit, snap, offset, total, loading = !allDone,
+                    error = mbError.takeIf { snap.isEmpty() }, genius = gStatus, geniusOn = gOn,
+                    progress = Progress(if (allDone) 1f else overall.coerceAtMost(.99f), mbP, g, aP, latest, phase),
                 )
                 network = s
-                if (!loading) cache[hit.id] = s
-                if (!firstAvatars && s.collabs.isNotEmpty()) { firstAvatars = true; fetchAvatars(s) }
+                if (allDone) cache[hit.id] = s
             }
 
             try {
                 coroutineScope {
-                    // MusicBrainz: sequential pages (1 req/s).
                     launch {
                         try {
                             while (true) {
@@ -128,13 +146,13 @@ class OrbitViewModel(app: Application) : AndroidViewModel(app) {
                                 if (page.recordings.isEmpty()) break
                                 agg.addMusicBrainz(page.recordings)
                                 offset += page.recordings.size
+                                latest = agg.snapshot().firstOrNull()?.name
                                 publish()
                             }
                         } catch (e: CancellationException) { throw e }
                         catch (e: Exception) { mbError = "MusicBrainz non raggiungibile" }
                         mbDone = true; publish()
                     }
-                    // Genius: official API, runs in parallel with MusicBrainz.
                     if (gOn) launch {
                         try {
                             val g = Genius(geniusToken)
@@ -149,10 +167,14 @@ class OrbitViewModel(app: Application) : AndroidViewModel(app) {
                                     async {
                                         gate.acquire()
                                         val full = try { runCatching { g.song(s.id) }.getOrNull() } finally { gate.release() }
-                                        if (full != null) agg.addGenius(full)
+                                        if (full != null) {
+                                            agg.addGenius(full)
+                                            latest = full.producers.firstOrNull()?.name ?: full.title
+                                        }
                                         done++
+                                        gP = if (songs.isEmpty()) 1f else done.toFloat() / songs.size
                                         gStatus = "Genius $done/${songs.size} brani"
-                                        if (done % 6 == 0 || done == songs.size) publish()
+                                        if (done % 3 == 0 || done == songs.size) publish()
                                     }
                                 }.awaitAll()
                             }
@@ -161,11 +183,43 @@ class OrbitViewModel(app: Application) : AndroidViewModel(app) {
                         gDone = true; publish()
                     }
                 }
+                // photos are preloaded too, so nodes appear complete
+                phase = "Foto"; publish()
+                preloadAvatars(agg.snapshot().take(PRELOAD_PHOTOS), hit) { aP = it; publish() }
+                phase = "Pronto"; allDone = true; publish()
                 network?.let { fetchAvatars(it) }
             } catch (e: CancellationException) {
                 throw e
             }
         }
+    }
+
+    private suspend fun preloadAvatars(people: List<Collaborator>, center: ArtistHit, onProgress: (Float) -> Unit) {
+        val wanted = listOf(Triple(center.id, center.name, null as String?)) + people.map { Triple(it.id, it.name, it.image) }
+        val gate = kotlinx.coroutines.sync.Semaphore(6)
+        var done = 0
+        val loader = coil.Coil.imageLoader(getApplication())
+        withTimeoutOrNull(9000) {
+            coroutineScope {
+                wanted.map { (id, name, img) ->
+                    async {
+                        gate.acquire()
+                        try {
+                            if (id !in avatars) {
+                                val url = img ?: runCatching { deezer.picture(name) }.getOrNull()
+                                if (url != null) {
+                                    avatars[id] = url
+                                    runCatching { loader.execute(coil.request.ImageRequest.Builder(getApplication()).data(url).build()) }
+                                }
+                            }
+                        } finally { gate.release() }
+                        done++
+                        onProgress(done.toFloat() / wanted.size)
+                    }
+                }.awaitAll()
+            }
+        }
+        onProgress(1f)
     }
 
     private fun fetchAvatars(s: NetworkState) {
@@ -228,5 +282,6 @@ class OrbitViewModel(app: Application) : AndroidViewModel(app) {
     companion object {
         const val MAX_RECORDINGS = 500
         const val MAX_GENIUS_SONGS = 60
+        const val PRELOAD_PHOTOS = 40
     }
 }

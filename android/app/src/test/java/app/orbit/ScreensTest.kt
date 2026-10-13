@@ -40,6 +40,11 @@ class ScreensTest {
     @Test fun networkDetail() = paparazzi.snapshot { CompositionLocalProvider(LocalMotion provides false) { Box(Modifier.fillMaxSize().grain()) {
         NetworkScreen(NetworkState(drake, collabs, 300, 2611, false), emptyMap(), null, {}, "id2", {}, emptyMap(), emptySet(), { _, _ -> }, {}, {}) } } }
 
+    @Test fun networkLoading() = paparazzi.snapshot { CompositionLocalProvider(LocalMotion provides false) { Box(Modifier.fillMaxSize().grain()) {
+        NetworkScreen(NetworkState(drake, collabs.take(9), 300, 2611, true, geniusOn = true, genius = "Genius 31/60 brani",
+            progress = Progress(.47f, .62f, .52f, 0f, "Hit-Boy", "Genius")), emptyMap(), null, {}, null, {}, emptyMap(), emptySet(), { _, _ -> }, {}, {})
+        BottomNav(Tab.NETWORK, {}, Modifier.align(Alignment.BottomCenter)) } } }
+
     @Test fun lists() = paparazzi.snapshot { CompositionLocalProvider(LocalMotion provides false) { Box(Modifier.fillMaxSize().grain()) {
         ListsScreen(listOf(SavedContact("a", "Boi-1da", "Producer", 9, "Drake", true), SavedContact("b", "Frank Dukes", "Producer · Performer", 5, "Drake"),
             SavedContact("c", "Vinylz", "Producer", 3, "Drake")), false, {}, {}, {}, {}, "", {})

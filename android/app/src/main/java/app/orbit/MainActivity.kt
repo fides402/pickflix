@@ -80,6 +80,7 @@ fun OrbitApp(vm: OrbitViewModel) {
                 },
                 onBack = { vm.back() },
                 onGeniusSetup = { vm.showSettings = true; vm.tab = Tab.LISTS },
+                onRetry = vm::retry,
             )
             Tab.LISTS -> ListsScreen(
                 items = saved, hideContacted = vm.hideContacted, onHide = { vm.hideContacted = !vm.hideContacted },

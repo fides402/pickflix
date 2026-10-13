@@ -29,6 +29,15 @@ data class Collaborator(
     val count: Int get() = tracks.size
 }
 
+data class Progress(
+    val total: Float = 0f,
+    val mb: Float = 0f,
+    val genius: Float = 0f,
+    val photos: Float = 0f,
+    val latest: String? = null,
+    val phase: String = "Avvio",
+)
+
 data class NetworkState(
     val center: ArtistHit,
     val collabs: List<Collaborator> = emptyList(),
@@ -39,6 +48,7 @@ data class NetworkState(
     val error: String? = null,
     val genius: String? = null,
     val geniusOn: Boolean = false,
+    val progress: Progress = Progress(),
 )
 
 data class Link(val label: String, val url: String)
