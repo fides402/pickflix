@@ -50,6 +50,7 @@ fun NetworkScreen(
     onSave: (Collaborator, Boolean) -> Unit,
     onExplore: (Collaborator) -> Unit,
     onBack: () -> Unit,
+    animateIn: Boolean = true,
 ) {
     var pan by remember { mutableStateOf(Offset.Zero) }
     var scale by remember { mutableFloatStateOf(.82f) }
@@ -62,7 +63,7 @@ fun NetworkScreen(
 
         if (state != null) GraphLayer(state.center, visible, avatars, selected?.id, scale, pan,
             onTransform = { p, z -> pan += p; scale = (scale * z).coerceIn(.45f, 3f) },
-            onSelect = onSelect)
+            onSelect = onSelect, animateIn = animateIn)
 
         Column(Modifier.fillMaxWidth().statusBarsPadding().padding(top = 18.dp)) {
             Row(Modifier.fillMaxWidth().padding(horizontal = 20.dp), horizontalArrangement = Arrangement.SpaceBetween) {
@@ -150,6 +151,7 @@ private fun GraphLayer(
     pan: Offset,
     onTransform: (Offset, Float) -> Unit,
     onSelect: (String?) -> Unit,
+    animateIn: Boolean,
 ) {
     val maxC = (nodes.maxOfOrNull { it.count } ?: 1).coerceAtLeast(1)
     val pos = remember(nodes) {
@@ -185,8 +187,8 @@ private fun GraphLayer(
                 key(n.id) {
                     val d = (32f + 28f * sqrt(n.count.toFloat() / maxC)).dp
                     val sel = n.id == selectedId
-                    val pop = remember { Animatable(0f) }
-                    LaunchedEffect(Unit) { delay(i * 18L); pop.animateTo(1f, spring(.6f, Spring.StiffnessLow)) }
+                    val pop = remember { Animatable(if (animateIn) 0f else 1f) }
+                    LaunchedEffect(Unit) { if (animateIn) { delay(i * 18L); pop.animateTo(1f, spring(.6f, Spring.StiffnessLow)) } }
                     val k by animateScale(sel)
                     Box(
                         Modifier.align(Alignment.Center).offset(pos[i].x.dp, pos[i].y.dp)
