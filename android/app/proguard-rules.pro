@@ -1,0 +1,3 @@
+-keep class app.orbit.data.** { *; }
+-keepattributes *Annotation*, InnerClasses
+-dontwarn org.slf4j.**
