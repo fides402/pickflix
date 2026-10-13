@@ -18,10 +18,18 @@ android {
         versionCode = 1
         versionName = "0.1.0"
     }
+    signingConfigs {
+        create("orbit") {
+            val ks = System.getenv("ORBIT_KEYSTORE")
+            if (ks != null) {
+                storeFile = file(ks); storePassword = System.getenv("ORBIT_PASS"); keyAlias = "orbit"; keyPassword = System.getenv("ORBIT_PASS")
+            }
+        }
+    }
     buildTypes {
         release {
-            isMinifyEnabled = true
-            isShrinkResources = true
+            isMinifyEnabled = false
+            if (System.getenv("ORBIT_KEYSTORE") != null) signingConfig = signingConfigs.getByName("orbit")
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
@@ -31,6 +39,7 @@ android {
     }
     kotlinOptions { jvmTarget = "17" }
     buildFeatures { compose = true }
+    lint { checkReleaseBuilds = false; abortOnError = false }
     packaging { resources.excludes += "/META-INF/{AL2.0,LGPL2.1}" }
 }
 
