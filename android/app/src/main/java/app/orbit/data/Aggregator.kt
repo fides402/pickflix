@@ -1,11 +1,15 @@
 package app.orbit.data
 
 private val noise = setOf("[unknown]", "[anonymous]", "[no artist]", "various artists", "[traditional]", "[data]")
-fun normName(s: String) = s.lowercase().filter { it.isLetterOrDigit() }
+private val nickname = Regex("[\\u201C\"][^\\u201D\"]*[\\u201D\"]|\\([^)]*\\)")
+
+/** Same person across sources: drop quoted nicknames and brackets, keep letters and digits. */
+fun normName(s: String) = s.replace(nickname, "").lowercase().filter { it.isLetterOrDigit() }
 
 /** Merges credits coming from different sources into one person per name. */
 class Aggregator(private val center: ArtistHit) {
     private class Acc(val id: String, val name: String, val mbId: String?) {
+        var image: String? = null
         val roles = linkedSetOf<Role>()
         val tracks = LinkedHashMap<String, Track>()
         val sources = linkedSetOf<Source>()
@@ -39,7 +43,11 @@ class Aggregator(private val center: ArtistHit) {
 
     fun addGenius(s: GnSong) {
         val year = s.date?.year?.toString()
-        fun GnArtist.put(role: Role) = acc(name, "g:$id", null)?.hit(role, s.title, year, Source.GENIUS)
+        fun GnArtist.put(role: Role) {
+            val a = acc(name, "g:$id", null) ?: return
+            a.hit(role, s.title, year, Source.GENIUS)
+            if (a.image == null && image != null && "default" !in image) a.image = image
+        }
         s.producers.forEach { it.put(Role.PRODUCER) }
         s.writers.forEach { it.put(Role.WRITER) }
         s.featured.forEach { it.put(Role.FEATURING) }
@@ -47,7 +55,7 @@ class Aggregator(private val center: ArtistHit) {
     }
 
     fun snapshot(limit: Int = 150): List<Collaborator> = people.values
-        .map { Collaborator(it.id, it.name, it.roles, it.tracks.values.toList(), it.sources, it.mbId) }
+        .map { Collaborator(it.id, it.name, it.roles, it.tracks.values.toList(), it.sources, it.mbId, it.image) }
         .sortedWith(compareByDescending<Collaborator> { it.count }.thenBy { it.name })
         .take(limit)
 

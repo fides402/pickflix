@@ -1,7 +1,9 @@
 package app.orbit.ui
 
 import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.spring
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
@@ -28,7 +30,7 @@ fun BottomNav(tab: Tab, onTab: (Tab) -> Unit, modifier: Modifier = Modifier) {
         Row(Modifier.fillMaxWidth().height(NavHeight - 1.dp)) {
             listOf(Tab.SEARCH to "Cerca", Tab.NETWORK to "Rete", Tab.LISTS to "Liste").forEach { (t, label) ->
                 val on = t == tab
-                val s by animateFloatAsState(if (on) 1f else 0f, label = "dot")
+                val s by animateFloatAsState(if (on) 1f else 0f, spring(.5f, Spring.StiffnessMedium), label = "dot")
                 Row(
                     Modifier.weight(1f).fillMaxHeight().tap { onTab(t) },
                     verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.Center,

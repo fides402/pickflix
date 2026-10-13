@@ -61,7 +61,7 @@ fun SearchScreen(
                         append("TROVA LA TUA PROSSIMA ")
                         withStyle(SpanStyle(color = P.Orange)) { append("CONNESSIONE.") }
                     },
-                    Modifier.padding(top = 14.dp), style = T.display,
+                    Modifier.padding(top = 14.dp).enter(0), style = T.display,
                 )
             }
             Box(Modifier.weight(1f).fillMaxWidth()) {
@@ -70,7 +70,7 @@ fun SearchScreen(
                         itemsIndexed(results) { i, hit ->
                             Hairline()
                             Row(
-                                Modifier.fillMaxWidth().tap { onOpen(hit) }.padding(vertical = 12.dp),
+                                Modifier.fillMaxWidth().animateItem().enter(i).tap { onOpen(hit) }.padding(vertical = 12.dp),
                                 verticalAlignment = Alignment.Top,
                             ) {
                                 Micro("%02d".format(i + 1), Modifier.width(30.dp).padding(top = 6.dp))
@@ -88,7 +88,7 @@ fun SearchScreen(
                     }
                 }
             }
-            Row(Modifier.fillMaxWidth().padding(top = 14.dp), verticalAlignment = Alignment.CenterVertically) {
+            Row(Modifier.fillMaxWidth().padding(top = 14.dp).enter(2), verticalAlignment = Alignment.CenterVertically) {
                 BasicTextField(
                     value = query, onValueChange = onQuery,
                     modifier = Modifier.weight(1f),
@@ -105,7 +105,7 @@ fun SearchScreen(
                 Micro(if (searching) "…" else if (typing) "${results.size} trovati" else "↵")
             }
             Box(Modifier.padding(top = 8.dp).fillMaxWidth().height(2.dp).background(P.Ink))
-            LazyRow(Modifier.padding(top = 12.dp), horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+            LazyRow(Modifier.padding(top = 12.dp).enter(3), horizontalArrangement = Arrangement.spacedBy(6.dp)) {
                 items(SUGGESTIONS) { s -> Chip(s, selected = false) { onSuggest(s) } }
             }
         }

@@ -1,6 +1,7 @@
 package app.orbit.ui
 
 import android.graphics.Bitmap
+import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.*
 import androidx.compose.foundation.*
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -16,6 +17,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.drawWithContent
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.*
+import androidx.compose.ui.graphics.drawscope.clipPath
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
@@ -26,10 +28,38 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
+import androidx.compose.ui.geometry.Rect
+import kotlinx.coroutines.delay
 import kotlin.math.PI
+import kotlin.math.hypot
 import kotlin.math.cos
 import kotlin.math.min
 import kotlin.math.sin
+
+/* ---------- motion ---------- */
+
+/** Tests and previews switch motion off so screenshots show the resting state. */
+val LocalMotion = compositionLocalOf { true }
+
+val Poster = CubicBezierEasing(.2f, .8f, .2f, 1f)
+
+/** Staggered rise-and-fade entrance, used for rows and blocks. */
+fun Modifier.enter(index: Int = 0, distance: Dp = 22.dp): Modifier = composed {
+    val motion = LocalMotion.current
+    val a = remember { Animatable(if (motion) 0f else 1f) }
+    LaunchedEffect(Unit) { if (motion) { delay(minOf(index, 10) * 45L); a.animateTo(1f, tween(460, easing = Poster)) } }
+    graphicsLayer { alpha = a.value; translationY = (1f - a.value) * distance.toPx() }
+}
+
+/** Circular reveal growing from the bottom edge (the tapped tab), echoing the poster circles. */
+fun Modifier.irisReveal(progress: Float, originFraction: Float): Modifier = drawWithContent {
+    if (progress >= 1f) drawContent() else {
+        val maxR = hypot(size.width, size.height)
+        val c = Offset(size.width * originFraction, size.height)
+        val path = Path().apply { addOval(Rect(c, progress * maxR * 1.05f)) }
+        clipPath(path) { this@drawWithContent.drawContent() }
+    }
+}
 
 /* ---------- text ---------- */
 
@@ -68,13 +98,15 @@ fun Modifier.tap(enabled: Boolean = true, onClick: () -> Unit): Modifier = compo
 
 @Composable
 fun Chip(label: String, selected: Boolean, modifier: Modifier = Modifier, onClick: () -> Unit) {
+    val bg by animateColorAsState(if (selected) P.Ink else P.Ink.copy(alpha = 0f), tween(260), label = "chipbg")
+    val fg by animateColorAsState(if (selected) P.Paper else P.Ink, tween(260), label = "chipfg")
     Box(
         modifier
-            .background(if (selected) P.Ink else Color.Transparent)
+            .background(bg)
             .border(1.dp, P.Ink)
             .tap(onClick = onClick)
             .padding(horizontal = 9.dp, vertical = 7.dp)
-    ) { Micro(label, color = if (selected) P.Paper else P.Ink) }
+    ) { Micro(label, color = fg) }
 }
 
 @Composable
@@ -117,8 +149,11 @@ fun Modifier.grain(alpha: Float = 0.085f): Modifier = drawWithContent {
 fun BlobField(modifier: Modifier = Modifier, intensity: Float = 1f) {
     val t = rememberInfiniteTransition(label = "blob")
     val a by t.animateFloat(0f, (2 * PI).toFloat(), infiniteRepeatable(tween(22000, easing = LinearEasing)), label = "a")
+    val motion = LocalMotion.current
+    val bloom = remember { Animatable(if (motion) 0f else 1f) }
+    LaunchedEffect(Unit) { if (motion) bloom.animateTo(1f, tween(1300, easing = Poster)) }
     Canvas(modifier) {
-        val m = min(size.width, size.height)
+        val m = min(size.width, size.height) * (.72f + .28f * bloom.value)
         fun blob(cx: Float, cy: Float, r: Float, ph: Float) {
             val c = Offset(cx * size.width + sin(a + ph) * m * .025f, cy * size.height + cos(a * .8f + ph) * m * .03f)
             val rr = r * m
@@ -127,7 +162,7 @@ fun BlobField(modifier: Modifier = Modifier, intensity: Float = 1f) {
                     colorStops = arrayOf(0f to P.Orange, .36f to P.Orange, .6f to P.Amber, 1f to P.Amber.copy(alpha = 0f)),
                     center = c, radius = rr,
                 ),
-                radius = rr, center = c, alpha = intensity,
+                radius = rr, center = c, alpha = intensity * bloom.value,
             )
         }
         blob(.38f, .46f, .50f, 0f)
@@ -146,13 +181,19 @@ fun TangentRings(modifier: Modifier = Modifier, shift: Offset = Offset.Zero) {
     val cols = remember {
         listOf(0xFFF5A02B, 0xFFF28E22, 0xFFEE7A1B, 0xFFE96514, 0xFFE4510C, 0xFFDE3F05, 0xFFD23702).map { Color(it) }
     }
+    val motion = LocalMotion.current
+    val grow = remember { Animatable(if (motion) 0f else 1f) }
+    LaunchedEffect(Unit) { if (motion) grow.animateTo(1f, tween(1500, easing = Poster)) }
     Canvas(modifier) {
         drawRect(P.Yellow)
         val tp = Offset(size.width * .80f, size.height * .60f) + shift
         val ang = Math.toRadians(-110.0 + b * 4)
         val dir = Offset(cos(ang).toFloat(), sin(ang).toFloat())
         var r = size.width * .93f
-        for (c in cols) { drawCircle(c, r, tp + dir * r); r *= .74f }
+        cols.forEachIndexed { k, c ->
+            val p = (grow.value * 1.9f - k * 0.13f).coerceIn(0f, 1f)
+            drawCircle(c, r * p, tp + dir * r * p); r *= .74f
+        }
     }
 }
 
@@ -163,10 +204,17 @@ fun ConcentricRings(modifier: Modifier = Modifier) {
     val cols = remember {
         listOf(0xFF5F8227, 0xFF43721F, 0xFF2D5C1C, 0xFF1D4D18, 0xFF134013, 0xFF0B3010, 0xFF06200A, 0xFF021005, 0xFF000000).map { Color(it) }
     }
+    val motion = LocalMotion.current
+    val t = rememberInfiniteTransition(label = "breathe")
+    val phase by t.animateFloat(0f, (2 * PI).toFloat(), infiniteRepeatable(tween(9000, easing = LinearEasing)), label = "ph")
+    val grow = remember { Animatable(if (motion) 0f else 1f) }
+    LaunchedEffect(Unit) { if (motion) grow.animateTo(1f, tween(1600, easing = Poster)) }
     Canvas(modifier) {
         var r = size.width * .52f
         cols.forEachIndexed { i, c ->
-            drawCircle(c, r, Offset(size.width / 2f + i * 1.5f, size.height * .5f + i * 2f))
+            val p = (grow.value * 1.8f - i * 0.1f).coerceIn(0f, 1f)
+            val b = if (motion) 1f + .012f * sin(phase + i * .55f) else 1f
+            drawCircle(c, r * p * b, Offset(size.width / 2f + i * 1.5f, size.height * .5f + i * 2f))
             r *= .82f
         }
     }

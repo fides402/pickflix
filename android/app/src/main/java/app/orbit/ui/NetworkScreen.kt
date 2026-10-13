@@ -3,6 +3,17 @@ package app.orbit.ui
 import android.content.Intent
 import android.net.Uri
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.core.LinearOutSlowInEasing
+import androidx.compose.animation.core.RepeatMode
+import androidx.compose.animation.core.animateFloat
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.animateIntAsState
+import androidx.compose.animation.core.infiniteRepeatable
+import androidx.compose.animation.core.rememberInfiniteTransition
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.ui.unit.Dp
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
@@ -16,7 +27,9 @@ import androidx.compose.foundation.gestures.detectTransformGestures
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.ui.graphics.Color
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.text.BasicText
 import androidx.compose.foundation.verticalScroll
@@ -50,7 +63,8 @@ fun NetworkScreen(
     onSave: (Collaborator, Boolean) -> Unit,
     onExplore: (Collaborator) -> Unit,
     onBack: () -> Unit,
-    animateIn: Boolean = true,
+    onGeniusSetup: () -> Unit = {},
+    animateIn: Boolean = LocalMotion.current,
 ) {
     var pan by remember { mutableStateOf(Offset.Zero) }
     var scale by remember { mutableFloatStateOf(.82f) }
@@ -71,18 +85,28 @@ fun NetworkScreen(
             }
             TwoTone(
                 (state?.center?.name ?: "—"), "\nnetwork",
-                Modifier.padding(horizontal = 20.dp).padding(top = 12.dp, bottom = 8.dp),
+                Modifier.padding(horizontal = 20.dp).padding(top = 12.dp, bottom = 8.dp).enter(0),
+            )
+            val pulse by rememberInfiniteTransition(label = "load").animateFloat(
+                1f, .35f, infiniteRepeatable(tween(700), RepeatMode.Reverse), label = "pulse",
             )
             Micro(
-                when {
+                alpha = if (state?.loading == true) pulse else 1f,
+                text = when {
                     state == null -> ""
                     state.error != null && all.isEmpty() -> state.error
                     all.isEmpty() && state.loading -> "Analisi delle registrazioni…"
                     else -> "Una rete di ${visible.size} persone" + if (state.loading) " · analisi in corso" else ""
                 },
-                Modifier.padding(horizontal = 20.dp),
+                modifier = Modifier.padding(horizontal = 20.dp),
             )
-            LazyRow(Modifier.padding(top = 10.dp), contentPadding = PaddingValues(horizontal = 20.dp), horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+            if (state != null && !state.geniusOn) {
+                Box(
+                    Modifier.padding(start = 20.dp, top = 10.dp).background(P.Ink).tap(onClick = onGeniusSetup)
+                        .padding(horizontal = 9.dp, vertical = 7.dp)
+                ) { Micro("+ Attiva Genius per più crediti →", color = P.Paper) }
+            }
+            LazyRow(Modifier.padding(top = 10.dp).enter(2), contentPadding = PaddingValues(horizontal = 20.dp), horizontalArrangement = Arrangement.spacedBy(6.dp)) {
                 item { Chip("Tutti ${all.size}", filter == null) { onFilter(null) } }
                 items(Role.entries.filter { r -> all.any { r in it.roles } }) { r ->
                     Chip("${r.label} ${all.count { r in it.roles }}", filter == r) { onFilter(r) }
@@ -103,7 +127,8 @@ fun NetworkScreen(
         AnimatedVisibility(
             visible = selected != null,
             modifier = Modifier.align(Alignment.BottomCenter),
-            enter = slideInVertically { it }, exit = slideOutVertically { it },
+            enter = slideInVertically(spring(.82f, Spring.StiffnessMediumLow)) { it } + fadeIn(tween(200)),
+            exit = slideOutVertically(tween(260)) { it } + fadeOut(tween(200)),
         ) {
             if (selected != null) DetailPanel(
                 c = selected, index = visible.indexOf(selected) + 1, total = visible.size,
@@ -127,16 +152,18 @@ private fun ZoomBtn(label: String, onClick: () -> Unit) {
 private fun Footer(state: NetworkState?, nodes: Int, modifier: Modifier) {
     Row(modifier.fillMaxWidth().padding(end = 20.dp), verticalAlignment = Alignment.Bottom, horizontalArrangement = Arrangement.spacedBy(20.dp)) {
         Box(Modifier.size(12.dp, 30.dp).background(P.Ink))
-        Column(verticalArrangement = Arrangement.spacedBy(3.dp)) { Micro("Nodi", alpha = .6f); Micro("%02d".format(nodes)) }
+        val nodesShown by animateIntAsState(nodes, tween(600), label = "nodes")
+        val scanned by animateIntAsState(state?.scanned ?: 0, tween(600), label = "scanned")
+        Column(verticalArrangement = Arrangement.spacedBy(3.dp)) { Micro("Nodi", alpha = .6f); Micro("%02d".format(nodesShown)) }
         Column(verticalArrangement = Arrangement.spacedBy(3.dp)) {
-            Micro("Registrazioni", alpha = .6f); Micro("${state?.scanned ?: 0} / ${state?.total ?: 0}")
+            Micro("Registrazioni", alpha = .6f); Micro("$scanned / ${state?.total ?: 0}")
         }
         Column(verticalArrangement = Arrangement.spacedBy(3.dp)) {
             Micro("Fonti", alpha = .6f)
-            Micro(buildList {
-                add("MusicBrainz")
-                if (state?.collabs?.any { Source.GENIUS in it.sources } == true) add("Genius")
-            }.joinToString(" + "))
+            val g = state?.collabs?.count { Source.GENIUS in it.sources } ?: 0
+            val m = state?.collabs?.count { Source.MUSICBRAINZ in it.sources } ?: 0
+            Micro("MusicBrainz $m")
+            if (state?.geniusOn == true) Micro(state.genius ?: "Genius $g")
         }
     }
 }
@@ -170,52 +197,77 @@ private fun GraphLayer(
                 scaleX = scale; scaleY = scale; translationX = pan.x; translationY = pan.y + size.height * .04f
             }
         ) {
-            Canvas(Modifier.fillMaxSize()) {
-                val c = Offset(size.width / 2, size.height / 2)
-                nodes.forEachIndexed { i, n ->
-                    val sel = n.id == selectedId
-                    drawLine(
-                        P.Ink.copy(alpha = if (sel) 1f else .24f), c,
-                        c + Offset(pos[i].x.dp.toPx(), pos[i].y.dp.toPx()),
-                        strokeWidth = (if (sel) 1.6f else 1f).dp.toPx(),
-                    )
-                }
-            }
-            // center
-            Avatar(avatars[center.id], center.name, 76.dp, Modifier.align(Alignment.Center), bg = P.Ink, fg = P.Paper)
+            val cpop = remember { Animatable(if (animateIn) 0f else 1f) }
+            LaunchedEffect(Unit) { if (animateIn) cpop.animateTo(1f, spring(.55f, Spring.StiffnessLow)) }
+            Avatar(
+                avatars[center.id], center.name, 76.dp,
+                Modifier.align(Alignment.Center).graphicsLayer { scaleX = cpop.value; scaleY = cpop.value },
+                bg = P.Ink, fg = P.Paper,
+            )
             nodes.forEachIndexed { i, n ->
                 key(n.id) {
-                    val d = (32f + 28f * sqrt(n.count.toFloat() / maxC)).dp
-                    val sel = n.id == selectedId
-                    val pop = remember { Animatable(if (animateIn) 0f else 1f) }
-                    LaunchedEffect(Unit) { if (animateIn) { delay(i * 18L); pop.animateTo(1f, spring(.6f, Spring.StiffnessLow)) } }
-                    val k by animateScale(sel)
-                    Box(
-                        Modifier.align(Alignment.Center).offset(pos[i].x.dp, pos[i].y.dp)
-                            .graphicsLayer { scaleX = pop.value * k; scaleY = pop.value * k; alpha = pop.value.coerceIn(0f, 1f) }
-                            .tap { onSelect(n.id) }
-                    ) {
-                        Avatar(
-                            avatars[n.id], n.name, d,
-                            bg = if (sel) P.Ink else P.Paper, fg = if (sel) P.Paper else P.Ink,
-                        )
-                    }
-                    if (i < 10 || sel || scale > 1.4f) {
-                        Box(
-                            Modifier.align(Alignment.Center)
-                                .offset(pos[i].x.dp, pos[i].y.dp + d / 2 + 9.dp)
-                                .background(P.Paper).padding(horizontal = 5.dp, vertical = 3.dp)
-                        ) { Micro(n.name, weight = 600) }
-                    }
+                    NodeView(
+                        index = i, n = n, target = pos[i],
+                        d = (32f + 28f * sqrt(n.count.toFloat() / maxC)).dp,
+                        sel = n.id == selectedId, avatar = avatars[n.id],
+                        showLabel = i < 10 || n.id == selectedId || scale > 1.4f,
+                        animateIn = animateIn, onSelect = { onSelect(n.id) },
+                    )
                 }
             }
         }
     }
 }
 
+/** One person: connecting line, avatar, label. Position, size and entrance are all animated. */
 @Composable
-private fun animateScale(sel: Boolean) =
-    androidx.compose.animation.core.animateFloatAsState(if (sel) 1.18f else 1f, spring(.5f, Spring.StiffnessMedium), label = "sel")
+private fun BoxScope.NodeView(
+    index: Int, n: Collaborator, target: Offset, d: Dp, sel: Boolean,
+    avatar: String?, showLabel: Boolean, animateIn: Boolean, onSelect: () -> Unit,
+) {
+    val pop = remember { Animatable(if (animateIn) 0f else 1f) }
+    LaunchedEffect(Unit) { if (animateIn) { delay(120L + index * 20L); pop.animateTo(1f, spring(.6f, Spring.StiffnessLow)) } }
+    val x by animateFloatAsState(target.x, spring(.85f, Spring.StiffnessLow), label = "x")
+    val y by animateFloatAsState(target.y, spring(.85f, Spring.StiffnessLow), label = "y")
+    val k by animateFloatAsState(if (sel) 1.18f else 1f, spring(.5f, Spring.StiffnessMedium), label = "sel")
+    val line by animateFloatAsState(if (sel) 1f else .24f, tween(250), label = "line")
+
+    Canvas(Modifier.fillMaxSize()) {
+        val c = Offset(size.width / 2, size.height / 2)
+        drawLine(
+            P.Ink.copy(alpha = line), c,
+            c + Offset(x.dp.toPx() * pop.value, y.dp.toPx() * pop.value),
+            strokeWidth = (if (sel) 1.6f else 1f).dp.toPx(),
+        )
+    }
+    if (sel) PulseRing(Modifier.align(Alignment.Center).offset(x.dp, y.dp), d)
+    Box(
+        Modifier.align(Alignment.Center).offset(x.dp, y.dp)
+            .graphicsLayer { scaleX = pop.value * k; scaleY = pop.value * k; alpha = pop.value.coerceIn(0f, 1f) }
+            .tap(onClick = onSelect)
+    ) {
+        Avatar(avatar, n.name, d, bg = if (sel) P.Ink else P.Paper, fg = if (sel) P.Paper else P.Ink)
+    }
+    val labelAlpha by animateFloatAsState(if (showLabel) 1f else 0f, tween(300), label = "label")
+    if (labelAlpha > 0.01f) {
+        Box(
+            Modifier.align(Alignment.Center).offset(x.dp, y.dp + d / 2 + 9.dp)
+                .graphicsLayer { alpha = labelAlpha * pop.value }
+                .background(P.Paper).padding(horizontal = 5.dp, vertical = 3.dp)
+        ) { Micro(n.name) }
+    }
+}
+
+/** Radar-style ping around the selected person. */
+@Composable
+private fun PulseRing(modifier: Modifier, d: Dp) {
+    val t = rememberInfiniteTransition(label = "ping")
+    val p by t.animateFloat(0f, 1f, infiniteRepeatable(tween(1500, easing = LinearOutSlowInEasing)), label = "p")
+    Box(
+        modifier.size(d).graphicsLayer { scaleX = 1f + p * .9f; scaleY = 1f + p * .9f; alpha = (1f - p) * .5f }
+            .clip(CircleShape).background(P.Ink)
+    )
+}
 
 @Composable
 private fun DetailPanel(
@@ -253,11 +305,19 @@ private fun DetailPanel(
                     }
                 }
             }
-            Row(Modifier.padding(top = 10.dp), horizontalArrangement = Arrangement.spacedBy(16.dp)) {
-                (links ?: c.mbId?.let { listOf(Link("MusicBrainz", "https://musicbrainz.org/artist/$it")) }.orEmpty()).forEach { l ->
-                    Micro(l.label, Modifier.tap {
-                        runCatching { ctx.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(l.url)).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)) }
-                    })
+            if (links == null) Micro("Cerco i profili…", Modifier.padding(top = 12.dp), alpha = .5f)
+            else Row(
+                Modifier.padding(top = 12.dp).horizontalScroll(rememberScrollState()),
+                horizontalArrangement = Arrangement.spacedBy(6.dp),
+            ) {
+                links.forEach { l ->
+                    val ig = l.label.contains("Instagram")
+                    Box(
+                        Modifier.background(if (ig) P.Orange else Color.Transparent)
+                            .border(1.dp, if (ig) P.Orange else P.Ink)
+                            .tap { openLink(ctx, l.url) }
+                            .padding(horizontal = 10.dp, vertical = 9.dp)
+                    ) { Micro(l.label + " ↗", color = if (ig) P.Paper else P.Ink, weight = 700) }
                 }
             }
             Row(Modifier.fillMaxWidth().padding(top = 14.dp), horizontalArrangement = Arrangement.spacedBy(6.dp)) {

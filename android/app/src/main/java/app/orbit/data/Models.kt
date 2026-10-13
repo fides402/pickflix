@@ -24,6 +24,7 @@ data class Collaborator(
     val tracks: List<Track>,
     val sources: Set<Source>,
     val mbId: String? = null,
+    val image: String? = null,
 ) {
     val count: Int get() = tracks.size
 }
@@ -36,6 +37,8 @@ data class NetworkState(
     val loading: Boolean = true,
     val note: String? = null,
     val error: String? = null,
+    val genius: String? = null,
+    val geniusOn: Boolean = false,
 )
 
 data class Link(val label: String, val url: String)
@@ -84,7 +87,21 @@ data class Link(val label: String, val url: String)
     val title: String = "",
     @SerialName("primary_artist") val primary: GnArtist? = null,
 )
-@Serializable data class GnArtist(val id: Long = 0, val name: String = "")
+@Serializable data class GnArtist(
+    val id: Long = 0,
+    val name: String = "",
+    @SerialName("image_url") val image: String? = null,
+)
+@Serializable data class GnArtistResp(val artist: GnArtistInfo)
+@Serializable data class GnArtistInfo(
+    val id: Long = 0,
+    val name: String = "",
+    val url: String? = null,
+    @SerialName("instagram_name") val instagram: String? = null,
+    @SerialName("twitter_name") val twitter: String? = null,
+    @SerialName("facebook_name") val facebook: String? = null,
+    @SerialName("image_url") val image: String? = null,
+)
 @Serializable data class GnSongs(val songs: List<GnSongLite> = emptyList(), @SerialName("next_page") val next: Int? = null)
 @Serializable data class GnSongFull(val song: GnSong)
 @Serializable data class GnSong(

@@ -66,7 +66,11 @@ class OrbitViewModel(app: Application) : AndroidViewModel(app) {
 
     var geniusToken by mutableStateOf(prefs.geniusToken)
         private set
-    fun saveToken(t: String) { prefs.geniusToken = t; geniusToken = t.trim(); cache.clear() }
+    var showSettings by mutableStateOf(false)
+    fun saveToken(t: String) {
+        prefs.geniusToken = t; geniusToken = t.trim(); cache.clear(); links.clear()
+        trail.lastOrNull()?.let { loadNetwork(it) }
+    }
 
     fun openArtist(hit: ArtistHit) {
         trail.add(hit)
@@ -89,71 +93,119 @@ class OrbitViewModel(app: Application) : AndroidViewModel(app) {
         selectedId = null
         roleFilter = null
         cache[hit.id]?.let { network = it; fetchAvatars(it); return }
-        network = NetworkState(hit)
+        val gOn = geniusToken.isNotBlank()
+        network = NetworkState(hit, geniusOn = gOn, genius = if (gOn) "Genius: ricerca artista…" else null)
         netJob = viewModelScope.launch {
             val agg = Aggregator(hit)
             var offset = 0
             var total = 0
-            var note: String? = null
+            var mbDone = false
+            var mbError: String? = null
+            var gDone = !gOn
+            var gStatus: String? = if (gOn) "Genius: ricerca artista…" else null
+            var firstAvatars = false
+
+            fun publish() {
+                val loading = !(mbDone && gDone)
+                val s = NetworkState(
+                    hit, agg.snapshot(), offset, total, loading,
+                    error = mbError.takeIf { agg.snapshot().isEmpty() }, genius = gStatus, geniusOn = gOn,
+                )
+                network = s
+                if (!loading) cache[hit.id] = s
+                if (!firstAvatars && s.collabs.isNotEmpty()) { firstAvatars = true; fetchAvatars(s) }
+            }
+
             try {
-                while (true) {
-                    if (total > 0 && offset >= minOf(total, MAX_RECORDINGS)) break
-                    val page = mb.recordings(hit.id, offset)
-                    total = page.count
-                    if (page.recordings.isEmpty()) break
-                    agg.addMusicBrainz(page.recordings)
-                    offset += page.recordings.size
-                    network = NetworkState(hit, agg.snapshot(), offset, total, loading = true)
-                    if (offset == page.recordings.size) fetchAvatars(network!!)
+                coroutineScope {
+                    // MusicBrainz: sequential pages (1 req/s).
+                    launch {
+                        try {
+                            while (true) {
+                                if (total > 0 && offset >= minOf(total, MAX_RECORDINGS)) break
+                                val page = mb.recordings(hit.id, offset)
+                                total = page.count
+                                if (page.recordings.isEmpty()) break
+                                agg.addMusicBrainz(page.recordings)
+                                offset += page.recordings.size
+                                publish()
+                            }
+                        } catch (e: CancellationException) { throw e }
+                        catch (e: Exception) { mbError = "MusicBrainz non raggiungibile" }
+                        mbDone = true; publish()
+                    }
+                    // Genius: official API, runs in parallel with MusicBrainz.
+                    if (gOn) launch {
+                        try {
+                            val g = Genius(geniusToken)
+                            val id = g.findArtistId(hit.name)
+                            if (id == null) { gStatus = "Genius: artista non trovato" }
+                            else {
+                                val songs = g.songIds(id, MAX_GENIUS_SONGS)
+                                var done = 0
+                                val gate = kotlinx.coroutines.sync.Semaphore(4)
+                                gStatus = "Genius 0/${songs.size} brani"
+                                songs.map { s ->
+                                    async {
+                                        gate.acquire()
+                                        val full = try { runCatching { g.song(s.id) }.getOrNull() } finally { gate.release() }
+                                        if (full != null) agg.addGenius(full)
+                                        done++
+                                        gStatus = "Genius $done/${songs.size} brani"
+                                        if (done % 6 == 0 || done == songs.size) publish()
+                                    }
+                                }.awaitAll()
+                            }
+                        } catch (e: CancellationException) { throw e }
+                        catch (e: Exception) { gStatus = "Genius: " + (e.message ?: "errore") }
+                        gDone = true; publish()
+                    }
                 }
-                if (geniusToken.isNotBlank()) {
-                    note = runCatching { addGenius(hit, agg) { network = NetworkState(hit, agg.snapshot(), offset, total, true) } }
-                        .exceptionOrNull()?.message
-                }
-                val done = NetworkState(hit, agg.snapshot(), offset, total, loading = false, note = note)
-                network = done
-                cache[hit.id] = done
-                fetchAvatars(done)
+                network?.let { fetchAvatars(it) }
             } catch (e: CancellationException) {
                 throw e
-            } catch (e: Exception) {
-                val cur = network
-                network = (cur ?: NetworkState(hit)).copy(loading = false, error = e.message ?: "Errore di rete")
             }
         }
-    }
-
-    private suspend fun addGenius(hit: ArtistHit, agg: Aggregator, tick: () -> Unit) = coroutineScope {
-        val g = Genius(geniusToken)
-        val id = g.findArtistId(hit.name) ?: return@coroutineScope
-        val songs = g.songIds(id, MAX_GENIUS_SONGS)
-        val gate = kotlinx.coroutines.sync.Semaphore(4)
-        songs.map { s ->
-            async {
-                gate.acquire()
-                try { runCatching { g.song(s.id) }.getOrNull() } finally { gate.release() }
-            }
-        }.awaitAll().filterNotNull().forEach { agg.addGenius(it) }
-        tick()
     }
 
     private fun fetchAvatars(s: NetworkState) {
         avatarJob?.cancel()
         avatarJob = viewModelScope.launch {
-            val wanted = listOf(s.center.id to s.center.name) + s.collabs.take(48).map { it.id to it.name }
-            for ((id, name) in wanted) {
+            val wanted = listOf(Triple(s.center.id, s.center.name, null as String?)) +
+                s.collabs.take(48).map { Triple(it.id, it.name, it.image) }
+            for ((id, name, img) in wanted) {
                 if (id in avatars) continue
+                if (img != null) { avatars[id] = img; continue }
                 runCatching { deezer.picture(name) }.getOrNull()?.let { avatars[id] = it }
                 delay(110)
             }
         }
     }
 
+    /** Social links for a person: Genius profile (Instagram, X...), MusicBrainz relations, then a fallback search. */
     fun loadLinks(c: Collaborator) {
-        val mbId = c.mbId ?: return
         if (c.id in links) return
         viewModelScope.launch {
-            links[c.id] = runCatching { mb.links(mbId) }.getOrDefault(listOf(Link("MusicBrainz", "https://musicbrainz.org/artist/$mbId")))
+            val out = LinkedHashMap<String, Link>()
+            if (geniusToken.isNotBlank()) runCatching {
+                val g = Genius(geniusToken)
+                val gid = if (c.id.startsWith("g:")) c.id.removePrefix("g:").toLongOrNull() else g.findArtistId(c.name)
+                gid?.let { g.artist(it) }?.let { a ->
+                    a.instagram?.takeIf { it.isNotBlank() }?.let { out["Instagram"] = Link("Instagram", "https://www.instagram.com/$it") }
+                    a.twitter?.takeIf { it.isNotBlank() }?.let { out["X"] = Link("X", "https://x.com/$it") }
+                    a.facebook?.takeIf { it.isNotBlank() }?.let { out["Facebook"] = Link("Facebook", "https://www.facebook.com/$it") }
+                    a.url?.let { out["Genius"] = Link("Genius", it) }
+                }
+            }
+            c.mbId?.let { id ->
+                runCatching { mb.links(id) }.getOrNull()?.forEach { out.putIfAbsent(it.label, it) }
+            }
+            if ("Instagram" !in out) {
+                val q = java.net.URLEncoder.encode("${c.name} instagram", "UTF-8")
+                out["Instagram"] = Link("Cerca Instagram", "https://www.google.com/search?q=$q")
+            }
+            val order = listOf("Instagram", "Cerca Instagram", "X", "Spotify", "Facebook", "Genius", "MusicBrainz")
+            links[c.id] = out.values.sortedBy { l -> order.indexOf(l.label).let { if (it < 0) 99 else it } }
         }
     }
 

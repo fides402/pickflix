@@ -146,4 +146,6 @@ class Genius(private val token: String) {
     }
 
     suspend fun song(id: Long): GnSong = call<GnSongFull>("/songs/$id").song
+
+    suspend fun artist(id: Long): GnArtistInfo = call<GnArtistResp>("/artists/$id").artist
 }

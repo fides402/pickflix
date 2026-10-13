@@ -1,6 +1,7 @@
 package app.orbit
 
 import androidx.compose.foundation.layout.Box
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -24,23 +25,23 @@ class ScreensTest {
     }
     private val drake = ArtistHit("d", "Drake")
 
-    @Test fun search() = paparazzi.snapshot { Box(Modifier.fillMaxSize().grain()) {
+    @Test fun search() = paparazzi.snapshot { CompositionLocalProvider(LocalMotion provides false) { Box(Modifier.fillMaxSize().grain()) {
         SearchScreen("", emptyList(), false, null, {}, {}, {})
-        BottomNav(Tab.SEARCH, {}, Modifier.align(Alignment.BottomCenter)) } }
+        BottomNav(Tab.SEARCH, {}, Modifier.align(Alignment.BottomCenter)) } } }
 
-    @Test fun searchTyping() = paparazzi.snapshot { Box(Modifier.fillMaxSize().grain()) {
+    @Test fun searchTyping() = paparazzi.snapshot { CompositionLocalProvider(LocalMotion provides false) { Box(Modifier.fillMaxSize().grain()) {
         SearchScreen("dra", listOf(ArtistHit("1", "Drake", "Person · CA · Canadian rapper"), ArtistHit("2", "Drake Bell", "Person · US")), false, null, {}, {}, {})
-        BottomNav(Tab.SEARCH, {}, Modifier.align(Alignment.BottomCenter)) } }
+        BottomNav(Tab.SEARCH, {}, Modifier.align(Alignment.BottomCenter)) } } }
 
-    @Test fun network() = paparazzi.snapshot { Box(Modifier.fillMaxSize().grain()) {
-        NetworkScreen(NetworkState(drake, collabs, 300, 2611, false), emptyMap(), null, {}, null, {}, emptyMap(), emptySet(), { _, _ -> }, {}, {}, animateIn = false)
-        BottomNav(Tab.NETWORK, {}, Modifier.align(Alignment.BottomCenter)) } }
+    @Test fun network() = paparazzi.snapshot { CompositionLocalProvider(LocalMotion provides false) { Box(Modifier.fillMaxSize().grain()) {
+        NetworkScreen(NetworkState(drake, collabs, 300, 2611, false), emptyMap(), null, {}, null, {}, emptyMap(), emptySet(), { _, _ -> }, {}, {})
+        BottomNav(Tab.NETWORK, {}, Modifier.align(Alignment.BottomCenter)) } } }
 
-    @Test fun networkDetail() = paparazzi.snapshot { Box(Modifier.fillMaxSize().grain()) {
-        NetworkScreen(NetworkState(drake, collabs, 300, 2611, false), emptyMap(), null, {}, "id2", {}, emptyMap(), emptySet(), { _, _ -> }, {}, {}, animateIn = false) } }
+    @Test fun networkDetail() = paparazzi.snapshot { CompositionLocalProvider(LocalMotion provides false) { Box(Modifier.fillMaxSize().grain()) {
+        NetworkScreen(NetworkState(drake, collabs, 300, 2611, false), emptyMap(), null, {}, "id2", {}, emptyMap(), emptySet(), { _, _ -> }, {}, {}) } } }
 
-    @Test fun lists() = paparazzi.snapshot { Box(Modifier.fillMaxSize().grain()) {
+    @Test fun lists() = paparazzi.snapshot { CompositionLocalProvider(LocalMotion provides false) { Box(Modifier.fillMaxSize().grain()) {
         ListsScreen(listOf(SavedContact("a", "Boi-1da", "Producer", 9, "Drake", true), SavedContact("b", "Frank Dukes", "Producer · Performer", 5, "Drake"),
             SavedContact("c", "Vinylz", "Producer", 3, "Drake")), false, {}, {}, {}, {}, "", {})
-        BottomNav(Tab.LISTS, {}, Modifier.align(Alignment.BottomCenter)) } }
+        BottomNav(Tab.LISTS, {}, Modifier.align(Alignment.BottomCenter)) } } }
 }
