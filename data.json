@@ -1074,7 +1074,7 @@
       "title": "Resident Evil",
       "image": "https://image.tmdb.org/t/p/w500/D8rnntI88rgzWKDK2yuxm25HTQ.jpg",
       "link": "https://altadefinizionepremium.com/p/resident-evil",
-      "rating": "7.3"
+      "rating": "7.5"
     },
     {
       "title": "Primetime",
@@ -1086,19 +1086,19 @@
       "title": "Verity",
       "image": "https://image.tmdb.org/t/p/w500/cLMNbCkgzn1qlmox7FyQBgXwL4D.jpg",
       "link": "https://altadefinizionepremium.com/p/verity",
-      "rating": "6.9"
+      "rating": "7.0"
     },
     {
-      "title": "Wildwood - I segreti del bosco proibito",
-      "image": "https://image.tmdb.org/t/p/w500/kfczsvfehVNDwzWiPuKAuQclzl7.jpg",
-      "link": "https://altadefinizionepremium.com/p/wildwood-i-segreti-del-bosco-proibito",
-      "rating": "8.5"
+      "title": "The Mongoose",
+      "image": "https://image.tmdb.org/t/p/w500/eSS5mvSG84UUuvtbHel5Yu3Wik4.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-mongoose",
+      "rating": "7.7"
     },
     {
-      "title": "The Dog Stars - Le stelle dopo la fine",
-      "image": "https://image.tmdb.org/t/p/w500/kNzWRhai5eMUC0NuybT4VdisqHF.jpg",
-      "link": "https://altadefinizionepremium.com/p/the-dog-stars-le-stelle-dopo-la-fine",
-      "rating": "7.2"
+      "title": "Godzilla Minus Zero",
+      "image": "https://image.tmdb.org/t/p/w500/qRq5Oa4hsfjVqTtEgBKi1efTQuv.jpg",
+      "link": "https://altadefinizionepremium.com/p/godzilla-minus-zero",
+      "rating": "8.9"
     },
     {
       "title": "Clayface",
@@ -1107,46 +1107,28 @@
       "rating": "7.4"
     },
     {
-      "title": "L'isola dei ricordi",
-      "image": "https://image.tmdb.org/t/p/w500/p8YpBFMmccQQoeQie9XKv6loDSa.jpg",
-      "link": "https://altadefinizionepremium.com/p/l-isola-dei-ricordi",
-      "rating": "8.0"
+      "title": "The Dog Stars - Le stelle dopo la fine",
+      "image": "https://image.tmdb.org/t/p/w500/kNzWRhai5eMUC0NuybT4VdisqHF.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-dog-stars-le-stelle-dopo-la-fine",
+      "rating": "7.2"
     },
     {
-      "title": "Ramayana - La nascita di una leggenda",
-      "image": "https://image.tmdb.org/t/p/w500/ovi5mxUCbSdFPv73rn6aXP9x9UC.jpg",
-      "link": "https://altadefinizionepremium.com/p/ramayana-la-nascita-di-una-leggenda",
-      "rating": "10.0"
+      "title": "Wildwood - I segreti del bosco proibito",
+      "image": "https://image.tmdb.org/t/p/w500/kfczsvfehVNDwzWiPuKAuQclzl7.jpg",
+      "link": "https://altadefinizionepremium.com/p/wildwood-i-segreti-del-bosco-proibito",
+      "rating": "8.5"
     },
     {
       "title": "Colisión",
       "image": "https://image.tmdb.org/t/p/w500/5oaS1EJfYCsd0kjZK2W9YaSMUaI.jpg",
       "link": "https://altadefinizionepremium.com/p/colisi-n",
-      "rating": "6.5"
+      "rating": "6.7"
     },
     {
-      "title": "Hope",
-      "image": "https://image.tmdb.org/t/p/w500/fbFxZSSw2kQoAkyXosVoOyBX0Z4.jpg",
-      "link": "https://altadefinizionepremium.com/p/hope",
-      "rating": "6.8"
-    },
-    {
-      "title": "Godzilla Minus Zero",
-      "image": "https://image.tmdb.org/t/p/w500/qRq5Oa4hsfjVqTtEgBKi1efTQuv.jpg",
-      "link": "https://altadefinizionepremium.com/p/godzilla-minus-zero",
-      "rating": "9.5"
-    },
-    {
-      "title": "Obsession",
-      "image": "https://image.tmdb.org/t/p/w500/kwprCwsIV4LvAqJC1dmiTAdZDJ1.jpg",
-      "link": "https://altadefinizionepremium.com/p/obsession",
-      "rating": "8.2"
-    },
-    {
-      "title": "La bola negra",
-      "image": "https://image.tmdb.org/t/p/w500/t1azKLExwUxKj6v6m2L535evuRa.jpg",
-      "link": "https://altadefinizionepremium.com/p/la-bola-negra",
-      "rating": "8.1"
+      "title": "L'isola dei ricordi",
+      "image": "https://image.tmdb.org/t/p/w500/p8YpBFMmccQQoeQie9XKv6loDSa.jpg",
+      "link": "https://altadefinizionepremium.com/p/l-isola-dei-ricordi",
+      "rating": "8.0"
     },
     {
       "title": "Spider-Man: Brand New Day",
@@ -1159,20 +1141,68 @@
       "image": "https://image.tmdb.org/t/p/w500/qQhInj9fw3S2bMbiEujVldthgKe.jpg",
       "link": "https://altadefinizionepremium.com/p/odissea",
       "rating": "8.0"
+    },
+    {
+      "title": "Hope",
+      "image": "https://image.tmdb.org/t/p/w500/fbFxZSSw2kQoAkyXosVoOyBX0Z4.jpg",
+      "link": "https://altadefinizionepremium.com/p/hope",
+      "rating": "6.8"
+    },
+    {
+      "title": "Wild Horse Nine",
+      "image": "https://image.tmdb.org/t/p/w500/og5qagWp4ZqVl28nbBwiBHZprJM.jpg",
+      "link": "https://altadefinizionepremium.com/p/wild-horse-nine",
+      "rating": "8.8"
     }
   ],
   "trending_series": [
     {
+      "title": "VisionQuest",
+      "image": "https://image.tmdb.org/t/p/w500/tcNNmG5ZCsLW0lT0Lkbo0mK9Mf1.jpg",
+      "link": "https://altadefinizionepremium.com/p/visionquest",
+      "rating": "8.7"
+    },
+    {
+      "title": "L’imperatrice risposata",
+      "image": "https://image.tmdb.org/t/p/w500/fmHnoe3eKjfikufa1jxLPmiKZCb.jpg",
+      "link": "https://altadefinizionepremium.com/p/l-imperatrice-risposata",
+      "rating": "8.0"
+    },
+    {
       "title": "Dead-End Job",
       "image": "https://image.tmdb.org/t/p/w500/yyA9CI8BLNg6LtVRvmVxki4xiGb.jpg",
       "link": "https://altadefinizionepremium.com/p/dead-end-job",
-      "rating": "7.4"
+      "rating": "7.7"
+    },
+    {
+      "title": "Stick",
+      "image": "https://image.tmdb.org/t/p/w500/pZ7fnbnGtK7XA9cw0u67W573d6M.jpg",
+      "link": "https://altadefinizionepremium.com/p/stick",
+      "rating": "7.3"
+    },
+    {
+      "title": "Dexter: Resurrection",
+      "image": "https://image.tmdb.org/t/p/w500/o2Oyi3boT100bY5kCP4MBiTeetO.jpg",
+      "link": "https://altadefinizionepremium.com/p/dexter-resurrection",
+      "rating": "8.5"
     },
     {
       "title": "Lupin",
       "image": "https://image.tmdb.org/t/p/w500/d59yXYdagCO8OSPZIV68lRoB5PF.jpg",
       "link": "https://altadefinizionepremium.com/p/lupin",
       "rating": "7.7"
+    },
+    {
+      "title": "Bleach",
+      "image": "https://image.tmdb.org/t/p/w500/e0kKmeM8R7Kersh5N2PPzIRNRhr.jpg",
+      "link": "https://altadefinizionepremium.com/p/bleach",
+      "rating": "8.4"
+    },
+    {
+      "title": "Bass X Machina",
+      "image": "https://image.tmdb.org/t/p/w500/y9c1AwrldWRsY9edSf21cOgbI0h.jpg",
+      "link": "https://altadefinizionepremium.com/p/bass-x-machina",
+      "rating": "7.0"
     },
     {
       "title": "Nocturne",
@@ -1187,28 +1217,10 @@
       "rating": "8.6"
     },
     {
-      "title": "VisionQuest",
-      "image": "https://image.tmdb.org/t/p/w500/tcNNmG5ZCsLW0lT0Lkbo0mK9Mf1.jpg",
-      "link": "https://altadefinizionepremium.com/p/visionquest",
-      "rating": "8.6"
-    },
-    {
-      "title": "Dexter: Resurrection",
-      "image": "https://image.tmdb.org/t/p/w500/o2Oyi3boT100bY5kCP4MBiTeetO.jpg",
-      "link": "https://altadefinizionepremium.com/p/dexter-resurrection",
+      "title": "Cyberpunk: Edgerunners",
+      "image": "https://image.tmdb.org/t/p/w500/v3JuB15WybKmxDeT1hWdK3j6eSJ.jpg",
+      "link": "https://altadefinizionepremium.com/p/cyberpunk-edgerunners",
       "rating": "8.5"
-    },
-    {
-      "title": "Where the Mask Ends",
-      "image": "https://image.tmdb.org/t/p/w500/nKhiK99WZohc3fJsTXJLf4SrSEY.jpg",
-      "link": "https://altadefinizionepremium.com/p/where-the-mask-ends",
-      "rating": "8.1"
-    },
-    {
-      "title": "Bleach",
-      "image": "https://image.tmdb.org/t/p/w500/e0kKmeM8R7Kersh5N2PPzIRNRhr.jpg",
-      "link": "https://altadefinizionepremium.com/p/bleach",
-      "rating": "8.4"
     },
     {
       "title": "The Gilded Age",
@@ -1217,46 +1229,28 @@
       "rating": "7.7"
     },
     {
-      "title": "Dark Matter",
-      "image": "https://image.tmdb.org/t/p/w500/5DyYSRwdop0LWqbKFUBtrfFday.jpg",
-      "link": "https://altadefinizionepremium.com/p/dark-matter",
-      "rating": "7.8"
-    },
-    {
       "title": "Tulsa King",
       "image": "https://image.tmdb.org/t/p/w500/bbhGWT5ln5dTFKP2DBCELOwK3jA.jpg",
       "link": "https://altadefinizionepremium.com/p/tulsa-king",
       "rating": "8.3"
     },
     {
-      "title": "Cyberpunk: Edgerunners",
-      "image": "https://image.tmdb.org/t/p/w500/v3JuB15WybKmxDeT1hWdK3j6eSJ.jpg",
-      "link": "https://altadefinizionepremium.com/p/cyberpunk-edgerunners",
-      "rating": "8.5"
+      "title": "The Early Spring",
+      "image": "https://image.tmdb.org/t/p/w500/nLWFbYv1r99Yy7dWvjoxMRegoe0.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-early-spring",
+      "rating": "8.2"
     },
     {
-      "title": "Carrie",
-      "image": "https://image.tmdb.org/t/p/w500/6otg7YqOkS8DxQO02yCGs6dwMsu.jpg",
-      "link": "https://altadefinizionepremium.com/p/carrie",
-      "rating": "8.3"
+      "title": "Dark Matter",
+      "image": "https://image.tmdb.org/t/p/w500/5DyYSRwdop0LWqbKFUBtrfFday.jpg",
+      "link": "https://altadefinizionepremium.com/p/dark-matter",
+      "rating": "7.8"
     },
     {
-      "title": "TERMINAL LIST",
-      "image": "https://image.tmdb.org/t/p/w500/onDgOhbqcWyYEMFrobhVvgHmqHr.jpg",
-      "link": "https://altadefinizionepremium.com/p/terminal-list",
-      "rating": "8.0"
-    },
-    {
-      "title": "Avatar: I sette rifugi",
-      "image": "https://image.tmdb.org/t/p/w500/jY1LtTNzCoXCO5b39KKqeAGWwbC.jpg",
-      "link": "https://altadefinizionepremium.com/p/avatar-i-sette-rifugi",
-      "rating": "9.0"
-    },
-    {
-      "title": "I Simpson",
-      "image": "https://image.tmdb.org/t/p/w500/fxLooktejTUqCvZl9ARhKMFNpbf.jpg",
-      "link": "https://altadefinizionepremium.com/p/i-simpson",
-      "rating": "8.0"
+      "title": "Where the Mask Ends",
+      "image": "https://image.tmdb.org/t/p/w500/nKhiK99WZohc3fJsTXJLf4SrSEY.jpg",
+      "link": "https://altadefinizionepremium.com/p/where-the-mask-ends",
+      "rating": "7.0"
     },
     {
       "title": "One Piece",
@@ -1265,10 +1259,10 @@
       "rating": "8.8"
     },
     {
-      "title": "Law & Order - I due volti della giustizia",
-      "image": "https://image.tmdb.org/t/p/w500/hpybpPAmYD1VYasaFlQKcfoVdHT.jpg",
-      "link": "https://altadefinizionepremium.com/p/law-order-i-due-volti-della-giustizia",
-      "rating": "7.3"
+      "title": "American Horror Story",
+      "image": "https://image.tmdb.org/t/p/w500/bPF1VoWYj4LyTMhmUJXtQjtcSSr.jpg",
+      "link": "https://altadefinizionepremium.com/p/american-horror-story",
+      "rating": "8.1"
     }
   ],
   "now_playing": [
@@ -1276,7 +1270,7 @@
       "title": "Wildwood - I segreti del bosco proibito",
       "image": "https://image.tmdb.org/t/p/w500/kfczsvfehVNDwzWiPuKAuQclzl7.jpg",
       "link": "https://altadefinizionepremium.com/p/wildwood-i-segreti-del-bosco-proibito",
-      "rating": "8.6"
+      "rating": "8.5"
     },
     {
       "title": "Hope",
@@ -1285,10 +1279,16 @@
       "rating": "6.8"
     },
     {
+      "title": "Resident Evil",
+      "image": "https://image.tmdb.org/t/p/w500/D8rnntI88rgzWKDK2yuxm25HTQ.jpg",
+      "link": "https://altadefinizionepremium.com/p/resident-evil",
+      "rating": "7.5"
+    },
+    {
       "title": "Drive - Cuori in pista",
       "image": "https://image.tmdb.org/t/p/w500/9nS6pALpvYLt9LHzx2Rtb1xbtoi.jpg",
       "link": "https://altadefinizionepremium.com/p/drive-cuori-in-pista",
-      "rating": "7.7"
+      "rating": "7.8"
     },
     {
       "title": "Fall 2: Deadpoint",
@@ -1297,16 +1297,10 @@
       "rating": "7.3"
     },
     {
-      "title": "El despertar",
-      "image": "https://image.tmdb.org/t/p/w500/w3YJx1PPPC6aiVKusxfc9QA0uYS.jpg",
-      "link": "https://altadefinizionepremium.com/p/el-despertar",
-      "rating": "6.5"
-    },
-    {
       "title": "Verity",
       "image": "https://image.tmdb.org/t/p/w500/cLMNbCkgzn1qlmox7FyQBgXwL4D.jpg",
       "link": "https://altadefinizionepremium.com/p/verity",
-      "rating": "6.9"
+      "rating": "7.0"
     },
     {
       "title": "Buddy",
@@ -1315,10 +1309,22 @@
       "rating": "7.0"
     },
     {
+      "title": "A Story of Derry",
+      "image": "https://image.tmdb.org/t/p/w500/4PtzGcegF5Po1NmDAW9IklyvAUh.jpg",
+      "link": "https://altadefinizionepremium.com/p/a-story-of-derry",
+      "rating": "6.9"
+    },
+    {
+      "title": "Colisión",
+      "image": "https://image.tmdb.org/t/p/w500/5oaS1EJfYCsd0kjZK2W9YaSMUaI.jpg",
+      "link": "https://altadefinizionepremium.com/p/colisi-n",
+      "rating": "6.7"
+    },
+    {
       "title": "The Mongoose",
       "image": "https://image.tmdb.org/t/p/w500/eSS5mvSG84UUuvtbHel5Yu3Wik4.jpg",
       "link": "https://altadefinizionepremium.com/p/the-mongoose",
-      "rating": "7.5"
+      "rating": "7.7"
     },
     {
       "title": "Clayface",
@@ -1327,22 +1333,10 @@
       "rating": "7.4"
     },
     {
-      "title": "A Story of Derry",
-      "image": "https://image.tmdb.org/t/p/w500/4PtzGcegF5Po1NmDAW9IklyvAUh.jpg",
-      "link": "https://altadefinizionepremium.com/p/a-story-of-derry",
-      "rating": "6.8"
-    },
-    {
-      "title": "Colisión",
-      "image": "https://image.tmdb.org/t/p/w500/5oaS1EJfYCsd0kjZK2W9YaSMUaI.jpg",
-      "link": "https://altadefinizionepremium.com/p/colisi-n",
-      "rating": "6.5"
-    },
-    {
-      "title": "Matchbox: Il film",
-      "image": "https://image.tmdb.org/t/p/w500/JFawNsqIqIZbmfn7Ud7oUvJMMm.jpg",
-      "link": "https://altadefinizionepremium.com/p/matchbox-il-film",
-      "rating": "7.6"
+      "title": "La bola negra",
+      "image": "https://image.tmdb.org/t/p/w500/t1azKLExwUxKj6v6m2L535evuRa.jpg",
+      "link": "https://altadefinizionepremium.com/p/la-bola-negra",
+      "rating": "8.0"
     },
     {
       "title": "Nightmare Before Christmas",
@@ -1351,16 +1345,22 @@
       "rating": "7.9"
     },
     {
-      "title": "L'isola dei ricordi",
-      "image": "https://image.tmdb.org/t/p/w500/p8YpBFMmccQQoeQie9XKv6loDSa.jpg",
-      "link": "https://altadefinizionepremium.com/p/l-isola-dei-ricordi",
-      "rating": "8.0"
-    },
-    {
       "title": "Contra el huracán",
       "image": "https://image.tmdb.org/t/p/w500/9na3MNAhsuNKDVOoctaE7opTmbx.jpg",
       "link": "https://altadefinizionepremium.com/p/contra-el-hurac-n",
       "rating": "7.6"
+    },
+    {
+      "title": "Matchbox: Il film",
+      "image": "https://image.tmdb.org/t/p/w500/JFawNsqIqIZbmfn7Ud7oUvJMMm.jpg",
+      "link": "https://altadefinizionepremium.com/p/matchbox-il-film",
+      "rating": "7.6"
+    },
+    {
+      "title": "L'isola dei ricordi",
+      "image": "https://image.tmdb.org/t/p/w500/p8YpBFMmccQQoeQie9XKv6loDSa.jpg",
+      "link": "https://altadefinizionepremium.com/p/l-isola-dei-ricordi",
+      "rating": "8.0"
     },
     {
       "title": "Coyote vs. Acme",
@@ -1375,16 +1375,16 @@
       "rating": "8.2"
     },
     {
-      "title": "La bola negra",
-      "image": "https://image.tmdb.org/t/p/w500/t1azKLExwUxKj6v6m2L535evuRa.jpg",
-      "link": "https://altadefinizionepremium.com/p/la-bola-negra",
-      "rating": "8.1"
+      "title": "Primetime",
+      "image": "https://image.tmdb.org/t/p/w500/sqArsDFYFryd5iKuoxLvr4y5NZv.jpg",
+      "link": "https://altadefinizionepremium.com/p/primetime",
+      "rating": "6.8"
     },
     {
-      "title": "Resident Evil",
-      "image": "https://image.tmdb.org/t/p/w500/D8rnntI88rgzWKDK2yuxm25HTQ.jpg",
-      "link": "https://altadefinizionepremium.com/p/resident-evil",
-      "rating": "7.3"
+      "title": "Never After Dark",
+      "image": "https://image.tmdb.org/t/p/w500/4rDgzOCBREeTaqZvTeFtEcnrju8.jpg",
+      "link": "https://altadefinizionepremium.com/p/never-after-dark",
+      "rating": "7.2"
     },
     {
       "title": "Masterplan",
@@ -1393,40 +1393,16 @@
       "rating": "6.9"
     },
     {
-      "title": "Mutiny - Inverti la rotta",
-      "image": "https://image.tmdb.org/t/p/w500/o4MXnSWwOnA4kftJ3NwZTIw2PuY.jpg",
-      "link": "https://altadefinizionepremium.com/p/mutiny-inverti-la-rotta",
-      "rating": "7.7"
+      "title": "Ragione e sentimento",
+      "image": "https://image.tmdb.org/t/p/w500/bwZCHb0qCFP2QT3QylGixpsNo8D.jpg",
+      "link": "https://altadefinizionepremium.com/p/ragione-e-sentimento",
+      "rating": "7.3"
     },
     {
       "title": "Animals",
       "image": "https://image.tmdb.org/t/p/w500/2bSbPh4m29yW4vj3zLWFGou9E9K.jpg",
       "link": "https://altadefinizionepremium.com/p/animals",
       "rating": "7.0"
-    },
-    {
-      "title": "The Cycle",
-      "image": "https://image.tmdb.org/t/p/w500/n5gSNf55KWfDc9hqP4H1KCCSutE.jpg",
-      "link": "https://altadefinizionepremium.com/p/the-cycle",
-      "rating": "6.8"
-    },
-    {
-      "title": "Never After Dark",
-      "image": "https://image.tmdb.org/t/p/w500/4rDgzOCBREeTaqZvTeFtEcnrju8.jpg",
-      "link": "https://altadefinizionepremium.com/p/never-after-dark",
-      "rating": "7.3"
-    },
-    {
-      "title": "Ragione e sentimento",
-      "image": "https://image.tmdb.org/t/p/w500/bwZCHb0qCFP2QT3QylGixpsNo8D.jpg",
-      "link": "https://altadefinizionepremium.com/p/ragione-e-sentimento",
-      "rating": "7.2"
-    },
-    {
-      "title": "The Rush - Corsa contro il tempo",
-      "image": "https://image.tmdb.org/t/p/w500/y2JldODg7WqeAZC9MRKshA2hSmq.jpg",
-      "link": "https://altadefinizionepremium.com/p/the-rush-corsa-contro-il-tempo",
-      "rating": "8.3"
     },
     {
       "title": "You Can See Everything",
@@ -1447,10 +1423,16 @@
       "rating": "7.4"
     },
     {
-      "title": "Heart of the Beast - Nel profondo selvaggio",
-      "image": "https://image.tmdb.org/t/p/w500/yiqRtrbY63aSPLinH5IsJwKHzZN.jpg",
-      "link": "https://altadefinizionepremium.com/p/heart-of-the-beast-nel-profondo-selvaggio",
-      "rating": "7.3"
+      "title": "The Rush - Corsa contro il tempo",
+      "image": "https://image.tmdb.org/t/p/w500/y2JldODg7WqeAZC9MRKshA2hSmq.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-rush-corsa-contro-il-tempo",
+      "rating": "8.3"
+    },
+    {
+      "title": "The Cycle",
+      "image": "https://image.tmdb.org/t/p/w500/n5gSNf55KWfDc9hqP4H1KCCSutE.jpg",
+      "link": "https://altadefinizionepremium.com/p/the-cycle",
+      "rating": "6.8"
     },
     {
       "title": "Colony",
@@ -1459,22 +1441,22 @@
       "rating": "8.2"
     },
     {
-      "title": "Avengers: Endgame",
-      "image": "https://image.tmdb.org/t/p/w500/hj1xaEUGMiUxaFYoutlljtlkHSG.jpg",
-      "link": "https://altadefinizionepremium.com/p/avengers-endgame",
-      "rating": "8.2"
-    },
-    {
-      "title": "Backrooms",
-      "image": "https://image.tmdb.org/t/p/w500/MIINS3Q31PEYGM7d3mwJE5mV4L.jpg",
-      "link": "https://altadefinizionepremium.com/p/backrooms",
-      "rating": "7.0"
+      "title": "Heart of the Beast - Nel profondo selvaggio",
+      "image": "https://image.tmdb.org/t/p/w500/yiqRtrbY63aSPLinH5IsJwKHzZN.jpg",
+      "link": "https://altadefinizionepremium.com/p/heart-of-the-beast-nel-profondo-selvaggio",
+      "rating": "7.3"
     },
     {
       "title": "Wicker",
       "image": "https://image.tmdb.org/t/p/w500/kNTpkCa1nHUIFqXYuKyKIwcSJwV.jpg",
       "link": "https://altadefinizionepremium.com/p/wicker",
       "rating": "7.5"
+    },
+    {
+      "title": "Backrooms",
+      "image": "https://image.tmdb.org/t/p/w500/MIINS3Q31PEYGM7d3mwJE5mV4L.jpg",
+      "link": "https://altadefinizionepremium.com/p/backrooms",
+      "rating": "7.0"
     },
     {
       "title": "Digger",
@@ -1489,10 +1471,28 @@
       "rating": "7.6"
     },
     {
+      "title": "Godzilla Minus Zero",
+      "image": "https://image.tmdb.org/t/p/w500/qRq5Oa4hsfjVqTtEgBKi1efTQuv.jpg",
+      "link": "https://altadefinizionepremium.com/p/godzilla-minus-zero",
+      "rating": "8.9"
+    },
+    {
+      "title": "Dune - Parte due",
+      "image": "https://image.tmdb.org/t/p/w500/nhdQxDCI64rMgypYZpsF7UvbdJA.jpg",
+      "link": "https://altadefinizionepremium.com/p/dune-parte-due",
+      "rating": "8.1"
+    },
+    {
       "title": "Whalefall - Nella balena",
       "image": "https://image.tmdb.org/t/p/w500/auhdhcoWhQzMovY2pa71BTgDAa7.jpg",
       "link": "https://altadefinizionepremium.com/p/whalefall-nella-balena",
       "rating": "6.6"
+    },
+    {
+      "title": "Your Mother Your Mother Your Mother",
+      "image": "https://image.tmdb.org/t/p/w500/4KaPZSKnInnArErTTgy9Oy14leR.jpg",
+      "link": "https://altadefinizionepremium.com/p/your-mother-your-mother-your-mother",
+      "rating": "7.4"
     },
     {
       "title": "L'amore della tua vita",
@@ -1501,40 +1501,28 @@
       "rating": "6.8"
     },
     {
-      "title": "Primetime",
-      "image": "https://image.tmdb.org/t/p/w500/sqArsDFYFryd5iKuoxLvr4y5NZv.jpg",
-      "link": "https://altadefinizionepremium.com/p/primetime",
-      "rating": "6.8"
+      "title": "Il regalo di compleanno",
+      "image": "https://image.tmdb.org/t/p/w500/4dhL4THU4CdtkjYvaLZEubd5ScN.jpg",
+      "link": "https://altadefinizionepremium.com/p/il-regalo-di-compleanno",
+      "rating": "7.0"
+    },
+    {
+      "title": "Dune",
+      "image": "https://image.tmdb.org/t/p/w500/zolKD2yscZd86GviNa6pBPc6N9o.jpg",
+      "link": "https://altadefinizionepremium.com/p/dune",
+      "rating": "7.8"
+    },
+    {
+      "title": "Un talento per il crimine",
+      "image": "https://image.tmdb.org/t/p/w500/mstDPKNKgSGFvVFVdfzeMNkcyw2.jpg",
+      "link": "https://altadefinizionepremium.com/p/un-talento-per-il-crimine",
+      "rating": "7.5"
     },
     {
       "title": "Michael",
       "image": "https://image.tmdb.org/t/p/w500/xUjMqG7GH6md8qX5e3MyLAzAYSZ.jpg",
       "link": "https://altadefinizionepremium.com/p/michael",
       "rating": "8.6"
-    },
-    {
-      "title": "Il regalo di compleanno",
-      "image": "https://image.tmdb.org/t/p/w500/4dhL4THU4CdtkjYvaLZEubd5ScN.jpg",
-      "link": "https://altadefinizionepremium.com/p/il-regalo-di-compleanno",
-      "rating": "7.3"
-    },
-    {
-      "title": "Tenzing",
-      "image": "https://image.tmdb.org/t/p/w500/rvYJksPOdfk0TDym3bLKJ7JeZfv.jpg",
-      "link": "https://altadefinizionepremium.com/p/tenzing",
-      "rating": "8.3"
-    },
-    {
-      "title": "The Social - Il prezzo della verità",
-      "image": "https://image.tmdb.org/t/p/w500/mJv5sV2knJtLy5ELIOilryhV59o.jpg",
-      "link": "https://altadefinizionepremium.com/p/the-social-il-prezzo-della-verit",
-      "rating": "7.0"
-    },
-    {
-      "title": "Matrix",
-      "image": "https://image.tmdb.org/t/p/w500/3vmTUXJHlKkvenf8G35dr5HlTEh.jpg",
-      "link": "https://altadefinizionepremium.com/p/matrix",
-      "rating": "8.3"
     }
   ],
   "on_air": [
@@ -1602,7 +1590,7 @@
       "title": "VisionQuest",
       "image": "https://image.tmdb.org/t/p/w500/tcNNmG5ZCsLW0lT0Lkbo0mK9Mf1.jpg",
       "link": "https://altadefinizionepremium.com/p/visionquest",
-      "rating": "8.6"
+      "rating": "8.7"
     },
     {
       "title": "Law & Order - I due volti della giustizia",
